@@ -19,14 +19,18 @@
 \contentsline {subsection}{\numberline {3.2.1}Modelo de Arquitetura de Referência para a Indústria 4.0}{31}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Asset Administration Shell}{34}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Memória digital do produto}{37}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Virtualização em nível de sistema operacional}{38}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Web services}{38}{section.3.5}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}Inserção de MDP no RAMI4.0}{38}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {4}Proposta de arquitetura de compartilhamento de informações na camada funcional}{39}{chapter.4}%
+\contentsline {subsection}{\numberline {4.0.1}Estrutura do AAS e seus submodelos}{39}{subsection.4.0.1}%
+\contentsline {subsection}{\numberline {4.0.2}O repositório e a descoberta de AAS's}{40}{subsection.4.0.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}Publicações decorrentes do trabalho}{40}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}Publicações decorrentes do trabalho}{43}{chapter.5}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}Cronograma detalhado}{41}{chapter.6}%
+\contentsline {chapter}{\chapternumberline {6}Cronograma detalhado}{44}{chapter.6}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {7}Conclusão}{42}{chapter.7}%
+\contentsline {chapter}{\chapternumberline {7}Conclusão}{45}{chapter.7}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias\footnote {De acordo com a Associa\c {c}\~ao Brasileira de Normas T\'ecnicas. NBR 6023.}}{43}{chapter*.11}%
+\contentsline {chapter}{Refer\^encias\footnote {De acordo com a Associa\c {c}\~ao Brasileira de Normas T\'ecnicas. NBR 6023.}}{46}{chapter*.11}%

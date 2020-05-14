@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.3)  6 APR 2020 07:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.4.20)  14 MAY 2020 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **texto.tex
 (./texto.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-02-25> (./abntex2.cls
+L3 programming layer <2020-04-06> (./abntex2.cls
 (/usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 )
@@ -14,7 +14,7 @@ Document Class: abntex2 2014/01/26 v1.9.2 abnTeX2
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/memoir/memoir.cls
-Document Class: memoir 2019/11/21 v3.7j configurable book, report, article docu
+Document Class: memoir 2020/03/25 v3.7k configurable book, report, article docu
 ment class
 \onelineskip=\skip47
 \lxvchars=\skip48
@@ -23,7 +23,7 @@ ment class
 \c@@memmarkcntra=\count168
 LaTeX Info: Redefining \InputIfFileExists on input line 140.
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2019/11/07 v1.0c TeX engine tests
+Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
 \stockheight=\skip50
 \stockwidth=\skip51
@@ -198,8 +198,8 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \afterepigraphskip=\skip131
 \epigraphwidth=\skip132
 \epigraphrule=\skip133
-LaTeX Info: Redefining \em on input line 7662.
-LaTeX Info: Redefining \emph on input line 7670.
+LaTeX Info: Redefining \em on input line 7664.
+LaTeX Info: Redefining \emph on input line 7672.
 \tocentryskip=\skip134
 \tocbaseline=\skip135
 \cftparskip=\skip136
@@ -282,8 +282,8 @@ LaTeX Info: Redefining \emph on input line 7670.
 \FrameRule=\dimen177
 \FrameSep=\dimen178
 \c@cp@cntr=\count273
-LaTeX Info: Redefining \: on input line 12187.
-LaTeX Info: Redefining \! on input line 12189.
+LaTeX Info: Redefining \: on input line 12191.
+LaTeX Info: Redefining \! on input line 12193.
 \c@ism@mctr=\count274
 \c@xsm@mctr=\count275
 \c@csm@mctr=\count276
@@ -402,7 +402,6 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count294
-\pdfmajorversion=\count295
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
 Package hyperref Info: Hyper index ON on input line 4555.
@@ -410,7 +409,7 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count296
+\c@Hy@tempcnt=\count295
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
@@ -426,7 +425,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count297
+\Fld@menulength=\count296
 \Field@Width=\dimen181
 \Fld@charsize=\dimen182
 Package hyperref Info: Hyper figures OFF on input line 6430.
@@ -442,15 +441,15 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count298
-\c@Item=\count299
-\c@Hfootnote=\count300
+\Hy@abspage=\count297
+\c@Item=\count298
+\c@Hfootnote=\count299
 )
 (/usr/share/texlive/texmf-dist/tex/latex/memoir/memhfixc.sty
 Package: memhfixc 2019/10/24 v1.18 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count301
-\c@Hpagenote=\count302
+\c@memhycontfloat=\count300
+\c@Hpagenote=\count301
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -461,8 +460,8 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count303
-\c@bookmark@seq@number=\count304
+\Fld@listcount=\count302
+\c@bookmark@seq@number=\count303
 
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -480,25 +479,25 @@ Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
-\BKM@id=\count305
+\BKM@id=\count304
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/02/28 3.41 The Babel package
+Package: babel 2020/03/22 3.42 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2020/02/28 3.41 Babel switching mechanism
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/02/28 3.41 Babel common definitions
-\babel@savecnt=\count306
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count305
 \U@D=\dimen183
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count307
+\bbl@dirlevel=\count306
 )
 Package babel Info: \l@british = using hyphenrules for english
 (babel)             (\language0) on input line 82.
@@ -517,8 +516,8 @@ Package babel Info: \l@brazil = using hyphenrules for portuguese
 (babel)             (\language4) on input line 113.
 Package babel Info: Making " an active character on input line 145.
 ))
-\c@quadro=\count308
-\c@loqdepth=\count309
+\c@quadro=\count307
+\c@loqdepth=\count308
 \cftbeforequadroskip=\skip192
 \cftquadroindent=\skip193
 \cftquadronumwidth=\skip194
@@ -529,20 +528,20 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen184
 \enit@toks=\toks24
 \enit@inbox=\box50
-\enit@count@id=\count310
-\enitdp@description=\count311
+\enit@count@id=\count309
+\enitdp@description=\count310
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count312
-\calc@Bcount=\count313
+\calc@Acount=\count311
+\calc@Bcount=\count312
 \calc@Adimen=\dimen185
 \calc@Bdimen=\dimen186
 \calc@Askip=\skip196
 \calc@Bskip=\skip197
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count314
+\calc@Ccount=\count313
 \calc@Cskip=\skip198
 )
 
@@ -565,17 +564,17 @@ Sidefoothsep and sidefootwidth: 7pt and 42pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
-\c@abntex@bookmarkcounter=\count315
+\c@abntex@bookmarkcounter=\count314
 \cftlastnumwidth=\skip256
 \chapternamenumlength=\skip257
 \ABNTEXcitacaorecuo=\skip258
-\c@alineasi=\count316
-\c@alineasii=\count317
-\enitdp@alineas=\count318
-\c@subalineasi=\count319
-\enitdp@subalineas=\count320
-\c@incisosi=\count321
-\enitdp@incisos=\count322
+\c@alineasi=\count315
+\c@alineasii=\count316
+\enitdp@alineas=\count317
+\c@subalineasi=\count318
+\enitdp@subalineas=\count319
+\c@incisosi=\count320
+\enitdp@incisos=\count321
 \ABNTEXsignwidth=\skip259
 \ABNTEXsignthickness=\skip260
 \ABNTEXsignskip=\skip261
@@ -585,14 +584,14 @@ nment
 
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count323
+\c@float@type=\count322
 \float@exts=\toks25
 \float@box=\box51
 \@float@everytoks=\toks26
 \@floatcapt=\box52
 )
 \@float@every@algorithm=\toks27
-\c@algorithm=\count324
+\c@algorithm=\count323
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
@@ -636,11 +635,11 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
 \MT@toks=\toks30
-\MT@count=\count325
+\MT@count=\count324
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen189
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count326
+\MT@listname@count=\count325
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
@@ -668,9 +667,9 @@ File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box53
 \AM@global@opts=\toks31
-\AM@pagecnt=\count327
+\AM@pagecnt=\count326
 \AM@toc@title=\toks32
-\c@AM@survey=\count328
+\c@AM@survey=\count327
 \AM@templatesizebox=\box54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mdwtools/mdwlist.sty
@@ -683,33 +682,33 @@ Package: algpseudocode
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count329
-\c@ALG@rem=\count330
-\c@ALG@nested=\count331
+\c@ALG@line=\count328
+\c@ALG@rem=\count329
+\c@ALG@nested=\count330
 \ALG@tlm=\skip263
 \ALG@thistlm=\skip264
-\c@ALG@Lnr=\count332
-\c@ALG@blocknr=\count333
-\c@ALG@storecount=\count334
-\c@ALG@tmpcounter=\count335
+\c@ALG@Lnr=\count331
+\c@ALG@blocknr=\count332
+\c@ALG@storecount=\count333
+\c@ALG@tmpcounter=\count334
 \ALG@tmplength=\skip265
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2020-02-25 L3 programming layer (loader) 
+Package: expl3 2020-04-06 L3 programming layer (loader) 
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count336
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count335
 \l__pdf_internal_box=\box55
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2020-02-25 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count337
-\g__xparse_grabber_int=\count338
-\l__xparse_m_args_int=\count339
-\l__xparse_v_nesting_int=\count340
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count336
+\g__xparse_grabber_int=\count337
+\l__xparse_m_args_int=\count338
+\l__xparse_v_nesting_int=\count339
 )
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -734,7 +733,7 @@ Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \minrowclearance=\skip266
 )
 LaTeX Info: Redefining \color on input line 709.
-\rownum=\count341
+\rownum=\count340
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -754,8 +753,8 @@ Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
 (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
 \minimumbiblabelwidth=\skip267
 \ABCIauxlen=\skip268
-\c@ABCIaux=\count342
-\c@ABCImax=\count343
+\c@ABCIaux=\count341
+\c@ABCImax=\count342
 
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
@@ -842,7 +841,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count344
+\c@section@level=\count343
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -857,16 +856,16 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             ! on input line 154.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count345
+\scratchcounter=\count344
 \scratchdimen=\dimen193
 \scratchbox=\box58
-\nofMPsegments=\count346
-\nofMParguments=\count347
+\nofMPsegments=\count345
+\nofMParguments=\count346
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count348
+\MPscratchCnt=\count347
 \MPscratchDim=\dimen194
-\MPnumerator=\count349
-\makeMPintoPDFobject=\count350
+\MPnumerator=\count348
+\makeMPintoPDFobject=\count349
 \everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1019,86 +1018,86 @@ Package pdftex.def Info: ficha_catalografica.pdf , page1 used on input line 160
 
 ] (./texto.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
+(Font)              <7> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 32.
+(Font)              <5> on input line 35.
 ) [9
 
 ]
-<images/cadeia-de-suprimentos.png, id=182, 1805.74625pt x 770.88pt>
+<images/cadeia-de-suprimentos.png, id=195, 1805.74625pt x 770.88pt>
 File: images/cadeia-de-suprimentos.png Graphic file (type png)
 <use images/cadeia-de-suprimentos.png>
 Package pdftex.def Info: images/cadeia-de-suprimentos.png  used on input line 3
-29.
+30.
 (pdftex.def)             Requested size: 455.0pt x 194.23691pt.
  [10
 
 
 ]
-<images/porter-cadeia-de-valor.png, id=202, 1522.68875pt x 816.04875pt>
+<images/porter-cadeia-de-valor.png, id=215, 1522.68875pt x 816.04875pt>
 File: images/porter-cadeia-de-valor.png Graphic file (type png)
 <use images/porter-cadeia-de-valor.png>
 Package pdftex.def Info: images/porter-cadeia-de-valor.png  used on input line 
-343.
+344.
 (pdftex.def)             Requested size: 455.0pt x 243.84526pt.
  [11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.347 	
+l.348 	
         <./images/cadeia-de-suprimentos.png>] [12pdfTeX warning (ext4): destina
 tion with the same identifier (name{figure.1.2}) has been already used, duplica
 te ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.354 	
+l.355 	
         <./images/porter-cadeia-de-valor.png>]
-<images/product-life-cycle.png, id=228, 760.8425pt x 342.27875pt>
+<images/product-life-cycle.png, id=241, 760.8425pt x 342.27875pt>
 File: images/product-life-cycle.png Graphic file (type png)
 <use images/product-life-cycle.png>
-Package pdftex.def Info: images/product-life-cycle.png  used on input line 358.
+Package pdftex.def Info: images/product-life-cycle.png  used on input line 359.
 
 (pdftex.def)             Requested size: 455.0pt x 204.69508pt.
-<images/life-cycle-extension.png, id=238, 1041.8925pt x 565.36218pt>
+<images/life-cycle-extension.png, id=251, 1041.8925pt x 565.36218pt>
 File: images/life-cycle-extension.png Graphic file (type png)
 <use images/life-cycle-extension.png>
 Package pdftex.def Info: images/life-cycle-extension.png  used on input line 37
-0.
+1.
 (pdftex.def)             Requested size: 455.0pt x 246.89674pt.
  [13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.374 	
+l.375 	
         <./images/product-life-cycle.png>] [14pdfTeX warning (ext4): destinatio
 n with the same identifier (name{figure.1.4}) has been already used, duplicate 
 ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.385 
+l.386 
        <./images/life-cycle-extension.png>]
-<images/i4.png, id=265, 1336.995pt x 649.42625pt>
+<images/i4.png, id=278, 1336.995pt x 649.42625pt>
 File: images/i4.png Graphic file (type png)
 <use images/i4.png>
-Package pdftex.def Info: images/i4.png  used on input line 389.
+Package pdftex.def Info: images/i4.png  used on input line 390.
 (pdftex.def)             Requested size: 455.0pt x 221.0101pt.
  [15pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.405 		
+l.406 		
          <./images/i4.png>]
-Underfull \hbox (badness 1033) in paragraph at lines 427--428
+Underfull \hbox (badness 1033) in paragraph at lines 428--429
 []|\OT1/cmr/m/n/12 (+20) Transpar^encia de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 []|\OT1/cmr/m/n/12 (+20) Descentraliza^^Xc~ao
  []
 
@@ -1107,48 +1106,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.445 	
+l.446 	
        ]
-<images/rami4.png, id=294, 1138.2525pt x 683.55376pt>
+<images/rami4.png, id=307, 1138.2525pt x 683.55376pt>
 File: images/rami4.png Graphic file (type png)
 <use images/rami4.png>
-Package pdftex.def Info: images/rami4.png  used on input line 451.
+Package pdftex.def Info: images/rami4.png  used on input line 452.
 (pdftex.def)             Requested size: 455.0pt x 273.23935pt.
  [17pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.458 \section
+l.459 \section
               {Memória Digital do Produto} <./images/rami4.png>]
-<images/MDP-ideia.png, id=309, 702.625pt x 702.625pt>
+<images/MDP-ideia.png, id=323, 702.625pt x 702.625pt>
 File: images/MDP-ideia.png Graphic file (type png)
 <use images/MDP-ideia.png>
-Package pdftex.def Info: images/MDP-ideia.png  used on input line 467.
+Package pdftex.def Info: images/MDP-ideia.png  used on input line 468.
 (pdftex.def)             Requested size: 273.00278pt x 273.00414pt.
  [18pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.473 	
+l.474 	
         <./images/MDP-ideia.png>] [19]
-<images/keythemes-i4.png, id=365, 968.61874pt x 891.33pt>
+<images/keythemes-i4.png, id=378, 968.61874pt x 891.33pt>
 File: images/keythemes-i4.png Graphic file (type png)
 <use images/keythemes-i4.png>
-Package pdftex.def Info: images/keythemes-i4.png  used on input line 491.
+Package pdftex.def Info: images/keythemes-i4.png  used on input line 492.
 (pdftex.def)             Requested size: 455.0pt x 418.69395pt.
  [20] [21pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.1.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.502 	
+l.503 	
         <./images/keythemes-i4.png>] [22]
-<images/metodologia-jensen.png, id=391, 404.26031pt x 328.22626pt>
+<images/metodologia-jensen.png, id=404, 404.26031pt x 328.22626pt>
 File: images/metodologia-jensen.png Graphic file (type png)
 <use images/metodologia-jensen.png>
-Package pdftex.def Info: images/metodologia-jensen.png  used on input line 560.
+Package pdftex.def Info: images/metodologia-jensen.png  used on input line 561.
 
 (pdftex.def)             Requested size: 318.49861pt x 258.59973pt.
  [23
@@ -1158,174 +1157,216 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.566 
+l.567 
        <./images/metodologia-jensen.png>] [24] [25
 
 ]
-<images/i4-2.png, id=424, 983.17313pt x 598.48593pt>
+<images/i4-2.png, id=437, 983.17313pt x 598.48593pt>
 File: images/i4-2.png Graphic file (type png)
 <use images/i4-2.png>
-Package pdftex.def Info: images/i4-2.png  used on input line 595.
+Package pdftex.def Info: images/i4-2.png  used on input line 596.
 (pdftex.def)             Requested size: 455.0pt x 276.96892pt.
  [26pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.602 	P
+l.603 	P
         or vezes, a I4.0 é tratada também como a convergência da produç�...
  <./images/i4-2.png>]
-<images/i3-to-i4.png, id=448, 1191.7022pt x 535.2497pt>
+<images/i3-to-i4.png, id=462, 1191.7022pt x 535.2497pt>
 File: images/i3-to-i4.png Graphic file (type png)
 <use images/i3-to-i4.png>
-Package pdftex.def Info: images/i3-to-i4.png  used on input line 613.
+Package pdftex.def Info: images/i3-to-i4.png  used on input line 614.
 (pdftex.def)             Requested size: 455.0pt x 204.36073pt.
  [27]
-<images/tecnologias-i4.png, id=469, 672.26157pt x 603.0028pt>
+<images/tecnologias-i4.png, id=482, 672.26157pt x 603.0028pt>
 File: images/tecnologias-i4.png Graphic file (type png)
 <use images/tecnologias-i4.png>
-Package pdftex.def Info: images/tecnologias-i4.png  used on input line 627.
+Package pdftex.def Info: images/tecnologias-i4.png  used on input line 628.
 (pdftex.def)             Requested size: 455.0pt x 408.12265pt.
  [28pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.630 	\end{figure}
+l.631 	\end{figure}
                     <./images/i3-to-i4.png>] [29pdfTeX warning (ext4): destinat
 ion with the same identifier (name{figure.3.12}) has been already used, duplica
 te ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.635 
+l.636 
        <./images/tecnologias-i4.png>] [30]
 
 LaTeX Warning: Reference `fig:eixo_layers' on page 31 undefined on input line 6
-75.
+76.
 
-<images/eixo_camadas.png, id=515, 1606.0pt x 629.35126pt>
+<images/eixo_camadas.png, id=528, 1606.0pt x 629.35126pt>
 File: images/eixo_camadas.png Graphic file (type png)
 <use images/eixo_camadas.png>
-Package pdftex.def Info: images/eixo_camadas.png  used on input line 680.
+Package pdftex.def Info: images/eixo_camadas.png  used on input line 681.
 (pdftex.def)             Requested size: 455.0pt x 178.30103pt.
 [31pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.684 
+l.685 
       ]
-<images/eixo_niveishierarquicos.png, id=525, 1581.91pt x 644.4075pt>
+<images/eixo_niveishierarquicos.png, id=538, 1581.91pt x 644.4075pt>
 File: images/eixo_niveishierarquicos.png Graphic file (type png)
 <use images/eixo_niveishierarquicos.png>
 Package pdftex.def Info: images/eixo_niveishierarquicos.png  used on input line
- 690.
+ 691.
 (pdftex.def)             Requested size: 455.0pt x 185.34929pt.
-<images/eixo_ciclodevida.png, id=531, 1636.1125pt x 589.20125pt>
+<images/eixo_ciclodevida.png, id=544, 1636.1125pt x 589.20125pt>
 File: images/eixo_ciclodevida.png Graphic file (type png)
 <use images/eixo_ciclodevida.png>
-Package pdftex.def Info: images/eixo_ciclodevida.png  used on input line 700.
+Package pdftex.def Info: images/eixo_ciclodevida.png  used on input line 701.
 (pdftex.def)             Requested size: 455.0pt x 163.85141pt.
  [32pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.704 
+l.705 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.704 
+l.705 
        <./images/eixo_camadas.png> <./images/eixo_niveishierarquicos.png>]
 [33pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.710 	\subsection
+l.711 	\subsection
                   {Asset Administration Shell} <./images/eixo_ciclodevida.png>]
-<images/aas-rami.png, id=551, 580.41844pt x 354.57469pt>
+<images/aas-rami.png, id=564, 580.41844pt x 354.57469pt>
 File: images/aas-rami.png Graphic file (type png)
 <use images/aas-rami.png>
-Package pdftex.def Info: images/aas-rami.png  used on input line 721.
+Package pdftex.def Info: images/aas-rami.png  used on input line 722.
 (pdftex.def)             Requested size: 455.0pt x 277.95761pt.
-<images/aas-submodelos.png, id=559, 1263.21938pt x 663.98062pt>
+<images/aas-submodelos.png, id=572, 1263.21938pt x 663.98062pt>
 File: images/aas-submodelos.png Graphic file (type png)
 <use images/aas-submodelos.png>
-Package pdftex.def Info: images/aas-submodelos.png  used on input line 731.
+Package pdftex.def Info: images/aas-submodelos.png  used on input line 732.
 (pdftex.def)             Requested size: 455.0pt x 239.16455pt.
 [34pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.734 	\end{figure}
+l.735 	\end{figure}
                     <./images/aas-rami.png>]
-<images/aas-conexao.png, id=572, 1190.94937pt x 536.0025pt>
+<images/aas-conexao.png, id=587, 1190.94937pt x 536.0025pt>
 File: images/aas-conexao.png Graphic file (type png)
 <use images/aas-conexao.png>
-Package pdftex.def Info: images/aas-conexao.png  used on input line 741.
+Package pdftex.def Info: images/aas-conexao.png  used on input line 746.
 (pdftex.def)             Requested size: 455.0pt x 204.779pt.
  [35pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.748 	A
-         integração dos ativos, representados pelos Componentes I4.0, em u...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.18})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.748 	A
-         integração dos ativos, representados pelos Componentes I4.0, em u...
- <./images/aas-submodelos.png> <./images/aas-conexao.png>]
-<images/submodelos.png, id=587, 517.18219pt x 304.88907pt>
+l.750 
+       <./images/aas-submodelos.png>]
+<images/submodelos.png, id=601, 517.18219pt x 304.88907pt>
 File: images/submodelos.png Graphic file (type png)
 <use images/submodelos.png>
-Package pdftex.def Info: images/submodelos.png  used on input line 753.
+Package pdftex.def Info: images/submodelos.png  used on input line 758.
 (pdftex.def)             Requested size: 455.0pt x 268.24272pt.
  [36pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-19}) has been already used, duplicate ignored
+18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.765 	A
-         MDP é alimentada e disponibilizada ao longo de todo o ciclo de vid...
- <./images/submodelos.png>] [37]
-<images/submodeloMDP.png, id=608, 1172.38pt x 842.14626pt>
-File: images/submodeloMDP.png Graphic file (type png)
-<use images/submodeloMDP.png>
-Package pdftex.def Info: images/submodeloMDP.png  used on input line 785.
-(pdftex.def)             Requested size: 455.0pt x 326.82945pt.
- [38
+l.762 
+       <./images/aas-conexao.png>] [37pdfTeX warning (ext4): destination with t
+he same identifier (name{figure.3.19}) has been already used, duplicate ignored
+
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.774 	A
+         MDP fornece também uma forma de rastreabilidade de produtos ao lon...
+ <./images/submodelos.png>] [38]
+<images/submodelos-publicos-e-restritos.png, id=629, 1041.1397pt x 685.05937pt>
+
+File: images/submodelos-publicos-e-restritos.png Graphic file (type png)
+<use images/submodelos-publicos-e-restritos.png>
+Package pdftex.def Info: images/submodelos-publicos-e-restritos.png  used on in
+put line 806.
+(pdftex.def)             Requested size: 455.0pt x 299.38869pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--825
+[]|\OT1/cmr/m/n/12 (+20) Submodelo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--829
+[]|\OT1/cmr/m/n/12 (+20) Submodelo res-
+ []
+
+[39
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.20})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.795 \chapter
+l.837 	\end{table}
+                   <./images/submodelos-publicos-e-restritos.png>]
+<images/repositorio.png, id=637, 1135.99406pt x 635.37375pt>
+File: images/repositorio.png Graphic file (type png)
+<use images/repositorio.png>
+Package pdftex.def Info: images/repositorio.png  used on input line 851.
+(pdftex.def)             Requested size: 455.0pt x 254.48431pt.
+ [40pdfTeX warning (ext4): destination with the same identifier (name{table.4.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.855 	
+       ]
+<images/submodeloMDP.png, id=643, 1172.38pt x 842.14626pt>
+File: images/submodeloMDP.png Graphic file (type png)
+<use images/submodeloMDP.png>
+Package pdftex.def Info: images/submodeloMDP.png  used on input line 862.
+(pdftex.def)             Requested size: 455.0pt x 326.82945pt.
+ [41pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+21}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.866 
+       <./images/repositorio.png>] [42pdfTeX warning (ext4): destination with t
+he same identifier (name{figure.4.22}) has been already used, duplicate ignored
+
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.872 \chapter
               {Publicações decorrentes do trabalho} <./images/submodeloMDP.pn
-g>] [39] [40
+g>] [43
 
-] [41
+] [44
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.3}) h
+pdfTeX warning (ext4): destination with the same identifier (name{table.6.4}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.951 \chapter
-              {Conclusão}] (./texto.bbl (./texto.brf)
+l.1028 \chapter
+               {Conclusão}] (./texto.bbl (./texto.brf)
 \tf@brf=\write5
 \openout5 = `texto.brf'.
 
- [42
+ [45
 
 ]
 
@@ -1341,11 +1382,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\nextToken' on input line 3.
 
 bibitemlist
-[43
+[46
 
-] [44] [45]) 
+] [47] [48]) 
 AED: lastpage setting LastPage
-[46]
+[49]
 \tf@lof=\write6
 \openout6 = `texto.lof'.
 
@@ -1355,28 +1396,29 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `texto.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 979.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 979.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1056.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1056.
  (./texto.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 979.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 979.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1056.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1056.
+
 Package rerunfilecheck Info: File `texto.brf' has not changed.
-(rerunfilecheck)             Checksum: CEEA811C33642BE0BFCC42C189D9BB28;5047.
+(rerunfilecheck)             Checksum: 26E5E1971A9FAA8962F88FE05C28CE01;5107.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 979.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1056.
  ) 
 Here is how much of TeX's memory you used:
- 15647 strings out of 482845
- 249348 string characters out of 5958184
- 870596 words of memory out of 5000000
- 30348 multiletter control sequences out of 15000+600000
+ 15686 strings out of 482462
+ 250407 string characters out of 5949841
+ 874294 words of memory out of 5000000
+ 30755 multiletter control sequences out of 15000+600000
  541714 words of font info for 107 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
  42i,18n,43p,1063b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/hvitoi/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.60
+ </home/hvitoi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.60
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
@@ -1385,10 +1427,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb>
-Output written on texto.pdf (47 pages, 5466661 bytes).
+Output written on texto.pdf (50 pages, 5612821 bytes).
 PDF statistics:
- 900 PDF objects out of 1000 (max. 8388607)
- 752 compressed objects within 8 object streams
- 153 named destinations out of 1000 (max. 500000)
- 11585 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 953 PDF objects out of 1000 (max. 8388607)
+ 798 compressed objects within 8 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 11627 words of extra memory for PDF output out of 12000 (max. 10000000)
 

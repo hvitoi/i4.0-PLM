@@ -260,8 +260,11 @@
 	\item[IIoT] \textit{Industrial Internet of Things} (Internet das Coisas Industrial)
 	\item[IoT] \textit{Internet of Things} (Internet das Coisas)
 	\item[MDP] Memória Digital do Produto
+	\item[OSI] \textit{Open System Interconnection} (Interconexão aberta de sistemas)
 	\item[RAMI4.0] \textit{Reference Architectural Model Industrie 4.0} (Modelo de Arquitetura de Referência para a Indústria 4.0)
+	\item[SOA] \textit{Service Oriented Architecture} (Arquitetura Orientada a Serviços)
   	\item[TIC] Tecnologia da Informação e Comunicação
+  	\item[UUID] \textit{Universal Unique IDentifier} (Identificador Único Universal)
   	
   	
   	
@@ -732,6 +735,10 @@
 		\label{fig:aas-submodelos}
 		\source{\citeonline{zvei2019aas} (adaptado).}
 	\end{figure}
+
+	Os submodelos são unidades básicas de organização dentro de um AAS que agregam informações semelhantes. Eles são divididos em dois tipos \cite{germany2019detailsaas}: submodelos básicos e submodelos livres.
+	
+	Os submodelos básicos são unidades de organização que se aplicam a muitos ou todos os ativos dentro do mundo I4.0. Já os submodelos livre são acertados entre os parceiros na cadeia de suprimentos e possuem um uso específico para um determinado produto.
 	
 	O ASS permite o uso de diferentes canais de comunicação entre objetos na I4.0, é um elo entre os objetos físicos e o mundo conectado. A Figura \ref{fig:aas-conexao} ilustra a comunicação entre diferentes AASs em um ambiente de manufatura I4.0.
 	
@@ -768,16 +775,98 @@
 	
 	A MDP fornece também uma forma de rastreabilidade de produtos ao longo da cadeia de valores uma vez que pode armazenar informações geoespaciais do ativo ao longo do tempo.
 
+	\section{Virtualização em nível de sistema operacional}
+	
+	A virtualização em nível do sistema operacional refere-se a um paradigma de sistema operacional no qual o kernel permite a existência de várias instâncias isoladas do espaço do usuário.
 
+	Contêineres oferecem vantagens como
+	
+	\begin{itemize}
+		\item Mesmo ambiente
+		\item Projetos isolados
+		\item Praticidade de rodar imagens
+	\end{itemize}
+
+	\section{Service oriented architetures (SOA)}
+	
+	\lipsum[1-1]
 
 % ----------------------------------------------------------
-\chapter{Inserção de MDP no RAMI4.0}
+\chapter{Proposta de arquitetura de compartilhamento de informações na camada funcional}
 
-	O conceito de Memória Digital do Produto (MDP) é inserido dentro da Indústria 4.0 com o objetivo de se agregar valor por meio da possibilidade de compartilhamento de informações entre parceiros ao longo da cadeia de valor de um ativo através da Internet.
+	\subsection{Estrutura do AAS e seus submodelos}
+
+	O conceito de Memória Digital do Produto (MDP) é inserido dentro da Indústria 4.0 com o objetivo de se agregar valor por meio da acessibilidade de informações entre parceiros ao longo da cadeia de valor de um ativo.
 	
-	A MDP é definida neste trabalho como um submodelo do AAS de um ativo qualquer. O submodelo MDP é composto de dados e funções de processamento de dados.
+	A MDP na I4.0 é definida como qualquer dado digitalizado que se relacione ao ativo. A MDP é armazenada em forma de submodelos em um AAS, cada submodelo agrega informações semelhantes relacionadas ao ativo.
 	
-	O submodelo MDP não armazena dados, ficando a cargo de cada submodelo o armazenamento de dados referente ao seu próprio escopo de interesse. O MDP, entretanto, agrega os dados de diferentes submodelos por meio de \textit{links} com a base de dados de todos os demais submodelos. O MDP é uma forma de integração dos dados feita por meio do espelhamento dos dados de submodelos diversos na forma de somente leitura (\textit{read-only}). A Figura \ref{fig:submodeloMDP} ilusta funcionamento do acesso aos dados por parte do submodelo MDP.
+	A MDP é dividida em duas partes, a parte pública e a parte restrita (vide Figura \ref{fig:submodelos-publicos-e-restritos}).
+	
+	\begin{figure}[H]
+		\centering
+		\caption{Submodelos públicos e restritos de um AAS.}
+		\includegraphics[width=1\textwidth]{submodelos-publicos-e-restritos.png}
+		\label{fig:submodelos-publicos-e-restritos}
+		\source{O autor.}
+	\end{figure}
+
+	A parte pública da MDP é representada pelo submodelo ``Identificação'', que contém informações não confidenciais sobre o ativo e tem a função de identificar o ativo na rede. A parte restrita da MDP também é representada através de submodelos e contém informações sensíveis sobre o ativo que podem ser acessadas somente mediante autenticação. A Tabela \ref{tab:submodelos-publicos-restritos} detalha os tipos de submodelos.
+	
+	
+		\begin{table}[H]
+		\centering
+		\caption{Caracterização dos submodelos públicos e restritos.}
+		\begin{tabular}{|p{1.3in}|p{4in}|}
+			
+			\hline
+			\textbf{Submodelo}
+			&\textbf{Descrição} \\
+			
+			\hline
+			Submodelo público
+			& Tem a função de identificar o ativo na rede. Contém informações que podem ser acessadas sem a necessidade de autenticação, como, por exemplo, seu identificador único universal (UUID - Universal Unique IDentifier), o modelo e fabricante do ativo. O submodelo não tem a função de fornecer uma ficha técnica detalhada, mas apenas uma caracterização abstrata do ativo. Dependendo da confidencialidade do ativo e do detentor do ativo, o submodelo de identificação pode apesar apresentar o UUID como dado público. Sem o UUID, o AAS se torna inacessível para qualquer uma das partes na cadeia de suprimentos. \\
+			
+			\hline
+			Submodelo restrito
+			& Representa a carga útil do AAS (\textit{payload}). Os submodelos restritos contêm informações que podem ser acessadas mediante autenticação. Os dados contidos nos submodelos restritos quando processados fornecem informações sobre o ativo e agregam valor ao mesmo. Além disso, novos modelos de negócio surgem sob os dados gerados pelo ativo. Alguns exemplos de submodelos restritos incluem: a ficha técnica detalhada do ativo, submodelos de histórico de leitura de sensores, histórico de geolocalização do ativo, histórico de padrão de uso, etc.\\
+			
+		
+			\hline
+			
+		\end{tabular}
+		\label{tab:submodelos-publicos-restritos}
+		\source{O autor.}
+	\end{table}
+	
+	\subsection{O repositório e a descoberta de AAS's}
+	
+	O submodelo \textbf{Identificação} é a forma primaria para a identicação e acesso a um AAS, pois este submodelo possui o UUID do ativo.
+	
+	Para que um AAS seja acessível pelas demais partes da cadeia de suprimentos, o submodelo Identificação deve estar disponível em uma lista pública que contém o submodelo de identificação de todos os AAS disponíveis, esta lista pública é definida como Repositório.
+	
+	O repositório, além de uma cópia do submodelo de identificação de cada AAS, possui também referências para os demais submodelos de cada AAS, conforme ilustrado na Figura \ref{fig:repositorio}.
+	
+	
+	\begin{figure}[H]
+		\centering
+		\caption{Repositório com referências aos AAS's.}
+		\includegraphics[width=1\textwidth]{repositorio.png}
+		\label{fig:repositorio}
+		\source{O autor.}
+	\end{figure}
+	
+	O repositório sob contexto da I4.0 é um \textit{web service}, ou seja, um serviço oferecido de um dispositivo eletrônico para outro dispositivo eletrônico com a comunicação entre eles por meio da Internet.
+	
+	Um \textit{web service} é disponibilizado por meio de um servidor que roda o serviço, escutando e respondendo solicitações de clientes através de uma determinada porta ou rede. Os clientes, por sua vez, consomem o serviço disponibilizado pelo servidor por meio de solicitações.
+	
+	Para o fornecimento e consumo de \textit{web services} entre cliente e servidor, diversos protocolos de comunicação podem ser utilizados na camada de aplicação do modelo padrão TCP/IP. Alguns desses protocolos e suas características são descritos na Tabela
+	
+	
+	
+	
+	
+	
+	Um AAS possui uma base de dados única que armazena os dados de todos os submodelos organizados em um sistema de arquivos. Portanto, os dados referentes aos submodelos incluídos no sistema de arquivos é parte do MDP. A outra parte são as funções que processam estes dados e retornam ao usuário o resultado solicitado, estas funções são partes de cada submodelo. A Figura \ref{fig:submodeloMDP} ilustra a arquitetura de um AAS com a inserção do conceito de MDP.
 	
 	\begin{figure}[H]
 		\centering
@@ -785,9 +874,9 @@
 		\includegraphics[width=1\textwidth]{submodeloMDP.png}
 		\label{fig:submodeloMDP}
 		\source{O autor.}
-	\end{figure}`
+	\end{figure}
 
-	A comunicação entre o submodelo MDP e os demais modelos é essencial, pois o MDP depende da acessibilidade da base de dados dos demais submodelos para o processamento de suas funções. 
+	O compartilhamento de informações entre submodelos é essencial, pois as funções de processamento de dados podem depender da acessibilidade da base de dados de um ou mais submodelos serem executadas. 
 	
 	
 

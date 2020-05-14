@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="submodelos-publicos-e-restritos.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 508 285.75"
+   height="1080"
+   width="1920"
+   inkscape:export-filename="/media/hvitoi/Moon/Nuvem/USP/Dissertação/LaTeX/images/svg/submodelos-publicos-e-restritos.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <inkscape:perspective
+       id="perspective947"
+       inkscape:persp3d-origin="105 : 87.749997 : 1"
+       inkscape:vp_z="210 : 137.25 : 1"
+       inkscape:vp_y="0 : 999.99997 : 0"
+       inkscape:vp_x="0 : 137.25 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     units="px"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="1013"
+     inkscape:window-width="1920"
+     inkscape:snap-global="true"
+     inkscape:snap-nodes="true"
+     inkscape:object-nodes="false"
+     inkscape:snap-others="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox="true"
+     inkscape:object-paths="false"
+     inkscape:snap-intersection-paths="false"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:snap-midpoints="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-center="false"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-page="true"
+     inkscape:snap-to-guides="true"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="456.08291"
+     inkscape:cx="268.86111"
+     inkscape:zoom="0.46086257"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       transform="matrix(3.0848507,0,0,3.0848507,-59.112316,-67.739318)"
+       id="g896">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 160.82613,29.935748 0.082,77.569602 -13.5747,0.0513 -0.0185,-13.104542 -91.161338,-0.24387 -0.237476,13.259632 -13.234306,0.0836 0.202762,-77.343142 17.907584,-0.04139 z"
+         id="path886"
+         sodipodi:nodetypes="cccccccccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 42.854043,41.853196 H 160.83873"
+         id="path892" />
+    </g>
+    <text
+       id="text902"
+       y="40.534828"
+       x="82.731796"
+       style="font-style:normal;font-weight:normal;font-size:10.8827px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.816199"
+       xml:space="preserve"><tspan
+         id="tspan904"
+         style="font-size:10.8827px;stroke-width:0.816199"
+         y="40.534828"
+         x="82.731796"
+         sodipodi:role="line">Header</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.8826px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.816199"
+       x="82.044289"
+       y="78.006638"
+       id="text902-6"><tspan
+         sodipodi:role="line"
+         x="82.044289"
+         y="78.006638"
+         style="font-size:10.8826px;stroke-width:0.816199"
+         id="tspan904-1">Body</tspan></text>
+    <rect
+       ry="5.9643478"
+       y="32.088562"
+       x="178.6701"
+       height="20.351185"
+       width="221.05998"
+       id="rect926"
+       style="fill:none;stroke:#ff0000;stroke-width:1.23394;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke" />
+    <text
+       id="text930"
+       y="46.077328"
+       x="208.40593"
+       style="font-style:normal;font-weight:normal;font-size:13.0592px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.816199"
+       xml:space="preserve"><tspan
+         style="font-size:13.0592px;stroke-width:0.816199"
+         y="46.077328"
+         x="208.40593"
+         id="tspan928"
+         sodipodi:role="line">Submodelo Identificação</tspan></text>
+    <rect
+       ry="5.9643493"
+       y="91.672623"
+       x="96.850487"
+       height="108.66046"
+       width="94.589096"
+       id="rect963"
+       style="fill:none;stroke:#ff0000;stroke-width:1.23394;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke" />
+    <rect
+       style="fill:none;stroke:#ff0000;stroke-width:1.23394;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+       id="rect969"
+       width="94.589096"
+       height="108.66046"
+       x="207.61491"
+       y="90.00267"
+       ry="5.9643493" />
+    <rect
+       ry="5.9643493"
+       y="92.023705"
+       x="324.00027"
+       height="108.66046"
+       width="94.589096"
+       id="rect971"
+       style="fill:none;stroke:#ff0000;stroke-width:1.23394;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.0592px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.816199"
+       x="141.47058"
+       y="108.98123"
+       id="text930-9"><tspan
+         sodipodi:role="line"
+         id="tspan928-4"
+         x="141.47058"
+         y="108.98123"
+         style="font-size:10.8827px;text-align:center;text-anchor:middle;stroke-width:0.816199">Submodelo</tspan><tspan
+         id="tspan991"
+         sodipodi:role="line"
+         x="141.47058"
+         y="125.30523"
+         style="font-size:10.8827px;text-align:center;text-anchor:middle;stroke-width:0.816199">Restrito 1</tspan></text>
+    <text
+       id="text999"
+       y="110.77474"
+       x="254.4877"
+       style="font-style:normal;font-weight:normal;font-size:13.0592px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.816199"
+       xml:space="preserve"><tspan
+         style="font-size:10.8827px;text-align:center;text-anchor:middle;stroke-width:0.816199"
+         y="110.77474"
+         x="254.4877"
+         id="tspan995"
+         sodipodi:role="line">Submodelo</tspan><tspan
+         style="font-size:10.8827px;text-align:center;text-anchor:middle;stroke-width:0.816199"
+         y="127.09875"
+         x="254.4877"
+         sodipodi:role="line"
+         id="tspan997">Restrito 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.0592px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.816199"
+       x="373.90402"
+       y="110.36658"
+       id="text1005"><tspan
+         sodipodi:role="line"
+         id="tspan1001"
+         x="373.90402"
+         y="110.36658"
+         style="font-size:10.8827px;text-align:center;text-anchor:middle;stroke-width:0.816199">Submodelo</tspan><tspan
+         id="tspan1003"
+         sodipodi:role="line"
+         x="373.90402"
+         y="126.69059"
+         style="font-size:10.8827px;text-align:center;text-anchor:middle;stroke-width:0.816199">Restrito 3</tspan></text>
+    <rect
+       ry="6.9851241"
+       y="228.96054"
+       x="120.30301"
+       height="34.881237"
+       width="266.92767"
+       id="rect1007"
+       style="opacity:1;fill:#714216;fill-opacity:0.54832;stroke:#000000;stroke-width:1.66881;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke" />
+    <text
+       id="text1011"
+       y="249.46921"
+       x="234.77426"
+       style="font-size:15.2357px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.816199"
+       xml:space="preserve"><tspan
+         style="font-size:15.2357px;stroke-width:0.816199"
+         y="249.46921"
+         x="234.77426"
+         id="tspan1009"
+         sodipodi:role="line">Ativo</tspan></text>
+  </g>
+</svg>
