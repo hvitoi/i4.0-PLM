@@ -28,6 +28,11 @@ Dispon{\'\i}vel em: \url{www.din.de/go/roadmapindustrie40-en}.}
   \emph{Reference Architecture Model Industrie 4.0 (RAMI4.0)}. [S.l.]: ZVEI and
   VDI, Status report, 2015.}
 
+\bibitem[API 2020]{rest2020httpmethods}
+\abntrefinfo{API}{API}{2020}
+{API, R. \emph{HTTP Methods}. Rest API Tutorials, 2020.
+Dispon{\'\i}vel em: \url{https://restfulapi.net/http-methods/}.}
+
 \bibitem[Aruv{\"a}li, Maass e Otto 2014]{aruvali2014objectmemory}
 \abntrefinfo{Aruv{\"a}li, Maass e Otto}{ARUV{\"A}LI; MAASS; OTTO}{2014}
 {ARUV{\"A}LI, T.; MAASS, W.; OTTO, T. Digital object memory based monitoring
@@ -93,6 +98,11 @@ Dispon{\'\i}vel em:
 {DRATH, R.; ALEXANDER, H. Industrie 4.0: hit or hype?
 \emph{Industrial Electronics Magazine}, v.~8, n.~2, p. 56--58, 2014.}
 
+\bibitem[Ferris 2004]{ferris2004webservices}
+\abntrefinfo{Ferris}{FERRIS}{2004}
+{FERRIS, C. Web services architecture.
+\emph{Standard, W3C World}, W3C Working Group, p.~10, 2004.}
+
 \bibitem[Germany 2018]{germany2018ramistandardization}
 \abntrefinfo{Germany}{GERMANY}{2018}
 {GERMANY. \emph{The Reference Architectural Model RAMI4.0 and the
@@ -113,6 +123,13 @@ Dispon{\'\i}vel em:
   2019.
 Dispon{\'\i}vel em:
   \url{https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/plattform-flyer-en.html}.}
+
+\bibitem[Gr{\"u}ner, Pfrommer e Palm 2016]{gruner2016restful}
+\abntrefinfo{Gr{\"u}ner, Pfrommer e Palm}{GR{\"U}NER; PFROMMER; PALM}{2016}
+{GR{\"U}NER, S.; PFROMMER, J.; PALM, F. Restful industrial communication with
+  opc ua.
+\emph{IEEE Transactions on Industrial Informatics}, IEEE, v.~12, n.~5, p.
+  1832--1841, 2016.}
 
 \bibitem[Hankel e Rexroth 2015]{hankel2015rami}
 \abntrefinfo{Hankel e Rexroth}{HANKEL; REXROTH}{2015}
@@ -139,6 +156,12 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Hugos}{HUGOS}{2018}
 {HUGOS, M.~H. \emph{Essentials of supply chain management}. [S.l.]: John Wiley
   \& Sons, 2018.}
+
+\bibitem[IEC 2017]{iec2017rami}
+\abntrefinfo{IEC}{IEC}{2017}
+{IEC. \emph{Smart manufacturing – Reference architecture model industry 4.0
+  (RAMI4.0)}. [S.l.]: IEC PAS 63088 - International Electrotechnical
+  Commission, 2017.}
 
 \bibitem[Jensen 1997]{jensen1997petrinet}
 \abntrefinfo{Jensen}{JENSEN}{1997}
@@ -206,6 +229,12 @@ Tese (Doutorado) --- Universidade de São Paulo, 2017.}
 \abntrefinfo{Porter e Kramer}{PORTER; KRAMER}{2011}
 {PORTER, M.~E.; KRAMER, M.~R. Criação de valor compartilhado.
 \emph{Harvard Business Review}, v.~89, n.~1/2, p. 62--77, 2011.}
+
+\bibitem[Radack 2009]{radack2009exchangedata}
+\abntrefinfo{Radack}{RADACK}{2009}
+{RADACK, G. Industrial automation systems and integration—exchange of
+  characteristic data — part 10: Characteristic data exchange format.
+2009.}
 
 \bibitem[Rüßmann \textit{et al.} 2015]{russmann2015industryfour}
 \abntrefinfo{Rüßmann \textit{et al.}}{RüßMANN \textit{et al.}}{2015}
@@ -284,6 +313,13 @@ Disserta\c{c}\~{a}o (Mestrado) --- Universidade de São Paulo, 2013.}
 \emph{IEEE Industrial Electronics Magazine}, v.~13, n.~1, p. 13--25, March
   2019.
 ISSN 1941-0115.}
+
+\bibitem[Yokotani e Sasaki 2016]{yokotani2016mqtt}
+\abntrefinfo{Yokotani e Sasaki}{YOKOTANI; SASAKI}{2016}
+{YOKOTANI, T.; SASAKI, Y. Comparison with http and mqtt on required network
+  resources for iot. In:  IEEE. \emph{2016 international conference on control,
+  electronics, renewable energy and communications (ICCEREC)}. [S.l.], 2016.
+  p.~1--6.}
 
 \bibitem[ZVEI 2019]{zvei2019aas}
 \abntrefinfo{ZVEI}{ZVEI}{2019}
