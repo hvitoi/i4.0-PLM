@@ -1,17 +1,10 @@
 \usepackage{anyfontsize}
 
-% ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
-% Declaracao da classe abntex2 como uma extensao da classe memoir
-% ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{abntex2}[2014/01/26 v1.9.2 abnTeX2]
 \RequirePackage{ifthen}
 
-%
-% Captura as options article e twocolumn
-%
+
 \providecommand{\ABNTEXisarticle}{false}
 \DeclareOption{article}{
 	\renewcommand{\ABNTEXisarticle}{true}
@@ -22,10 +15,8 @@
 	\renewcommand{\ABNTEXistwocolumn}{true}
 	\PassOptionsToClass{twocolumn}{memoir}%}
 }
-%	
-% Opcoes chapter=TITLE, section=TITLE, subsection=TITLE e
-% subsubsection=TITLE: titulos em letras maiusculas
-% 
+
+
 \newboolean{ABNTEXupperchapter}     %true=titles of chapter/appendix in uppercase
 \newboolean{ABNTEXuppersection}     %true=titles of sections in uppercase
 \newboolean{ABNTEXuppersubsection}  %true=titles of subsections in uppercase
@@ -64,9 +55,7 @@
 \ProcessOptions\relax
 \LoadClass{memoir}
 
-% sumario=abnt-6027-2012 : Sumário conforme recomendação da ABNT NBR 6027:2012, que
-%    soh pode ser usado com memoir v3.6k ou superior
-%    \settocpreprocessor \changes{v3.6k}{2012/09/18}{Added}
+
 \ifdefined\settocpreprocessor
 \else
   \setboolean{ABNTEXsumario-tradicional}{false}
@@ -74,17 +63,6 @@
 \fi
 
 
-% ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
-% Comandos para tratamento de opcoes proprias
-% ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
-
-% ---
-% Comandos para controlar as opcoes de titulos com letras maiusculas 
-% ---
-
-% pacote que prove \MakeTextUppercase
 \RequirePackage{textcase}
 
 \newcommand{\ABNTEXchapterupperifneeded}[1]{\ifthenelse{\boolean{ABNTEXupperchapter}}{\MakeTextUppercase{#1}}{#1}}
@@ -94,12 +72,6 @@
 \newcommand{\ABNTEXsubsubsubsectionupperifneeded}{\ifthenelse{\boolean{ABNTEXuppersubsubsubsection}}{\MakeTextUppercase}{}}
 % ---
 
-
-% ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
-% Pacotes adicionais e customizacoes gerais do memoir
-% ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
 
 % ---
 % Do pacote de if/them/else
@@ -1198,15 +1170,6 @@
        \vspace*{\fill}
     }%
 
-    %{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
-
-%%%%%%%%%% MODIFICAÇÃO %%%%%%%%%%
-%     {\large\imprimirorientadorRotulo~\imprimirorientador\par}
-%     \abntex@ifnotempty{\imprimircoorientador}{%
-%        {\large\imprimircoorientadorRotulo~\imprimircoorientador}%
-%     }%
-%     \vspace*{\fill}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     {\normalfont\normalsize\imprimirlocal}
     \par
