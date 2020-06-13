@@ -1,0 +1,33 @@
+% Pacotes básicos
+\usepackage[utf8]{inputenc} % Codificação do documento (conversão automática dos acentos)
+\usepackage{lastpage} % Usado pela Ficha catalográfica
+\usepackage{indentfirst} % Indenta o primeiro parágrafo de cada seção
+\usepackage{color} % Controle das cores
+\usepackage{graphicx} % Inclusão de gráficos
+\usepackage{microtype} % Melhorias de justificação
+\usepackage{pdfpages} % Incluir PDFs
+\usepackage{algorithm} % Ilustrações do tipo algoritmo
+\usepackage{mdwlist} % Itens com espaço padrão da abnt
+\usepackage[noend]{algpseudocode} % Ilustrações do tipo algoritmo
+		
+% Pacotes adicionais
+\usepackage{lipsum}
+\usepackage{bigstrut}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% Pacotes de citações
+\usepackage[brazilian,hyperpageref]{backref} % Paginas com as citações na bib
+\usepackage[alf,abnt-etal-list=0,abnt-etal-text=it]{abntex2cite} % Citações padrão ABNT
+
+% Configuração de pacotes
+\graphicspath{{figuras/}} % Diretório padrão de imagens
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~} % Configurações do pacote backref - Usado sem a opção hyperpageref de backref
+\renewcommand{\backref}{} % Texto padrão antes do número das páginas
+\renewcommand*{\backrefalt}[4]{ % Define os textos da citação
+	\ifcase #1 Nenhuma citação no texto.
+	\or Citado na página #2.
+	\else Citado #1 vezes nas páginas #2.
+	\fi
+}

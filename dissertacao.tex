@@ -1,114 +1,25 @@
 \documentclass[
-	12pt,					% Tamanho da fonte
-	oneside,			% Para impressão apenas no anverso (apenas frente). Oposto a twoside
-	a4paper,			% Tamanho do papel
-	english,			% Idioma adicional para hifenização
-	brazil				% O último idioma é o principal do documento
+	12pt,		% Tamanho da fonte
+	openright,	% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,	% para impressão em verso e anverso. Oposto a oneside
+	a4paper,	% Tamanho do papel
+	english,	% Idioma adicional para hifenização
+	brazil		% O último idioma é o principal do documento
 ]{abntex2}
 
-% Pacotes básicos
-\usepackage[utf8]{inputenc}				% Codificação do documento (conversão automática dos acentos)
-\usepackage{lastpage}							% Usado pela Ficha catalográfica
-\usepackage{indentfirst}					% Indenta o primeiro parágrafo de cada seção
-\usepackage{color}								% Controle das cores
-\usepackage{graphicx}							% Inclusão de gráficos
-\usepackage{microtype} 						% Melhorias de justificação
-\usepackage{pdfpages}     				% Incluir PDFs
-\usepackage{algorithm}						% Ilustrações do tipo algoritmo
-\usepackage{mdwlist}							% Itens com espaço padrão da abnt
-\usepackage[noend]{algpseudocode}	% Ilustrações do tipo algoritmo
-		
-% Pacotes adicionais
-\usepackage{lipsum}
-\usepackage{bigstrut}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{tabularx}
-\usepackage{multirow}
+% Pacotes
+\include{config/pacotes}
 
-% Pacotes de citações
-\usepackage[brazilian,hyperpageref]{backref}	 										% Paginas com as citações na bib
-\usepackage[alf,abnt-etal-list=0,abnt-etal-text=it]{abntex2cite}	% Citações padrão ABNT
-
-% Configuração de pacotes
-\graphicspath{{figuras/}} 																	% Diretório padrão de imagens
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}	% Configurações do pacote backref - Usado sem a opção hyperpageref de backref
-\renewcommand{\backref}{} 																	% Texto padrão antes do número das páginas
-\renewcommand*{\backrefalt}[4]{ 														% Define os textos da citação
-	\ifcase #1 Nenhuma citação no texto.
-	\or Citado na página #2.
-	\else Citado #1 vezes nas páginas #2.
-	\fi
-}
-
-% Informações de dados para capa e folha de rosto
-\instituicao{
-	UNIVERSIDADE DE SÃO PAULO
-	\par
-	PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA MECÂNICA
-}
-\titulo{Integração da memória digital de produto ao RAMI4.0 para monitoramento de ativos ao longo da cadeia de valor}
-\autor{HENRIQUE ABRANTES VITOI}
-\local{São Paulo}
-\data{2020}
-\orientador{Prof. Dr. Fabrício Junqueira}
-\coorientador{Prof. Dr. Paulo Eigi Miyagi}
-\tipotrabalho{Dissertação (Mestrado)}
-
-\preambulo{
-	Versão original
-	\newline \newline \newline
-	Dissertação apresentada à Escola Politécnica da Universidade de São Paulo para obtenção do título de Mestre em Ciências pelo Programa de Pós-graduação em Engenharia Mecânica. 
-	\newline \newline
-	Área de concentração: Engenharia de Controle e Automação Mecânica
-	\newline \newline \newline
-	Versão corrigida contendo as alterações solicitadas pela comissão julgadora em \_\_\_\_\_\_\_ de \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ de \_\_\_\_\_\_\_\_\_\_. A versão original encontra-se em acervo reservado na Biblioteca da POLI-USP e na Biblioteca Digital de Teses e Dissertações da USP (BDTD), de acordo com a Resolução CoPGr 6018, de 13 de outubro de 2011.
-}
-
-\definecolor{blue}{RGB}{41,5,195}	% Altera o aspecto da cor azul
-
-% Informações do PDF
-\makeatletter
-\hypersetup{
-	pdftitle={\@title}, 
-	pdfauthor={\@author},
-	pdfsubject={\imprimirpreambulo},
-	colorlinks=true,
-	linkcolor=black,
-	citecolor=black,
-	filecolor=black,
-	urlcolor=black,
-	bookmarksdepth=4
-}
-\makeatother
-
-% Tamanho do parágrafo
-\setlength{\parindent}{1.25cm}
-
-% Espaçamento entre parágrafos
-\setlength{\parskip}{0cm}
-\renewcommand{\baselinestretch}{1.5}
-\makeindex	% Compila o índice
-
-% Controlar linhas órfãs e viúvas
-\clubpenalty10000
-\widowpenalty10000
-\displaywidowpenalty10000
-
-
-
+% Metadados
+\include{config/metadados}
 
 \begin{document}
-
-
-% ----------------------------------------------------------
-% ELEMENTOS PRÉ-TEXTUAIS
-% ----------------------------------------------------------
+	
+% Elementos pré-textuais
 \frenchspacing
 \include{capitulos/0-pre-textual}
 
-% ----------------------------------------------------------
-% ELEMENTOS TEXTUAIS
-% ----------------------------------------------------------
+% Elementos textuais
 \textual
 \include{capitulos/1-introducao}
 \include{capitulos/2-metodologia}
@@ -118,11 +29,8 @@
 \include{capitulos/6-prova-de-conceito}
 \include{capitulos/7-conclusao}
 
-% ----------------------------------------------------------
-% ELEMENTOS PÓS-TEXTUAIS
-% ----------------------------------------------------------
+% Elementos pós-textuais
 \postextual
 \include{capitulos/8-bibliografia}
-
 
 \end{document}
