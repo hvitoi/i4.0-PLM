@@ -1,33 +1,39 @@
 % Pacotes básicos
-\usepackage[utf8]{inputenc} % Codificação do documento (conversão automática dos acentos)
-\usepackage{lastpage} % Usado pela Ficha catalográfica
-\usepackage{indentfirst} % Indenta o primeiro parágrafo de cada seção
-\usepackage{color} % Controle das cores
-\usepackage{graphicx} % Inclusão de gráficos
-\usepackage{microtype} % Melhorias de justificação
-\usepackage{pdfpages} % Incluir PDFs
-\usepackage{algorithm} % Ilustrações do tipo algoritmo
-\usepackage{mdwlist} % Itens com espaço padrão da abnt
-\usepackage[noend]{algpseudocode} % Ilustrações do tipo algoritmo
-		
+\usepackage{lmodern}			% Fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Seleção de códigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificação do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% Melhorias de justificação
+
 % Pacotes adicionais
-\usepackage{lipsum}
-\usepackage{bigstrut}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{tabularx}
-\usepackage{multirow}
+
+\usepackage{pdfpages}			% Incluir PDFs	
+\usepackage[table]{xcolor}		% Incluir cores em hexadecimal
+\usepackage{lipsum}				% Dummy text
+\usepackage{array}				% Opções adicionais para tabelas
+\usepackage{tabularx}			% Gerenciador de tabelas
+\usepackage{tabulary}			% Gerenciador de tabelas
 
 % Pacotes de citações
-\usepackage[brazilian,hyperpageref]{backref} % Paginas com as citações na bib
-\usepackage[alf,abnt-etal-list=0,abnt-etal-text=it]{abntex2cite} % Citações padrão ABNT
+\usepackage[brazilian,hyperpageref]{backref}	% Páginas com as citações na bibl
+\usepackage[alf]{abntex2cite}					% Citações padrão ABNT
 
-% Configuração de pacotes
-\graphicspath{{figuras/}} % Diretório padrão de imagens
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~} % Configurações do pacote backref - Usado sem a opção hyperpageref de backref
-\renewcommand{\backref}{} % Texto padrão antes do número das páginas
-\renewcommand*{\backrefalt}[4]{ % Define os textos da citação
-	\ifcase #1 Nenhuma citação no texto.
-	\or Citado na página #2.
-	\else Citado #1 vezes nas páginas #2.
+% ---
+
+% Diretório de imagens
+\graphicspath{{figuras/}} 
+
+% Configurações do pacote backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}	% Usado sem a opção hyperpageref de backref
+\renewcommand{\backref}{}	% Texto padrão antes do número das páginas
+\renewcommand*{\backrefalt}[4]{	% Define os textos da citação
+	\ifcase #1
+	Nenhuma citação no texto.
+	\or
+	Citado na página #2.
+	\else
+	Citado #1 vezes nas páginas #2.
 	\fi
 }
