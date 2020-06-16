@@ -1,0 +1,52 @@
+  <shape w="100" h="70" aspect="fixed" strokewidth="inherit">
+    
+    <connections>
+      <constraint x="0.5" y="0"/>
+      <constraint x="0.5" y="1"/>
+      <constraint x="0" y="0.5"/>
+      <constraint x="1" y="0.5"/>
+    </connections>
+    
+    <background>
+      <path>
+        <move x="5" y="0"/>
+        <line x="95" y="0"/>
+        <line x="100" y="5"/>
+        <line x="100" y="70"/>
+        <line x="80" y="70"/>
+        <line x="80" y="62.5"/>
+        <line x="77.5" y="60"/>
+        <line x="22.5" y="60"/>
+        <line x="20" y="62.5"/>
+        <line x="20" y="70"/>
+        <line x="0" y="70"/>
+        <line x="0" y="5"/>
+        <close/>
+        <move x="0" y="10"/>
+        <line x="100" y="10"/>
+      </path>
+    </background>
+    
+    <foreground>
+      <fillstroke />
+      <path>
+        <move x="5" y="0"/>
+        <line x="95" y="0"/>
+        <line x="100" y="5"/>
+        <line x="100" y="70"/>
+        <line x="80" y="70"/>
+        <line x="80" y="62.5"/>
+        <line x="77.5" y="60"/>
+        <line x="22.5" y="60"/>
+        <line x="20" y="62.5"/>
+        <line x="20" y="70"/>
+        <line x="0" y="70"/>
+        <line x="0" y="5"/>
+        <close/>
+        <move x="0" y="10"/>
+        <line x="100" y="10"/>
+      </path>
+    </foreground>
+
+    
+  </shape>

@@ -1,33 +1,79 @@
 \chapter{Arquitetura para compartilhamento de informações do ativo}
-
-
-\section{Estrutura do AAS e seus submodelos}
-
-	O conceito de Memória Digital do Produto (MDP) é inserido dentro da Indústria 4.0 com o objetivo de se agregar valor por meio da possibilidade de acesso a informações sobre o ativo entre parceiros ao longo da cadeia de valor de um ativo.
 	
-	A MDP na I4.0 é definida como qualquer dado digitalizado que se relacione ao ativo. A MDP é um banco de dados que armazena informações referentes a cada um dos submodelos em um AAS. Cada submodelo agrega informações semelhantes relativas ao ativo. A MDP está localizada no corpo do AAS (\textit{body}).
+	A elaboração de uma arquitetura comum para o compartilhamento de informações do ativo é essencial para que haja consistência e interoperabilidade entre os membros da CS adotando este sistema.
 	
-	Os submodelos são divididos em duas categorias, a parte pública e a parte restrita.
+	Esta seção tem o objetivo de apresentar detalhes da arquitetura proposta baseada em \textit{Web Services} (WS) nos modelos de uma arquitetura orientada a serviços (SOA) compatível com Componentes I4.0 para o compartilhamento de informações do ativo ao longo da CS.
 	
-	Os submodelos públicos contêm informações não confidenciais sobre o ativo e têm funções de identificação na rede. Os submodelos públicos ``Identificação'' e ``Referências'' serão tratados neste trabalho. Estes submodelos têm a função de identificação a si mesmo e criação de \textit{links} com referências para os demais submodelos restritos no AAS e estão localizados no cabeçalho do AAS (\textit{header}).
+	É apresentado também nesta seção o mapeamento dos componentes desta arquitetura dentro do eixo camadas do RAMI4.0.
 	
-	Os submodelos restritos, por sua vez, contêm informações sensíveis sobre o ativo, que podem ser acessadas mediante autenticação, estes submodelos representam a carga útil do AAS, pois é a porção de informação que é de fato relevante para o cliente que consumirá as informações do AAS. Os submodelos restritos serão mencionados nesse trabalho simplesmente como ``Submodelos''.
+\section{ Componentes e operações do WS }
 	
-	A estrutura proposta de um AAS é apresentada na \autoref{fig:submodelos-publicos-e-restritos}.
+	Os componentes e operações propostos para a comunicação entre ativos ao longo da \textit{Cadeia de Suprimentos} é baseada na estrutura de um WS (vide \autoref{fig:componentes-webservice}). Esta arquitetura envolve três componentes (atores) básicos: o cliente, o servidor e o repositório; e três operações: publicação, busca e interação.
+	
+	A interrelação entre os componentes e suas operações são mostradas na \autoref{fig:aas-wb}.
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Submodelos públicos e restritos de um AAS.}
-		\label{fig:submodelos-publicos-e-restritos}
-		\includegraphics[width=0.7\textwidth]{submodelos-publicos-e-restritos.png}
+		\caption{Componentes e operações do WS.}
+		\label{fig:aas-wb}
+		\includegraphics[width=0.7\textwidth]{aas-wb}
+		\fonte{O autor.}
+	\end{figure}
+	
+	A descrição dos serviços disponíveis nos submodelos de cada AAS devem ser publicados em um repositório comum, onde todos os AASs disponíveis no mundo conectado poderiam se tornar visíveis. A função do repositório é armazenar uma descrição dos serviços disponíveis e não o serviço em si, o serviço é fornecido pelo próprio AAS que o disponibilizou, servindo o repositório apenas como uma plataforma de descobertas de serviços.
+
+	No modelo, cada AAS pode atuar tanto como um fornecedor de serviços, quanto um solicitante de serviços, sempre por intermédio do repositório.
+	
+	Quando o AAS atua como Servidor, este AAS publica a descrição de seus serviços no repositório. Quando como Cliente, o AAS busca no repositório um serviço desejado e recebe uma lista de opções de serviços com suas respectivas descrições para que possa se escolhido o mais adequado.
+	
+	Uma vez definido o serviço a ser consumido, o AAS Cliente e AAS Servidor estabelecem uma conexão direta, onde o cliente inicia uma interação com o servidor, utilizando os detalhes contidos na descrição do serviço para localizar, contactar e invocar o serviço.
+	
+	A \autoref{fig:pfs-ws} mostra o diagrama de fluxo do tipo PFS (\textit{Production Flow Schema}) inicial, envolvendo as operações de publicação, busca e interação entre os componentes.
+	
+	\begin{figure}[htb]
+		\centering
+		\caption{Diagrama PFS das operações do WS.}
+		\label{fig:pfs-ws}
+		\includegraphics[width=1\textwidth]{pfs-ws}
 		\fonte{O autor.}
 	\end{figure}
 
-	As informações geradas pelos submodelos são armazenadas na MDP por meio de uma API REST. O acesso à MDP referente a cada submodelo restrito é feito mediante autenticação.
+	Os serviços fornecidos por um AAS são diversos, entretanto, neste trabalhos serão tratados com ênfase aqueles serviços que têm a função de compartilhar informações sobre o ativo que podem agregar valor ao produto ao longo de sua cadeia de valor. Ou seja, os serviços que extraem informações da MDP da AAS e as fornecem, mediante autenticação, aos partes solicitantes ao longo da cadeia de suprimentos.
+
+\section{Estrutura do AAS e seus submodelos}
+
+	Nesta proposta de arquitetura de WS, o conceito de Memória Digital do Produto (MDP) é inserido dentro da Indústria 4.0 com o objetivo de se agregar valor por meio da possibilidade de acesso a informações sobre o ativo entre parceiros ao longo da cadeia de valor.
 	
-	Os \textbf{submodelos públicos} têm a função identificação do ativo na rede. Contém informações que podem ser acessadas sem a necessidade de autenticação, como, por exemplo, seu identificador único universal (UUID - Universal Unique IDentifier), o modelo e fabricante do ativo. O submodelo não tem a função de fornecer uma ficha técnica detalhada, mas apenas uma caracterização abstrata do ativo. Dependendo da confidencialidade do ativo, o submodelo de identificação pode apenas apresentar o UUID como informação pública. Sem o UUID, o AAS se torna inacessível para qualquer uma das partes da cadeia de suprimentos.
-		
-	Os \textbf{submodelos restritos} representam a carga útil do AAS (\textit{payload}). Os submodelos restritos contêm as propriedades, funcões e demais regras de negócio do ativo. Os dados dos submodelos são armazenadas na MDP, que podem ser acessada mediante autenticação. Os dados contidos na MDP dos submodelos restritos quando processados fornecem informações sobre o ativo e agregam valor ao mesmo. Além disso, novos modelos de negócio surgem sob os dados gerados pelo ativo. Alguns exemplos de submodelos restritos incluem: a ficha técnica detalhada do ativo, submodelos de histórico de leitura de sensores, histórico de geolocalização do ativo, histórico de padrão de uso, etc.
+	A MDP precisa ser integrada ao AAS para que possa ter a estrutura necessária para que seus dados sejam disponibilizados no mundo conectado da I4.0.
+	
+	A MDP em um AAS corresponde aos dados, ao gerenciamento desses dados e às funções básicas aplicadas em cima desses dados. A MDP contém informações referentes a cada um dos submodelos em um AAS. Cada submodelo agrega informações semelhantes relativas ao ativo.
+	
+	O AAS é composto pelo cabeçalho (\textit{header}) e o corpo (\textit{body}).
+	
+	O cabeçalho têm a função de providenciar informações públicas sobre o ativo que o identifiquem minimamente e que forneçam uma descrição sobre seus serviços oferecidos. Contém informações que podem ser acessadas sem a necessidade de autenticação, como, por exemplo, seu identificador único universal (UUID - \textit{Universal Unique IDentifier}), o modelo e fabricante do ativo. O cabeçalho contém também a descrição dos serviços fornecidos por seus submodelos. A descrição dos serviços é enviada ao repositório ou pode ser também consultada diretamente pelo AAS solicitante.
+	
+	A descrição de cada serviço em um cabeçalho de AAS deve necessariamente conter também referências ao AAS fornecedor, ou seja, \textit{links} e identificações que permitam o cliente localizar, contactar e invocar o serviço ofertado.
+	
+	O cabeçalho não tem a função de fornecer uma ficha técnica detalhada, mas apenas uma caracterização abstrata do ativo. Dependendo da confidencialidade do ativo, o submodelo de identificação pode apenas apresentar o UUID como informação pública. Sem o UUID, o AAS se torna inacessível para qualquer uma das partes da cadeia de suprimentos.
+	
+	O corpo (\textit{body}) de um AAS fornece as informações e funcionalidades sensíveis sobre o ativo, que podem ser acessadas mediante autenticação. As funcionalidades dos ativos são agrupadas em forma de submodelos, que são unidades de agrupamento de funcionalidades semelhantes, como propriedades, serviços e demais regras de negócio do ativo. Já os dados relativos aos submodelos são armazenadas e gerenciadas pela MDP, que também está localizada no corpo do AAS.
+	
+	O corpo do AAS representam a carga útil (\textit{payload}) do AAS, pois é a porção de informação que é de fato relevante para o cliente que consumirá os serviços ofertados.
+	
+	A estrutura proposta de um AAS compatível com WSs é apresentada na \autoref{fig:estrutura-aas}.
+	
+	\begin{figure}[htb]
+		\centering
+		\caption{Estrutura do AAS com seus submodelos e a MDP.}
+		\label{fig:estrutura-aas}
+		\includegraphics[width=0.7\textwidth]{estrutura-aas}
+		\fonte{O autor.}
+	\end{figure}
+
+	Os dados contidos na MDP sobre submodelos, quando processados, fornecem informações sobre o ativo e agregam valor ao mesmo. Além disso, novos modelos de negócio surgem sob os dados gerados pelo ativo.
+	
+	Neste trabalho, é dado enfoque aos submodelos que oferecem serviços de consulta de dados a qualquer uma das partes ao longo da cadeia de suprimentos. Alguns exemplos desse tipo de submodelo podem incluir: a ficha técnica detalhada do ativo, submodelos de histórico de leitura de sensores, histórico de geolocalização do ativo, histórico de padrão de uso, etc.		
+
 	
 \section{O repositório e a descoberta de AAS's}
 	
@@ -36,12 +82,12 @@
 	Para que um AAS seja acessível pelas demais partes da cadeia de suprimentos, os submodelos Identificação e Referências devem estar disponíveis em uma lista pública que contém o submodelo de identificação de todos os AAS disponíveis, esta lista pública é definida como Repositório.
 	
 	O repositório, além de uma cópia do submodelo de identificação de cada AAS, possui também uma cópia das referências para os demais submodelos de cada AAS, conforme ilustrado na \autoref{fig:repositorio}.
-	
+
 	\begin{figure}[htb]
 		\centering
 		\caption{Repositório com referências aos AAS's.}
 		\label{fig:repositorio}
-		\includegraphics[width=1\textwidth]{repositorio.png}
+		\includegraphics[width=1\textwidth]{repositorio}
 		\fonte{O autor.}
 	\end{figure}
 	
@@ -59,7 +105,7 @@
 		\centering
 		\caption{Repositório com referências aos AASs.}
 		\label{fig:4-elos}
-		\includegraphics[width=0.8\textwidth]{4-elos.png}
+		\includegraphics[width=0.8\textwidth]{4-elos}
 		\fonte{O autor.}
 	\end{figure}
 	
@@ -112,7 +158,7 @@
 		\centering
 		\caption{Formato de intercâmbio de informações da MDP em JSON.}
 		\label{fig:json}
-		\includegraphics[width=0.8\textwidth]{json.png}
+		\includegraphics[width=0.8\textwidth]{json}
 		\fonte{O autor.}
   \end{figure}
   
@@ -142,7 +188,7 @@
 		\centering
 		\caption{Comunicação AAS-MDP.}
 		\label{fig:aas-mdp}
-		\includegraphics[width=0.8\textwidth]{aas-mdp.png}
+		\includegraphics[width=0.8\textwidth]{aas-mdp}
 		\fonte{O autor.}
 	\end{figure}
 
@@ -164,7 +210,7 @@
 		\centering
 		\caption{Comunicação Cliente-MDP.}
 		\label{fig:cliente-mdp}
-		\includegraphics[width=0.8\textwidth]{cliente-mdp.png}
+		\includegraphics[width=0.8\textwidth]{cliente-mdp}
 		\fonte{O autor.}
 	\end{figure}
 	
@@ -181,7 +227,7 @@
 		\centering
 		\caption{Comunicação Cliente-MDP.}
 		\label{fig:aas-mdp-cliente}
-		\includegraphics[width=1\textwidth]{aas-mdp-cliente.png}
+		\includegraphics[width=1\textwidth]{aas-mdp-cliente}
 		\fonte{O autor.}
 	\end{figure}
 
