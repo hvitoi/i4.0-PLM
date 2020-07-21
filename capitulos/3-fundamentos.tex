@@ -8,6 +8,7 @@
 	A inter-relação entre esses conceitos é a base para o entendimento e criação da arquitetura para o compartilhamento de informações sobre o ativo ao longo da cadeia de suprimentos e para a elaboração de considerações sobre implicações do massivo compartilhamento de informações no ciclo de vida do produto no contexto da Indústria 4.0.
 
 \section{Indústria 4.0}
+\label{sec:industria4}
 
 	Indústria 4.0 (I4.0) é o nome dado às recentes modificações em relação às tecnologias utilizadas em processos industriais e à forma de organização dos sistemas industriais. Tais tecnologias são inseridas com o propósito de se oferecer um alto nível de automação e intercâmbio de informações entre equipamentos e produtos \cite{lasi2014industryfour}.
 
@@ -94,6 +95,7 @@
 	Em revoluções industriais passadas, os países pioneiros a se adaptarem às drásticas mudanças de produção foram os que mais se beneficiaram e se consolidaram como potências econômicas. Na quarta revolução industrial não será diferente. Embora a mudança completa para a I4.0 possa levar 20 anos para ser concretizada \cite{russmann2015industryfour}, nos próximos anos serão estabelecidos avanços importantes que definirão os pioneiros e detentores de tecnologias dessa nova revolução. Portanto, é de interesse de cada país liderar a concorrência global a fim de se consolidar como mercado líder e fornecedor de soluções para a Indústria 4.0.
 
 	\subsection{Modelo de Arquitetura de Referência para a Indústria 4.0}
+	\label{sub:rami4}
 	
 	O Modelo de Arquitetura de Referência para a Indústria 4.0, abreviado RAMI4.0, consiste em um sistema de coordenadas tridimensional que descreve todos os aspectos cruciais da Indústria 4.0. Dessa maneira, inter-relações complexas podem ser divididas em grupos menores e mais simples.
 	
@@ -139,7 +141,7 @@
 	São 6 as camadas do RAMI4.0. O propósito de cada camada, começando da mais inferior (Ativo) para a mais elevada (Regra de Negócio), é descrito a seguir \cite{bitkom2016implementation}:
 	
 	\begin{enumerate}
-		\item \textbf{Ativo}: Representa um elemento da realidade não necessariamente físico, como, por exemplo, uma máquina, um \textit{software}, uma documentação, uma ideia, etc. O trabalhador e seu conhecimento sendo aplicado representa também um ativo. Os ativos são integrados ao meio digital através da camada de Integração.
+		\item \textbf{Ativo}: Representa um elemento da realidade não necessariamente físico, como, por exemplo, uma máquina, um \textit{software}, uma documentação, uma ideia, etc. O trabalhador e seu conhecimento sendo aplicado representa também um ativo. Nesta camada física estão os fornecedores de dados, ou seja, os elementos que servirão como fonte de dados. Normalmente estes dados gerados pelo ativo são extraído e monitorados para fins de controle da planta de produção. Os ativos são integrados ao meio digital através da camada de Integração. 
 		
 		\item \textbf{Integração}: Camada responsável pela extração e fornecimento de informações sobre os ativos para as camadas superiores. Representa a digitalização dos ativos. Cada evento no mundo real é refletido também em um evento no mundo virtual. Se a realidade mudar, esse evento então é relatado à camada de integração e os dados são atualizados no mundo virtual.
 		
@@ -356,6 +358,7 @@
 	Implementações de uma memória com informações sobre produto ao longo de sua cadeia de suprimentos é importante, pois torna possível acessar e utilizar informações do mundo real providenciada por diferentes fontes para o potencial benefício das partes interessadas naquele produto \cite{brandherm2011productmemory}, como, por exemplo, fabricantes, transportadores, varejistas e consumidores. E também no pós-venda, onde a MDP continua a ser disponibilizada e ativa, dando a possibilidade ao consumidor de ainda manter contato com cada elo da cadeia de suprimentos e se beneficiar de serviços individuais que se acumulam na memória \cite{brandherm2011productmemory}.
 	
 \section{Arquitetura orientada a serviços}
+\label{sec:webservices}
 	
 	Arquitetura Orientada a Serviços (SOA) é um estilo de projeto de \textit{software} em que serviços são disponibilizados a outros sistemas por meio de um protocolo de comunicação comum em uma rede \cite{bell2008soa}. Um serviço é uma unidade de funcionalidade que pode ser fornecida/acessada remotamente. A SOA se destina a ser independente de fornecedores, produtos e tecnologias.
 	
@@ -379,8 +382,8 @@
 	
 	Para se disponibilizar um serviço por meio de uma API, o conceito de \textit{Web Services} (WS) é vastamente utilizado \cite{souit2013soa}. Os WSs podem ser vistos como um conceito padrão para facilitar a interoperabilidade, integração e reuso dos componentes de aplicações.
 	
-	\subsection{Web Services}
-	
+\subsection{Web Services}
+
 	Um \textit{Web Service} (WS) é uma interface que descreve uma série de operações acessíveis por meio de uma linguagem de descrição de serviços padronizada \cite{gottschalk2002webservices}. Um WS executa uma tarefa específica ou um conjunto de tarefas e retorna ao usuário o resultado da operação. Cada aplicação pode ter a sua própria linguagem, que é traduzida para uma linguagem comum, como um XML, JSON, CSV, etc.
 	
 	Por meio de WSs, as aplicações podem ser descritas, publicadas, localizadas e invocadas em uma rede de comunicação tipo WWW (\textit{World Wide Web}) \cite{souit2013soa}.
