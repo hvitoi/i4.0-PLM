@@ -376,7 +376,7 @@
 		\item A lista de descrição de serviços é armazenada em sua MDP local e enviada à camada superior para ser transferida ao repositório.
 		\item É feita a definição das especificações da comunicação, onde se estabelece o protocolo de comunicação a ser adotado na API (e.g., HTTP, MQTT), assim como o tipo de arquitetura (e.g., REST, SOAP) e o formato de intercâmbio (e.g., json, xml, yaml).
 		\item A descrição dos serviços é enviada ao Repositório via API, definida pelas especificações da comunicação.
-		\item A descrição dos serviços é recebida pelo Repositório em um formato de intercâmbio definido. A descrição dos serviços nesta fase já contém todas as informações para a identificação do serviço e seu AAS correspondente.
+		\item A descrição dos serviços é recebida pelo Repositório em um formato de intercâmbio definido. A descrição dos serviços nesta fase já contém todas as informações para a identificação do serviço e de seu AAS correspondente.
 		\item A lista de serviços é armazenada junto aos demais serviços na MDP do Repositório.
 	\end{enumerate}
 
@@ -392,18 +392,18 @@
 		\fonte{O autor.}
 	\end{figure}
 
-	Começando pela primeira atividade no Componente I4.0 do Cliente, que é a definição dos parâmetros de consulta, a operação de requisição para a busca de um serviço segue um fluxo estabelecido até chegar receber a resposta do Repositório, os passos são detalhados a seguir:
+	Começando pela primeira atividade no Componente I4.0 do Cliente, que é a definição dos parâmetros de consulta, a operação de requisição para a busca de um serviço segue um fluxo estabelecido até chegar no Repositório, esses passos são detalhados a seguir:
 	
 	\begin{enumerate}
 		\item O processo de requisição começa com a definição dos parâmetros de consulta, que representa o conjunto de restrições que estabelecem qual é exatamente o tipo de serviço que o Cliente deseja consumir. Para os serviços que visam a extração de informações do ativo, os parâmetros representam, por exemplo, o ID do AAS a ser consultado, o horário e data de um determinado evento, uma filtragem por modelos específicos de um produto, etc. Os parâmetros de consulta são estabelecidos pela regra de negócio, isto significa que a regra de negócio diz o que o Componente I4.0 pode ou não consumir, a regra de negócio cria a necessidade de se consumir um serviço sempre que o consumo desse serviço resulte em agregação de valor ao produto/negócio, respeitando-se sempre as demais condições legais e regulatórias.
 		\item É feita a definição das especificações de comunicação, onde se estabelece o protocolo de comunicação a ser adotado na API (e.g., HTTP, MQTT), assim como o tipo de arquitetura (e.g., REST, SOAP) e o formato de intercâmbio (e.g., json, xml, yaml).
 		\item A requisição é enviada via API, definida pelas especificações da comunicação.
 		\item O repositório recebe a requisição do cliente.
-		\item A requisição é processada pelo repositório. Identifica-se nesta fase se a requisição é válida e contém todos os parâmetros necessários para a consulta.
+		\item A requisição é processada pelo repositório. Identifica-se nesta fase se a requisição é válida e se ela contém todos os parâmetros necessários para a consulta.
 		\item Finalmente é feita a consulta à MDP do Repositório utilizando os parâmetros de consulta estabelecidos pelo cliente.
 	\end{enumerate}
 
-	Após a requisição, o repositório envia a resposta ao cliente. O fluxo de atividades da resposta é apresenta com diagramas PFS na \autoref{fig:rami-busca-resposta}.
+	Após a requisição, o repositório envia a resposta ao cliente. O fluxo de atividades da resposta é apresentada em diagramas PFS na \autoref{fig:rami-busca-resposta}.
 
 	\begin{figure}[htb]
 		\centering
@@ -416,17 +416,17 @@
 	Detalhadamente, a resposta do repositório segue o seguinte fluxo de atividades, começando pela consulta à MDP do repositório à direita:
 	
 	\begin{enumerate}
-		\item A consulta à MDP é realizada e recebe os resultados. Os resultados podem ser uma lista de serviços válidos, assim como podem conter mensagens de erro devido a solicitações inválidas ou buscas retornando zero correspondências.
+		\item A consulta à MDP é realizada e recebe-se os resultados. Os resultados podem ser uma lista de serviços válidos, assim como podem conter mensagens de erro devido a solicitações inválidas ou buscas retornando zero correspondências.
 		\item A lista de serviços é disponibilizada para acesso por parte da camada superior.
 		\item É feita a definição das especificações de comunicação, onde se estabelece o protocolo de comunicação a ser adotado na API (e.g., HTTP, MQTT), assim como o tipo de arquitetura (e.g., REST, SOAP) e o formato de intercâmbio (e.g., json, xml, yaml).
-		\item O envio da resposta é feito via API, definida com as especificações da comunicação.
+		\item O envio da resposta é feito via API, definida nas especificações da comunicação.
 		\item O Cliente recebe a resposta em um formato de intercâmbio definido.
-		\item O Cliente, após a recepção da lista de serviços disponíveis, faz o processamento para a definição do serviço mais adequado. Em consultas a serviços de compartilhamento de dados esta fase é simplificada, uma vez que os próprios parâmetros de consulta na requisição já definem o serviço ideal que o cliente busca. A seleção do serviço mais adequado é baseada na regra de negócios estabelecida na operação de requisição, que estabelece os requisitos do serviço.
+		\item O Cliente, após a recepção da lista de serviços disponíveis, faz o processamento para a definição do serviço mais adequado. Em consultas a serviços de compartilhamento de informações esta fase é simplificada, uma vez que os próprios parâmetros de consulta na requisição já definem o serviço ideal que o cliente busca. A seleção do serviço mais adequado é baseada na regra de negócios definida na operação de requisição, que estabelece os requisitos do serviço.
 	\end{enumerate}
 
 \subsection{Operação de Interação}
 
-	A operação de interação é a fase final para o consumo de um serviço disponibilizado no mundo conectado na I4.0. A \autoref{fig:rami-interacao} apresenta diagramas PFS do fluxo de atividades para a operação de interação entre um AAS Servidor e um AAS Cliente.
+	A operação de interação é a fase final para o consumo de um serviço disponibilizado no mundo conectado da I4.0. A \autoref{fig:rami-interacao} apresenta diagramas PFS do fluxo de atividades para a operação de interação entre um AAS Servidor e um AAS Cliente.
 	
 	\begin{figure}[htb]
 		\centering
@@ -439,16 +439,16 @@
 	Esta operação começa com um evento físico no ativo, esta informação deve percorrer um fluxo padrão para que seja disponibilizada ao cliente por meio de um serviço. Este fluxo de atividades detalhado é apresentado a seguir:
 	
 	\begin{enumerate}
-		\item Um evento físico acontece no mundo real acontece com o ativo.
-		\item O evento é transformado em sinais físicos que são processados digitalmente.
-		\item Já na camada de Integração, é definido o meio de transporte um procolo de transferência para o transporte dos sinais físicos como, por exemplo, o Wi-Fi, Ethernet, 5G, etc.
+		\item Um evento físico no mundo real acontece com o ativo.
+		\item O evento é transformado em sinais físicos, que são processados digitalmente.
+		\item Já na camada de Integração, é definido o meio de transporte e um procolo de transferência para o transporte dos sinais físicos como, por exemplo, o Wi-Fi, Ethernet, 5G, etc.
 		\item Os dados são devidamente transportados pelo meio e protocolo definidos na atividade anterior até uma central de processamento.
 		\item Os dados são processados e virtualizados. Nesta fase é criado um correspondente virtual para o evento do ativo físico, ou seja, os dados são digitalizados e enviados ao AAS.
-		\item Os dados chegam à camada de Comunicação por meio de uma consulta aos dados de sinais já digitalizados.
-		\item Os dados são então pré-processados, parte na qual é executada a limpeza dos dados, remoção de redundâncias e melhor os dados são reestruturados para serem armazenados na MDP.
-		\item É definido o protocolo de comunicação padrão da Indústria 4.0: O OPC UA.
+		\item Os dados chegam à camada de Comunicação por meio de uma consulta aos sinais já digitalizados.
+		\item Os dados são então pré-processados, parte na qual é executada a limpeza dos dados, remoção de redundâncias e reestruturação para serem armazenados na MDP.
+		\item É definido o protocolo de comunicação padrão da Indústria 4.0: o OPC UA.
 		\item Os dados são então enviados à camada de Informação, onde são salvos na MDP.
-		\item Os dados são disponibilizados para consulta (após autenticação).
+		\item Os dados são disponibilizados para consulta (mediante autenticação).
 		\item É feita a autenticação para a determinação sobre quais dados o serviço solicitante pode ter acesso.
 		\item O serviço, já autenticado, recebe os dados na camada funcional. A concessão de dados a um determinado serviço é feita segundo as políticas de privacidade contidas nas regras de negócio.
 		\item Já de posse dos dados, o serviço é executado e a resposta para tal serviço é gerada. Todo o fluxo de informações desde o ativo até a camada funcional é mapeado para um serviço que tem como objetivo o compartilhamento de informações do ativo ao longo da cadeia de suprimentos, porém se aplica a qualquer outro serviço que necessite de informações em tempo real do ativo. Os serviços são orquestrados por um orquestrador de serviços e regido pelas condições regulatórias pertencentes à camada de regra de negócio.
