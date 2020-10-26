@@ -262,7 +262,7 @@
 	
 	A cadeia de suprimentos (CS), por outro lado, é um conceito mais amplo. A CS é onde a logística é exercida. São as partes necessárias para dar suporte ao pedido de um cliente, desde o produtor até o consumidor final. A gestão da cadeia de suprimentos tem como alvo a orquestração de todas as partes envolvidas por meio de uma logística integrada de forma a otimizar ao máximo o processo de fornecimento de um produto, serviço ou informação.
 	
-	A ideia de uma CS simples envolve fornecedor, produtor e cliente \cite{hugos2018supplychain}, porém conceitos modernos estendem a noção de uma CS, passando a incluir diversos outros fornecedores de serviços em áreas como logística, finanças, \textit{marketing} e desenvolvimento; que, mediante coordenação e colaboração, criam oportunidades para melhoria dos custos ou serviços ao consumidor. A \autoref{fig:cadeia-de-suprimentos} exemplifica a inter-relação das partes em uma cadeia de suprimentos estendida.
+	A ideia de uma CS simples envolve fornecedor, produtor e cliente \cite{hugos2018supplychain}, porém conceitos modernos estendem a noção de uma CS, passando a incluir diversos outros fornecedores de serviços em áreas como logística, finanças, \textit{marketing} e desenvolvimento, que, mediante coordenação e colaboração, criam oportunidades para melhoria dos custos ou serviços ao consumidor. A \autoref{fig:cadeia-de-suprimentos} exemplifica a inter-relação das partes em uma cadeia de suprimentos estendida.
 	
 	\begin{figure}[htb]
 		\centering
@@ -372,7 +372,7 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Interconexão entre os elementos do sistema (a) com um \textit{middleware} e (b) sem um \textit{middleware}.}
+		\caption{Interconexão entre os elementos do sistema (a) sem um \textit{middleware} e (b) com um \textit{middleware}.}
 		\label{fig:middleware}
 		\includegraphics[width=0.9\textwidth]{middleware.png}
 		\fonte{\citeonline{gosewehr2017middleware} (adaptado).}
@@ -487,24 +487,21 @@
 \section{Modelagem de sistemas}
 \label{sec:modelagem}
 
-	Sistemas são um conjunto de elementos interdependentes de modo a formar um todo organizado. Também pode ser entendido como um conjunto de órgãos funcionais, componentes, entidades, partes ou elementos e as relações entre eles, com um objetivo geral a ser atingido \cite{mulbert2005sistemas}.
+	Sistema é um conjunto de elementos interdependentes de modo a formar um todo organizado. Também pode ser entendido como um conjunto de órgãos funcionais, componentes, entidades, partes ou elementos e as relações entre eles, com um objetivo geral a ser atingido \cite{mulbert2005sistemas}.
 	
 	No contexto da Logística 4.0, um sistema pode ser definido como o conjunto de diferentes cadeias de suprimentos ligadas por meio de relacionamentos interorganizacionais, que fazem acontecer os fluxos envolvidos (de dinheiro, materiais, bens e informações) \cite{oliveira2016supplychain}.
 	
-	A modelagem e análise dos sistemas na cadeia de suprimentos é uma ferramenta para melhorar a eficiência da cadeia como um todo. As vantagens de sua utilização podem possibilitar a capacidade de capturar e entender o comportamento da rede, a reprodução e análise de diferentes cenários e soluções, previsibilidade de possíveis perturbações de mercado e melhoria nos processos de distribuição.
+	As técnicas de modelagem e análise dos sistemas na cadeia de suprimentos são meios para melhorar a eficiência da cadeia como um todo. A utilização destas técnica auxiliam no entendimento sobre o comportamento do sistema e dos relacionamentos entre seus componentes Auxiliam também na reprodução e análise de diferentes cenários e soluções, na previsibilidade de possíveis perturbações de mercado e na melhoria nos processos de distribuição.
 	
-	Com a intensificação da globalização, é cada vez mais comum a criação de cadeias de suprimentos complexas, envolvendo várias organizações dispersas geograficamente. Por isso, as ferramentas de suporte à tomada de decisões podem auxiliar no sentido de fornecer uma solução mais adequada à dinâmica de diversas redes.
-	A modelagem é uma das formas de auxílio à tomada de decisões e pode ser uma ferramenta útil para se entender as interações e melhorar a performance da CS \cite{oliveira2016supplychain}. 
+	Com a intensificação da globalização é cada vez mais comum a criação de cadeias de suprimentos complexas, envolvendo várias organizações dispersas geograficamente. Por isso, as ferramentas de suporte à tomada de decisões podem auxiliar no sentido de fornecer soluções mais adequada à dinâmica de diversas CSs. A modelagem é uma das formas de auxílio à tomada de decisões e pode ser uma ferramenta útil para se entender as interações e melhorar o desempenho da CS \cite{oliveira2016supplychain}.
 	
-	Um desafio para desenvolvimento de bons modelos nessa área é a adoção de metodologias claras que possam facilitar e agilizar o processo de se realizar a modelagem e a análise de aspectos da cadeia de suprimentos. Uma metodologia apresenta apenas um direcionamento sobre os procedimentos a serem tomados a fim de se atingir um objetivo, porém cada problema a ser analisado requer especificações diferentes, o que demanda adaptações dos procedimentos originais.
+	Um desafio para o desenvolvimento de bons modelos nessa área é a adoção de metodologias claras que possam facilitar e agilizar o processo de se realizar a modelagem e a análise de aspectos da cadeia de suprimentos. Uma metodologia apresenta apenas um direcionamento sobre os procedimentos a serem tomados a fim de se atingir um objetivo, porém cada problema a ser analisado requer especificações diferentes, o que demanda adaptações dos procedimentos originais.
 	
-	\citeonline{miyagi1996controle} define os sistemas feitos pelo homem (\textit{man-made systems}) como sistemas de manufatura, transporte, comunicação, redes de computadores, etc. Estes sistemas seriam caracterizados por uma dinâmica decorrente da ocorrência de eventos e, portanto, são classificados como Sistemas a Eventos Discretos (SED).
-	
-	Um SED é uma classificação do sistemas de acordo com seu comportamento determinado pela ocorrência de eventos que alteram de forma discreta instantânea o estado do sistema \cite{miyagi1996controle}.
+	\citeonline{miyagi1996controle} define os sistemas feitos pelo homem (\textit{man-made systems}) como sistemas de manufatura, transporte, comunicação, redes de computadores, etc. Estes sistemas seriam caracterizados por uma dinâmica decorrente da ocorrência de eventos e, portanto, são classificados como Sistemas a Eventos Discretos (SED). Um SED é, portanto, uma classificação de sistemas de acordo com seu comportamento, determinado pela ocorrência de eventos que alteram de forma discreta e instantânea o estado do sistema \cite{miyagi1996controle}.
 	
 	Para a modelagem de SEDs, a aplicação de ferramentas como a Rede de Petri e suas variações como \textit{Production Flow Schema} (PFS) e \textit{Mark Flow Graph} (MFG) são formas de auxílio no desenvolvimento de sistemas de controle e automação.
 	
-	A utilização da técnica de PFS no contexto da I4.0 pode auxiliar no mapeamento das operações e interações entre os elementos do sistema, uma vez que a dinâmica de interação pode ser classificada com um SED. Neste trabalho o PFS é utilizado a fim de se indicar as operações e suas relações ao longo das camadas do RAMI4.0.
+	A utilização da técnica de PFS no contexto da I4.0 pode auxiliar no mapeamento das operações e interações entre os elementos do sistema, uma vez que a dinâmica de interação pode ser classificada com um SED. Neste trabalho o PFS é utilizado a fim de se indicar as atividades relativas à cadeia de valor de um produto e mapeá-las para dentro das camadas do RAMI4.0.
 	
 	\subsection{Production Flow Schema}
 	
@@ -512,14 +509,14 @@
 	
 	No PFS, os eventos são indicações de determinadas atividades, que por sua vez podem incluir vários outros eventos e estados organizados hierarquicamente.
 	
-	Por meio de modelos em PFS, é especificada a estrutura da arquitetura apresentada, indicando assim as interações de seus componentes. Além disso, com o PFS, os fluxos das operações podem ser descritos se forma desacoplada de qualquer tecnologia necessária para a implementação do sistema \cite{pisching2018equipmentrami}.
+	Por meio de modelos em PFS, é possível especificar uma estrutura de arquitetura, indicando assim as interações entre os componentes de um sistema. Além disso, com o PFS, os fluxos das operações podem ser descritos de forma desacoplada de qualquer tecnologia necessária para a implementação do sistema \cite{pisching2018equipmentrami}.
 	
-	Em um PFS deve haver a representação dos eventos discretos, portanto, qualquer processo produtivo representado em PFS apresentará os seguintes elementos estruturais:
+	Em um PFS deve haver a representação dos eventos discretos. Portanto, qualquer processo produtivo representado em PFS apresentará os seguintes elementos estruturais:
 	
 	\begin{itemize}
-		\item Atividades: Representação dos componentes ativos;
-		\item Distribuidores: Representação dos componentes passivos;
-		\item Arcos orientados: Representação das relações entre os componentes ativos  e passivos.
+		\item Atividades: representação dos componentes ativos;
+		\item Distribuidores: representação dos componentes passivos;
+		\item Arcos orientados: representação das relações entre os componentes ativos  e passivos.
 	\end{itemize}
 
 	A \autoref{fig:pfs-elementos} descreve os elementos do PFS e sua representação gráfica.
@@ -532,9 +529,9 @@
 		\fonte{\citeonline{pisching2018pfs} (adaptado).}
 	\end{figure}
 
-	A atividade corresponde à realização de certas unidades ou conjuntos de operações, como um processamento, uma montagem, desmontagem, etc. Os distribuidores correspondem ao lugar de entrada e saída de itens ou a transição entre as diferentes atividades. Já os arcos orientados indicam a direção dos fluxos e a relação entre os eventos.
+	A atividade corresponde à realização de certas unidades ou conjuntos de operações, como um processamento, uma montagem, desmontagem, etc. Os distribuidores correspondem aos lugares de entrada e saída de itens. Já os arcos orientados indicam a direção dos fluxos e a relação entre os elementos do sistema.
 	
-	Os arcos conectando a parte externa das atividades (horizontalmente) indicam um fluxo principal (primário), já os arcos conectando a parte interna da atividade (verticalmente) indicam um fluxo secundário \cite{miyagi1996controle}. 
+	Os arcos conectando a parte externa das atividades (horizontalmente) indicam um fluxo principal (primário); já os arcos conectando a parte interna da atividade (verticalmente) indicam um fluxo secundário \cite{miyagi1996controle}. 
 	
 	Um terceiro tipo de fluxo é usado para representar a integração entre interfaces das atividades e é indicado por meio de um arco conectando diretamente duas atividades. O arco indicador de interação de fluxo é usado para modelar interações entre diferentes níveis, como operações de solicitação e resposta \cite{pisching2018pfs}.
 	
@@ -548,11 +545,6 @@
 		\fonte{\citeonline{pisching2018pfs} (adaptado).}
 	\end{figure}
 	
-	Os fluxos de processo do sistema em PFS são modelados por meio de uma abordagem \textit{top-down}, assim os resultados podem ser refinados sucessivamente detalhando-se a cada iteração a atividade representada. A modelagem do sistema em PFS, portanto, parte de um alto nível de abstração, seguido de sucessivos refinamentos detalhando o modelo a cada nível.
+	Os fluxos de processo do sistema em PFS são modelados por meio de uma abordagem \textit{top-down}, assim os resultados podem ser refinados sucessivamente detalhando-se a cada iteração a atividade representada. A modelagem do sistema em PFS, portanto, parte de um alto nível de abstração, seguido de sucessivos refinamentos, detalhando o modelo a cada nível.
 	
-	Desta forma, o PFS representa uma linguagem de alto nível independente de tecnologias e fabricantes para modelar os processos do sistema. A relevância de se adotar uma linguagem natural para a representação do sistema como o PFS está na padronização da comunicação com especialistas de diferentes áreas, como arquitetos, engenheiros e \textit{designers}. Assim, há uma efetiva comunicação sobre a interação entre as partes de um sistema e sobre os fluxo de elementos e operações em diferentes níveis do sistema em análise, como, por exemplo, produtos, ordens de serviço, máquinas, informações de sensores, etc.
-
-	
-	
-	
-	
+	Desta forma, o PFS representa uma linguagem de alto nível independente de tecnologias e fabricantes para modelar os processos do sistema. A relevância de se adotar uma linguagem natural, como o PFS, para a representação de sistemas está na padronização da comunicação com especialistas de diferentes áreas, como arquitetos, engenheiros e desenhistas. Assim, há uma efetiva comunicação sobre a interação entre as partes de um sistema e sobre os fluxo de elementos e operações em diferentes níveis do sistema em análise, como, por exemplo, produtos, ordens de serviço, máquinas, informações de sensores, etc.
