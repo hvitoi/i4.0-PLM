@@ -12,7 +12,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="aas-lifecycle.svg"
    inkscape:export-filename="/media/hvitoi/Moon/Nuvem/USP/Dissertação/LaTeX/images/svg/aas-lifecycle.png"
    inkscape:export-xdpi="96"
@@ -530,11 +530,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="458.77012"
-     inkscape:cy="637.05477"
+     inkscape:zoom="1.4"
+     inkscape:cx="248.67142"
+     inkscape:cy="469.49647"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g648-8"
      inkscape:document-rotation="0"
      showgrid="false"
      units="mm"
@@ -552,7 +552,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -758,19 +758,25 @@
         <text
            xml:space="preserve"
            style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-           x="289.4574"
-           y="84.188286"
+           x="294.60266"
+           y="88.84584"
            id="text636"><tspan
              sodipodi:role="line"
-             id="tspan634"
-             x="289.4574"
-             y="84.188286"
-             style="font-size:8.46667px;stroke-width:0.264583">Análise de dados e</tspan><tspan
-             sodipodi:role="line"
-             x="289.4574"
-             y="94.771622"
+             x="294.60266"
+             y="88.84584"
              style="font-size:8.46667px;stroke-width:0.264583"
-             id="tspan638">Inteligência Artificial</tspan></text>
+             id="tspan638">Análise dos dados</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:38.6293px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.965733"
+           x="432.82181"
+           y="75.118431"
+           id="text1189"><tspan
+             sodipodi:role="line"
+             id="tspan1187"
+             x="432.82181"
+             y="75.118431"
+             style="stroke-width:0.965733"></tspan></text>
       </g>
       <rect
          rx="0"
@@ -969,20 +975,26 @@
         </g>
         <text
            id="text636-3"
-           y="84.188286"
-           x="289.4574"
+           y="88.358124"
+           x="292.74072"
            style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
            xml:space="preserve"><tspan
-             style="font-size:8.46667px;stroke-width:0.264583"
-             y="84.188286"
-             x="289.4574"
-             id="tspan634-4"
-             sodipodi:role="line">Análise de dados e</tspan><tspan
              id="tspan638-0"
              style="font-size:8.46667px;stroke-width:0.264583"
-             y="94.771622"
-             x="289.4574"
-             sodipodi:role="line">Inteligência Artificial</tspan></text>
+             y="88.358124"
+             x="292.74072"
+             sodipodi:role="line">Análise dos dados</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:38.6293px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.965732"
+           x="460.2735"
+           y="63.637386"
+           id="text1195"><tspan
+             sodipodi:role="line"
+             id="tspan1193"
+             x="460.2735"
+             y="63.637386"
+             style="stroke-width:0.965732"></tspan></text>
       </g>
       <rect
          style="fill:none;stroke:#000000;stroke-width:0.79375;stroke-linecap:square;stroke-linejoin:bevel;stroke-dasharray:0.79375, 0.79375;paint-order:markers stroke fill"
