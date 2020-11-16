@@ -93,6 +93,11 @@
 \usepackage{textcomp}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{outlines}
+\usepackage{xcolor,pifont} % Checks
+\usepackage{colortbl}
+
+
 
 %\usepackage{enumitem}
 
@@ -137,9 +142,15 @@
 Escola Politécnica da Universidade de São Paulo \\
 Engenharia de Controle e Automação Mecânica
 
-%\medskip
+\medskip
+
 %\textit{hvitoi@usp.br} % Your email address
+
+\textit{Orientação}: Prof. Dr. Fabrício Junqueira
+
+\textit{Coorientação}: Prof. Dr. Paulo Eigi Miyagi
 }
+
 \date{\today} % Date, can be changed to a custom date
 
 \begin{document}
@@ -162,26 +173,12 @@ Engenharia de Controle e Automação Mecânica
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{Informações}
-	
-	\begin{itemize}
-		\item Autor: Henrique Abrantes Vitoi
-		\item Orientação: Prof. Dr. Fabrício Junqueira
-		\item Coorientação: Prof. Dr. Paulo Eigi Miyagi
-		\item Departamento de Engenharia Mecatrônica e de Sistemas Mecânicos
-		
-	\end{itemize}
-
-\end{frame}
-%---
-\begin{frame}
 	\frametitle{Contextualização}
 		
 	\begin{itemize}
-		\item Cenário intrinsecamente globalizado
-		\item Necessidade de eficiência em troca de informações, serviços e mercadoria
-		\item Eficiência logística
-		\item Logística da informação
+		\item Cenário intrinsecamente globalizado;
+		\item Necessidade de uma melhor eficiência na troca de informações entre os elos da CS;
+		\item Logística da informação.
 	\end{itemize}
 
 \end{frame}
@@ -189,20 +186,41 @@ Engenharia de Controle e Automação Mecânica
 \begin{frame}
 	\frametitle{Mudança de paradigma na Indústria}
 	
+	\begin{block}{Conceito de I4.0 - Plattform Industrie 4.0 }
+		Indústria 4.0 refere-se à rede inteligente de máquinas e processos para a indústria com a ajuda das Tecnologia da Informação e Comunicação (TIC).
+	\end{block}
+	\noindent
+	\begin{minipage}{.7\linewidth}
+		\centering
+		\begin{figure}[htb]
+			\centering
+			\caption{As revoluções industriais.}
+			\label{fig:i4}
+			\includegraphics[width=0.7\textwidth]{i4.png}
+		\end{figure}
+	\end{minipage}%
+	\begin{minipage}{.3\linewidth}
+		\centering
+		{\scriptsize Princípios da I4.0:
+		\begin{itemize}
+			\item Interoperabilidade
+			\item Transparência de informações
+			\item Descentralização de decisões
+			\item Assistência técnica
+		\end{itemize}}
+	\end{minipage}	
+	
+\end{frame}
+%---
+\begin{frame}
+	\frametitle{Indústria 4.0 - RAMI4.0}
+	
 	\begin{figure}[htb]
 		\centering
-		\caption{As revoluções industriais.}
-		\label{fig:i4}
-		\includegraphics[width=0.7\textwidth]{i4.png}
+		\caption{Representação do RAMI4.0.}
+		\label{fig:rami4}
+		\includegraphics[width=1\textwidth]{rami4.png}
 	\end{figure}
-
-	Princípios da I4.0:
-	\begin{itemize}
-		\item Interoperabilidade
-		\item Transparência de informações
-		\item Descentralização de decisões
-		\item Assistência técnica
-	\end{itemize}
 	
 \end{frame}
 %---
@@ -221,27 +239,19 @@ Engenharia de Controle e Automação Mecânica
 \begin{frame}
 	\frametitle{Objetivos do trabalho}
 	
-	\begin{itemize}
-		\item Elaboração de uma arquitetura orientada a serviços baseada no RAMI4.0
-		\item Arquitetura para o compartilhamento da MDP ao longo da cadeia de suprimentos
-		\item Integração do conceito de MDP ao RAMI4.0
-		\item Mapeamento das operações de um Web Service ao RAMI4.0
-		\item Proposta de estruturação dos dados da MDP
-		\item Considerações do compartilhamento de informações do produto sobre o ciclo de vida do produto
-	\end{itemize}
+	\begin{outline}[enumerate]
+		\1 Elaborar de um modelo do compartilhamento da MDP ao longo da cadeia de suprimentos orientado a serviços baseado no RAMI4.0
+			\2 Integração do conceito de MDP à I4.0;
+			\2 Estruturação da MDP dentro de um AAS;
+			\2 Geração de diagramas PFS sobre o fluxo de informações dentro das camadas do RAMI4.0.
+		\1 Apresentar considerações do amplo compartilhamento de informações por meio da MDP sobre o ciclo de vida do produto
+			\2 Considerações sobre o eixo ``Ciclo de vida e cadeia de valor'';
+			\2 Extensão do ciclo de vida do produto com a MDP;
+			\2 Possíveis informações a serem coletadas pela MDP e em que momento.
+	\end{outline}
 
 \end{frame}
-%---
-\begin{frame}
-	\frametitle{Contribuição do trabalho}
-	
-	\begin{itemize}
-		\item Refinamento do Modelo de Arquitetura de Referência para I4.0 (RAMI4.0)
-		\item Padronização do formato de compartilhamento de informações dos ativos entre empresas
-		\item Eficiência logística
-	\end{itemize}
-	
-\end{frame}
+
 %---
 \begin{frame}
 	\frametitle{Metodologia}
@@ -252,6 +262,20 @@ Engenharia de Controle e Automação Mecânica
 		\label{fig:metodologia-jensen-projeto}
 		\includegraphics[width=0.7\textwidth]{metodologia-jensen-projeto.png}
 	\end{figure}
+	
+\end{frame}
+%---
+\begin{frame}
+	\frametitle{Fundamentação teórica}
+	
+	\begin{itemize}
+		\item Indústria 4.0
+		\item Logística \& Cadeia de Suprimentos
+		\item Ciclo de vida do produto
+		\item Memória digital do produto (MDP)
+		\item Arquitetura orientada a serviços (SOA)
+		\item Modelagem de sistemas
+	\end{itemize}
 	
 \end{frame}
 
@@ -275,7 +299,7 @@ Engenharia de Controle e Automação Mecânica
 \end{frame}
 %---
 \begin{frame}
-	\frametitle{Indústria 4.0} - Conceitos
+	\frametitle{Indústria 4.0}
 	
 	\begin{block}{Conceito de I4.0 - Plattform Industrie 4.0 }
 		Indústria 4.0 refere-se à rede inteligente de máquinas e processos para a indústria com a ajuda das Tecnologia da Informação e Comunicação (TIC).
@@ -451,23 +475,23 @@ Engenharia de Controle e Automação Mecânica
 	\frametitle{Componentes e Operações da Arquitetura}
 	
 	\begin{itemize}
-		\item Arquitetura para o compartilhamento de informações do produto
-		\item Garantir a interoperabilidade entre os membros da CS
-		\item Compartilhamento de informações por meio de serviços (ou Web Services)
+		\item Arquitetura para o compartilhamento de informações do produto;
+		\item Garantir a interoperabilidade entre os membros da CS;
+		\item Compartilhamento de informações por meio de serviços (ou Web Services).
 	\end{itemize}
 
-	Componentes
+	Componentes:
 	\begin{enumerate}
 		\item AAS Servidor
 		\item AAS Cliente
 		\item AAS Repositório
 	\end{enumerate}
 
-	Operações
+	Operações:
 	\begin{enumerate}
-		\item AAS Publicação
-		\item AAS Busca
-		\item AAS Interação
+		\item Publicação
+		\item Busca
+		\item Interação
 	\end{enumerate}
 	
 \end{frame}
@@ -491,26 +515,26 @@ Engenharia de Controle e Automação Mecânica
 		\centering
 		\caption{Componentes da arquitetura para a I4.0.}
 		\label{tab:componentes-ws}
-		\resizebox{\textwidth}{!}{	
-		\begin{tabular}{p{3cm}p{12cm}}
-			\hline
-			\textbf{Componente}
-			& \textbf{Descrição} \\ 
-			
-			\hline
-			AAS Servidor
-			& O AAS Servidor é a conexão direta com o ativo. Este AAS extrai as informações sobre seu ativo para sua própria MDP para que assim possam ser disponibilizadas na rede. Cada submodelo do AAS representa um conjunto de informações e serviços semelhantes agrupados. \\
-			
-			\hline
-			AAS Cliente
-			& O AAS Cliente é a parte que irá consumir as informações disponibilizadas pelo AAS Servidor. O cliente representa cada uma das partes envolvidas na cadeia de suprimentos. Pode representar uma instituição, uma pessoa física ou até mesmo uma outra máquina/produto. \\
-			
-			\hline
-			AAS Repositório
-			& O repositório é o componente que recebe, armazena e disponibiliza informações de descrição sobre todos os serviços disponíveis no mundo conectado. O AAS recebe operações de ``publicação'' por parte do AAS Servidor e operações de ``busca'' por parte do AAS Cliente. O Repositório não atua como canal de comunicação entre AAS Cliente e Servidor, mas apenas fornece informações necessárias para que ambos os AAS possam se comunicar diretamente por meio da operação de ``interação''. \\
-			
-			\hline
-		\end{tabular}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{p{3cm}p{12cm}}
+				\hline
+				\textbf{Componente}
+				& \textbf{Descrição} \\ 
+				
+				\hline
+				AAS Servidor
+				& Conexão direta com o produto. Possui os serviços que disponibilizam informações para os parceiros ao longo da CS. \\
+				
+				\hline
+				AAS Cliente
+				& Parte que irá consumir informações disponibilizadas pelo AAS Servidor. Representa cada uma das partes envolvidas na cadeia de suprimentos. \\
+				
+				\hline
+				AAS Repositório
+				& Elemento que recebe, armazena e disponibiliza informações de descrição sobre todos os serviços disponíveis no mundo conectado. É o componente para a descoberta de serviços. \\
+				
+				\hline
+			\end{tabular}
 		}
 	\end{table}
 	
@@ -524,140 +548,28 @@ Engenharia de Controle e Automação Mecânica
 		\caption{Operações do WS para a I4.0.}
 		\label{tab:operacoes-ws}
 		\resizebox{\textwidth}{!}{
-		\begin{tabular}{p{3cm}p{12cm}}
-			\hline
-			\textbf{Operação}
-			& \textbf{Descrição} \\ 
-			
-			\hline
-			Publicação
-			& Ação tomada pelo AAS Servidor sempre que este componente queira anunciar um serviço para que possa ser descoberto. Nesta operação, o AAS Servidor envia uma lista de seus serviços ofertados e a descrição de cada um desses serviços. Esta lista é recebida e armazenada pelo AAS Repositório, que a disponibiliza para acesso público. \\
-			
-			\hline
-			Busca
-			& Ação tomada pelo AAS Cliente sempre que este precisa consultar serviços de seu interesse. Nesta operação o AAS Cliente faz uma solicitação ao AAS Repositório com os parâmetros que definem o tipo e as restrições do serviço desejado. A operação de busca engloba também o fluxo contrário de informações, que é o envio da resposta da solicitação do AAS Repositório para o AAS Cliente. \\
-			
-			\hline
-			Interação
-			& Ação tomada pelo AAS Cliente sempre que este deseja invocar um serviço. O AAS Cliente estabelece uma conexão direta com o AAS Servidor e consome o determinado serviço solicitado. A operação de interação normalmente é feita após o recebimento da lista de descrição de serviços por parte do AAS Repositório, porém a interação pode ser feita diretamente caso o AAS Cliente já possua informações necessárias para o estabelecimento da conexão.  \\
-			
-			\hline
-		\end{tabular}
+			\begin{tabular}{p{3cm}p{12cm}}
+				\hline
+				\textbf{Operação}
+				& \textbf{Descrição} \\ 
+				
+				\hline
+				Publicação
+				& Publicação de um serviço pelo AAS Servidor em um AAS Repositório a fim de se tornar público um serviço. \\
+				
+				\hline
+				Busca
+				& Busca no AAS Repositório de um serviço requisitado pelo AAS Cliente. A busca é realizada com os parâmetros que definam o tipo e as restrições do serviço desejado. \\
+				
+				\hline
+				Interação
+				& Interação entre AAS Cliente e AAS Servidor para consumo/fornecimento de um serviço de compartilhamento de informações. \\
+				
+				\hline
+			\end{tabular}
 		}
 	\end{table}
 	
-	
-\end{frame}
-%---
-\begin{frame}
-	\frametitle{Componentes e Operações}
-	
-	\begin{figure}[htb]
-		\centering
-		\caption{Diagrama PFS das operações do WS.}
-		\label{fig:pfs-ws}
-		\includegraphics[width=1\textwidth]{pfs-ws}
-	\end{figure}
-	
-\end{frame}
-%---
-\begin{frame}
-	\frametitle{Conteúdo da MDP - AAS Repositório}
-	
-	\begin{table}[htb]
-		\centering
-		\caption{Proposta de metamodelo para a MDP do repositório.}
-		\label{tab:mdp-repositorio}
-		\resizebox{0.75\textwidth}{!}{
-		\begin{tabular}{p{3cm}p{12cm}}
-			\hline
-			\textbf{Propriedade}
-			& \textbf{Descrição} \\ 
-			
-			\hline
-			ID do AAS servidor
-			& Tem a função de distinguir exclusivamente os AASs provedores de serviços e todos seus elementos no mundo conectado da I4.0. Alguns tipos possíveis de identificadores são: IRDI, IRI e UUID. O ID do AAS servidor é uma referência ao AAS Repositório e a todos os demais AASs que solicitarem a descrição dos serviços. \\
-			
-			\hline
-			ID do serviço
-			& Identificação exclusiva do serviço para a sua identificação única entre todos os repositórios. O ID do serviço pode ser derivado do próprio ID do AAS servidor com identificações extra do ID dentro do AAS (E.g., ID\_MODELO.SERVIÇO\_001). \\
-			
-			\hline
-			Descrição do AAS provedor
-			& Breve descrição sobre o AAS servidor e suas funções. \\
-			
-			\hline
-			Protocolos de comunicação e padrões de API
-			& Definição dos protocolos de comunicação suportados pelo fornecedor daquele serviço, como, por exemplo, HTTP, MQTT, etc; assim como as especificações do padrão para a comunicação via API como, por exemplo, REST, SOAP, GraphQL, etc.   \\
-			
-			\hline
-			Formato de intercâmbio
-			& Formato de arquivo de intercâmbio de informações. Ex.: json, xml, yaml, aasx, etc.  \\
-			
-			\hline
-			\textit{Timestamp} da inserção do serviço no repositório
-			& Data e hora de inserção do serviço ao repositório. \\
-			
-			\hline
-			Indicação de disponibilidade
-			& Chave booleana indicando se o AAS servidor atualmente suporta requisições. Esta propriedade pode estar desatualizada caso o AAS Servidor sofra uma falha de comunicação. Em outros casos, o AAS Servidor pode voluntariamente indicar ao repositório que temporariamente não processará solicitações de serviços. \\
-			
-			\hline
-			Quality of Service (QoS)
-			
-			& A métrica de qualidade de serviço (QoT) fornece indicadores sobre a qualidade do serviço prestado por um determinado AAS. O tempo médio de resposta do serviço baseado no tempo de resposta observado por diversas requisições executadas e a disponibilidade do AAS quando solicitado são índices que contribuição do QoS. Um índice para serviços de qualidade mais subjetiva pode ser criado baseado em avaliações de AAS Clientes que já consumiram o serviço.\\
-			
-			\hline
-			Descrição do serviço
-			& Descrição sobre o funcionamento do serviço juntamente com o tipo de resposta esperado.  \\			
-			\hline
-		\end{tabular}
-		}
-
-	\end{table}
-	
-\end{frame}
-%---
-\begin{frame}
-	\frametitle{Conteúdo da MDP - AAS Servidor}
-	
-	\begin{table}[htb]
-		\centering
-		\caption{Proposta de metamodelo para a MDP do servidor.}
-		\label{tab:mdp-servidor}
-		\resizebox{1\textwidth}{!}{
-		\begin{tabular}{p{4cm}p{11cm}}
-			\hline
-			\textbf{Propriedade/Função}
-			& \textbf{Descrição} \\ 
-			
-			\hline
-			ID do serviço
-			& Identificação exclusiva do serviço para a sua identificação única entre todos os repositórios. \\
-			
-			\hline
-			Extração de dados dos submodelos
-			& Função que retorna os dados solicitados pelo serviço. \\
-			
-			\hline
-			Organização dos dados
-			& Funções de estruturação dos dados ao formato solicitado pelo serviço, nesta fase pode haver também funções de limpeza dos dados brutos extraídos dos submodelos. \\
-			
-			\hline
-			\textit{Quality of Service} (QoS)
-			& Função para cálculo e armazenamento do índice de qualidade de serviço (QoS) com base em métricas sobre serviços já prestados e avaliações de AAS clientes que já consumiram o serviço. \\
-			
-			\hline
-			Atualização da descrição do serviço no repositório
-			& Função que envia ao repositório da empresa a descrição atualizada dos serviços. \\
-			
-			\hline
-			Repositório
-			& Referência ao repositório da empresa onde o ativo se encontra. \\			
-			\hline
-		\end{tabular}
-		}
-	\end{table}
 	
 \end{frame}
 %---
@@ -674,13 +586,57 @@ Engenharia de Controle e Automação Mecânica
 \end{frame}
 %---
 \begin{frame}
+	\frametitle{Os dados de serviços no repositório}
+	
+	\begin{table}[htb]
+		\centering
+		\caption{Metamodelo de dados do repositório.}
+		\label{tab:mdp-repositorio}
+		\resizebox{0.9\textwidth}{!}{
+			\begin{tabular}{p{3cm}p{12cm}}
+				\hline
+				\textbf{Propriedade}
+				& \textbf{Descrição} \\ 
+				
+				\hline
+				ID do serviço
+				& Identificação única do serviço entre todos os repositórios. \\
+				
+				\hline
+				Descrição do serviço (WSD)
+				& Descrição sobre todos os atributos e funcionalidades do \textit{Web Service} juntamente com o tipo de resposta padrão. \\
+				
+				\hline
+				ID do AAS Servidor
+				& Identificação única do AAS Serviço que fornece determinado serviço. Permite que o cliente possa localizar e invocar diretamente o serviço ofertado. \\
+				
+				\hline
+				Descrição do AAS Servidor
+				& Breve descrição sobre o AAS Servidor como nome, modelo e companhia fabricante do ativo. \\	
+				
+				\hline
+				\textit{Timestamp} do serviço
+				& Registros de data e hora relacionados a operações de inserção e atualização de informações sobre o serviço no repositório. \\
+				
+				\hline
+				Quality of Service (QoS)
+				& A métrica de qualidade de serviço (QoS) fornece indicadores sobre a qualidade do serviço prestado por um determinado AAS. \\
+				
+				\hline
+			\end{tabular}
+		}
+	\end{table}
+	
+\end{frame}
+%---
+\begin{frame}
 	\frametitle{Dinâmica dos serviços - Múltiplos elos}
 	
 	\begin{figure}[htb]
 		\centering
 		\caption{Exemplificação das operações de publicação e busca com múltiplos clientes.}
-		\label{fig:webservice-multielo}
-		\includegraphics[width=1\textwidth]{webservice-multielo}
+		\label{fig:ppt-webservice-multielo}
+		\includegraphics[width=1\textwidth]{ppt-webservice-multielo}
 	\end{figure}
 	
 \end{frame}
@@ -693,32 +649,6 @@ Engenharia de Controle e Automação Mecânica
 		\caption{Exemplificação das operações de publicação e busca com múltiplos produtos.}
 		\label{fig:webservice-multiproduto}
 		\includegraphics[width=0.7\textwidth]{webservice-multiproduto}
-	\end{figure}
-	
-\end{frame}
-%---
-\begin{frame}
-	\frametitle{Descrição das camadas do RAMI4.0}
-	
-	\begin{itemize}
-		\item \textbf{Ativo}: Pessoas e empresas (cliente), produtos (servidor) e WSDs (repositório); 
-		\item \textbf{Integração}: Virtualização das informações, protocolos de transferência de dados (Ethernet, 5G, Wi-Fi, etc); 
-		\item \textbf{Comunicação}: Protocolos de comunicação vertical (OPC UA); 
-		\item \textbf{Informação}: Controle de acesso / autenticação, análise de dados, armazenamento, descrição dos serviços (virtual);
-		\item \textbf{Funcional}: Serviços de compartilhamento de informações, protocolos de comunicação horizontal (HTTPS, MQTT, etc), interface horizontal entre AASs; 
-		\item \textbf{Regra de negócio}: Restrições legais, políticas de privacidade.
-	\end{itemize}
-	
-\end{frame}
-%---
-\begin{frame}
-	\frametitle{Descrição das camadas do RAMI4.0}
-	
-	\begin{figure}[H]
-		\centering
-		\caption{Camadas do RAMI4.0 com os elementos da arquitetura.}
-		\label{fig:webservice-rami}
-		\includegraphics[width=0.8\textwidth]{webservice-rami}
 	\end{figure}
 	
 \end{frame}
@@ -795,9 +725,9 @@ Engenharia de Controle e Automação Mecânica
 	\frametitle{Ciclo de vida do produto}
 	
 	\begin{itemize}
-		\item Impacto do amplo compartilhamento da MDP ao longo da CS
-		\item Surgimento de novos modelos de negócio baseados em dados (\textit{data-driven})
-		\item Atribuições de cada AAS em sua fase ``tipo'' e sua fase ``instância''
+		\item Impacto do amplo compartilhamento da MDP ao longo da CS;
+		\item Surgimento de novos modelos de negócio baseados em dados (\textit{data-driven});
+		\item Melhorias de projeto do produto (fase ``tipo'') e melhorias operacionais (fase ``instância'');
 	\end{itemize}
 	
 \end{frame}
@@ -815,9 +745,21 @@ Engenharia de Controle e Automação Mecânica
 \end{frame}
 %---
 \begin{frame}
-	\frametitle{A MDP na fase ``tipo''}
+	\frametitle{Extensão do ciclo de vida do produto} 
 	
-	A análise de dados da MDP possibilita o aprimoramento do ``tipo'' do produto das seguintes maneiras:
+	\begin{figure}[htb]
+		\centering
+		\caption{Modelo de ciclo de vida do produto com renovação do produto.}
+		\label{fig:ciclo-de-vida-extensao}
+		\includegraphics[width=1\textwidth]{ciclo-de-vida-extensao.png}
+	\end{figure}
+	
+\end{frame}
+%---
+\begin{frame}
+	\frametitle{Uso da MDP na melhoria de projeto do produto}
+	
+	A extração de informações da MDP auxilia no desenvolvimento de novas versões de ``tipos'' aprimoradas, o significam a melhoria de projeto do produto. Algumas formas de melhoria de projeto do produto são:
 	
 	\begin{itemize}
 		\item Identificação e reparo de falhas de projeto;
@@ -829,127 +771,118 @@ Engenharia de Controle e Automação Mecânica
 \end{frame}
 %---
 \begin{frame}
-	\frametitle{Extração de informações pela MDP na fase ``tipo''}
+	\frametitle{Extração de informações}
 	
-		\begin{table}[htb]
+	\begin{table}[htb]
 		\centering
 		\caption{Possíveis informações e respectivos submodelos para o aprimoramento do projeto do produto.}
 		\label{tab:produto-tipo}
-		\resizebox{1\textwidth}{!}{
-		\begin{tabular}{p{4cm}p{3cm}p{3cm}p{4cm}}
-			
-			\hline
-			\textbf{Informação}
-			& \textbf{Submodelo}
-			& \textbf{Cliente}
-			& \textbf{Leitura}	
-			\\ 
-			
-			\hline
-			Histórico de leitura de sensores dos componentes
-			& Leitura de sensores
-			& Fabricante / Técnico de manutenção
-			& Automática (E.g, a cada 6 horas)
-			\\
-			
-			\hline
-			Índice de disponibilidade, eficiência e qualidade do produto
-			& Eficiência Global do Equipamento (OEE)
-			& Fabricante / Gestor
-			& Automática, sob solicitação
-			\\
-			
-			\hline
-			Volume de emissão de gases do efeito estufa
-			& Pegada ambiental
-			& Fabricante / Consumidor
-			& Automática
-			\\
-			
-			\hline
-			Consumo energético
-			& Eficiência energética
-			& Fabricante / Consumidor / Operador
-			& Automática, a cada turno
-			\\
-			
-			\hline
-			Funcionalidades mais utilizadas
-			& Dados de uso
-			& Fabricante
-			& Automática
-			\\
-			
-			\hline
-			Leitura de coordenadas geográficas
-			& Geolocalização
-			& Gestor / Distribuidor / Consumidor
-			& Sob solicitação
-			\\
-			
-			\hline
-		\end{tabular}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{p{4cm}p{3cm}p{3cm}p{4cm}}
+				
+				\hline
+				\textbf{Informação}
+				& \textbf{Submodelo}
+				& \textbf{Cliente}
+				& \textbf{Leitura}	
+				\\ 
+				
+				\hline
+				Histórico de leitura de sensores dos ativos
+				& Leitura de sensores
+				& Fabricante / Técnico de manutenção
+				& Automática (E.g, a cada 6 horas)
+				\\
+				
+				\hline
+				Índice de disponibilidade, eficiência e qualidade do produto
+				& Eficiência Global do Equipamento (OEE)
+				& Fabricante / Gestor
+				& Automática, sob solicitação
+				\\
+				
+				\hline
+				Volume de emissão de gases e materiais particulados
+				& Pegada ambiental
+				& Fabricante / Consumidor
+				& Automática
+				\\
+				
+				\hline
+				Consumo energético
+				& Eficiência energética
+				& Fabricante / Consumidor / Operador
+				& Automática, a cada turno
+				\\
+				
+				\hline
+				Padrões de uso
+				& Dados de uso
+				& Fabricante
+				& Automática
+				\\
+				
+				\hline
+			\end{tabular}
 		}
-
 	\end{table}
 	
 \end{frame}
 %---
 \begin{frame}
-	\frametitle{A MDP na fase ``instância''}
+	\frametitle{Uso da MDP na melhoria de operação do produto}
 	
-	A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu tipo). Alguns benefícios são elencados a seguir:	
+	A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu tipo), ou seja, são benefícios operacionais agregados ao produto. Alguns benefícios são:		
 	
 	\begin{itemize}
-		\item Manutenção do produto orientada por dados
-		\item Eficiência logística e simplificação da logística reversa (reciclagem, acionamento da garantia, \textit{recalls}, etc)
-		\item Maior interação com as partes da cadeia de suprimentos
+		\item Manutenção do produto orientada por dados;
+		\item Simplificação da logística reversa (reciclagem, acionamento da garantia, \textit{recalls}, etc);
+		\item Maior integração dos membros da cadeia de suprimentos utilizando o produto como o centro de interação.
 	\end{itemize}
 	
 \end{frame}
 %---
 \begin{frame}
-	\frametitle{Extração de informações pela MDP na fase ``instância''}
+	\frametitle{Extração de informações}
 	
 	\begin{table}[htb]
 		\centering
 		\caption{Possíveis informações e respectivos submodelos extraídos de ``instâncias'' de produtos.}
 		\label{tab:produto-instancia}
-		\resizebox{1\textwidth}{!}{
-		\begin{tabular}{p{4cm}p{3cm}p{3cm}p{4cm}}
-			
-			\hline
-			\textbf{Informação}
-			& \textbf{Submodelo}
-			& \textbf{Cliente}
-			& \textbf{Leitura}	
-			\\
-			
-			\hline
-			Histórico de leitura de sensores dos componentes
-			& Leitura de sensores
-			& Fabricante / Técnico de manutenção
-			& Automática
-			\\
-			
-			\hline
-			Leitura de coordenadas geográficas
-			& Geolocalização
-			& Gestor / Distribuidor / Consumidor
-			& Sob solicitação
-			\\
-			
-			\hline
-			Manuais, notas fiscais, certificados de manutenção
-			& Documentação
-			& Gestor / Consumidor / Fabricante (escrita)
-			& Sob solicitação
-			\\
-			
-			\hline
-		\end{tabular}
-		}
-
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{p{4cm}p{3cm}p{3cm}p{4cm}}
+				
+				\hline
+				\textbf{Informação}
+				& \textbf{Submodelo}
+				& \textbf{Cliente}
+				& \textbf{Leitura}	
+				\\
+				
+				\hline
+				Histórico de leitura de sensores dos ativos
+				& Leitura de sensores
+				& Fabricante / Técnico de manutenção
+				& Automática
+				\\
+				
+				\hline
+				Leitura de coordenadas geográficas
+				& Geolocalização
+				& Gestor / Distribuidor / Consumidor
+				& Sob solicitação
+				\\
+				
+				\hline
+				Manuais, notas fiscais, certificados de manutenção
+				& Documentação
+				& Gestor / Consumidor / Fabricante (escrita)
+				& Sob solicitação
+				\\
+				
+				\hline
+			\end{tabular}
+	}
 	\end{table}
 	
 \end{frame}
@@ -962,26 +895,139 @@ Engenharia de Controle e Automação Mecânica
 \begin{frame}
 	\frametitle{Considerações finais}
 	
+	{\small
 	\begin{itemize}
-		\item Refinamento do Modelo de Arquitetura de Referência para I4.0 (RAMI4.0)
-		\item Padronização do formato de compartilhamento de informações dos ativos entre empresas
-		\item Eficiência logística
+		\item Importância da consistência e interoperabilidade no fluxo de informações entre os membros da CS;
+		
+		\item Este trabalho traça um modelo de compartilhamento de informações por meio de \textit{Web Services} utilizando como arquitetura de base o RAMI4.0;
+		
+		\item O mapeamento das operações para o eixo ``Camadas'' do RAMI4.0 permite a visualização dos fluxos de atividades ocorridas durante todo o processo de consumo de informações da MDP;
+		
+		\item O compartilhamento da MDP contribui na melhoria de projeto do produto e na melhoria operacional da dinâmica da cadeia de suprimentos;
+		
+		\item A MDP propicia o surgimento de novos modelos de negócio baseados em dados (\textit{data-driven}).
 	\end{itemize}
+	}
 	
 \end{frame}
 %---
 \begin{frame}
 	\frametitle{Próximos passos}
 	
-	\begin{itemize}
-		\item Elaboração de informações a serem coletadas pelo MDP ao longo da MDP
-		\item Definição de quais informações coletar e quando com base em referências bibliográficas
-		\item Revisão das atividades necessárias para a comunicação entre os componentes do WS
-	\end{itemize}
+	\definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
+	\definecolor{terracotta}{rgb}{0.89, 0.45, 0.36}
+	
+	\begin{outline}[enumerate]
+		\1 Elaborar de um modelo do compartilhamento da MDP ao longo da cadeia de suprimentos orientado a serviços baseado no RAMI4.0
+			\2 Integração do conceito de MDP à I4.0 \textcolor{tealgreen}{\ding{52}Feito}
+			\2 Estruturação da MDP dentro de um AAS \textcolor{tealgreen}{\ding{52}Feito}
+			\2 Geração de diagramas PFS sobre o fluxo de informações dentro das camadas do RAMI4.0 \textcolor{terracotta}{\ding{52}Revisar}
+		\1 Apresentar considerações do amplo compartilhamento de informações por meio da MDP sobre o ciclo de vida do produto
+			\2 Considerações sobre o eixo ``Ciclo de vida e cadeia de valor'' \textcolor{tealgreen}{\ding{52}Feito}
+			\2 Extensão do ciclo de vida do produto com a MDP \textcolor{tealgreen}{\ding{52}Feito}
+			\2 Possíveis informações a serem coletadas pela MDP e em que momento  \textcolor{terracotta}{\ding{52}Revisar/Incluir}
+	\end{outline}
 	
 \end{frame}
 %---
-
+\begin{frame}
+	\frametitle{Cronograma}
+	
+	\begin{table}[htb]
+		\centering
+		\caption{Cronograma de atividades concluídas e planejadas para 2020 e 2021.}
+		\label{tab:cronograma-20-21}
+		\makebox[\textwidth][c]{\footnotesize
+			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+				\hline
+				%
+				& \multicolumn{6}{c|}{\textbf{2020}}
+				& \multicolumn{2}{c|}{\textbf{2021}} \\
+				
+				
+				\hline
+				Etapas
+				& \begin{tabular}[c]{@{}c@{}}jan/\\fev\end{tabular}
+				& \begin{tabular}[c]{@{}c@{}}mar/\\abr\end{tabular}
+				& \begin{tabular}[c]{@{}c@{}}mai/\\jun\end{tabular}
+				& \begin{tabular}[c]{@{}c@{}}jul/\\ago\end{tabular}
+				& \begin{tabular}[c]{@{}c@{}}set/\\out\end{tabular}
+				& \begin{tabular}[c]{@{}c@{}}nov/\\dez\end{tabular}
+				& \begin{tabular}[c]{@{}c@{}}jan/\\fev\end{tabular}
+				& \begin{tabular}[c]{@{}c@{}}mar/\\abr\end{tabular} \\
+				
+				\hline
+				Cumprimento dos créditos
+				&
+				&
+				&
+				&
+				&
+				&
+				&
+				& \\
+				
+				\hline
+				Levantamento bibliográfico
+				& \cellcolor[HTML]{9AFF99}C
+				& \cellcolor[HTML]{9AFF99}C
+				& \cellcolor[HTML]{9AFF99}C
+				& \cellcolor[HTML]{9AFF99}C
+				& \cellcolor[HTML]{9AFF99}C
+				& \cellcolor[HTML]{FFCB2F}A
+				& \cellcolor[HTML]{FFCB2F}A
+				& \cellcolor[HTML]{FFCB2F}A \\
+				
+				\hline
+				Revisão PFS mapeamento
+				&
+				&
+				&
+				&
+				& \cellcolor[HTML]{9AFF99}C
+				& \cellcolor[HTML]{FFCB2F}A
+				&
+				& \\
+				
+				\hline
+				Revisão informações MDP
+				&
+				&
+				&
+				&
+				& \cellcolor[HTML]{9AFF99}C
+				& \cellcolor[HTML]{FFCB2F}A
+				& \cellcolor[HTML]{FFCB2F}A
+				& \cellcolor[HTML]{FFCB2F}A \\
+				
+				\hline
+				Exame de qualificação
+				&
+				& 
+				&
+				&
+				&
+				& \cellcolor[HTML]{FFCB2F}A
+				&
+				& \\
+				
+				\hline
+				Defesa da dissertação
+				&
+				&
+				&
+				&
+				&
+				&
+				&
+				& \cellcolor[HTML]{FFCB2F}A \\
+				\hline
+				
+		\end{tabular}}
+	\end{table}
+	
+	
+\end{frame}
 %------------------------------------------------
 \begin{frame}
 \Huge{\centerline{Fim}}
