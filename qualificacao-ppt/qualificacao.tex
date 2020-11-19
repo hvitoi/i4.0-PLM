@@ -74,7 +74,7 @@
 %\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
 \setbeamertemplate{enumerate mini template}{\insertenumlabel}
 \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
-\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption}[numered]
 }
 \graphicspath{{images/}}
 
@@ -176,9 +176,9 @@ Engenharia de Controle e Automação Mecânica
 	\frametitle{Contextualização}
 		
 	\begin{itemize}
-		\item Cenário intrinsecamente globalizado;
-		\item Necessidade de uma melhor eficiência na troca de informações entre os elos da CS;
-		\item Logística da informação.
+		\item Cenário intrinsecamente \textbf{globalizado}, maior \textbf{complexidade nas interações};
+		\item Necessidade de uma melhor\textbf{ eficiência na troca de informações} entre os elos da cadeia de suprimentos;
+		\item \textbf{Logística da informação}.
 	\end{itemize}
 
 \end{frame}
@@ -187,20 +187,20 @@ Engenharia de Controle e Automação Mecânica
 	\frametitle{Mudança de paradigma na Indústria}
 	
 	\begin{block}{Conceito de I4.0 - Plattform Industrie 4.0 }
-		Indústria 4.0 refere-se à rede inteligente de máquinas e processos para a indústria com a ajuda das Tecnologia da Informação e Comunicação (TIC).
+		Indústria 4.0 (I4.0) refere-se à rede inteligente de máquinas e processos para a indústria com a ajuda das Tecnologia da Informação e Comunicação.
 	\end{block}
-	\noindent
+
+	\bigskip
+	%\noindent
 	\begin{minipage}{.7\linewidth}
-		\centering
 		\begin{figure}[htb]
 			\centering
-			\caption{As revoluções industriais.}
+			%\caption{As revoluções industriais.}
 			\label{fig:i4}
-			\includegraphics[width=0.7\textwidth]{i4.png}
+			\includegraphics[width=1\textwidth]{i4.png}
 		\end{figure}
 	\end{minipage}%
 	\begin{minipage}{.3\linewidth}
-		\centering
 		{\scriptsize Princípios da I4.0:
 		\begin{itemize}
 			\item Interoperabilidade
@@ -217,11 +217,11 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Representação do RAMI4.0.}
-		\label{fig:rami4}
-		\includegraphics[width=1\textwidth]{rami4.png}
+		%\caption{As revoluções industriais.}
+		\label{fig:ass-real-virtual}
+		\includegraphics[width=1\textwidth]{ass-real-virtual.png}
 	\end{figure}
-	
+
 \end{frame}
 %---
 \begin{frame}
@@ -229,7 +229,7 @@ Engenharia de Controle e Automação Mecânica
 
 	\begin{figure}[htb]
 		\centering
-		\caption{Coleta de dados do produto ao longo da cadeia de valores.}
+		%\caption{Coleta de dados do produto ao longo da cadeia de valores.}
 		\label{fig:mdp}
 		\includegraphics[width=0.6\textwidth]{mdp.png}
 	\end{figure}
@@ -240,14 +240,14 @@ Engenharia de Controle e Automação Mecânica
 	\frametitle{Objetivos do trabalho}
 	
 	\begin{outline}[enumerate]
-		\1 Elaborar de um modelo do compartilhamento da MDP ao longo da cadeia de suprimentos orientado a serviços baseado no RAMI4.0
-			\2 Integração do conceito de MDP à I4.0;
-			\2 Estruturação da MDP dentro de um AAS;
-			\2 Geração de diagramas PFS sobre o fluxo de informações dentro das camadas do RAMI4.0.
-		\1 Apresentar considerações do amplo compartilhamento de informações por meio da MDP sobre o ciclo de vida do produto
-			\2 Considerações sobre o eixo ``Ciclo de vida e cadeia de valor'';
-			\2 Extensão do ciclo de vida do produto com a MDP;
-			\2 Possíveis informações a serem coletadas pela MDP e em que momento.
+		\1 Elaborar de um \textbf{modelo do compartilhamento da MDP} ao longo da cadeia de suprimentos
+			\2 Estruturação da MDP dentro de um Componente I4.0;
+			\2 Esquematização da dinâmica de compartilhamento de informações por meio de serviços;
+			\2 Modelagem do fluxo de informações dentro das camadas do RAMI4.0.
+		\1 Apresentar considerações do amplo \textbf{compartilhamento da MDP sobre o ciclo de vida do produto}
+			\2 Considerações sobre o eixo ``Ciclo de vida e cadeia de valor'' do RAMI4.0;
+			\2 Considerações sobre a extensão do ciclo de vida do produto com a MDP;
+			\2 Levantamento de informações a serem coletadas pela MDP.
 	\end{outline}
 
 \end{frame}
@@ -258,9 +258,9 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Teorias, ferramentas e aplicações apontadas em diferentes fases do projeto de pesquisa.}
+		%\caption{Teorias, ferramentas e aplicações apontadas em diferentes fases do projeto de pesquisa.}
 		\label{fig:metodologia-jensen-projeto}
-		\includegraphics[width=0.7\textwidth]{metodologia-jensen-projeto.png}
+		\includegraphics[width=0.8\textwidth]{metodologia-jensen-projeto.png}
 	\end{figure}
 	
 \end{frame}
@@ -468,32 +468,39 @@ Engenharia de Controle e Automação Mecânica
 \fi
 
 %------------------------------------------------
-\section{Arquitetura}
+\section{Arquitetura proposta}
 %------------------------------------------------
 
 \begin{frame}
 	\frametitle{Componentes e Operações da Arquitetura}
 	
+	\textbf{Propósito}:
+	
 	\begin{itemize}
-		\item Arquitetura para o compartilhamento de informações do produto;
-		\item Garantir a interoperabilidade entre os membros da CS;
-		\item Compartilhamento de informações por meio de serviços (ou Web Services).
+		\item Garantir o \textbf{compartilhamento de informações} do produto ao longo da cadeia de suprimentos;
+		\item Fornecimento/Consumo das informações da MDP por meio de \textit{\textbf{Web Services}};
+		\item Integração com o \textbf{RAMI4.0}
 	\end{itemize}
 
-	Componentes:
-	\begin{enumerate}
-		\item AAS Servidor
-		\item AAS Cliente
-		\item AAS Repositório
-	\end{enumerate}
+	\bigskip
 
-	Operações:
-	\begin{enumerate}
-		\item Publicação
-		\item Busca
-		\item Interação
-	\end{enumerate}
-	
+	\begin{minipage}{.5\linewidth}
+		\textbf{Componentes}:
+		\begin{enumerate}
+			\item AAS Servidor
+			\item AAS Cliente
+			\item AAS Repositório
+		\end{enumerate}
+	\end{minipage}%
+	\begin{minipage}{.5\linewidth}
+		\textbf{Operações}:
+		\begin{enumerate}
+			\item Publicação
+			\item Busca
+			\item Interação
+		\end{enumerate}
+	\end{minipage}
+
 \end{frame}
 %---
 \begin{frame}
@@ -501,13 +508,14 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Componentes e operações do WS.}
+		%\caption{Componentes e operações do WS.}
 		\label{fig:aas-ws}
-		\includegraphics[width=0.8\textwidth]{aas-ws}
+		\includegraphics[width=1\textwidth]{aas-ws}
 	\end{figure}
 	
 \end{frame}
 %---
+\iffalse
 \begin{frame}
 	\frametitle{Componentes}
 
@@ -572,15 +580,16 @@ Engenharia de Controle e Automação Mecânica
 	
 	
 \end{frame}
+\fi
 %---
 \begin{frame}
 	\frametitle{Detalhamento das partes do AAS}
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Estrutura do AAS com seus submodelos e a MDP.}
+		%\caption{Estrutura do AAS com seus submodelos e a MDP.}
 		\label{fig:estrutura-aas}
-		\includegraphics[width=0.8\textwidth]{estrutura-aas}
+		\includegraphics[width=0.9\textwidth]{estrutura-aas}
 	\end{figure}
 	
 \end{frame}
@@ -590,36 +599,36 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{table}[htb]
 		\centering
-		\caption{Metamodelo de dados do repositório.}
+		%\caption{Metamodelo de dados do repositório.}
 		\label{tab:mdp-repositorio}
-		\resizebox{0.9\textwidth}{!}{
+		\resizebox{1\textwidth}{!}{
 			\begin{tabular}{p{3cm}p{12cm}}
 				\hline
 				\textbf{Propriedade}
 				& \textbf{Descrição} \\ 
 				
 				\hline
-				ID do serviço
+				\textbf{ID do serviço}
 				& Identificação única do serviço entre todos os repositórios. \\
 				
 				\hline
-				Descrição do serviço (WSD)
+				\textbf{	Descrição do serviço (WSD)}
 				& Descrição sobre todos os atributos e funcionalidades do \textit{Web Service} juntamente com o tipo de resposta padrão. \\
 				
 				\hline
-				ID do AAS Servidor
+				\textbf{ID do AAS Servidor}
 				& Identificação única do AAS Serviço que fornece determinado serviço. Permite que o cliente possa localizar e invocar diretamente o serviço ofertado. \\
 				
 				\hline
-				Descrição do AAS Servidor
+				\textbf{Descrição do AAS Servidor}
 				& Breve descrição sobre o AAS Servidor como nome, modelo e companhia fabricante do ativo. \\	
 				
 				\hline
-				\textit{Timestamp} do serviço
+				\textbf{\textit{Timestamp} do serviço}
 				& Registros de data e hora relacionados a operações de inserção e atualização de informações sobre o serviço no repositório. \\
 				
 				\hline
-				Quality of Service (QoS)
+				\textbf{Quality of Service (QoS)}
 				& A métrica de qualidade de serviço (QoS) fornece indicadores sobre a qualidade do serviço prestado por um determinado AAS. \\
 				
 				\hline
@@ -634,7 +643,7 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Exemplificação das operações de publicação e busca com múltiplos clientes.}
+		%\caption{Exemplificação das operações de publicação e busca com múltiplos clientes.}
 		\label{fig:ppt-webservice-multielo}
 		\includegraphics[width=1\textwidth]{ppt-webservice-multielo}
 	\end{figure}
@@ -646,9 +655,9 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Exemplificação das operações de publicação e busca com múltiplos produtos.}
+		%\caption{Exemplificação das operações de publicação e busca com múltiplos produtos.}
 		\label{fig:webservice-multiproduto}
-		\includegraphics[width=0.7\textwidth]{webservice-multiproduto}
+		\includegraphics[width=0.85\textwidth]{webservice-multiproduto}
 	\end{figure}
 	
 \end{frame}
@@ -658,7 +667,7 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da operação de publicação.}
+		%\caption{Diagrama PFS da operação de publicação.}
 		\label{fig:rami-publicacao}
 		\includegraphics[width=1\textwidth]{rami-publicacao}
 	\end{figure}
@@ -670,9 +679,9 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da requisição em uma operação de busca.}
+		%\caption{Diagrama PFS da requisição em uma operação de busca.}
 		\label{fig:rami-busca-requisicao}
-		\includegraphics[width=0.9\textwidth]{rami-busca-requisicao}
+		\includegraphics[width=1\textwidth]{rami-busca-requisicao}
 
 	\end{figure}
 	
@@ -683,9 +692,9 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da resposta em uma operação de busca.}
+		%\caption{Diagrama PFS da resposta em uma operação de busca.}
 		\label{fig:rami-busca-resposta}
-		\includegraphics[width=0.9\textwidth]{rami-busca-resposta}
+		\includegraphics[width=1\textwidth]{rami-busca-resposta}
 
 	\end{figure}
 
@@ -696,9 +705,9 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da requisição de um serviço em uma operação de interação.}
+		%\caption{Diagrama PFS da requisição de um serviço em uma operação de interação.}
 		\label{fig:rami-interacao-requisicao}
-		\includegraphics[width=0.9\textwidth]{rami-interacao-requisicao}
+		\includegraphics[width=1\textwidth]{rami-interacao-requisicao}
 	
 	\end{figure}
 	
@@ -709,49 +718,37 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da resposta de um serviço em uma operação de interação.}
+		%\caption{Diagrama PFS da resposta de um serviço em uma operação de interação.}
 		\label{fig:rami-interacao-resposta}
-		\includegraphics[width=0.9\textwidth]{rami-interacao-resposta}
+		\includegraphics[width=1\textwidth]{rami-interacao-resposta}
 
 	\end{figure}
 	
 \end{frame}
 
 %------------------------------------------------
-\section{Ciclo de vida}
+\section{Impactos sobre o ciclo de vida}
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{Ciclo de vida do produto}
+	\frametitle{Impactos da arquitetura proposta sobre o ciclo de vida do produto}
 	
 	\begin{itemize}
-		\item Impacto do amplo compartilhamento da MDP ao longo da CS;
-		\item Surgimento de novos modelos de negócio baseados em dados (\textit{data-driven});
-		\item Melhorias de projeto do produto (fase ``tipo'') e melhorias operacionais (fase ``instância'');
+		\item Impactos do amplo compartilhamento da MDP ao longo da cadeia de Suprimentos;
+		\item Surgimento de novos \textbf{modelos de negócio baseados em dados (\textit{data-driven})};
+		\item Agregação de valor ao produto: \textbf{Melhorias de projeto} do produto (fase ``tipo'') e \textbf{melhorias operacionais} (fase ``instância'');
 	\end{itemize}
 	
 \end{frame}
 %---
 \begin{frame}
-	\frametitle{Extensão do ciclo de vida do produto segundo a I4.0}
+	\frametitle{Melhoria de novos produtos com base MDP}
 	
 	\begin{figure}[htb!]
 		\centering
-		\caption{Ciclo de vida do produto.}
+		%\caption{Ciclo de vida do produto.}
 		\label{fig:aas-lifecycle}
-		\includegraphics[width=0.9\textwidth]{aas-lifecycle}
-	\end{figure}
-	
-\end{frame}
-%---
-\begin{frame}
-	\frametitle{Extensão do ciclo de vida do produto} 
-	
-	\begin{figure}[htb]
-		\centering
-		\caption{Modelo de ciclo de vida do produto com renovação do produto.}
-		\label{fig:ciclo-de-vida-extensao}
-		\includegraphics[width=1\textwidth]{ciclo-de-vida-extensao.png}
+		\includegraphics[width=1\textwidth]{aas-lifecycle}
 	\end{figure}
 	
 \end{frame}
@@ -759,7 +756,7 @@ Engenharia de Controle e Automação Mecânica
 \begin{frame}
 	\frametitle{Uso da MDP na melhoria de projeto do produto}
 	
-	A extração de informações da MDP auxilia no desenvolvimento de novas versões de ``tipos'' aprimoradas, o significam a melhoria de projeto do produto. Algumas formas de melhoria de projeto do produto são:
+	Uso da MDP para o desenvolvimento de \textbf{novas versões de ``tipos''} aprimoradas. Algumas formas de melhoria de projeto do produto são:
 	
 	\begin{itemize}
 		\item Identificação e reparo de falhas de projeto;
@@ -775,7 +772,7 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{table}[htb]
 		\centering
-		\caption{Possíveis informações e respectivos submodelos para o aprimoramento do projeto do produto.}
+		%\caption{Possíveis informações e respectivos submodelos para o aprimoramento do projeto do produto.}
 		\label{tab:produto-tipo}
 		\resizebox{\textwidth}{!}{
 			\begin{tabular}{p{4cm}p{3cm}p{3cm}p{4cm}}
@@ -830,9 +827,22 @@ Engenharia de Controle e Automação Mecânica
 \end{frame}
 %---
 \begin{frame}
+	\frametitle{Extensão do ciclo de vida do produto com a MDP} 
+	
+	\begin{figure}[htb]
+		\centering
+		%\caption{Modelo de ciclo de vida do produto com renovação do produto.}
+		\label{fig:ciclo-de-vida-extensao}
+		\includegraphics[width=1\textwidth]{ciclo-de-vida-extensao.png}
+	\end{figure}
+	
+\end{frame}
+
+%---
+\begin{frame}
 	\frametitle{Uso da MDP na melhoria de operação do produto}
 	
-	A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu tipo), ou seja, são benefícios operacionais agregados ao produto. Alguns benefícios são:		
+	Uso da MDP na melhoria operacional das ``instâncias'' sem necessariamente alterar seu projeto. Alguns benefícios são:		
 	
 	\begin{itemize}
 		\item Manutenção do produto orientada por dados;
@@ -847,7 +857,7 @@ Engenharia de Controle e Automação Mecânica
 	
 	\begin{table}[htb]
 		\centering
-		\caption{Possíveis informações e respectivos submodelos extraídos de ``instâncias'' de produtos.}
+		%\caption{Possíveis informações e respectivos submodelos extraídos de ``instâncias'' de produtos.}
 		\label{tab:produto-instancia}
 		\resizebox{\textwidth}{!}{
 			\begin{tabular}{p{4cm}p{3cm}p{3cm}p{4cm}}
@@ -892,6 +902,7 @@ Engenharia de Controle e Automação Mecânica
 \section{Considerações finais}
 %------------------------------------------------
 
+\iffalse
 \begin{frame}
 	\frametitle{Considerações finais}
 	
@@ -910,22 +921,23 @@ Engenharia de Controle e Automação Mecânica
 	}
 	
 \end{frame}
+\fi
 %---
 \begin{frame}
 	\frametitle{Próximos passos}
 	
 	\definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
 	\definecolor{terracotta}{rgb}{0.89, 0.45, 0.36}
-	
+
 	\begin{outline}[enumerate]
-		\1 Elaborar de um modelo do compartilhamento da MDP ao longo da cadeia de suprimentos orientado a serviços baseado no RAMI4.0
-			\2 Integração do conceito de MDP à I4.0 \textcolor{tealgreen}{\ding{52}Feito}
-			\2 Estruturação da MDP dentro de um AAS \textcolor{tealgreen}{\ding{52}Feito}
-			\2 Geração de diagramas PFS sobre o fluxo de informações dentro das camadas do RAMI4.0 \textcolor{terracotta}{\ding{52}Revisar}
-		\1 Apresentar considerações do amplo compartilhamento de informações por meio da MDP sobre o ciclo de vida do produto
-			\2 Considerações sobre o eixo ``Ciclo de vida e cadeia de valor'' \textcolor{tealgreen}{\ding{52}Feito}
-			\2 Extensão do ciclo de vida do produto com a MDP \textcolor{tealgreen}{\ding{52}Feito}
-			\2 Possíveis informações a serem coletadas pela MDP e em que momento  \textcolor{terracotta}{\ding{52}Revisar/Incluir}
+		\1 Elaborar de um modelo do compartilhamento da MDP ao longo da cadeia de suprimentos
+			\2 Estruturação da MDP dentro de um Componente I4.0; \textcolor{tealgreen}{\ding{52}Feito}
+			\2 Esquematização da dinâmica de compartilhamento de informações por meio de serviços; \textcolor{tealgreen}{\ding{52}Feito}
+			\2 Modelagem do fluxo de informações dentro das camadas do RAMI4.0. \textcolor{terracotta}{\ding{52}Revisar}
+		\1 Apresentar considerações do amplo compartilhamento da MDP sobre o ciclo de vida do produto
+			\2 Considerações sobre o eixo ``Ciclo de vida e cadeia de valor'' do RAMI4.0; \textcolor{tealgreen}{\ding{52}Feito}
+			\2 Considerações sobre a extensão do ciclo de vida do produto com a MDP; \textcolor{tealgreen}{\ding{52}Feito}
+			\2 Levantamento de informações a serem coletadas pela MDP. \textcolor{terracotta}{\ding{52}Revisar/Incluir}
 	\end{outline}
 	
 \end{frame}
@@ -1029,9 +1041,11 @@ Engenharia de Controle e Automação Mecânica
 	
 \end{frame}
 %------------------------------------------------
+\iffalse
 \begin{frame}
 \Huge{\centerline{Fim}}
 \end{frame}
+\fi
 %------------------------------------------------
 
 \end{document} 
