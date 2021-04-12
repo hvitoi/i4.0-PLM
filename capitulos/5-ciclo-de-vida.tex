@@ -14,7 +14,7 @@
 	
 	Os ``tipos'' estão presentes desde a concepção/conceitualização até os primeiros protótipos/testes. O ``tipo'' de um ativo é definido pelas suas propriedades e funcionalidades distintas. Todos os itens que são criados ao longo do projeto de um produto (e.g., desenhos em CAD, manuais, \textit{softwares}, etc) são incorporados ao ``tipo'' do ativo. Informações externas associadas ao ativo que são criadas ao longo de seu desenvolvimento como informações de \textit{marketing} também são incorporadas ao ``tipo''.
 	
-	As instâncias são criadas/produzidas/fabricadas com base nas informações de um ``tipo'' de ativo. Informações específicas sobre produção, logística, qualidade e testes são associadas à ``instância'' de um ativo. Nesta fase, os dados de uso são coletados e associados para então poderem ser armazenados na MDP de cada ativo e compartilhados com outros parceiros ao longo da cadeia de suprimentos. 
+	As instâncias são criadas, produzidas ou fabricadas com base nas informações de um ``tipo'' de ativo. Informações específicas sobre produção, logística, qualidade e testes são associadas à ``instância'' de um ativo. Nesta fase, os dados de uso são coletados e associados para então poderem ser armazenados na MDP de cada ativo e serem compartilhados com outros parceiros ao longo da cadeia de suprimentos. 
 	
 	O histórico completo do ciclo de vida do produto está associados à combinação entre ``tipo'' e a ``instância'' de um determinado produto. Estes dados podem ser aproveitados de forma inteligente para a geração de valor, gerando assim novos modelos de negócio.
 	
@@ -30,168 +30,98 @@
 		\fonte{O autor.}
 	\end{figure}
 
+\section{Transformação da competitividade por meio produtos inteligentes}
+
+	O extenso uso de sensores e recursos de conexão permitem com que produtos se tornem ``inteligentes'', isto é, ganham a capacidade de se comunicar com outros dispositivos e compartilhar informações de estado.
+	
+	A ascensão de produtos inteligentes no contexto da Indústria 4.0 trazem duas formas básicas de agregação de valor ao produto por meio do compartilhamento da MDP: as \textbf{melhorias de projeto} e as \textbf{melhorias operacionais}.
+	
+	Estes novos tipos de produtos e a possibilidade de exploração de seus dados alteram a estrutura da indústria e a natureza da concorrência, expondo as empresas a novas oportunidades e ameaças competitivas \cite{porter2014smartproducts}.
+	
+	Estes produtos passam a combinar hardware, sensores, armazenamento de dados, microprocessadores, software e conectividade de inúmeras maneiras. Esses “produtos inteligentes e conectados” possibilitados por grandes melhorias no poder de processamento e miniaturização de dispositivos e pelos benefícios de rede da conectividade sem fio onipresente estão desencadeando uma nova era de competição.
+	
 \section{Uso da MDP na melhoria de projeto do produto}
 
-	A extração de informações da MDP auxilia no desenvolvimento de novas versões de ``tipos'' aprimoradas. Novos ``tipos'' aprimorados significam a melhoria de projeto do produto.
+	A extração de informações da MDP auxilia no desenvolvimento de novas versões com ``tipos'' aprimoradas. Novos ``tipos'' aprimorados significam a melhoria de projeto do produto.
 
-	Com os ciclos de vida do produto cada vez mais curtos e cadeias de logística cada vez mais complexas, explorar o registro de informações do produto pode garantir uma posição competitiva de uma empresa comercial frente aos competidores.
+	Com os ciclos de vida do produto cada vez mais curtos e cadeias de suprimentos cada vez mais complexas, explorar o registro de informações do produto pode garantir uma posição competitiva de uma empresa comercial frente aos competidores.
 	
 	Além disso, a memória digital do produto abre novas possibilidades em relação ao combate à pirataria e falsificação de produtos, na proteção ao consumidor e na garantia de qualidade do produto \cite{wahlster2007digitalmemory}.
 	
-	Formas de melhoria de projeto do produto podem ser elencadas, o que dá indícios de informações a serem armazenadas pelo produto ao longo de seu ciclo de vida. Algumas das forma de aprimoramento dos ``tipos'' dos produtos são:
+	\citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts} classificam as funções e capacidades dos produtos em quatro áreas: monitoramento, controle, otimização e autonomia. Por meio da análise da descrição das funcionalidade e capacidades de cada área, foi feito um mapeamento dessas funcionalidades para o contexto do eixo ciclo de vida e cadeia de valor do RAMI4.0.
+	
+	As funcionalidades e capacidades dos produtos no que diz respeito à melhoria de projeto foram então classificadas de acordo com as seguintes categorias:
 	
 	\begin{itemize}
 		\item Identificação e reparo de falhas de projeto;
-		\item Adição de novas funcionalidades ao produto;
-		\item Melhoria da experiência do cliente/operador com o produto;
-		\item Geração de indicadores de sustentabilidade.
+		\item Adição/remoção de funcionalidades;
+		\item Melhorias de experiência do usuário com o produto;
+		\item Geração de indicadores.
 	\end{itemize}
 
-	A \autoref{tab:produto-tipo} lista possíveis informações e seus respectivos submodelos que agregam valor ao produto por meio da geração de novos ``tipos''.
+	Estas categorias permitem segregar os dados de acordo com seus respectivos objetivos ao serem inseridos no projeto de um produto. Além disso, as categoriais dão indícios de possíveis informações genéricas a serem armazenadas pelo produto ao longo de seu ciclo de vida, independente da indústria na qual o produto está inserido.
 	
-	\begin{table}[htb]
-		\centering
-		\caption{Possíveis informações e respectivos submodelos para o aprimoramento do projeto do produto.}
-		\label{tab:produto-tipo}
-		\begin{tabular}{p{4cm}p{3cm}p{3cm}p{4cm}}
-			
-			\hline
-			\textbf{Informação}
-			& \textbf{Submodelo}
-			& \textbf{Cliente}
-			& \textbf{Leitura}	
-			\\ 
-			
-			\hline
-			Histórico de leitura de sensores dos ativos
-			& Leitura de sensores
-			& Fabricante / Técnico de manutenção
-			& Automática (E.g, a cada 6 horas)
-			\\
-			
-			\hline
-			Índice de disponibilidade, eficiência e qualidade do produto
-			& Eficiência Global do Equipamento (OEE)
-			& Fabricante / Gestor
-			& Automática, sob solicitação
-			\\
-			
-			\hline
-			Volume de emissão de gases e materiais particulados
-			& Pegada ambiental
-			& Fabricante / Consumidor
-			& Automática
-			\\
-			
-			\hline
-			Consumo energético
-			& Eficiência energética
-			& Fabricante / Consumidor / Operador
-			& Automática, a cada turno
-			\\
-			
-			\hline
-			Padrões de uso
-			& Dados de uso
-			& Fabricante
-			& Automática
-			\\
+	A seguir são apresentadas as descrições de cada uma das categoriais de funcionalidades e capacidades de produtos inteligentes no que diz respeito às melhorias de projeto.
+	
+	A \textbf{identificação e reparo de falhas de projeto} permite o monitoramento remoto de produtos e identificação de eventuais falhas de projeto por meio da análise de um alto volume de dados e identificação de padrões.
+	
+	A  identificação de potenciais falhas se dá, por exemplo, por meio da leitura de sensores de temperatura e vibração de diversos produtos de um mesmo modelo. Valores discrepantes do esperado podem, então, serem identificados em uma amostra. Os erros estruturais de projeto do produto são reparados e lançados em um novo ``tipo'' ou uma nova versão do produto.
+	
+	A \textbf{adição/remoção de novas funcionalidades} se dá pelo monitoramento do produto, que permite com que empresas e clientes explorem  as características operacionais e o histórico de um produto, ou seja, de que maneira o usuário opera um determinado produto. Desta forma, é possível entender melhor como o produto é realmente usado e a partir disso levantar a necessidade da adição de novas funcionalidades ou até mesmo a remoção de funções pouco utilizadas.
+	
+	O monitoramento das características operacionais do produto é uma forma de evoluir o projeto de produtos por meio da simplificação do projeto. Desta forma, atende-se às reais necessidades do usuário e evita-se produtos inflados de funcionalidades ou com funcionalidades importantes faltando.
+	
+	A \textbf{melhoria de experiência do usuário com o produto} se dá pela exploração e análise das informações que descrevem a maneira e padrões como o usuário interage com o produto. Desta forma, as informações podem ser utilizadas pelo fabricante para a determinação de funções do produto que podem não ser claras para o usuários ou funções que estão sendo utilizadas de maneira incorreta.
+	
+	Mudanças na ergonomia do produto e melhorias na intuitividade das funções de operação são mudanças de projeto que elevam a experiência do usuário com o produto e causam uma maior percepção de valor
+	
+	A \textbf{geração de indicadores} traz conhecimento que auxilia na tomada de decisões. Alguns indicadores dependem das circunstâncias de operação do equipamento e, portanto, variam em relação ao valor estabelecido pelo fabricante. Por meio dos indicadores, o fabricante é capaz de investigar problemas e eventualmente reprojetar o equipamento. Além disso, o próprio gestor dos equipamentos pode identificar possíveis melhorias em processos a fim de atingir determinadas metas. 
+	
+	Os indicadores de  volume de emissão de gases e materiais particulados e podem ser usados em auditoriais para adequação às condições legais e regulatórias do país e/ou para atender às condições de saúde e bem estar do trabalhador.
+	
+	A eficiência Global do Equipamento (\textit{Overall equipment effectiveness} - OEE), o volume de emissão de gases do efeito estufa e materiais particulados e o consumo energético e eficiência energética são outros exemplos de indicadores a serem gerados e atualizados instantaneamente pelos próprios produtos.
 
-			\hline
-		\end{tabular}
-		\fonte{O autor.}
-	\end{table}
+\section{Uso da MDP na melhoria operacional do produto}
 
-	O \textbf{histórico de leitura de sensores dos ativos} permite ao fabricante monitorar remotamente determinados modelos de produtos por ele fabricados e identificar padrões de falha em determinadas peças.
+	A fase ``instância'' ocorre com a produção e venda de um produto que é feita a partir de um ``tipo'' de ativo \cite{bader2019aas}. As informações específicas sobre produção, logística e qualidade são associadas às ``instâncias'' dos ativos.
 	
-	O monitoramento dos dados de sensores de temperatura, pressão, vibração e outros, atrelado a técnicas de análise de dados sobre um grande volume de dados (\textit{big data}) permite aos projetistas a identificação de erros estruturais de projeto do produto e com isso a realização de reparos e lançamento de um novo ``tipo''.
+	Nesta fase o produto está em produção, o que significa que o usuário está ativamente utilizando o produto/equipamento em sua empresa. Os dados de uso da instância podem ser compartilhados com outros parceiros da cadeia de valor.
 	
-	A frequência de escrita das informações na MDP pelo produto pode ser configurada pelo fabricante e a frequência de leitura estabelecida pelo cliente que consome as informações, que eventualmente será o próprio fabricante.
+	A análise de dados da MDP pode trazer benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu tipo), ou seja, são benefícios operacionais agregados ao produto. 
 	
-	Os \textbf{índices de disponibilidade, eficiência e qualidade} do produto permitem a realização do cálculo de eficiência global do equipamento (\textit{Overall Equipment Effectivences} - OEE). O OEE demonstra se uma máquina está funcionando perfeitamente ou se necessita de algum reparo, caso haja a queda do índice médio.
-	
-	Caso o OEE de diversos clientes apontem uma eficiência abaixo do esperado, o fabricante é capaz de investigar o problema e eventualmente reprojetar o equipamento. Além disso, o próprio gestor da área pode monitorar o índice de eficiência de seus equipamentos
-	
-	O \textbf{volume de emissão de gases e materiais particulados} pode identificar avarias no funcionamento do produto. Além disso, a alta emissão de gases pode ir contra as condições regulatórias do país e também oferecer riscos ao operador inserido no ambiente de trabalho.
-	
-	O monitoramento das emissões pode apontar a necessidade de alterações de projeto para atender as condições legais e de saúde do trabalhador.
-	
-	O \textbf{consumo energético} acima ou abaixo dos padrões estabelecidos em projeto também pode indicar um funcionamento incorreto ou abaixo de sua capacidade. A análise do consumo e eventuais correções em projeto são necessárias para fornecer ao consumidor uma melhor qualidade de operação.
-	
-	As informações de \textbf{padrões de uso} podem ser utilizadas pelo fabricante para a determinação de funções do produto que podem não ser claras para o consumidor ou funções que estão sendo utilizadas da maneira errada.
-	
-	Mudanças na ergonomia do produto, remoções de funcionalidades raramente utilizadas e melhorias na intuitividade das funções de operação são mudanças de projeto que elevam a experiência do operador/consumidor com o produto e causam uma maior percepção de valor.
-
-
-\section{Uso da MDP na melhoria de operação do produto}
-
-	A fase ``instância'' ocorre com a produção e venda de um produto com base nas informações de um ``tipo'' de ativo \cite{bader2019aas}. As informações específicas sobre produção, logística e qualidade são associadas às ``instâncias'' dos ativos.
-	
-	Nesta fase o produto está em produção, o que significa que consumidor/operador está ativamente utilizando o equipamento em sua empresa. Os dados de uso da instância podem ser compartilhados com outros parceiros da cadeia de valor.
-	
-	A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu tipo), ou seja, são benefícios operacionais agregados ao produto. Alguns benefícios são elencados a seguir:	
+	A partir das classificações de funções e capacidades dos produtos apresentadas por \citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts}, foi feito um mapeamento das funções relacionadas às melhorias operacionais do produto, criando uma nova classificação baseada nos dados no contexto do eixo ciclo de vida e cadeia de valor do RAMI4.0. As funcionalidades dos produtos foram então divididas nas seguintes categorias:	
 
 	\begin{itemize}
 		\item Manutenção do produto orientada por dados;
-		\item Eficiência logística e simplificação da logística reversa (reciclagem, acionamento da garantia, \textit{recalls}, etc);
-		\item Maior integração dos membros da cadeia de suprimentos utilizando o produto como o centro de interação.
+		\item Monitoramento e rastreamento em tempo real;
+		\item Integração dos membros da cadeia de suprimentos e eficiência logística.
+		
 	\end{itemize}
 
-	A \autoref{tab:produto-instancia} lista possíveis informações e seus respectivos submodelos que agregam valor ao produto por meio de melhorias operacionais.
-
-	\begin{table}[htb]
-		\centering
-		\caption{Possíveis informações e respectivos submodelos extraídos de ``instâncias'' de produtos.}
-		\label{tab:produto-instancia}
-		\begin{tabular}{p{4cm}p{3cm}p{3cm}p{4cm}}
-			
-			\hline
-			\textbf{Informação}
-			& \textbf{Submodelo}
-			& \textbf{Cliente}
-			& \textbf{Leitura}	
-			\\
-			
-			\hline
-			Histórico de leitura de sensores dos ativos
-			& Leitura de sensores
-			& Fabricante / Técnico de manutenção
-			& Automática
-			\\
-			
-			\hline
-			Leitura de coordenadas geográficas
-			& Geolocalização
-			& Gestor / Distribuidor / Consumidor
-			& Sob solicitação
-			\\
-			
-			\hline
-			Manuais, notas fiscais, certificados de manutenção
-			& Documentação
-			& Gestor / Consumidor / Fabricante (escrita)
-			& Sob solicitação
-			\\
-
-			\hline
-		\end{tabular}
-		\fonte{O autor.}
-	\end{table}
-
-	O \textbf{histórico de leitura de sensores dos ativos} permite não somente a indicação de pontos de melhoria de projeto, mas também uma mudança de paradigma em relação à forma como a manutenção dos ativos é realizada.
+	As categorias permitem segregar os dados de acordo com seus respectivos objetivos ao serem inseridos no projeto de um produto. Além disso, as categoriais dão indícios de possíveis informações genéricas a serem armazenadas pelo produto ao longo de seu ciclo de vida, independente do contexto/indústria na qual o produto está inserido.
 	
-	Com o histórico de leitura de sensores de cada componente do ativo, estratégias de manutenção preditivas e prescritivas podem ser adotadas pelo próprio fabricante. A manutenção orientada por dados de uso pode reduzir a incidência de falhas e trazer benefícios econômicos \cite{odonovan2015maintenance}.
+	A seguir são apresentadas as descrições de cada uma das categorias de funcionalidades e capacidades de produtos inteligentes no que diz respeito às melhorias operacionais:
+	
+	A \textbf{manutenção do produtos orientada por dados} (\textit{data driven})  é uma mudança de paradigma em relação à forma tradicional como a manutenção dos ativos é realizada.
+	
+	Com o histórico de leitura de sensores de cada componente do ativo, estratégias de manutenção preditivas e prescritivas podem ser adotadas pelo próprio fabricante. A manutenção orientada pelos dados de uso, comparada com a manutenção tradicional, pode reduzir a incidência de falhas e trazer benefícios econômicos \cite{odonovan2015maintenance}.
 	
 	Com a manutenção prescritiva, os dados empíricos e o histórico do ativo são utilizados para prescrever qual medida deve ser tomada, trazendo mais confiabilidade por meio de técnicas estatísticas. A contínua extração de dados de sensores da MDP e sua análise torna a ação de manutenção mais automatizada.
 	
-	As \textbf{leituras de coordenadas geográficas} são úteis durante o transporte de produtos entre os membros da cadeia de suprimentos. O distribuidor, por exemplo, pode ter acesso à posição exata do produto enquanto este estiver sob sua custódia.
+	A manutenção do produtos orientada por dados pode trazer a responsabilidade de manutenção dos produtos de uma planta para a instituição que melhor conhece os detalhes e funcionamento técnico do produto, como o fabricante ou uma empresa especilizada em um determinado ativo. O uso de dados para a manutenção permite implementar um novo paradigma de detecção e correção de falhas de equipamentos industriais: a Manutenção como um Serviço (\textit{Maintenance-as-a-Service} - MaaS)  \cite{zoll2018maas}.
+
+	O \textbf{monitoramento e rastreamento} em tempo real é possibilitado pelas leituras de coordenadas geográficas. O monitoramento e rastreamento são úteis durante o transporte de produtos entre os membros da cadeia de suprimentos. O distribuidor, por exemplo, pode ter acesso à posição exata do produto enquanto este estiver sob sua custódia.
 	
 	As coordenadas geográficas garantem a rastreabilidade do produto enquanto ele se desloca ao longo da cadeia de suprimentos. A demanda de rastreabilidade surge para manter um melhor controle da cadeia produtiva, assim como repassar essas informações aos consumidores.
 	
-	Outra função seria como forma de identificar possíveis parcerias ao fabricar uma nova demanda de um produto. Ao iniciar uma ordem de fabricação/compra, o próprio produto pode se encarregar de selecionar quem irá fabricar, onde será entregue, qual empresa de transporte, custos, prazos, etc.
+	Outra função do rastreamento é como uma forma de identificar possíveis parcerias ao fabricar uma nova demanda de um produto. Ao iniciar uma ordem de fabricação/compra, o próprio produto pode se encarregar de selecionar quem irá fabricar, onde será entregue, qual empresa de transporte, custos, prazos, etc.
 	
-	O submodelo de documentação contém todos os documentos digitais referentes ao produto. \textbf{Manuais, notas fiscais, certificados de manutenção} e outros documentos podem ser escritos, lidos e atualizados pelos parceiros da CS mediante autenticação.
+	A  \textbf{integração dos membros da cadeia de suprimentos e eficiência logística} acontece com a melhoria da comunicação entre os elos utilizando o produto como centro de interação.
 	
-	O compartilhamento de documentos digitais permite uma maior interação com as partes e garante que cada um terá sempre a versão mais atualizada de um determinado documento, assim como favorece a gestão de documentos, reduzindo o uso do papel e tornando os ambientes de trabalho mais seguros, ágeis e organizados.
+	A comunicação passa a acontecer por meio do módulo que representa o produto e não mais pelo contato direto entre as partes. Isso simplifica também a logística reversa do produto, como no caso de reciclagem, acionamento da garantia, \textit{recalls} e outros.
+	
+	Outro ponto de melhor integração com a utilização do produto como centro das interações é com relação à documentação do produto. O submodelo de documentação conterá todos os documentos digitais referentes ao produto. Desta forma, manuais, notas fiscais, certificados de manutenção e outros documentos podem ser escritos, lidos e atualizados pelos parceiros da CS mediante autenticação.
+	
+	O compartilhamento de documentos digitais permite uma maior interação com as partes e garante que cada membro terá sempre a versão mais atualizada de um determinado documento, assim como favorece a gestão de documentos, reduzindo o uso do papel e tornando os ambientes de trabalho mais seguros, ágeis e organizados.
 	
 	Os documentos representam uma conexão entre os membros da CS, portanto, comunicados, formulários de troca de produto, documentos para acionamento de garantia do produto, \textit{recalls} e quaisquer outras operações que envolvam a logística reversa podem ser solicitados pela própria MDP.

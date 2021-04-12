@@ -31,7 +31,7 @@
 		\fonte{O autor.}
 	\end{figure}
 
-	De maneira sucinta, os componentes são descritos da seguinte forma: ``O AAS Servidor'' é a parte que possui um serviço a oferecer para os demais AASs no mundo conectado, o ``AAS Cliente'' é a parte que necessita de um serviço e que age ativamente para receber este serviço e o ``AAS Repositório'' é a parte que armazena informações sobre descrições de diversos serviços.
+	De maneira sucinta, os componentes são descritos da seguinte forma: ``O AAS Servidor'' é a parte que possui um serviço a oferecer para os demais AASs no mundo conectado, o ``AAS Cliente'' é a parte que necessita de um serviço e que age ativamente para receber este serviço e o ``AAS Repositório'' é a parte que armazena informações sobre descrições de diversos serviços, que são disponibilizados na forma de contratos.
 	
 	A \autoref{tab:componentes-ws} lista os componentes da arquitetura para a I4.0 e suas respectivas descrições detalhadas.
 	
@@ -54,14 +54,14 @@
 			
 			\hline
 			AAS Repositório
-			& O repositório é o elemento que recebe, armazena e disponibiliza informações de descrição sobre todos os serviços disponíveis no mundo conectado. O AAS recebe operações de ``publicação'' por parte do AAS Servidor e operações de ``busca'' por parte do AAS Cliente. O Repositório não atua como canal de comunicação entre AAS Cliente e Servidor, mas apenas fornece informações necessárias para que ambos os AAS possam se comunicar diretamente por meio da operação de ``interação''. \\
+			& O repositório é o elemento que recebe, armazena e disponibiliza informações de descrição sobre todos os serviços disponíveis no mundo conectado, as descrições de serviços são disponibilizados em forma de contratos. O AAS recebe operações de ``publicação'' por parte do AAS Servidor e operações de ``busca'' por parte do AAS Cliente. O Repositório não atua como canal de comunicação entre AAS Cliente e Servidor, mas apenas fornece informações necessárias para que ambos os AAS possam se comunicar diretamente por meio da operação de ``interação''. \\
 			
 			\hline
 		\end{tabular}
 		\fonte{O autor.}
 	\end{table}
 	
-	Neste modelo, a descrição dos serviços disponíveis nos submodelos de cada AAS é armazenada em um repositório comum, onde todos os AASs disponíveis no mundo conectado na I4.0 poderiam se tornar visíveis. A função do repositório é armazenar uma descrição dos serviços disponíveis e não o serviço em si. O serviço é fornecido pelo próprio AAS Servidor que o disponibilizou, servindo o repositório apenas como um elemento para a descoberta de serviços.
+	Neste modelo, o contrato contendo a descrição dos serviços disponíveis nos submodelos de cada AAS é armazenado em um repositório comum, onde todos os AASs disponíveis no mundo conectado na I4.0 poderiam se tornar visíveis. A função do repositório é armazenar uma lista de contratos dos AASs disponíveis e não o providenciar o serviço em si. O serviço é fornecido pelo próprio AAS Servidor que o disponibilizou, servindo o repositório apenas como um elemento para a descoberta de serviços.
 
 	Cada AAS pode atuar tanto como um fornecedor de serviços (servidor), quanto como um solicitante de serviços (cliente), ou como ambos. Sempre usando o repositório como meio para a publicação ou busca dos serviços.
 
@@ -80,7 +80,7 @@
 			
 			\hline
 			Publicação
-			& Ação tomada pelo AAS Servidor sempre que este componente queira anunciar um serviço para que possa ser descoberto. Nesta operação, o AAS Servidor envia uma lista de seus serviços ofertados e a descrição de cada um desses serviços. Esta lista é recebida e armazenada pelo AAS Repositório, que a disponibiliza para acesso público. \\
+			& Ação tomada pelo AAS Servidor sempre que este componente queira anunciar um serviço para que possa ser descoberto. Nesta operação, o AAS Servidor envia o contrato descrevendo os serviços ofertados e a descrição de cada um desses serviços. Esta lista é recebida e armazenada pelo AAS Repositório, que a disponibiliza para acesso público. \\
 			
 			\hline
 			Busca
@@ -88,18 +88,18 @@
 			
 			\hline
 			Interação
-			& Ação tomada pelo AAS Cliente sempre que este deseja invocar um serviço. O AAS Cliente estabelece uma conexão direta com o AAS Servidor e consome o determinado serviço solicitado. A operação de interação normalmente é feita após o recebimento da lista de descrição de serviços por parte do AAS Repositório, porém a interação pode ser feita diretamente caso o AAS Cliente já possua informações necessárias para o estabelecimento da conexão.  \\
+			& Ação tomada pelo AAS Cliente sempre que este deseja invocar um serviço. O AAS Cliente estabelece uma conexão direta com o AAS Servidor e consome o determinado serviço solicitado. A operação de interação normalmente é feita após o recebimento da lista de contratos por parte do AAS Repositório, porém a interação pode ser feita diretamente caso o AAS Cliente já possua informações necessárias para o estabelecimento da conexão.  \\
 			
 			\hline
 		\end{tabular}
 		\fonte{O autor.}
 	\end{table}
 
-	Para cada uma das operações, deve ser definido também o WSD (\textit{Web Services Description}), documento o qual estabelece os padrões de comunicação suportados pelo AAS Servidor como, por exemplo, o padrão REST ou o padrão SOAP; e especifica como acessar e quais as operações ou métodos estão disponíveis no serviço. 
+	Para cada uma das operações, deve ser definido também o contrato, documento o qual descreve as funcionalidades do \textit{Web Service} e estabelece os padrões de comunicação suportados pelo AAS Servidor como, por exemplo, o padrão REST ou o padrão SOAP; e especifica como acessar e quais são as operações ou métodos que estão disponíveis no serviço. 
 	
-	Quando o AAS atua como Servidor, este publica a descrição de seus serviços no repositório por meio de uma API (\textit{Application Programming Interface}) definida no WSD. Quando como Cliente, o AAS busca no repositório um serviço desejado e recebe uma lista de opções de serviços com suas respectivas descrições. Assim, o serviço mais adequado pode ser selecionado.
+	Quando o AAS atua como Servidor, este publica seu contrato no repositório por meio de uma API (\textit{Application Programming Interface}) definida no contrato. Quando como Cliente, o AAS busca no repositório um serviço desejado e recebe uma lista de opções de serviços com suas respectivas descrições (contidas no contrato). Assim, o serviço mais adequado pode ser selecionado.
 	
-	Uma vez definido o serviço a ser consumido, o AAS Cliente estabelecerá a conexão direta com o AAS Servidor por meio de algum dos padrões suportados, utilizando os detalhes contidos na descrição do serviço para localizar, contactar e invocar o serviço.	
+	Uma vez definido o serviço a ser consumido, o AAS Cliente estabelecerá a conexão direta com o AAS Servidor por meio de algum dos padrões suportados, utilizando os detalhes contidos no contrato para localizar, contactar e invocar o serviço.	
 	
 	A \autoref{fig:pfs-ws} apresenta um diagrama PFS (\textit{Production Flow Schema}) (vide \autoref{sec:modelagem}), com o fluxo de ocorrência das operações básicas no WS para a I4.0.
 	
@@ -121,7 +121,7 @@
 	
 	A estrutura proposta do AAS é baseda em \citeonline{bader2019aas}, que estabelece a divisão do AAS em submodelos e o divide em duas partes: o cabeçalho (\textit{header}) e o corpo (\textit{body}).
 	
-	O cabeçalho na estrutura proposta terá a função de providenciar informações públicas sobre o ativo que o identifiquem minimamente e que forneça uma descrição sobre seus serviços oferecidos. O cabeçalho deverá conter informações que podem ser acessadas sem a necessidade de autenticação como, por exemplo, seu identificador único universal (UUID - \textit{Universal Unique IDentifier}), o modelo e fabricante do ativo. O cabeçalho deverá conter também uma descrição mínima sobre seus serviços públicos disponíveis.
+	O cabeçalho na estrutura proposta terá a função de providenciar informações públicas sobre o ativo que o identifiquem minimamente e que forneça uma descrição sobre seus serviços oferecidos. O cabeçalho deverá conter informações que podem ser acessadas sem a necessidade de autenticação como, por exemplo, seu identificador único universal (UUID - \textit{Universal Unique IDentifier}), o modelo e fabricante do ativo. O cabeçalho deverá conter também o contrato daquele \textit{Web Service} com as descrições de seus serviços públicos disponíveis.
 	
 	O cabeçalho não terá a função de fornecer uma ficha técnica detalhada, mas apenas uma caracterização abstrata das funções/serviços do ativo. O cabeçalho deverá necessariamente conter o UUID do AAS. Sem o UUID o AAS Servidor se torna inacessível para qualquer uma das partes da cadeia de suprimentos.
 	
@@ -149,7 +149,7 @@
 
 \section{Os dados de serviços no repositório}
 	
-	O C4.0-Repositório corresponde ao ativo ``repositório'' e a seu AAS correspondente. O C4.0-Repositório armazena os dados referentes aos serviços, incluindo as descrições dos serviços \textit{web} (WSD), que são publicadas por diversos AAS-Servidores no mundo conectado da Indústria 4.0.
+	O C4.0-Repositório corresponde ao ativo ``repositório'' e a seu AAS correspondente. O C4.0-Repositório armazena as descrições dos serviços definidas pelos contratos de cada \textit{Web Service}, que são publicadas por diversos AAS-Servidores no mundo conectado da Indústria 4.0.
 	
 	Os dados de serviços contidos no C4.0-Repositório devem ser padronizados para garantir uma interpretação consistente destes por parte do AAS-Cliente, que consome os serviços. Para isso, metamodelos devem ser estabelecidos a fim de se criar moldes sobre os quais os dados devem ser estruturados.
 	
@@ -169,8 +169,8 @@
 			& Número do serviço para a sua identificação única entre todos os repositórios. O ID do serviço pode ser derivado do próprio ID do AAS-Servidor correspondente (E.g., ID\_SERVIDOR.ID\_SERVIÇO\_001). \\
 			
 			\hline
-			Descrição do serviço (WSD)
-			& Descrição sobre todos os atributos e funcionalidades do \textit{Web Service} juntamente com o tipo de resposta a ser dado em caso de sucesso ou falha. A descrição do serviço (WSD) deve ser padronizada segundo o formato de intercâmbio adotado. Para APIs REST o Swagger é comumente utilizado como ``contrato'', detalhando todos os recursos e operações em um formato legível por humanos e por máquina. Para APIs SOAP, o WSDL é comumente utilizado. \\
+			Descrição do serviço
+			& Descrição sobre todos os atributos e funcionalidades do \textit{Web Service} juntamente com o tipo de resposta a ser dado em caso de sucesso ou falha. As descrições dos serviços estão estabelecidas por meio de um contrato, que descreve todos os métodos que um determinado servidor suporta. Para APIs REST o Swagger é comumente utilizado como ``contrato'', detalhando todos os recursos e operações em um formato legível por humanos e por máquina. Para APIs SOAP, o WSDL é comumente utilizado. APIs com servidores gRPC suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}). \\
 			
 			\hline
 			ID do AAS Servidor correspondente ao serviço
@@ -215,17 +215,17 @@
 		\centering
 		\caption{Exemplificação das operações de publicação e busca com múltiplos clientes.}
 		\label{fig:webservice-multielo}
-		\includegraphics[width=0.8\textwidth]{webservice-multielo}
+		\includegraphics[width=0.75\textwidth]{webservice-multielo}
 		\fonte{O autor.}
 	\end{figure}
 
-	Na \autoref{fig:webservice-multielo} são mostrados os três submodelos do AAS Produto: (\textbf{e}) Submodelo ``geolocalização'', (\textbf{f}) submodelo ``sensores'' e (\textbf{g}) submodelo ``documentação''. A (\textbf{h}) MDP realiza o gerenciamento dos dados de todos os submodelos e os disponibiliza para acesso pelos serviços, que por sua vez geram uma lista de (\textbf{i}) descrições de serviços (WSD). Esta lista de descrições de serviços é (\textbf{j}) publicada no repositório.
+	Na \autoref{fig:webservice-multielo} são mostrados os três submodelos do AAS Produto: (\textbf{e}) Submodelo ``geolocalização'', (\textbf{f}) submodelo ``sensores'' e (\textbf{g}) submodelo ``documentação''. A (\textbf{h}) MDP realiza o gerenciamento dos dados de todos os submodelos e os disponibiliza para acesso pelos serviços, as descrições dos serviços são armazenados em forma de um (\textbf{i}) contrato. Este contrato é (\textbf{j}) publicado no repositório.
 	
-	O (\textbf{k}) AAS Repositório recebe as descrições de serviços do AAS Produto e as disponibiliza para consulta. O AAS Repositório receberá também listas de descrição de serviços de diversos outros AASs.
+	O (\textbf{k}) AAS Repositório recebe o contrato do AAS Produto e o disponibiliza para consulta. O AAS Repositório receberá também os contratos de diversos outros AASs.
 	
 	Os AAS Clientes fazem a (\textbf{l}) busca no AAS Repositório. As buscas são feitas com parâmetros a fim de se restringir qual tipo de serviço aquele cliente pretende consumir, podendo-se restringir a busca, inclusive, ao serviço de um AAS específico, identificando-o por meio de seu UUID.
 	
-	Cada AAS Cliente (Fabricante, Distribuidor ou Consumidor), portanto, realiza a consulta ao AAS Repositório com os parâmetros de interesse e recebe a resposta com descrições detalhadas sobre os serviços disponíveis e informações para localizar, contactar e invocar estes serviços.
+	Cada AAS Cliente (Fabricante, Distribuidor ou Consumidor), portanto, realiza a consulta ao AAS Repositório com os parâmetros de interesse e recebe a resposta de contratos contendo descrições detalhadas sobre os serviços disponíveis e informações para localizar, contactar e invocar estes serviços.
 	
 	O próximo passo (após o recebimento da resposta do AAS Repositório) é a decisão interna de cada AAS Cliente sobre qual serviço selecionar. Uma vez definido, o AAS Cliente estabelece uma comunicação direta com o AAS Servidor (produto) para o consumo do serviço selecionado.
 	
@@ -265,7 +265,7 @@
 	
 	Cada elemento desta camada (os ativos) deve possuir meios de comunicação e identificadores únicos (UUID) para permitir o seu monitoramento e supervisão dos dispositivos de controle por meio do AAS \cite{adolphs2015rami}.
 	
-	Na arquitetura orientada a serviços que compartilham dados pela CS, três tipos de ativos básicos podem ser elencados: o produto, que é a fonte de dados e fornecedor dos serviços (servidor); as empresas ou pessoas, que são os clientes que consomem as informações da MDP do produto e também podem alterá-las; e o repositório, que contém as descrições dos serviços, responsável por garantir a visibilidade de um produto na cadeia de suprimentos.
+	Na arquitetura orientada a serviços que compartilham dados pela CS, três tipos de ativos básicos podem ser elencados: o produto, que é a fonte de dados e fornecedor dos serviços (servidor); as empresas ou pessoas, que são os clientes que consomem as informações da MDP do produto e também podem alterá-las; e o repositório que contém todos os contratos e é responsável por garantir a visibilidade de um produto na cadeia de suprimentos.
 	
 	Na camada \textbf{Integração} estão as funcionalidades responsáveis pela virtualização de todos os ativos da camada inferior \cite{adolphs2015rami}. Ela representa a ponte para a troca de informações entre o mundo real e o virtual.
 	
@@ -281,7 +281,7 @@
 
 	A camada de \textbf{Informação} é onde os dados são de fato armazenados. Para isso, modelos de estrutura de Banco de Dados (BD) são definidos de acordo os tipos de dados e suas aplicações. Alguns exemplos de estrutura de dados incluem: BDs relacionais (e.g., MySQL, Postgres, SQLite) \cite{morris2017relationaldatabase} e demais BDs NoSQL como os orientados a documentos (e.g., MongoDB, CouchDB), os do tipo chave-valor (e.g., Redis, DynanoDB), os de armazenamento em coluna ampla (e.g., Cassandra, HBase) e os baseados em grafos (e.g.,Neo4j, JanusGraph) \cite{schaefer2019nosql}.
 	
-	Desta forma, esta camada é responsável por gerar e armazenar as descrições de serviços oferecidos por cada C4.0-Servidor. Além disso, esta camada contém a parte da MDP que realiza a autenticação dos C4.0s solicitantes, ou seja, realiza o controle de acesso a suas informações.
+	Desta forma, esta camada é responsável por gerar e armazenar os contratos disponibilizados por cada C4.0-Servidor. Além disso, esta camada contém a parte da MDP que realiza a autenticação dos C4.0s solicitantes, ou seja, realiza o controle de acesso a suas informações.
 	
 	Na camada \textbf{Funcional} é onde ocorre toda a interação horizontal com C4.0s contidos no mundo conectado da I4.0. Esta camada é responsável pela integração horizontal entre as partes da cadeia de suprimentos de um produto. Os serviços são disponibilizados por meio da camada funcional, portanto é a interface entre os C4.0s de diferentes empresas.
 	
@@ -342,23 +342,21 @@
 		
 		\item As restrições legais e as políticas de privacidade para um determinado C4.0 são acessadas. Esta atividade adicionará restrições aos serviços a serem publicados. Estas restrições serão incorporadas à descrição de cada serviço a ser publicado.
 		
-		\item A geração da lista de descrições de serviços (WSD) é feita com base nos serviços disponíveis no C4.0-Servidor e nas restrições impostas. Uma descrição de cada serviço disponível é gerada em um formato de intercâmbio padronizado.
+		\item O contrato contendo as descrições de serviços disponíveis no C4.0-Servidor é disponibilizado.
 		
-		\item As especificações da API do C4.0-Repositório (e.g., protocolos de comunicação, \textit{endpoints} disponíveis, formatos de intercâmbio suportados) são consultadas e selecionadas para uso na requisição.
+		\item O contrato é enviado ao C4.0-Repositório via API. 
 		
-		\item A lista de WSD é enviada ao C4.0-Repositório via API. 
-		
-		\item O C4.0-Repositório recebe a lista de WSD no formato de intercâmbio definido. A descrição dos serviços nesta fase já contém todas as informações para a identificação do serviço e de seu componente correspondente.
+		\item O C4.0-Repositório recebe o contrato no formato de intercâmbio definido. A descrição dos serviços nesta fase já contém todas as informações para a identificação do serviço e de seu componente correspondente.
 		
 		\item Os dados recebidos alimentam uma interface para comunicação com o ativo real.
 		
-		\item A lista de WSD é armazenada junto às demais descrições de serviços no ativo ``repositório'' do C4.0-Repositório.
+		\item O contrato com a lista das descrições dos serviços é armazenado junto aos demais contratos no ativo ``repositório'' do C4.0-Repositório.
 		
 	\end{enumerate}
 
 \subsection{Operação de Busca}
 
-	A operação de busca é dividida em duas partes: a requisição e a resposta. A requisição é a iniciativa do C4.0-Cliente para requerer a lista de WSD de um C4.0-Repositório. O fluxo de atividades da requisição em uma operação de busca é apresentado na \autoref{fig:rami-busca-requisicao}.
+	A operação de busca é dividida em duas partes: a requisição e a resposta. A requisição é a iniciativa do C4.0-Cliente para requerer a lista de contratos contidas em um C4.0-Repositório, que descreve os serviços de cada ativo cadastrado. O fluxo de atividades da requisição em uma operação de busca é apresentado na \autoref{fig:rami-busca-requisicao}.
 	
 	Já a resposta da requisição em uma operação de busca é feita pelo C4.0-Repositório para o C4.0-Cliente e é apresentada na \autoref{fig:rami-busca-resposta}.
 	
@@ -382,8 +380,6 @@
 		
 		\item Opcionalmente, a MDP local armazena os detalhes da solicitação em um registro de solicitações realizadas.
 		
-		\item As especificações da API do C4.0-Repositório (e.g., protocolos de comunicação, \textit{endpoints} disponíveis, formatos de intercâmbio suportados) são consultadas e selecionadas para uso na requisição.
-		
 		\item A requisição é enviada ao C4.0-Repositório via API.
 		
 		\item O C4.0-Repositório recebe a solicitação e a insere ao final da lista de solicitações para ser processada.
@@ -392,7 +388,7 @@
 		
 		\item Estabelece-se uma interface para a interação entre o AAS e seu ativo real para a consulta das informações solicitadas na requisição.
 		
-		\item Realiza-se a leitura da lista de WSDs no repositório utilizando os parâmetros de consulta estabelecidos.
+		\item Realiza-se a leitura da lista de contratos no repositório utilizando os parâmetros de consulta estabelecidos.
 		
 	\end{enumerate}
 
@@ -409,19 +405,19 @@
 	Detalhadamente, a resposta do C4.0-Repositório segue o seguinte fluxo de atividades, começando pela disponibilização das informações reais do ativo repositório:
 	
 	\begin{enumerate}
-		\item Os dados do ativo (WSD) são disponibilizados para as camadas superiores.
+		\item Os dados do ativo são disponibilizados para as camadas superiores.
 		
 		\item Os dados disponibilizados são virtualizados para a integração com o AAS.
 		
 		%\item É realizada a consulta da lista de WSDs. Os resultados podem ser uma lista de serviços válidos, assim como podem conter mensagens de erro devido a solicitações inválidas ou buscas retornando zero correspondências.
 		
-		\item A lista de WSD é disponibilizada para acesso por parte da camada Funcional. A lista  pode conter serviços válidos, assim como pode conter mensagens de erro devido a solicitações inválidas ou buscas retornando zero correspondências.
+		\item O contrato contendo a descrições dos serviços é disponibilizada para acesso por parte da camada Funcional. A lista  pode conter serviços válidos, assim como pode conter mensagens de erro devido a solicitações inválidas ou buscas retornando zero correspondências.
 
 		\item A resposta é enviada ao C4.0-Cliente via API.
 		
-		\item O C4.0-Cliente recebe a resposta contendo a lista de WSD no formato de intercâmbio definido.
+		\item O C4.0-Cliente recebe a resposta contendo os contratos no formato de intercâmbio definido.
 		
-		\item Após a recepção da lista de serviços disponíveis, é feito o processamento para a definição do serviço mais adequado. Esta fase geralmente não fornece múltiplas opções para a consulta de serviços de compartilhamento de informações ao longo da cadeia de suprimentos uma vez que os parâmetros de consulta na requisição ao repositório geralmente já delimitam exatamente o serviço e o AAS-Servidor que o cliente busca.
+		\item Após a recepção da lista de contratos contendo todos os serviços disponíveis, é feito o processamento para a definição do serviço mais adequado. Esta fase geralmente não fornece múltiplas opções para a consulta de serviços de compartilhamento de informações ao longo da cadeia de suprimentos uma vez que os parâmetros de consulta na requisição ao repositório geralmente já delimitam exatamente o serviço e o AAS-Servidor que o cliente busca.
 	\end{enumerate}
 
 \subsection{Operação de Interação}
@@ -438,7 +434,7 @@
 		\fonte{O autor.}
 	\end{figure}
 
-	A requisição de um serviço na operação de interação é iniciada pelo C4.0-Cliente e é enviada diretamente ao C4.0-Servidor usando a WSD fornecida pelo C4.0-Repositório. O fluxo de atividades para a requisição de um serviço é detalhada a seguir:
+	A requisição de um serviço na operação de interação é iniciada pelo C4.0-Cliente e é enviada diretamente ao C4.0-Servidor usando o contrato fornecido pelo C4.0-Repositório. O fluxo de atividades para a requisição de um serviço é detalhada a seguir:
 	
 	\begin{enumerate}
 		
