@@ -25,10 +25,9 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Componentes e operações do WS.}
 		\label{fig:aas-ws}
 		\includegraphics[width=0.7\textwidth]{aas-ws}
-		\fonte{O autor.}
+		\caption{Componentes e operações do WS.}
 	\end{figure}
 
 	De maneira sucinta, os componentes são descritos da seguinte forma: ``O AAS Servidor'' é a parte que possui um serviço a oferecer para os demais AASs no mundo conectado, o ``AAS Cliente'' é a parte que necessita de um serviço e que age ativamente para receber este serviço e o ``AAS Repositório'' é a parte que armazena informações sobre descrições de diversos serviços, que são disponibilizados na forma de contratos.
@@ -37,7 +36,6 @@
 	
 	\begin{table}[htb]
 		\centering
-		\caption{Componentes da arquitetura para a I4.0.}
 		\label{tab:componentes-ws}
 		\begin{tabular}{p{3cm}p{12cm}}
 			\hline
@@ -58,7 +56,7 @@
 			
 			\hline
 		\end{tabular}
-		\fonte{O autor.}
+		\caption{Componentes da arquitetura para a I4.0.}
 	\end{table}
 	
 	Neste modelo, o contrato contendo a descrição dos serviços disponíveis nos submodelos de cada AAS é armazenado em um repositório comum, onde todos os AASs disponíveis no mundo conectado na I4.0 poderiam se tornar visíveis. A função do repositório é armazenar uma lista de contratos dos AASs disponíveis e não o providenciar o serviço em si. O serviço é fornecido pelo próprio AAS Servidor que o disponibilizou, servindo o repositório apenas como um elemento para a descoberta de serviços.
@@ -71,7 +69,6 @@
 	
 	\begin{table}[htb]
 		\centering
-		\caption{Operações do WS para a I4.0.}
 		\label{tab:operacoes-ws}
 		\begin{tabular}{p{3cm}p{12cm}}
 			\hline
@@ -92,7 +89,7 @@
 			
 			\hline
 		\end{tabular}
-		\fonte{O autor.}
+		\caption{Operações do WS para a I4.0.}
 	\end{table}
 
 	Para cada uma das operações, deve ser definido também o contrato, documento o qual descreve as funcionalidades do \textit{Web Service} e estabelece os padrões de comunicação suportados pelo AAS Servidor como, por exemplo, o padrão REST ou o padrão SOAP; e especifica como acessar e quais são as operações ou métodos que estão disponíveis no serviço. 
@@ -105,10 +102,9 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS das operações do WS.}
 		\label{fig:pfs-ws}
 		\includegraphics[width=1\textwidth]{pfs-ws}
-		\fonte{O autor.}
+		\caption{Diagrama PFS das operações do WS.}
 	\end{figure}
 	
 	Os serviços fornecidos por um AAS são diversos. Entretanto, neste trabalho serão tratados com ênfase aqueles serviços que têm como objetivo o compartilhamento de informações sobre o ativo que possam agregar valor ao produto ao longo de sua cadeia de suprimentos. Ou seja, os serviços que extraem informações da MDP do AAS e as fornecem, mediante autenticação, às partes solicitantes ao longo da cadeia de suprimentos.
@@ -137,10 +133,9 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Estrutura do AAS com seus submodelos e a MDP.}
 		\label{fig:estrutura-aas}
 		\includegraphics[width=0.7\textwidth]{estrutura-aas}
-		\fonte{O autor.}
+		\caption{Estrutura do AAS com seus submodelos e a MDP.}
 	\end{figure}
 
 	Os dados puros estão contidos nos submodelos. A MDP fornece uma interface para a visualização dos dados dos submodelos. Desta forma, a MDP atua como um ponto único de extração de dados dos submodelos. Os serviços, por sua vez, consultam os dados da \textit{view} da MDP. Assim, a MDP é capaz de realizar o gerenciamento dos dados, estabelecendo, por exemplo, políticas de acesso e/ou escrita e demais regras de negócio do AAS Servidor.
@@ -157,7 +152,6 @@
 	
 	\begin{table}[htb]
 		\centering
-		\caption{Metamodelo de dados do repositório.}
 		\label{tab:mdp-repositorio}
 		\begin{tabular}{p{3cm}p{12cm}}
 			\hline
@@ -190,7 +184,7 @@
 			
 			\hline
 		\end{tabular}
-		\fonte{O autor.}
+		\caption{Metamodelo de dados do repositório.}
 	\end{table}
 	
 	A \autoref{tab:mdp-repositorio} é uma lista não exaustiva das propriedades necessárias para o armazenamento de um serviço. Ela apenas apresenta alguns tipos de propriedades necessárias para identificação e invocação de um serviço na rede.
@@ -213,10 +207,9 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Exemplificação das operações de publicação e busca com múltiplos clientes.}
 		\label{fig:webservice-multielo}
 		\includegraphics[width=0.75\textwidth]{webservice-multielo}
-		\fonte{O autor.}
+		\caption{Exemplificação das operações de publicação e busca com múltiplos clientes.}
 	\end{figure}
 
 	Na \autoref{fig:webservice-multielo} são mostrados os três submodelos do AAS Produto: (\textbf{e}) Submodelo ``geolocalização'', (\textbf{f}) submodelo ``sensores'' e (\textbf{g}) submodelo ``documentação''. A (\textbf{h}) MDP realiza o gerenciamento dos dados de todos os submodelos e os disponibiliza para acesso pelos serviços, as descrições dos serviços são armazenados em forma de um (\textbf{i}) contrato. Este contrato é (\textbf{j}) publicado no repositório.
@@ -233,10 +226,9 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Exemplificação das operações de publicação e busca com múltiplos produtos.}
 		\label{fig:webservice-multiproduto}
 		\includegraphics[width=1\textwidth]{webservice-multiproduto}
-		\fonte{O autor.}
+		\caption{Exemplificação das operações de publicação e busca com múltiplos produtos.}
 	\end{figure}
 	
 	A \autoref{fig:webservice-multiproduto} demonstra a situação de uma consulta de um AAS Cliente em múltiplos produtos. Neste exemplo, cada AAS Produto (\textbf{a}, \textbf{b} e \textbf{c}) realiza uma operação de (\textbf{f}) publicação no (\textbf{e}) AAS Repositório. 
@@ -314,10 +306,9 @@
 	
 	\begin{figure}[H]
 		\centering
-		\caption{Camadas do RAMI4.0 com os elementos da arquitetura.}
 		\label{fig:webservice-rami}
 		\includegraphics[width=0.7\textwidth]{webservice-rami}
-		\fonte{O autor.}
+		\caption{Camadas do RAMI4.0 com os elementos da arquitetura.}
 	\end{figure}
 
 \subsection{Operação de Publicação}
@@ -328,10 +319,9 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da operação de publicação.}
 		\label{fig:rami-publicacao}
 		\includegraphics[width=1\textwidth]{rami-publicacao}
-		\fonte{O autor.}
+		\caption{Diagrama PFS da operação de publicação.}
 	\end{figure}
 
 	Esta operação é iniciada pelo C4.0-Servidor recém instalado ou atualizado, seguindo um fluxo de atividades estabelecido até chegar no ativo do C4.0-Repositório, os passos são detalhados a seguir:
@@ -362,10 +352,9 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da requisição em uma operação de busca.}
 		\label{fig:rami-busca-requisicao}
 		\includegraphics[width=1\textwidth]{rami-busca-requisicao}
-		\fonte{O autor.}
+		\caption{Diagrama PFS da requisição em uma operação de busca.}
 	\end{figure}
 
 	A operação de requisição para a busca de um serviço parte do C4.0-Cliente e segue um fluxo estabelecido até chegar ao C4.0-Repositório, esses passos são detalhados a seguir:
@@ -396,10 +385,9 @@
 
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da resposta em uma operação de busca.}
 		\label{fig:rami-busca-resposta}
 		\includegraphics[width=1\textwidth]{rami-busca-resposta}
-		\fonte{O autor.}
+		\caption{Diagrama PFS da resposta em uma operação de busca.}
 	\end{figure}
 
 	Detalhadamente, a resposta do C4.0-Repositório segue o seguinte fluxo de atividades, começando pela disponibilização das informações reais do ativo repositório:
@@ -428,10 +416,9 @@
 	
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da requisição de um serviço em uma operação de interação.}
 		\label{fig:rami-interacao-requisicao}
 		\includegraphics[width=1\textwidth]{rami-interacao-requisicao}
-		\fonte{O autor.}
+		\caption{Diagrama PFS da requisição de um serviço em uma operação de interação.}
 	\end{figure}
 
 	A requisição de um serviço na operação de interação é iniciada pelo C4.0-Cliente e é enviada diretamente ao C4.0-Servidor usando o contrato fornecido pelo C4.0-Repositório. O fluxo de atividades para a requisição de um serviço é detalhada a seguir:
@@ -458,10 +445,9 @@
 
 	\begin{figure}[htb]
 		\centering
-		\caption{Diagrama PFS da resposta de um serviço em uma operação de interação.}
 		\label{fig:rami-interacao-resposta}
 		\includegraphics[width=1\textwidth]{rami-interacao-resposta}
-		\fonte{O autor.}
+		\caption{Diagrama PFS da resposta de um serviço em uma operação de interação.}
 	\end{figure}
 	
 	O detalhamento do fluxo de atividades da resposta é detalhado a seguir:
