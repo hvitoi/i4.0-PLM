@@ -31,18 +31,18 @@
 \renewcommand{\imprimircapa}{%
 	\begin{capa}%
 		\center
-		
+
 		{\ABNTEXchapterfont\imprimirautor}
 		\vspace*{\dimexpr 9cm - 12pt\relax}
-		
+
 		%\vfill
 		{\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
 		\vfill
-		
+
 		\imprimirlocal
 		\par
 		\imprimirdata
-		
+
 	\end{capa}
 }
 
@@ -51,18 +51,18 @@
 \renewcommand{\folhaderostocontent}{
 	\begin{center}
 		\center
-		
+
 		{\ABNTEXchapterfont\imprimirautor}
 		\vspace*{\dimexpr 9cm - 12pt\relax}
-		
+
 		{\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
 		\vfill
-		
+
 		\abntex@ifnotempty{\imprimirpreambulo}{%
 			\hspace{.45\textwidth}
 			\begin{minipage}{.5\textwidth}
 				\SingleSpacing
-				
+
 				\imprimirpreambulo
 				\par
 				\vspace*{2\baselineskip}
@@ -70,18 +70,18 @@
 				\par
 				\vspace{2\baselineskip}
 				{\imprimirorientadorRotulo~\imprimirorientador}
-				
+
 				\abntex@ifnotempty{\imprimircoorientador}{%
 					{\imprimircoorientadorRotulo~\imprimircoorientador}%
 				}%
 			\end{minipage}%
 			\vspace*{\fill}
 		}%
-		
+
 		\imprimirlocal
 		\par
 		\imprimirdata
-		
+
 	\end{center}
 }
 
@@ -91,18 +91,18 @@
 \newcommand{\falsafolhaderostocontent}{
 	\begin{center}
 		\center
-		
+
 		{\ABNTEXchapterfont\imprimirautor}
 		\vspace*{\dimexpr 9cm - 12pt\relax}
-		
+
 		{\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
 		\vfill
-		
+
 		\abntex@ifnotempty{\imprimirpreambulo}{%
 			\hspace{.45\textwidth}
 			\begin{minipage}{.5\textwidth}
 				\SingleSpacing
-				
+
 				\imprimirpreambulo
 				\par
 				\vspace*{2\baselineskip}
@@ -110,18 +110,18 @@
 				\par
 				\vspace{2\baselineskip}
 				{\phantom{\imprimirorientadorRotulo}~\phantom{\imprimirorientador}}
-				
+
 				\abntex@ifnotempty{\imprimircoorientador}{%
 					{\phantom{\imprimircoorientadorRotulo}~\phantom{\imprimircoorientador}}%
 				}%
 			\end{minipage}%
 			\vspace*{\fill}
 		}%
-		
+
 		\imprimirlocal
 		\par
 		\imprimirdata
-		
+
 	\end{center}
 }
 
@@ -143,11 +143,11 @@
 \makeatletter
 \hypersetup{
 	%pagebackref=true,
-	pdftitle={\@title}, 
+	pdftitle={\@title},
 	pdfauthor={\@author},
 	pdfsubject={\imprimirpreambulo},
 	pdfcreator={LaTeX with abnTeX2},
-	pdfkeywords={industria4}{rami}{ciclo-de-vida-produto}, 
+	pdfkeywords={industria4}{rami}{ciclo-de-vida-produto},
 	colorlinks=true,	% false: boxed links; true: colored links
 	linkcolor=blue,	% Color of internal links
 	citecolor=blue,	% Color of links to bibliography
