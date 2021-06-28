@@ -30,7 +30,7 @@ Os componentes da arquitetura e suas inter-relações são apresentados na \auto
 	\label{fig:aas-ws}
 \end{figure}
 
-De maneira sucinta, os componentes são descritos da seguinte forma: ``O AAS Servidor'' é a parte que possui um serviço a oferecer para os demais AASs no mundo conectado, o ``AAS Cliente'' é a parte que necessita de um serviço e que age ativamente para receber este serviço e o ``AAS Repositório'' é a parte que armazena informações sobre descrições de diversos serviços, que são disponibilizados na forma de contratos.
+De maneira sucinta, os componentes são descritos da seguinte forma: ``O AAS Servidor'' é a parte que possui um serviço a oferecer para os demais AAS no mundo conectado, o ``AAS Cliente'' é a parte que necessita de um serviço e que age ativamente para receber este serviço e o ``AAS Repositório'' é a parte que armazena informações sobre descrições de diversos serviços, que são disponibilizados na forma de contratos.
 
 A \autoref{tab:componentes-ws} lista os componentes da arquitetura para a I4.0 e suas respectivas descrições detalhadas.
 
@@ -59,7 +59,7 @@ A \autoref{tab:componentes-ws} lista os componentes da arquitetura para a I4.0 e
 	\label{tab:componentes-ws}
 \end{table}
 
-Neste modelo, o contrato contendo a descrição dos serviços disponíveis nos submodelos de cada AAS é armazenado em um repositório comum, onde todos os AASs disponíveis no mundo conectado na I4.0 podem se tornar visíveis. A função do repositório é armazenar uma lista de contratos dos AASs disponíveis, mas não o providenciar o serviço em si. O serviço é fornecido pelo próprio AAS Servidor que o tornou público, servindo o repositório apenas como um elemento para a descoberta de serviços.
+Neste modelo, o contrato contendo a descrição dos serviços disponíveis nos submodelos de cada AAS é armazenado em um repositório comum, onde todos os AAS disponíveis no mundo conectado na I4.0 podem se tornar visíveis. A função do repositório é armazenar uma lista de contratos dos AAS disponíveis, mas não o providenciar o serviço em si. O serviço é fornecido pelo próprio AAS Servidor que o tornou público, servindo o repositório apenas como um elemento para a descoberta de serviços.
 
 É importante notar que no mundo da I4.0 todo ativo é englobado por um AAS e se torna um Componente I4.0. Como o repositório detém informações e funções que agregam valor ao negócio, este pode também ser considerado um ativo e, portanto, possui o seu próprio AAS, que é responsável por toda a parte virtual deste ativo.
 
@@ -67,7 +67,7 @@ Cada AAS pode atuar tanto como um fornecedor de serviços (servidor), quanto com
 
 \subsection{Operações}
 
-As operações de serviços de AASs e suas inter-relações com os componentes são mostradas por meio dos arcos na \autoref{fig:aas-ws} e suas descrições detalhadas são apresentadas na \autoref{tab:operacoes-ws}
+As operações de serviços de AAS e suas inter-relações com os componentes são mostradas por meio dos arcos na \autoref{fig:aas-ws} e suas descrições detalhadas são apresentadas na \autoref{tab:operacoes-ws}
 
 \begin{table}[htb]
 	\centering
@@ -117,7 +117,7 @@ O conceito de Memória Digital do Produto (MDP) deve ser inserido na Indústria 
 
 Nesta seção são apresentados os detalhes sobre uma possível estruturação do AAS contendo todas as partes necessárias (incluindo a MDP) para a implementação do compartilhamento de informações por meio de WSs.
 
-A estrutura proposta do AAS é baseda em \citeonline{bader2019aas}, que estabelece a divisão do AAS em submodelos e o divide em duas partes: o cabeçalho (\textit{header}) e o corpo (\textit{body}).
+A estrutura proposta do AAS é baseada em \citeonline{bader2019aas}, que estabelece a divisão do AAS em submodelos e o divide em duas partes: o cabeçalho (\textit{header}) e o corpo (\textit{body}).
 
 O cabeçalho na estrutura proposta terá a função de providenciar informações públicas sobre o ativo que o identifiquem minimamente e que forneça uma descrição sobre seus serviços oferecidos. O cabeçalho deverá conter informações que podem ser acessadas sem a necessidade de autenticação como, por exemplo, seu identificador único universal (UUID - \textit{Universal Unique IDentifier}), o modelo e fabricante do ativo. O cabeçalho deverá conter também o contrato daquele \textit{Web Service} com as descrições de seus serviços públicos disponíveis.
 
@@ -163,7 +163,7 @@ Os dados dos contratos contidos no repositório devem ser padronizados para gara
 
 		\hline
 		ID do serviço
-		 & Número do serviço para a sua identificação única entre todos os repositórios. O ID do serviço pode ser derivado do próprio ID do AAS-Servidor correspondente (E.g., ID\_SERVIDOR.ID\_SERVIÇO\_001).                                                                                                                                                                                                                                                                                      \\
+		 & Número do serviço para a sua identificação única entre todos os repositórios. O ID do serviço pode ser derivado do próprio ID do AAS-Servidor correspondente (E.g., ID\_SERVIDOR. ID\_SERVIÇO\_001).                                                                                                                                                                                                                                                                                     \\
 
 		\hline
 		Descrição do serviço
@@ -171,7 +171,7 @@ Os dados dos contratos contidos no repositório devem ser padronizados para gara
 
 		\hline
 		ID do AAS Servidor correspondente ao serviço
-		 & Tem a função de distinguir exclusivamente os AASs provedores de serviços e todos seus elementos \cite{adolphs2016structure} no mundo conectado da I4.0. Alguns tipos possíveis de identificadores são \cite{bader2019aas}: IRDI, IRI e UUID. O ID do AAS servidor permite que o consumidor de serviços possa localizar e invocar diretamente o serviço ofertado.                                                                                                                         \\
+		 & Tem a função de distinguir exclusivamente os AAS provedores de serviços e todos seus elementos \cite{adolphs2016structure} no mundo conectado da I4.0. Alguns tipos possíveis de identificadores são \cite{bader2019aas}: IRDI, IRI e UUID. O ID do AAS servidor permite que o consumidor de serviços possa localizar e invocar diretamente o serviço ofertado.                                                                                                                         \\
 
 		\hline
 		Descrição do AAS Servidor
@@ -201,8 +201,6 @@ O AAS-Servidor será, portanto, o responsável pela geração e atualização do
 
 A inserção e atualização de um registro no AAS-Repositório deve acontecer sempre que um AAS-Servidor é instalado ou atualizado, o que acarreta uma nova operação de publicação.
 
-%Já os possíveis dados a serem extraídos do AAS-Servidor (produto) O metamodelo e possíveis informações a serem armazenadas na MDP do produto (AAS servidor) são apresentados no \autoref{cha:ciclo-de-vida}.
-
 \section{Fluxo de fornecimento de serviços}
 
 As etapas para o fornecimento de serviços na I4.0 segue um fluxo padrão. Os submodelos agregam informações semelhantes que podem ser lidas ou escritas (via MDP) e disponibilizada por meio de \textit{Web Services} a qualquer uma das partes ao longo da CS mediante autenticação.
@@ -220,7 +218,7 @@ A \autoref{fig:webservice-multielo} demonstra este cenário mencionado com o flu
 
 Na \autoref{fig:webservice-multielo} são mostrados os três submodelos do AAS Produto: (\textbf{e}) Submodelo ``geolocalização'', (\textbf{f}) submodelo ``sensores'' e (\textbf{g}) submodelo ``documentação''. A (\textbf{h}) MDP realiza o gerenciamento dos dados de todos os submodelos e os disponibiliza para acesso pelos serviços, as descrições dos serviços são armazenados em forma de um (\textbf{i}) contrato. Este contrato é (\textbf{j}) publicado no repositório.
 
-O (\textbf{k}) AAS Repositório recebe o contrato do AAS Produto e o disponibiliza para consulta. O AAS Repositório receberá também os contratos de diversos outros AASs (não representado na figura).
+O (\textbf{k}) AAS Repositório recebe o contrato do AAS Produto e o disponibiliza para consulta. O AAS Repositório receberá também os contratos de diversos outros AAS (não representado na figura).
 
 Os AAS Clientes fazem a (\textbf{l}) busca no AAS Repositório. As buscas são feitas com parâmetros a fim de se restringir qual tipo de serviço aquele cliente pretende consumir, podendo-se restringir a busca, inclusive, ao serviço de um AAS específico, identificando-o por meio de seu UUID.
 
@@ -263,8 +261,6 @@ A camada \textbf{Integração} está presente no C4.0-Servidor, pois dele serão
 
 Com relação à camada \textbf{Comunicação}, para a arquitetura de compartilhamento de informações de ativos, não haverá comunicação entre C4.0s dentro da mesma empresa uma vez que todas as operações de um WS (publicação, busca e interação) ocorrem entre componentes de organizações distintas. Esta camada, entretanto, é necessária para as diversas outras comunicações inter-organizacionais. Os protocolos estabelecidos nesta camada para a integração vertical são independentes dos protocolos para a integração horizontal, que são definidos na camada funcional.
 
-%	A camada de \textbf{Informação} é onde os dados são de fato armazenados. Para isso, modelos de estrutura de Banco de Dados (BD) são definidos de acordo os tipos de dados e suas aplicações. Alguns exemplos de estrutura de dados incluem: BDs relacionais (e.g., MySQL, Postgres, SQLite) \cite{morris2017relationaldatabase} e demais BDs NoSQL como os orientados a documentos (e.g., MongoDB, CouchDB), os do tipo chave-valor (e.g., Redis, DynanoDB), os de armazenamento em coluna ampla (e.g., Cassandra, HBase) e os baseados em grafos (e.g.,Neo4j, JanusGraph) \cite{schaefer2019nosql}.
-
 Na camada \textbf{Informação}  do C4.0-Repositório estarão armazenados os contratos disponibilizados por cada produto. No C4.0-Servidor, esta camada armazena os submodelos e a MDP.
 
 Na camada \textbf{Funcional} ocorre toda a integração horizontal entre as partes da cadeia de suprimentos de um produto. Os serviços são disponibilizados por meio da camada funcional, portanto esta é a interface entre os C4.0s de diferentes empresas.
@@ -275,8 +271,6 @@ Na camada \textbf{Regra de Negócio} estarão as restrições aplicadas sobre os
 
 A regra de negócio estabelecerá quem na cadeia de suprimentos terá permissão para acessar quais informações do produto e quando. Um fabricante, por exemplo, terá acesso aos dados de padrões de uso de um ativo somente sob a permissão do cliente, o que representa uma regra nesta camada. Um distribuidor, por sua vez, só poderá ter acesso à localização do ativo enquanto o produto estiver sob sua custódia.
 
-%Para os WSs, outra função importante desta camada é a orquestração dos serviços, que se refere ao gerenciamento dos serviços oferecidos. Quando os serviços são oferecidos em forma de contêineres, o orquestrador de serviços permite a escalabilidade da capacidade de trabalho, permitindo a invocação ou remoção de contêineres de acordo com a demanda de um determinado serviço. Alguns orquestradores de contêineres podem ser citados, como o Kubernetes, Docker Swarm e Apache Mesos \cite{redhat2020orchestration}.
-
 Para cada tipo de operação relacionada a um Componente I4.0, é necessário detalhar o fluxo de dados e de eventos acontecendo em cada uma das camadas. Este detalhamento permite que implementações de soluções I4.0 sejam facilitadas e garante que a criação dessas soluções por diversos desenvolvedores de sistemas resulte em sistemas que sejam interoperáveis, independentemente da tecnologia adotada.
 
 O Componente I4.0 pode ainda ser mais detalhadamente especificado, identificando se o componente representa um produto em desenvolvimento ou um produto em produção. Estes detalhes são cobertos pelo eixo ``Ciclo de Vida e Cadeia de Valor'' e considerações sobre este eixo envolvendo a arquitetura proposta baseada em WSs é apresentada no \autoref{cha:ciclo-de-vida}.
@@ -284,11 +278,11 @@ O Componente I4.0 pode ainda ser mais detalhadamente especificado, identificando
 A \autoref{fig:webservice-rami} apresenta os componentes da arquitetura de fornecimento de WSs dentro do eixo Camadas do RAMI4.0.%, que são:
 
 %	\begin{itemize}
-%		\item \textbf{Ativo}: Pessoas e empresas (cliente), produtos (servidor) e WSDs (repositório); 
+%		\item \textbf{Ativo}: Pessoas e empresas (cliente), produtos (servidor) e contratos (repositório); 
 %		\item \textbf{Integração}: Virtualização das informações, protocolos de transferência de dados (Ethernet, 5G, Wi-Fi, etc); 
 %		\item \textbf{Comunicação}: Protocolos de comunicação vertical (OPC UA); 
 %		\item \textbf{Informação}: Controle de acesso / autenticação, análise de dados, armazenamento, descrição dos serviços (virtual);
-%		\item \textbf{Funcional}: Serviços de compartilhamento de informações, protocolos de comunicação horizontal (HTTPS, etc), interface horizontal entre AASs; 
+%		\item \textbf{Funcional}: Serviços de compartilhamento de informações, protocolos de comunicação horizontal (HTTPS, etc), interface horizontal entre AAS; 
 %		\item \textbf{Regra de negócio}: Restrições legais, políticas de privacidade.
 %	\end{itemize}
 
