@@ -31,6 +31,7 @@ Embora o termo I4.0 seja bastante comum na discussão tecnológica atual, muitas
 \begin{table}[htb]
 	\centering
 	\footnotesize
+	\caption{Princípios para implantação da I4.0 baseados em \citeonline{hermann2016design}.}
 	\begin{tabular}{p{3cm}p{12cm}}
 		\hline
 		\textbf{Princípio}           & \textbf{Descrição}                                                                                                                                                                                                                                                                                                           \\
@@ -53,7 +54,6 @@ Embora o termo I4.0 seja bastante comum na discussão tecnológica atual, muitas
 
 		\hline
 	\end{tabular}
-	\caption{Princípios para implantação da I4.0 baseados em \citeonline{hermann2016design}.}
 	\label{tab:principios-i4}
 \end{table}
 
@@ -103,6 +103,7 @@ A \autoref{fig:rami4} mostrou a representação do RAMI4.0, especificando os ite
 \begin{table}[htb]
 	\centering
 	\footnotesize
+	\caption{Eixos do RAMI4.0.}
 	\begin{tabular}{p{3cm}p{12cm}}
 		\hline
 		\textbf{Eixo} & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                                                                                                              \\
@@ -120,7 +121,6 @@ A \autoref{fig:rami4} mostrou a representação do RAMI4.0, especificando os ite
 		              & No eixo horizontal direito estão indicados os níveis hierárquicos da IEC 62264, a série de padrões internacionais para sistemas de TI e controle corporativos. Os níveis hierárquicos representam as diferentes funcionalidades das fábricas. Para representar o ambiente I4.0, as funcionalidades foram expandidas, incluindo adicionalmente o ``Produto'', o ``Dispositivo de campo'' e o ``Mundo conectado''.                                                \\
 		\hline
 	\end{tabular}
-	\caption{Eixos do RAMI4.0.}
 	\label{tab:rami-eixos}
 \end{table}
 
@@ -160,15 +160,21 @@ Já os elementos do eixo ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 são det
 	\fonte{\citeonline{gayko2018ramistandardization} (adaptado).}
 \end{figure}
 
+O eixo ``Ciclo de Vida e Cadeia de Valor'' é derivado da norma IEC 62890 \cite{adolphs2015rami}. O objetivo deste eixo é representar o ciclo de vida de um Componente I4.0 ao longo de toda a sua cadeia de valor.
+
 A I4.0 oferece um grande potencial de aprimoramento dos processos ao longo do ciclo de vida do produto. Este eixo fornece uma representação do estado do ativo ao longo de toda sua cadeia de suprimentos e sua cadeia de valor.
 
 É feita a distinção fundamental entre ``tipo'' e ``instância'', cada um correspondendo a uma fase em que o produto se encontra \cite{adolphs2015rami}.
 
 Um tipo é sempre criado com uma ideia inicial, ou seja, quando um produto surge na fase de desenvolvimento. Isso abrange o comissionamento, desenvolvimento e testes até a produção inicial de amostras e protótipos \cite{adolph2018roadmap}.
 
+Os ``tipos'' estão presentes desde a concepção/conceitualização até os primeiros protótipos/testes. O ``tipo'' de um ativo é definido pelas suas propriedades e funcionalidades distintas. Todos os itens que são criados ao longo do projeto de um produto (e.g., desenhos em CAD, manuais, \textit{softwares}, etc) são incorporados ao ``tipo'' do ativo. Informações externas associadas ao ativo que são criadas ao longo de seu desenvolvimento como informações de \textit{marketing} também são incorporadas ao ``tipo''.
+
 Com a conclusão de todas as etapas de testes e validação, o tipo é liberado para produção em série. A partir de então, novos produtos podem ser instanciados com base neste tipo validado.
 
 Com a fabricação do produto, instâncias são geradas. Cada produto fabricado representa uma instância de um determinado tipo e recebe um número de série exclusivo.
+
+As instâncias são criadas, produzidas ou fabricadas com base nas informações de um ``tipo'' de ativo. Informações específicas sobre produção, logística, qualidade e testes são associadas à ``instância'' de um ativo. Nesta fase, os dados de uso são coletados e associados para então poderem ser armazenados na MDP de cada ativo e serem compartilhados com outros parceiros ao longo da cadeia de suprimentos.
 
 As melhorias sobre um produto feitas pelo fabricante refletem em um novo tipo, que por sua vez pode ser usado para fabricar novas instâncias, acompanhando, assim, o ciclo de vida do produto.
 
@@ -443,7 +449,7 @@ A arquitetura REST possibilita a interoperabilidade entre sistemas na \textit{In
 
 O padrão REST, mais moderno, veio gradualmente substituindo o padrão SOAP, mais antigo, e hoje é a forma mais comum de compartilhamento de informações por meio de \textit{web services}. Apesar de ambos os padrões serem baseados no HTTP e HTTPS, o padrão REST geralmente contém um \textit{payload} de mensagem mais leve por trafegar dados no formato JSON, ao contrário do padrão SOAP que utiliza o formato XML.
 
-A arquitetura REST estabelece as orientações e boas práticas de uma interface que devem ser satisfeitas  para que possa ser referida como um serviço RESTful. Esses princípios são \cite{fielding2000rest}:
+A arquitetura REST estabelece as orientações e boas práticas de uma interface que devem ser satisfeitas  para que possa ser referida como um serviço \textit{RESTful}. Esses princípios são \cite{fielding2000rest}:
 
 \begin{enumerate}
 	\item \textbf{Cliente-Servidor}:  segregação das interfaces dos usuário das interfacer do banco de dados. Desta forma, padroniza-se a interface para a interação com um banco de dados, trazendo mais portabilidade e flexibilidade aos sistemas e melhorando a sua escalabilidade.
@@ -465,6 +471,7 @@ Cada método do protocolo HTTP recebe um tipo de operação padrão do REST. A \
 
 \begin{table}[htb]
 	\centering
+	\caption{Mapeamento dos métodos HTTP em um \textit{RESTful Service}.}
 	\begin{tabular}{p{2cm}p{2cm}p{9cm}}
 		\hline
 		\textbf{Método} &
@@ -513,10 +520,17 @@ Cada método do protocolo HTTP recebe um tipo de operação padrão do REST. A \
 
 		\hline
 	\end{tabular}
-	\caption{Mapeamento dos métodos HTTP em um \textit{RESTful Service}.}
 	\label{tab:methods-rest}
 	\fonte{\citeonline{fielding2000architecture} (adaptado).}
 \end{table}
+
+Tanto para APIs REST quanto para APIs SOAP, é necessário a definição de um contrato, que é a documentação da API. Este documento descreve o comportamento da API, o que inclui as URLs dos \textit{endpoints} (rotas), os métodos de cada rota, argumentos e exemplos de chamadas (\textit{requests}) com suas respectivas respostas.
+
+Existem vários formatos de arquivo que permitem criar um contrato e obter sua documentação, o mais comumente utilizado para a documentação de APIs REST é o OpenAPI \cite{santos2020openapi}, anteriormente conhecido como \textit{Swagger}.
+
+Para APIs SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{ferris2003wsdl}. APIs com servidores gRPC suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
+
+O contrato é definido pelos provedores do serviço e destinado aos consumidores da API, ou seja, às empresas e desenvolvedores que irão utilizar a API. O documento geralmente é criado pela própria equipe de desenvolvimento que elabora o serviço.
 
 \section{Modelagem de sistemas}
 \label{sec:modelagem}
