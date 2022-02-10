@@ -160,23 +160,21 @@ Já os elementos do eixo ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 são det
 	\fonte{\citeonline{gayko2018ramistandardization} (adaptado).}
 \end{figure}
 
-O eixo ``Ciclo de Vida e Cadeia de Valor'' é derivado da norma IEC 62890 \cite{adolphs2015rami}. O objetivo deste eixo é representar o ciclo de vida de um Componente I4.0 ao longo de toda a sua cadeia de valor.
-
-A I4.0 oferece um grande potencial de aprimoramento dos processos ao longo do ciclo de vida do produto. Este eixo fornece uma representação do estado do ativo ao longo de toda sua cadeia de suprimentos e sua cadeia de valor.
+O eixo ``Ciclo de Vida e Cadeia de Valor'' é derivado da norma IEC 62890 \cite{adolphs2015rami}. O objetivo deste eixo é representar o estado de um Componente I4.0 ao longo de toda a sua cadeia de valor, ou seja, a representação de seu ciclo de vida.
 
 É feita a distinção fundamental entre ``tipo'' e ``instância'', cada um correspondendo a uma fase em que o produto se encontra \cite{adolphs2015rami}.
 
-Um tipo é sempre criado com uma ideia inicial, ou seja, quando um produto surge na fase de desenvolvimento. Isso abrange o comissionamento, desenvolvimento e testes até a produção inicial de amostras e protótipos \cite{adolph2018roadmap}.
+Um ``tipo'' é sempre criado com uma ideia inicial, ou seja, quando um produto surge na fase de desenvolvimento. Isso abrange o comissionamento, desenvolvimento e testes até a produção inicial de amostras e protótipos \cite{adolph2018roadmap}.
 
-Os ``tipos'' estão presentes desde a concepção/conceitualização até os primeiros protótipos/testes. O ``tipo'' de um ativo é definido pelas suas propriedades e funcionalidades distintas. Todos os itens que são criados ao longo do projeto de um produto (e.g., desenhos em CAD, manuais, \textit{softwares}, etc) são incorporados ao ``tipo'' do ativo. Informações externas associadas ao ativo que são criadas ao longo de seu desenvolvimento como informações de \textit{marketing} também são incorporadas ao ``tipo''.
+Os ``tipos'' estão presentes desde a concepção/conceitualização até os primeiros protótipos/testes. O ``tipo'' de um ativo é definido por suas propriedades e funcionalidades distintas. Todos os itens que são criados ao longo do projeto de um produto (e.g., desenhos em CAD, manuais, \textit{softwares}, etc) são incorporados ao ``tipo'' do ativo. Informações externas associadas ao ativo que são criadas ao longo de seu desenvolvimento como informações de \textit{marketing} também são incorporadas ao ``tipo''.
 
-Com a conclusão de todas as etapas de testes e validação, o tipo é liberado para produção em série. A partir de então, novos produtos podem ser instanciados com base neste tipo validado.
+Com a conclusão de todas as etapas de testes e validação, o ``tipo'' é liberado para produção em série. A partir de então, novos produtos podem ser instanciados com base no projeto validado até então.
 
-Com a fabricação do produto, instâncias são geradas. Cada produto fabricado representa uma instância de um determinado tipo e recebe um número de série exclusivo.
+Com a fabricação do produto, ``instâncias'' são geradas. Cada produto fabricado representa uma ``instância'' de um determinado ``tipo'' e assim recebe um número de série exclusivo.
 
-As instâncias são criadas, produzidas ou fabricadas com base nas informações de um ``tipo'' de ativo. Informações específicas sobre produção, logística, qualidade e testes são associadas à ``instância'' de um ativo. Nesta fase, os dados de uso são coletados e associados para então poderem ser armazenados na MDP de cada ativo e serem compartilhados com outros parceiros ao longo da cadeia de suprimentos.
+As ``instâncias'' são criadas, produzidas ou fabricadas com base nas informações de um ``tipo'' de ativo. Informações específicas sobre produção, logística, qualidade e testes são associadas à ``instância'' do ativo. Nesta fase, os dados de uso são coletados e associados para então poderem ser armazenados na MDP de cada ativo e serem compartilhados com outros parceiros ao longo da cadeia de suprimentos.
 
-As melhorias sobre um produto feitas pelo fabricante refletem em um novo tipo, que por sua vez pode ser usado para fabricar novas instâncias, acompanhando, assim, o ciclo de vida do produto.
+As melhorias sobre um produto feitas pelo fabricante refletem em um novo ``tipo'', que por sua vez pode ser usado para fabricar novas ``instâncias'', acompanhando, assim, o ciclo de vida do produto.
 
 O último eixo descrito, ``Níveis Hierárquicos'', do RAMI4.0 é apresentado na \autoref{fig:eixo-niveishierarquicos}. Nesta representação, o último nível -- ``Mundo conectado'' (não representado no detalhamento à direita) -- é a interconexão e interoperabilidade entre as mais de diversas empresas, que por sua vez possuem todas as demais camadas inferiores listadas.
 
@@ -228,17 +226,15 @@ Os submodelos são unidades básicas de organização dentro de um AAS que agreg
 
 Os submodelos básicos são unidades de organização que se aplicam a muitos ou todos os ativos dentro do mundo I4.0. Já os submodelos livre são acertados entre os parceiros na cadeia de suprimentos e possuem um uso específico para um determinado produto.
 
-O AAS é um elo entre os ativos reais e seus correspondentes digitais no mundo conectado. A \autoref{fig:aas-conexao} ilustra a comunicação entre diferentes AASs em um ambiente de manufatura I4.0 sob uma ontologia comum.
+O AAS é um elo entre os ativos reais e seus correspondentes digitais no mundo conectado. Dentro da I4.0, os ativos possuem um AAS com capacidade de comunicação com outros dispositivos \cite{bader2019aas}. O conjunto Ativo-AAS, que é o objeto real encapsulado pelo \textit{Asset Administration Shell}, é denominado ``Componente I4.0''. A \autoref{fig:aas-conexao} ilustra a comunicação entre diferentes Componentes I4.0 em um ambiente de manufatura.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=1\textwidth]{aas-conexao.png}
-	\caption{Comunicação entre AASs de componentes I4.0.}
+	\caption{Comunicação entre diferentes Componentes I4.0.}
 	\label{fig:aas-conexao}
 	\fonte{\citeonline{marcon2018asset} (adaptado).}
 \end{figure}
-
-Dentro da I4.0, todos os ativos possuem um AAS com capacidade de comunicação com outros dispositivos. O conjunto Ativo-AAS, que é o objeto real encapsulado pelo \textit{Asset Administration Shell}, é denominado ``Componente I4.0''.
 
 A integração dos ativos, representada pelos Componentes I4.0, em um nível funcional requer uma descrição padronizada das funções (ou capacidades) dos ativos em questão. A padronização de submodelos para descrever detalhadamente cada função pode ser usada para definir requisitos para a fabricação de produtos \cite{bedenbender2017aasexamples}. A \autoref{fig:submodelos} mostra um exemplo de detalhamento de funções de um ativo.
 
@@ -250,7 +246,7 @@ A integração dos ativos, representada pelos Componentes I4.0, em um nível fun
 	\fonte{\citeonline{bedenbender2017aasexamples} (adaptado).}
 \end{figure}
 
-No ambiente de manufatura baseado na I4.0, o produto descreve os requerimentos necessários para sua fabricação e então esses requerimentos são comparados com as descrições das funções das máquinas disponíveis. Portanto, a seleção de um ativo é otimizada, baseando-se nos requerimentos do produto e nas descrições das funções dos ativos.
+No ambiente de manufatura baseado na I4.0, o produto descreve os requisitos necessários para sua fabricação, e então esses requisitos são comparados com as descrições das funções das máquinas disponíveis. Portanto, a seleção de um ativo é otimizada, baseando-se nos requisitos do produto e nas descrições das funções dos ativos.
 
 Desta forma, um Componente I4.0 representa todos os elementos necessários para a efetiva interoperabilidade entre ativos no mundo conectado, inclusive os seus próprios requisitos, suas regras de negócio, limitações técnicas e todas as demais características que se relacionem ao ativo e sua interação com o ambiente.
 
@@ -275,7 +271,7 @@ A ideia de uma CS simples envolve fornecedor, produtor e cliente \cite{hugos2018
 	\fonte{\citeonline{hugos2018supplychain} (adaptado).}
 \end{figure}
 
-Além do eficiente fluxo de materiais e produtos dentro da CS, é imprescindível a manutenção de um canal para troca de informações entre as partes em uma CS, pois sem uma adequada comunicação, gerentes podem acidentalmente tomar decisões supostamente racionais, porém que afetam negativamente outros líderes da cadeia, como o efeito chicote \cite{lee1997bullwhip}, que é a distorção da percepção da procura de um produto que vai se ampliando ao longo da cadeia de suprimentos. Erros de comunicação desse tipo podem acarretar problemas como o aumento do custo de transporte, o elevado tempo de aprovisionamento ao cliente e o desgaste no relacionamento com os fornecedores.
+Além do eficiente fluxo de materiais e produtos dentro da CS, é imprescindível a manutenção de um canal para troca de informações entre as partes, pois sem uma comunicação adequada, gerentes podem acidentalmente tomar decisões supostamente racionais, porém que afetam negativamente outros líderes da cadeia, como o efeito chicote \cite{lee1997bullwhip}, que é a distorção da percepção da procura de um produto que vai se ampliando ao longo da cadeia de suprimentos. Erros de comunicação desse tipo podem acarretar problemas como o aumento do custo de transporte, o elevado tempo de aprovisionamento ao cliente e o desgaste no relacionamento com os fornecedores.
 
 Ao longo da cadeia de suprimentos pode-se observar processos que agregam valor ao produto em desenvolvimento. As etapas de transformação do produto com adição de valor ao longo da CS também podem ser definidas como Cadeia de Valor (CV).
 
@@ -291,7 +287,7 @@ Uma CV é um conjunto de atividades que empresas de um setor específico desempe
 
 As CVs estão focadas em fornecer o máximo valor ao cliente (valor perceptível) com o menor custo e, portanto, é um indicador para a competitividade da empresa. Com o crescente acirramento da competição entre as empresas, essas devem procurar novas formas de agregar mais valor perceptível aos seus produtos, sendo isto em forma de redução de preço, aumento de qualidade, suporte ou qualquer outra nova funcionalidade.
 
-Outra forma de agregação de valor está no princípio de valor compartilhado, que envolve a geração de valor econômico de forma a criar também valor para a sociedade como um todo \cite{porter2011valorcompartilhado} com o enfrentamento de suas necessidades e desafios. Esta necessidade de valor compartilhado parte da percepção generalizada de que empresas prosperam às custas da depreciação da comunidade que as cercam. Soluções que visem o aumento das condições de trabalho, a maior racionalidade e eficiência no tratamento dos recursos naturais necessários para sua atividade e outras formas de balancear o \textit{trade-off} entre eficiência econômica e progresso social são estratégias para se recuperar a legitimidade e a percepção de valor pela sociedade da atividade empresarial.
+Outra forma de agregação de valor está no princípio de valor compartilhado, que envolve a geração de valor econômico de forma a criar também valor para a sociedade como um todo \cite{porter2011valorcompartilhado}, com o enfrentamento de suas necessidades e desafios. Esta necessidade de valor compartilhado parte da percepção generalizada de que empresas prosperam às custas da depreciação das comunidades que as cercam. Soluções que visem o aumento das condições de trabalho, a maior racionalidade e eficiência no tratamento dos recursos naturais necessários para sua atividade e outras formas de balancear o \textit{trade-off} entre eficiência econômica e progresso social são estratégias para se recuperar a legitimidade e a percepção de valor pela sociedade da atividade empresarial.
 
 \subsection{Logística 4.0}
 
@@ -301,9 +297,7 @@ A inserção dessas novas tecnologias ao escopo de estudo da logística acarreta
 
 As cadeias de suprimentos atuais podem ser extremamente grandes e complexas (alta interdependência entre as partes) e, portanto, sem uma correta gestão, podem levar à tomada de decisões não ótimas por parte dos gestores humanos. Por esses aspectos, este setor pode ser um dos primeiros a se adaptar a esta nova forma de organização da Indústria 4.0 (ou da Logística 4.0), tornando os processos cada vez mais automatizados a fim de se atender os novos requisitos da sociedade moderna.
 
-Dentro da CS, identificadores individuais podem ser usados a fim de se implementar a conectividade de objetos e informações requeridos no contexto da I4.0.
-
-A tecnologia de RFID (\textit{Radio-Frequency IDentification}) permite criar uma identificação única para um objeto, onde a etiqueta RFID é um pequeno \textit{chip} que pode ser acoplado e incorporado a um produto e assim armazena um código de identificação único, assim como outras informações relevantes, que podem ser transmitidas sem fio via rádiofrequência. O RFID se mostra como uma alternativa ao tradicional código de barras e o \textit{QR code}. A utilização de identificadores individuais é comum para aplicação de conceitos da I4.0 \cite{alyahya2016rfidwarehousing, vlachos2014rfidimpact, fan2015inventory, bibi2017rfidfood}, pois permite a identificação de cada coisa na rede e possibilita a troca de informações autônomas.
+Dentro da CS, identificadores individuais podem ser usados a fim de se implementar a conectividade de objetos e informações requeridos no contexto da I4.0. Neste sentido, a tecnologia de RFID (\textit{Radio-Frequency IDentification}) permite criar uma identificação única para um objeto, onde a etiqueta RFID é um pequeno \textit{chip} que pode ser acoplado e incorporado a um produto e assim armazenar um código de identificação único, assim como outras informações relevantes, que podem ser transmitidas sem fio via rádiofrequência. O RFID se mostra como uma alternativa ao tradicional código de barras e o \textit{QR code}. A utilização de identificadores individuais é comum para aplicação de conceitos da I4.0 \cite{alyahya2016rfidwarehousing, vlachos2014rfidimpact, fan2015inventory, bibi2017rfidfood}, pois permite a identificação de cada coisa na rede e possibilita a troca de informações autônomas.
 
 A Logística 4.0, portanto, estabelece uma série de paradigmas que empresas atuando no ramo logístico deverão seguir nos próximos anos para se manterem competitivas. Conceitos de operação como o intercâmbio de informações instantâneas, soluções automatizadas e análise de dados em tempo real abrem caminhos para novos modelos de negócios \cite{strandhagen2017logistics}, que se tornarão essenciais na eficiência em logística moderna.
 
@@ -320,7 +314,7 @@ O conceito de ciclo de vida do produto foi elaborado em meados da década de 196
 	\fonte{\citeonline{levitt1965lifecycle} (adaptado).}
 \end{figure}
 
-Vista a tendência global de redução do ciclo de vida do produto devida a rápida taxa de introdução de novas tecnologias para satisfazer a demanda dos clientes, especialmente no mercado de produtos eletrônicos \cite{trappey2008lifecycle}, novas versões de modelos de ciclo de vida do produto vêm sendo elaboradas considerando outros aspectos de mercado e não somente sob a visão da área de \textit{Marketing}. Por vezes, estudos recentes envolvendo ciclo de vida são denominados ``engenharia do ciclo de vida do produto'' (E-CVP) \cite{cao2012lifecycle} e levam em consideração fatores não abordados nos modelos originais como, por exemplo, a fase de pesquisa e desenvolvimento, a retroalimentação de dados, assim como o descarte e reciclagem do produto. Sempre tendo como objetivo auxiliar na tomada de decisões para o sucesso de um produto no mercado.
+Vista a tendência global de redução do ciclo de vida do produto devida a rápida taxa de introdução de novas tecnologias para satisfazer a demanda dos clientes, especialmente no mercado de produtos eletrônicos \cite{trappey2008lifecycle}, novas versões de modelos de ciclo de vida do produto vêm sendo elaboradas considerando outros aspectos de mercado e não somente sob a visão da área de \textit{Marketing}. Por vezes, estudos recentes envolvendo ciclo de vida são denominados ``engenharia do ciclo de vida do produto'' (E-CVP) \cite{cao2012lifecycle} e levam em consideração fatores não abordados nos modelos originais como, por exemplo, a fase de pesquisa e desenvolvimento, a retroalimentação de dados, assim como o descarte e reciclagem do produto.
 
 A \autoref{fig:ciclo-de-vida-extensao} mostra um modelo de ciclo de vida do produto com elementos que incluem a fase de desenvolvimento e a renovação do produto. A renovação do produto e a decorrente extensão de sua vida é essencial, pois mantém o produto no mercado na forma de novas versões e, assim, amplia as receitas mediante ações estratégicas para agregação de valor. O modelo do ciclo de vida e os elementos presentes sempre irão variar conforme a natureza do produto e tipo de mercado consumidor onde o mesmo está inserido.
 
@@ -344,7 +338,7 @@ Mais recentemente, novas propostas de modificações de processos industriais po
 
 O termo ``Memória Digital do Produto'' (MDP) surgiu pela primeira vez em 2007 por meio de um boletim de notícias de tecnologia de uma empresa alemã fabricante de conectores elétricos e eletrônicos \cite{wahlster2007digitalmemory}. À época, o termo foi tratado com analogia a um diário, que mantinha todas as informações do produto ao longo de seu ciclo de vida.
 
-Hoje, o conceito na literatura se refere a sistemas que permitem a coleta de dados em todas as fases do ciclo de vida do produto para a distribuição e/ou análise. Os dados de interesse do produto podem ser relativos a qualquer fase do produto ao longo de sua cadeia de suprimentos, o que abrange dados de produção individual, de montagem, de distribuição, de uso por parte do consumidor, etc. A \autoref{fig:mdp} ilustra o conceito de MDP.
+Hoje, o conceito na literatura se refere a sistemas que permitem a coleta de dados em todas as fases do ciclo de vida do produto para a distribuição e/ou análise. Os dados de interesse do produto são heterogêneos e podem ser gerados e/ou consumidos por diferentes elos ao longo de sua cadeia de suprimentos. A \autoref{fig:mdp} ilustra o conceito de MDP.
 
 \begin{figure}[htb]
 	\centering
@@ -354,9 +348,9 @@ Hoje, o conceito na literatura se refere a sistemas que permitem a coleta de dad
 	\fonte{\citeonline{zuhlke2020digitalmemory} (adaptado).}
 \end{figure}
 
-Sua relevância está no fato da tendência de produtos novos apresentarem ciclos de vida cada vez mais curtos e devido ao fato das cadeias de suprimentos apresentarem redes cada vez mais complexas, com múltiplos fornecedores e clientes. Com isso, a MDP manteria registros digitais do ciclo de vida dos produtos, faria o monitoramento constante do seu estado atual e realizaria o rastreamento de sua posição. Segundo \citeonline{wahlster2007digitalmemory}, o acesso a essas informações pelas partes interessadas seria de vital importância na competitividade de empresa produtoras e de comércio, além de abrir novas proteções em relação à pirataria.
+Sua relevância está no fato da tendência de produtos novos apresentarem ciclos de vida cada vez mais curtos, e também devido ao fato das cadeias de suprimentos serem compostas por redes cada vez mais complexas, com múltiplos fornecedores e clientes. Com isso, a MDP manteria registros digitais do ciclo de vida dos produtos, faria o monitoramento constante do seu estado atual e realizaria o rastreamento de sua posição. Segundo \citeonline{wahlster2007digitalmemory}, o acesso a essas informações pelas partes interessadas seria de vital importância na competitividade de empresas produtoras e de comércio, além de abrir novas proteções em relação à pirataria.
 
-Os produtos que são produzidos no cenário de Indústria 4.0 podem ser equipados com a MDP e por meio dela extrair e armazenar informações relevantes de eventos ocorridos ao longo do ciclo de vida do produto a fim de fornecer serviços a todo o ambiente com o qual o produto se relaciona \cite{brandherm2011productmemory}. A MDP fornece também uma forma de rastreabilidade, uma vez que pode armazenar informações geoespaciais do ativo ao longo do tempo.
+Os produtos que são produzidos no cenário de Indústria 4.0 podem ser equipados com a MDP e por meio dela extrair e armazenar informações relevantes de eventos ocorridos ao longo do ciclo de vida do produto, a fim de fornecer serviços a todo o ambiente com o qual o produto se relaciona \cite{brandherm2011productmemory}. A MDP fornece também uma forma de rastreabilidade, uma vez que pode armazenar informações geoespaciais do ativo ao longo do tempo.
 
 Implementações de uma memória com informações sobre produto ao longo de sua cadeia de suprimentos é importante, pois torna possível acessar e utilizar informações do mundo real providenciada por diferentes fontes para o potencial benefício das partes interessadas naquele produto \cite{brandherm2011productmemory}, como, por exemplo, fabricantes, transportadores, varejistas e consumidores. E também no pós-venda, onde a MDP continua a ser disponibilizada e ativa, dando a possibilidade ao consumidor de ainda manter contato com cada elo da cadeia de suprimentos e se beneficiar de serviços individuais que se acumulam na memória \cite{brandherm2011productmemory}.
 
@@ -365,7 +359,7 @@ Implementações de uma memória com informações sobre produto ao longo de sua
 
 Arquitetura Orientada a Serviços (\textit{Service Oriented Architecture} - SOA) é um estilo de projeto de \textit{software} em que serviços são disponibilizados a outros sistemas por meio de um protocolo de comunicação comum em uma rede \cite{bell2008soa}. Um serviço é uma unidade de funcionalidade que pode ser fornecida/acessada remotamente. A SOA se destina a ser independente de fornecedores, produtos e tecnologias.
 
-Para quem consome um serviço, a abordagem é como uma caixa preta, o que significa que o consumidor não sabe ou não precisa estar ciente do funcionamento interno deste serviço, sendo relevante apenas o seu resultado. Os serviços representam uma lógica de fornecimento de resultados. É uma abstração de problemas, ou seja, toda a complexidade interna inerente aos serviços pode ser abstraída pelos consumidores dos serviços.
+Para quem consome um serviço, a abordagem é como uma caixa preta, o que significa que o consumidor não sabe ou não precisa estar ciente do funcionamento interno deste serviço, sendo relevante apenas a sua interface de entrada e de saída, definidos no contrato. Os serviços representam uma lógica de fornecimento de resultados. É uma abstração de problemas, ou seja, toda a complexidade interna inerente aos serviços pode ser abstraída pelos consumidores dos serviços.
 
 Dentro do mundo da Indústria 4.0 e de sistemas produtivos, a SOA é uma abordagem que traz novas perspectivas uma vez que se estabelece um conjunto de princípios para uma arquitetura de sistema autônomo e interoperável \cite{candido2009soa}, que tem por objetivo aumentar a eficiência, agilidade e produtividade de um sistema por meio da adoção generalizada do conceito de serviços \cite{souit2013soa}.
 
@@ -383,11 +377,11 @@ A SOA dentro do meio industrial permite que um sistema atue como \textit{middlew
 
 SOA está relacionada à ideia de uma Interface de Programação de Aplicação (\textit{Application Programming Interface} - API), que é o conjunto de rotinas e padrões estabelecidos por um \textit{software} para a utilização das suas funcionalidades por aplicativos externos.
 
-Para se disponibilizar um serviço por meio de uma API, o conceito de \textit{Web Services} (WS) é vastamente utilizado \cite{souit2013soa}. Os WSs podem ser vistos como um conceito padrão para facilitar a interoperabilidade, integração e reuso dos componentes de aplicações.
+Para se disponibilizar um serviço por meio de uma API, o conceito de \textit{Web Services} (WS) é vastamente utilizado \cite{souit2013soa}, pois assim é possível fornecer serviços utilizando a Internet (protocolos TCP/IP) como meio de tráfego de informações.
 
 \subsection{Web Services}
 
-Um \textit{Web Service} (WS) é uma interface que descreve uma série de operações acessíveis por meio de uma linguagem de descrição de serviços padronizada \cite{gottschalk2002webservices}. Um WS executa uma tarefa específica ou um conjunto de tarefas e retorna ao usuário o resultado da operação. Cada aplicação pode ter a sua própria linguagem, que é traduzida para uma linguagem comum, como um XML, JSON, CSV, etc.
+Um \textit{Web Service} (WS) é uma interface que descreve uma série de operações acessíveis por meio de uma linguagem de descrição de serviços padronizada \cite{gottschalk2002webservices}. Um WS executa uma tarefa específica ou um conjunto de tarefas e retorna ao usuário o resultado da operação. Cada aplicação pode ter a sua própria linguagem, que é traduzida para uma linguagem comum, como o XML, JSON, CSV e outros.
 
 Por meio de WSs, as aplicações podem ser descritas, publicadas, localizadas e invocadas em uma rede de comunicação tipo WWW (\textit{World Wide Web}) \cite{souit2013soa}.
 
@@ -404,29 +398,29 @@ A arquitetura de um WS é constituída por três atores básicos: o provedor de 
 Detalhadamente, os atores em um WS são:
 
 \begin{itemize}
-	\item \textbf{Provedor de serviços}: Representa a plataforma que hospeda e fornece um determinado serviço, esta plataforma permite que clientes solicitem serviços e recebam suas respectivas respostas. O provedor de serviços é responsável também por fornecer uma descrição sobre o serviço prestado e publicar esta descrição em um repositório acessível pelo solicitante.
+	\item \textbf{Provedor de serviços}: Representa a plataforma que hospeda e fornece um determinado serviço. Esta plataforma permite que clientes solicitem serviços e recebam suas respectivas respostas. O provedor de serviços é responsável também por fornecer uma descrição sobre o serviço prestado e publicar esta descrição em um repositório acessível pelo solicitante;
 
-	\item \textbf{Repositório de serviços}: É uma plataforma acessível com a função de armazenar e fornecer a descrição sobre diversos WSs. Os WSs são descobertos pelo solicitante por meio do repositório para que assim possa decidir o serviço que melhor o atenda.
+	\item \textbf{Repositório de serviços}: É uma plataforma acessível com a função de armazenar e fornecer a descrição sobre diversos WSs. Os WSs são descobertos pelo solicitante, por meio do repositório, para que assim possa decidir o serviço que melhor o atenda;
 
-	\item \textbf{Solicitante de serviços}: É o ator que necessita de um determinado serviço e requisita a sua execução. O solicitante de serviço pode ser uma pessoa acessando um navegador ou uma aplicação realizando solicitações por meio de APIs.
+	\item \textbf{Solicitante de serviços}: É a plataform que necessita um determinado serviço e solicita a sua execução. O solicitante de serviço pode ser uma pessoa acessando um navegador ou uma outra aplicação realizando solicitações por meio de APIs.
 \end{itemize}
 
 Já as operações básicas em WS em detalhe são:
 
 \begin{itemize}
-	\item \textbf{Publicação}: Publicação da descrição do serviço pelo provedor em um repositório para que o serviço se torne acessível ao público e os solicitantes possam localizá-lo.
+	\item \textbf{Publicação}: Publicação da descrição do serviço pelo provedor em um repositório para que o serviço se torne acessível ao público e os solicitantes possam localizá-lo;
 
-	\item \textbf{Busca}: Busca e recebimento da descrição de um serviço. O solicitante pode receber a descrição do serviço pelo provedor ou por meio do repositório.
+	\item \textbf{Busca}: Busca e recebimento da descrição de um serviço. O solicitante pode receber a descrição do serviço pelo provedor ou por meio do repositório;
 
 	\item \textbf{Interação}: Comunicação direta entre solicitante e provedor para o fornecimento de serviços. Nesta fase, o solicitante se decide por um determinado serviço dentre os disponíveis no repositório e inicia uma interação com o provedor por meio de uma API.
 \end{itemize}
 
-As etapas de interação entre as entidades são representadas por meio de diagrama UML na \autoref{fig:uml-webservice}.
+As etapas de interação entre as entidades são representadas por meio do diagrama da \autoref{fig:uml-webservice}.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=1\textwidth]{uml-webservice}
-	\caption{Diagrama UML com os atores e interações em um WS.}
+	\caption{Diagrama com os atores e interações em um WS.}
 	\label{fig:uml-webservice}
 	\fonte{\citeonline{booth2004webservice} (adaptado).}
 \end{figure}
@@ -437,9 +431,9 @@ O WSD define os formatos de mensagem, tipos de dados, protocolos de transporte e
 
 Já a Semântica de um WS é o documento que compartilha o comportamento esperado de resposta deste serviço, pode ser explícito ou implícito, oral ou escrito, processável por máquina ou orientado a humanos, e pode ser um acordo legal ou um acordo informal \cite{booth2004webservice}.
 
-Os WSs se tornaram bastante atrativos, pois esse modelo pode ser aplicado com tecnologias acessíveis ao solicitante, em particular XML e HTTP, que podem ser acessadas pela maioria dos navegadores convencionais. A disponibilização de serviços interativos na \textit{Internet} se tornou muito popular e com isso surgem novos modelos de negócios como o SaaS (\textit{Software as a Service}), PaaS (\textit{Platform as a Service}), IaaS (\textit{Infrastructure as a Service}), etc.
+Os WSs se tornaram bastante atrativos, pois esse modelo pode ser aplicado com tecnologias acessíveis ao solicitante, em particular XML e HTTP, que podem ser acessadas pela maioria dos navegadores convencionais. A disponibilização de serviços interativos na \textit{Internet} se tornou muito popular e com isso surgem novos modelos de negócios como o SaaS (\textit{Software as a Service}), PaaS (\textit{Platform as a Service}), IaaS (\textit{Infrastructure as a Service}) e até mesmo MaaS (\textit{Manufacturing as a Service}) \cite{annunziata2019maas, nichols2020maas, siepen2019maas}.
 
-Dentro do mundo da Indústria 4.0 não é diferente. Ativos podem publicar suas funcionalidades em repositórios e executarem determinadas tarefas mediante solicitação por parte do solicitante, podendo assim serem classificados como uma manufatura como um serviço (\textit{Manufacturing as a Service}) \cite{annunziata2019maas, nichols2020maas, siepen2019maas}.
+Dentro do mundo da Indústria 4.0 não é diferente. O \autoref{cha:arquitetura} traz uma proposta de como os ativos podem publicar suas funcionalidades em repositórios e executarem determinadas tarefas mediante solicitação por parte do consumidor
 
 \subsection{Transferência Representacional de Estado}
 
@@ -452,26 +446,26 @@ O padrão REST, mais moderno, veio gradualmente substituindo o padrão SOAP, mai
 A arquitetura REST estabelece as orientações e boas práticas de uma interface que devem ser satisfeitas  para que possa ser referida como um serviço \textit{RESTful}. Esses princípios são \cite{fielding2000rest}:
 
 \begin{enumerate}
-	\item \textbf{Cliente-Servidor}:  segregação das interfaces dos usuário das interfacer do banco de dados. Desta forma, padroniza-se a interface para a interação com um banco de dados, trazendo mais portabilidade e flexibilidade aos sistemas e melhorando a sua escalabilidade.
+	\item \textbf{Cliente-Servidor}:  segregação das interfaces dos usuário das interfacer do banco de dados. Desta forma, padroniza-se a interface para a interação com um banco de dados, trazendo mais portabilidade e flexibilidade aos sistemas e melhorando a sua escalabilidade;
 
-	\item \textbf{Sem estado}: cada solicitação do cliente ao servidor deve conter todas as informações necessárias para o servidor processar a solicitação. Desta forma, a solicitação não pode depender que qualquer tipo que contexto a ser armazenado no servidor, o estado da sessão é mantido inteiramente no cliente.
+	\item \textbf{Sem estado}: cada solicitação do cliente ao servidor deve conter todas as informações necessárias para o servidor processar a solicitação. Desta forma, a solicitação não pode depender que qualquer tipo que contexto a ser armazenado no servidor, o estado da sessão é mantido inteiramente no cliente;
 
-	\item \textbf{Cache}:  a resposta para as solicitações podem ser armazenadas em uma memória \textit{cache}. Quando a resposta puder ser armazenada em \textit{cache}, o cliente poderá reutilizar a resposta já recebida anteriormente e evitar de se realizar uma nova requisição.
+	\item \textbf{Cache}:  a resposta para as solicitações podem ser armazenadas em uma memória \textit{cache}. Quando a resposta puder ser armazenada em \textit{cache}, o cliente poderá reutilizar a resposta já recebida anteriormente e evitar de se realizar uma nova requisição;
 
-	\item \textbf{Interface uniforme}: As interfaces são padronizada entre os sistemas que se comunicam por meio de um serviço REST. São definidas para os serviços REST quatro restrições de interface: identificação de recursos, manipulação de recursos por meio de representações; mensagens auto descritivas e hipermídia como forma de interação com a aplicação.
+	\item \textbf{Interface uniforme}: As interfaces são padronizada entre os sistemas que se comunicam por meio de um serviço REST. São definidas para os serviços REST quatro restrições de interface: identificação de recursos, manipulação de recursos por meio de representações; mensagens auto descritivas e hipermídia como forma de interação com a aplicação;
 
-	\item \textbf{Sistema em camadas}: o estilo de sistema em camadas introduz camadas hierárquicas  ao sistema, restringindo, assim, o comportamento do componente de forma que cada componente possa ter acesso somente à camada imediata com a qual está interagindo.
+	\item \textbf{Sistema em camadas}: o estilo de sistema em camadas introduz camadas hierárquicas  ao sistema, restringindo, assim, o comportamento do componente de forma que cada componente possa ter acesso somente à camada imediata com a qual está interagindo;
 
 	\item \textbf{Código sob demanda} (opcional): permite com que as funcionalidades do cliente sejam estendidas ao baixar e executar um o código na forma de \textit{scripts} sob demanda, reduzindo assim o número de funcionalidades necessárias a serem implementadas de antemão.
 \end{enumerate}
 
-O principal item de manipulação relacionado a um serviço REST é um recurso. Um recurso é qualquer informação a ser manipulada: documento, imagem, uma coleção de objetos, etc. Os serviços REST utilizam um identificador único de um recurso como forma de o referenciar em consultas. Exemplo de recursos incluem um usuário, uma foto, um pedidos, etc. Já as coleções são um conjunto de recursos de uma mesma categoria, como por exemplo uma  lista de usuários cadastrados, a lista de comentários em uma publicação, etc.
+O principal item de manipulação relacionado a um serviço REST é um recurso. Um recurso é qualquer informação a ser manipulada: documento, imagem, uma coleção de objetos, etc. Os serviços REST utilizam um identificador único de um recurso como forma de o referenciar em consultas. Exemplo de recursos incluem um usuário, uma foto, um pedidos, etc. Já as coleções são conjuntos de recursos de uma mesma categoria, como por exemplo uma  lista de usuários cadastrados, a lista de comentários em uma publicação, etc.
 
 Cada método do protocolo HTTP recebe um tipo de operação padrão do REST. A \autoref{tab:methods-rest} mostra as possíveis operações e seus métodos HTTP correspondentes, quando este protocolo é utilizado.
 
 \begin{table}[htb]
 	\centering
-	\caption{Mapeamento dos métodos HTTP em um \textit{RESTful Service}.}
+	\caption{Mapeamento dos métodos HTTP em um serviço \textit{RESTful}.}
 	\begin{tabular}{p{2cm}p{2cm}p{9cm}}
 		\hline
 		\textbf{Método} &
@@ -524,11 +518,11 @@ Cada método do protocolo HTTP recebe um tipo de operação padrão do REST. A \
 	\fonte{\citeonline{fielding2000architecture} (adaptado).}
 \end{table}
 
-Tanto para APIs REST quanto para APIs SOAP, é necessário a definição de um contrato, que é a documentação da API. Este documento descreve o comportamento da API, o que inclui as URLs dos \textit{endpoints} (rotas), os métodos de cada rota, argumentos e exemplos de chamadas (\textit{requests}) com suas respectivas respostas.
+Tanto para APIs REST quanto para APIs SOAP, é necessária a definição de um contrato, que é a documentação da API. Este documento descreve o comportamento da API, o que inclui as URLs dos \textit{endpoints} (rotas), os métodos de cada rota, argumentos e exemplos de chamadas (\textit{requests}) com suas respectivas respostas \cite{santos2020apicontract}.
 
-Existem vários formatos de arquivo que permitem criar um contrato e obter sua documentação, o mais comumente utilizado para a documentação de APIs REST é o OpenAPI \cite{santos2020openapi}, anteriormente conhecido como \textit{Swagger}.
+Existem vários formatos de arquivo que permitem criar um contrato e obter sua documentação. O mais comumente utilizado para a documentação de APIs REST é o OpenAPI \cite{santos2020openapi}, anteriormente conhecido como \textit{Swagger}.
 
-Para APIs SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{ferris2003wsdl}. APIs com servidores gRPC suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
+Para APIs SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{ferris2003wsdl}. APIs com outros protocolos de comunicação, como por exemplo o gRPC (\textit{Remote Call Procedure}), suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
 
 O contrato é definido pelos provedores do serviço e destinado aos consumidores da API, ou seja, às empresas e desenvolvedores que irão utilizar a API. O documento geralmente é criado pela própria equipe de desenvolvimento que elabora o serviço.
 
@@ -553,11 +547,11 @@ A utilização da técnica de PFS no contexto da I4.0 pode auxiliar no mapeament
 
 \subsection{Production Flow Schema}
 
-O PFS (\textit{Production Flow Schema}) é uma técnica indicada para aplicação em diferentes níveis de modelagem, análise e controle de SEDs \cite{miyagi1996controle}.
+O PFS (\textit{Production Flow Schema}) é uma técnica indicada para nível conceitual de modelagem, análise e controle de SEDs \cite{miyagi1996controle}.
 
 No PFS, os eventos são indicações de determinadas atividades, que por sua vez podem incluir vários outros eventos e estados organizados hierarquicamente.
 
-Por meio de modelos em PFS, é possível especificar uma estrutura de arquitetura, indicando assim as interações entre os componentes de um sistema. Além disso, com o PFS, os fluxos das operações podem ser descritos de forma desacoplada de qualquer tecnologia necessária para a implementação do sistema \cite{pisching2018equipmentrami}.
+Por meio de modelos em PFS é possível especificar uma estrutura de arquitetura, indicando assim as interações entre os componentes de um sistema. Além disso, com o PFS, os fluxos das operações podem ser descritos de forma desacoplada de qualquer tecnologia necessária para a implementação do sistema \cite{pisching2018equipmentrami}.
 
 Em um PFS deve haver a representação dos eventos discretos. Portanto, qualquer processo produtivo representado em PFS apresentará os seguintes elementos estruturais:
 
@@ -579,11 +573,9 @@ A \autoref{fig:pfs-elementos} descreve os elementos do PFS e sua representação
 
 A atividade corresponde à realização de certas unidades ou conjuntos de operações, como um processamento, uma montagem, desmontagem, etc. Os distribuidores correspondem aos lugares de entrada e saída de itens. Já os arcos orientados indicam a direção dos fluxos e a relação entre os elementos do sistema.
 
-Os arcos conectando à parte externa das atividades (horizontalmente) indicam um fluxo principal (primário); já os arcos conectando a parte interna da atividade (verticalmente) indicam um fluxo secundário \cite{miyagi1996controle}.
+Os arcos conectando a parte externa das atividades (horizontalmente) indicam um fluxo principal (primário) (\autoref{fig:pfs-fluxos}\textcolor{blue}{a}); já os arcos conectando a parte interna da atividade (verticalmente) indicam um fluxo secundário (\autoref{fig:pfs-fluxos}\textcolor{blue}{b})\cite{miyagi1996controle}.
 
-Um terceiro tipo de fluxo é usado para representar a integração entre interfaces das atividades e é indicado por meio de um arco conectando diretamente duas atividades. O arco indicador de interação de fluxo é usado para modelar interações entre diferentes níveis, como operações de solicitação e resposta \cite{pisching2018pfs}.
-
-Os tipos de fluxo na representação em PFS é mostrada na \autoref{fig:pfs-fluxos}.
+Um terceiro tipo de fluxo é usado para representar a integração entre interfaces das atividades e é indicado por meio de um arco conectando diretamente duas atividades (\autoref{fig:pfs-fluxos}\textcolor{blue}{c}). O arco indicador de interação de fluxo é usado para modelar interações entre diferentes níveis, como operações de solicitação e resposta \cite{pisching2018pfs}.
 
 \begin{figure}[htb]
 	\centering
@@ -593,6 +585,6 @@ Os tipos de fluxo na representação em PFS é mostrada na \autoref{fig:pfs-flux
 	\fonte{\citeonline{pisching2018pfs} (adaptado).}
 \end{figure}
 
-Os fluxos de processo do sistema em PFS são modelados por meio de uma abordagem \textit{top-down}, assim os resultados podem ser refinados sucessivamente detalhando-se a cada iteração a atividade representada. A modelagem do sistema em PFS, portanto, parte de um alto nível de abstração, seguido de sucessivos refinamentos, detalhando o modelo a cada nível.
+Os fluxos de processo do sistema em PFS são modelados por meio de uma abordagem \textit{top-down}, assim os resultados podem ser refinados sucessivamente, detalhando, a cada iteração, a atividade representada. A modelagem do sistema em PFS, portanto, parte de um alto nível de abstração, seguido de sucessivos refinamentos, detalhando o modelo a cada nível.
 
-Desta forma, o PFS representa uma linguagem de alto nível independente de tecnologias e fabricantes para modelar os processos do sistema. A relevância de se adotar uma linguagem natural, como o PFS, para a representação de sistemas está na padronização da comunicação com especialistas de diferentes áreas, como arquitetos, engenheiros e desenhistas. Assim, há uma efetiva comunicação sobre a interação entre as partes de um sistema e sobre os fluxo de elementos e operações em diferentes níveis do sistema em análise, como, por exemplo, produtos, ordens de serviço, máquinas, informações de sensores, etc.
+Desta forma, o PFS representa uma linguagem de alto nível independente de tecnologias e fabricantes para modelar os processos do sistema. A relevância de se adotar uma linguagem natural, como o PFS, para a representação de sistemas está na padronização da comunicação com especialistas de diferentes áreas, como arquitetos, engenheiros e desenhistas \cite{pisching2018pfs}. Assim, há uma efetiva comunicação sobre a interação entre as partes de um sistema e sobre os fluxo de elementos e operações em diferentes níveis do sistema em análise, como, por exemplo, produtos, ordens de serviço, máquinas, informações de sensores, etc.

@@ -5,7 +5,7 @@ Este capítulo visa trazer discussões sobre o impacto do amplo compartilhamento
 
 % São abordadas possíveis mudanças na curva de ciclo de vida do produto e o surgimento de novos modelos de negócio baseado em dados (\textit{data-driven}).
 
-Uma visão da MDP sobre o eixo ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 é abordada, discutindo as atribuições dos AAS como ``tipos'' e como ``instâncias''.
+Uma visão da MDP sobre o eixo ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 é abordada, discutindo como o compartilhamento de informações se relaciona com o ASS em sua forma ``tipo'' e ``instância''.
 
 Além disso, é abordada uma proposta de modelo da estrutura de dados de um AAS que compartilha as informações relacionadas ao seu estado na cadeia de suprimentos. Desta forma, é feita uma análise relacionada aos submodelos necessários para a implementação da ``Arquitetura para compartilhamento de informações do ativo'', abordada no \autoref{cha:arquitetura}.
 
@@ -15,7 +15,7 @@ O modelo do RAMI4.0 descrito na \autoref{sub:rami4} apresentou o eixo ``ciclo de
 
 O histórico completo do ciclo de vida de um determinado produto corresponde a suas informações de estados relevantes geradas ao longo de sua existência. Estas informações são acessadas via MDP, e são associadas a seu ativo tanto em sua fase ``tipo'' quanto em sua fase ``instância'' (vide \autoref{sub:rami4}). Estes dados podem ser aproveitados de forma inteligente para a geração de valor por meio de novos modelos de negócio.
 
-A ``Arquitetura para compartilhamento de informações do ativo'' possibilita o fluxo informações entre estas duas fases do ativo (``tipo'' e ``instância''), o que traz novas possíveis formas de geração de valor. A \autoref{fig:aas-lifecycle} ilustra este cenário, onde o compartilhamento da MDP gera melhorias a partir das informações do ativo. Foram identificadas duas formas de geração de valor por meio das informações do ativo: as ``melhorias de projeto'' e as ``melhorias operacionais'', que serão discutidas na \autoref{sec:melhoria-projeto} e \autoref{sec:melhoria-operacional}.
+A ``Arquitetura para compartilhamento de informações do ativo'' possibilita o de fluxo informações entre estas duas fases do ativo (``tipo'' e ``instância''), o que traz novas possíveis formas de geração de valor. A \autoref{fig:aas-lifecycle} ilustra este cenário, onde o compartilhamento da MDP gera melhorias a partir das informações do ativo. Foram identificadas duas formas de geração de valor por meio das informações do ativo: as ``melhorias de projeto'' e as ``melhorias operacionais'', que serão discutidas na \autoref{sec:melhoria-projeto} e \autoref{sec:melhoria-operacional}.
 
 \begin{figure}[htb!]
 	\centering
@@ -30,30 +30,28 @@ O fluxo de informações e geração de valor é detalhado a seguir:
 	\item O projeto inicial de um produto é disponibilizado para produção em forma de um ``tipo'';
 	\item Instâncias do projeto são fabricadas e disponibilizadas para venda e distribuição;
 	\item Dados são coletados a partir das várias instâncias produzidas;
-	\item Um alto volume de dados coletados das instâncias é análisado utilizando técnicas análise de dados e \textit{business intelligence};
+	\item Um alto volume de dados coletados das instâncias é análisado utilizando técnicas de análise de dados e \textit{business intelligence};
 	\item A partir do processamento dos dados, há criação de valor relacionada à melhoria operacional do produto (detalhada na \autoref{sec:melhoria-operacional});
 	\item A partir do processamento dos dados e de outros fatores externos, há criação de valor relacionada à melhoria de projeto do produto (detalhada na \autoref{sec:melhoria-projeto});
 	\item Com as melhorias de projeto, uma nova versão (tipo) é gerada, completando assim o ciclo de vida.
 \end{enumerate}
 
-A \autoref{fig:aas-lifecycle} representa o fluxo de geração de valor ao longo do ciclo de vida de um produto no contexto da Indústria 4.0. Este ciclo de vida representa o seu processo de melhoria continua por meio do compartilhamento de dados de acordo com a ``Arquitetura para compartilhamento de informações do ativo''.
+A \autoref{fig:aas-lifecycle} representa o fluxo de geração de valor ao longo do ciclo de vida de um produto no contexto da Indústria 4.0. Este ciclo de vida representa o seu processo de melhoria continua por meio do compartilhamento de dados de acordo com a ``Arquitetura para compartilhamento de informações do ativo'' (\autoref{cha:arquitetura}).
 
 Os ativos (definidos como produtos) geram, por exemplo, informações de uso e sobre manutenções realizadas, que podem ser armazenadas na MDP e assim auxiliar em melhorias no seu próprio processo de fabricação, além de ser fonte de dados para o desenvolvimento de novas versões aperfeiçoadas, gerando um novo ``tipo''.
 
-O compartilhamento das informações insere um novo elemento na competitividade entre as empresas \cite{framling2013plm} e, por meio da MDP, este compartilhamento é possibilitado. O novos ativos inseridos neste novo ``formato'' trazem a possibilidade de exploração de seus dados e alteram, desta forma, a estrutura da indústria e a natureza da concorrência, expondo as empresas a novas oportunidades e ameaças competitivas \cite{porter2014smartproducts}.
+O compartilhamento das informações insere um novo elemento na competitividade entre as empresas \cite{framling2013plm} e, por meio da MDP, este compartilhamento é possibilitado. Os novos ativos inseridos neste novo ``formato'' trazem a possibilidade de exploração de seus dados e alteram, desta forma, a estrutura da indústria e a natureza da concorrência, expondo as empresas a novas oportunidades e ameaças competitivas \cite{porter2014smartproducts}.
 
 A MDP, portanto, traz a agregação de valor ao produto como um todo por meio do compartilhamento de informações. Neste capítulo são propostas duas novas classificações quanto às formas de melhoria do produto e agregação de valor por meio da MDP: as \textbf{melhorias de projeto} (\autoref{sec:melhoria-projeto}) e as \textbf{melhorias operacionais} (\autoref{sec:melhoria-operacional}) .
 
-A divisão em \textbf{melhorias de projeto} e \textbf{melhorias operacionais} permite segregar os tipos de informações a serem compartilhadas e assim detalhar a estrutura de dados do submodelo correspondente.
+A divisão em \textbf{melhorias de projeto} e \textbf{melhorias operacionais} permite segregar as informações a serem compartilhadas e assim detalhar a estrutura de dados do submodelo correspondente.
 
 \subsection{Melhoria de projeto do produto}
 \label{sec:melhoria-projeto}
 
-%A extração de informações da MDP auxilia no desenvolvimento de novas versões com ``tipos'' aprimorados. Novos ``tipos'' aprimorados significam a melhoria de projeto do produto.
-
 \citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts} classificaram o valor das informações dos produtos em quatro áreas: monitoramento, controle, otimização e autonomia. Por meio da análise da descrição das funcionalidades e capacidades de cada área, foi feito um mapeamento para o contexto do eixo ``ciclo de vida e cadeia de valor'' do RAMI4.0.
 
-Os tipos de valor das informações no que diz respeito à melhoria de projeto foram então reclassificados sob o contexto do RAMI4.0. As seguintes categorias foram então definidas:
+As informações no que diz respeito à melhoria de projeto foram então reclassificadas sob o contexto do RAMI4.0. As seguintes categorias foram então definidas:
 
 \begin{itemize}
 	\item Identificação e reparo de falhas de projeto;
@@ -61,13 +59,13 @@ Os tipos de valor das informações no que diz respeito à melhoria de projeto f
 	\item Geração de indicadores.
 \end{itemize}
 
-Estas categorias permitem segregar as informações de acordo com seus respectivos objetivos ao serem inseridos no projeto de um ativo. Além disso, as categoriais dão indícios de possíveis informações genéricas a serem armazenadas ao longo do ciclo de vida do produto, independente da indústria na qual ele está inserido.
+Estas categorias permitem segregar as informações de acordo com os objetivos de projeto que cada uma dessas informações possui. Além disso, as categoriais dão indícios de possíveis dados a serem armazenados ao longo do ciclo de vida do produto, independente da indústria na qual ele está inserido.
 
 A seguir são apresentadas as descrições de cada uma das categorias apresentadas:
 
 A \textbf{``Identificação e reparo de falhas de projeto''} permite o monitoramento remoto e identificação de eventuais falhas de projeto por meio da análise de um alto volume de dados e identificação de padrões.
 
-A  identificação de potenciais falhas se dá, por exemplo, por meio da leitura de sensores de temperatura e vibração de diversos ativos de um mesmo modelo. Valores discrepantes do esperado podem, então, serem identificados em uma amostra. Os eventuais erros estruturais de projeto deve ser reparados e lançados em um novo ``tipo'', como uma nova versão.
+A identificação de potenciais falhas se dá, por exemplo, por meio da leitura de sensores de temperatura e vibração de diversos ativos de um mesmo modelo. Valores discrepantes do esperado podem, então, serem identificados em uma amostra. Os eventuais erros estruturais de projeto devem ser reparados e lançados como uma nova versão.
 
 A \textbf{``Melhoria da interação do usuário com o produto''} se dá pela exploração e análise das informações que descrevem a maneira e padrões como o usuário interage com o ativo (produto). Desta forma, as informações podem ser utilizadas pelo fabricante para a determinação de funções que podem não ser claras para o usuários ou funções que estão sendo utilizadas de maneira incorreta.
 
@@ -79,22 +77,18 @@ O monitoramento das características operacionais é uma forma de evoluir o proj
 
 A \textbf{``Geração de indicadores''} traz conhecimento que auxilia na tomada de decisões. Alguns indicadores dependem das circunstâncias de operação do equipamento e, portanto, variam em relação ao valor estabelecido pelo fabricante. Por meio dos indicadores, o fabricante é capaz de investigar problemas e eventualmente reprojetar o equipamento. Além disso, o próprio gestor dos equipamentos pode identificar possíveis melhorias em processos a fim de atingir determinadas metas.
 
-Os indicadores de  volume de emissão de gases e materiais particulados e podem ser usados em auditoriais para adequação às condições legais e regulatórias do país e/ou para atender às condições de saúde e bem estar do trabalhador.
+Os indicadores de volume de emissão de gases e materiais particulados podem, por exemplo, serem usados em auditorias para adequação às condições legais e regulatórias no país e/ou para atender às condições de saúde e bem estar do trabalhador.
 
-A eficiência Global do Equipamento (\textit{Overall equipment effectiveness} - OEE), o volume de emissão de gases do efeito estufa e materiais particulados e o consumo energético e eficiência energética são outros exemplos de indicadores a serem gerados e atualizados instantaneamente pelos próprios ativos.
+A eficiência Global do Equipamento (\textit{Overall equipment effectiveness} - OEE), consumo energético e a eficiência energética são outros exemplos de indicadores a serem gerados e atualizados instantaneamente pelos próprios ativos.
 
 \subsection{Melhoria operacional do produto}
 \label{sec:melhoria-operacional}
 
-% A fase ``instância'' ocorre com a produção e venda  que é feita a partir de um ``tipo'' de ativo. Informações específicas sobre produção, logística e qualidade são associadas às ``instâncias'' dos ativos.
-
-% Nesta fase o produto está em produção, o que significa que o usuário está ativamente utilizando o produto/equipamento em sua empresa. Os dados de uso da instância podem ser compartilhados com outros parceiros da cadeia de valor.
-
-A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu tipo), ou seja, são benefícios operacionais agregados ao ativo.
+A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu ``tipo''), ou seja, são benefícios operacionais agregados ao ativo.
 
 A partir das classificações sobre o valor das informações dos produtos apresentadas por \citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts}, foi feito um mapeamento para as funções relacionadas às melhorias operacionais, criando uma nova classificação das informaçoes sob o contexto do eixo ``ciclo de vida e cadeia de valor'' do RAMI4.0.
 
-Os tipos de valor das informações no que diz respeito à melhoria operacional foram então reclassificados sob o contexto do RAMI4.0. As seguintes categorias foram então definidas:
+O valor das informações no que diz respeito à melhoria operacional foram então reclassificados sob o contexto do RAMI4.0. As seguintes categorias foram definidas:
 
 \begin{itemize}
 	\item Manutenção orientada por dados;
@@ -106,245 +100,134 @@ As categorias permitem segregar as informações de acordo com seus respectivos 
 
 A seguir são apresentadas as descrições de cada uma das categorias apresentadas:
 
-A \textbf{``Manutenção orientada por dados''} (\textit{data driven}) é uma mudança de paradigma em relação à forma tradicional como a manutenção dos ativos é realizada.
+A \textbf{``Manutenção orientada por dados''} (\textit{data driven}) é uma mudança de paradigma em relação à forma tradicional de manutenção corretiva. Com a manutenção orientada por dados são usados o comportamento histórico do produto e técnicas estatísticas para a criação de modelos que apontem eventuais falhas antes que estas venham a acontecer.
 
 Com o histórico de leitura de sensores de cada componente do ativo, estratégias de manutenção preditivas e prescritivas podem ser adotadas pelo próprio fabricante. A manutenção orientada pelos dados de uso, comparada com a manutenção tradicional, pode reduzir a incidência de falhas e trazer benefícios econômicos. %\cite{odonovan2015maintenance}
 
 Com a manutenção prescritiva, os dados empíricos e o histórico do ativo são utilizados para prescrever qual medida deve ser tomada, trazendo mais confiabilidade por meio de técnicas estatísticas. A contínua extração de dados de sensores do ativo e sua análise torna a ação de manutenção mais automatizada.
 
-A manutenção dos ativos orientada por dados permite trazer a responsabilidade de manutenção dos ativos de uma planta para a instituição que melhor conhece os detalhes do funcionamento técnico do ativo, como o fabricante ou uma empresa especializada na manutenção de um determinado ativo. O uso de dados para a manutenção permite implementar um novo paradigma de detecção e correção de falhas de equipamentos industriais: a Manutenção como um Serviço (\textit{Maintenance-as-a-Service} - MaaS). %\cite{zoll2018maas}
+A manutenção dos ativos orientada por dados permite trazer a responsabilidade de manutenção dos ativos de uma planta para a instituição que melhor conhece os detalhes do funcionamento técnico do ativo, como o fabricante ou uma empresa especializada na manutenção de um determinado ativo. O uso de dados para a manutenção permite implementar um novo paradigma de detecção e correção de falhas de equipamentos industriais: a Manutenção como um Serviço (\textit{Maintenance-as-a-Service} - MaaS) \cite{zoll2018maas}.
 
 O \textbf{``Monitoramento e rastreamento em tempo real''} é possibilitado pela leitura de coordenadas geográficas. O monitoramento e rastreamento são úteis durante o transporte entre os membros da cadeia de suprimentos. O distribuidor, por exemplo, pode ter acesso à posição exata de um ativo enquanto este estiver sob sua custódia.
 
 As coordenadas geográficas garantem a rastreabilidade do ativo enquanto ele se desloca ao longo da cadeia de suprimentos. A demanda de rastreabilidade surge para manter um melhor controle da cadeia produtiva, assim como repassar essas informações aos consumidores.
 
-Outra função do rastreamento é como forma de identificar possíveis parcerias ao atender a uma demanda de fabricação. Ao iniciar uma ordem de fabricação/compra, o próprio ativo pode se encarregar de selecionar quem irá fabricar, onde será entregue, qual empresa de transporte, custos, prazos, etc.
+Outra função do rastreamento é como forma de identificar possíveis parcerias ao atender a uma demanda de fabricação. Ao iniciar uma ordem de fabricação/compra, o próprio produto pode assegurar de que todas as especificações escolhidas pelo cliente serão atendidas e, desta forma, o produto pode dar ao cliente estimativas de prazo e custos, assim como o nome todos os elos da cadeia de suprimentos que estarão envolvidos nesta fabricação/entrega.
 
 A \textbf{``Integração dos membros da cadeia de suprimentos e eficiência logística''} acontece com a melhoria da comunicação entre os elos utilizando o produto (ativo) como centro de interação.
 
-A comunicação passa ser centralizada e não mais depender pelo contato direto entre as partes. Isso simplifica também a logística reversa, como no caso de reciclagem, acionamento da garantia, \textit{recalls} e outros.
+A comunicação passa a ser centralizada no produto e não mais depender do contato direto entre as partes. Isso simplifica também a logística reversa, como no caso de solicitações de devolução, acionamento de garantia, \textit{recalls} e outros, que agora utilizarão o produto como um ponto de intermediação entre as partes (por exemplo, fabricante e consumidor final).
 
 Outro ponto de melhor integração com a utilização do produto como centro das interações é com relação à documentação. O submodelo de documentação conterá todos os documentos digitais referentes ao ativo. Desta forma, manuais, notas fiscais, certificados de manutenção e outros documentos podem ser escritos, lidos e atualizados pelos parceiros da CS mediante autenticação.
 
 O compartilhamento de documentos digitais permite uma maior interação com as partes e garante que cada membro terá sempre a versão mais atualizada de um determinado documento, favorecendo assim sua gestão, reduzindo o uso do papel e tornando os ambientes de trabalho mais seguros, ágeis e organizados.
 
-Os documentos representam uma conexão entre os membros da CS, portanto, comunicados, formulários de troca, documentos para acionamento de garantia, \textit{recalls} e quaisquer outras operações que envolvam a logística reversa podem ser solicitados pela própria MDP.
+Os documentos representam uma conexão entre os membros da CS, portanto, comunicados, formulários de troca, documentos para acionamento de garantia e quaisquer outras operações podem ser solicitados pela própria MDP do produto. O produto torna-se o centro das negociações e, portanto, o ponto de integração entre os membros da CS.
 
-\section{Submodelos e propriedades dos componentes}
+\section{Submodelos do C4.0-Servidor}
 
-Nesta seção são apresentadas propostas de submodelos e propriedades necessárias para a integração dos ativos na cadeia de suprimentos.
+Nesta seção são apresentadas propostas de submodelos e atributos necessárias para a integração dos ativos na cadeia de suprimentos.
 
-Os submodelos dos componentes da ``Arquitetura para compartilhamento de informações do ativo'' devem ser padronizados e detalhados a fim de se garantir a interoperabilidade entre os sistemas.
+Os submodelos dos componentes da ``Arquitetura para compartilhamento de informações do ativo'' (\autoref{cha:arquitetura}) devem ser padronizados e detalhados a fim de se garantir a interoperabilidade entre os sistemas.
 
-São apresentados os submodelos essenciais do ``AAS-Repositório'' e ``AAS-Servidor''. A fim de simplificação, o AAS-Repositório será mencionado como ``repositório'' e o AAS-Servidor como ``produto''.
+São apresentados os submodelos essenciais para o produto, ou seja, o C4.0-Servidor. O C4.0-Servidor é o fornecedor de informações e portanto deve possuir uma estrutura de dados padronizada.
 
-\subsection{Submodelos do repositório}
+O produto no contexto da ``Arquitetura para compartilhamento de informações do ativo'' é a fonte e o servidor de informações para os diversos membros ao longo da cadeia de suprimentos. O acesso a estas informações permite a colaboração entre os membros e assim abre oportunidades para uma tomada de decisões coordenada a fim de remover as ineficiências inerentes da cadeia de suprimentos.
 
-O repositório armazena as descrições dos serviços definidos pelos contratos de cada \textit{Web Service}, que são publicados por diversos ativos no mundo conectado da Indústria 4.0.
+É necessária uma definição dos submodelos do produto para que se possa identificar os tipos de informações genéricas a serem compartilhadas e com quais membros compartilhar. Além disso, a definição destes submodelos contribui com o refinamento das especificações do AAS no contexto da Indústria 4.0.
 
-Os dados dos contratos contidos no repositório devem ser padronizados para garantir uma interpretação consistente por parte das aplicações, que consomem os serviços. Para isso, os submodelos do repositório devem ser estabelecidos a fim de se criar moldes de metamodelos sobre os quais os dados devem ser estruturados.
+\citeonline{torres2014information} faz uma análise de literatura e analisa o impacto do compartilhamento de informações em cadeias de suprimentos. Além disso, é feita uma classificação dos trabalhos, dentre elas a classificação quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
 
-\citeonline{bader2019aas} estabelece padrões de metamodelos para a implementação de submodelos no AAS, porém não aborda um possível repositório de serviços e o armazenamento de dados de serviços.
+Além disso, \citeonline{bader2020submodel} define alguns tipos de submodelos padrões para a Indústria 4.0 e detalha seus respectivos atributos.
 
-A proposta de estruturação dos dados do repositório é dividida em três submodelos: ``serviço'', ``produto'' e ``contrato''. As Tabelas \ref{tab:repositorio-submodelo-servico}, \ref{tab:repositorio-submodelo-produto} e \ref{tab:repositorio-submodelo-contrato} detalham as propriedades de cada um dos submodelos.
+Os tipos de informações identificados na análise bibliográfica de \citeonline{torres2014information} e no documento de \citeonline{bader2020submodel} serão incorporados a novos submodelos propostos para o produto para que possam ser compartilhados por meio da MDP ao longo da cadeia de suprimentos.
 
-\begin{table}[htb]
-	\centering
-	\caption{Submodelo ``serviço'' do repositório.}
-	\begin{tabular}{p{2.5cm}p{1.5cm}p{9.5cm}}
-		\hline
-		\textbf{Propriedade}
-		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
-
-		\hline
-		\textit{id}
-		 & \textit{String}
-		 & Número do serviço para a sua identificação única dentre todos os repositórios. O ID do serviço deve ser derivado do próprio ID do AAS-Servidor correspondente como um \textit{namespace} (E.g., ID\_SERVIDOR. ID\_SERVIÇO\_001).                                                                                                                                                                                                                           \\
-
-		\hline
-		\textit{description}
-		 & \textit{String}
-		 & Descrição textual sobre as funcionalidades do \textit{Web Service}. Está é uma descrição textual, pois a descrição completa é estabelecida no formato padronizado dp contrato do \textit{web service}.                                                                                                                                                                                                                                                     \\
-
-		\hline
-		\textit{reputation}
-		 & \textit{Integer}
-		 & A métrica de reputação fornece indicadores sobre a qualidade do serviço prestado por um determinado AAS. O tempo médio de resposta do serviço baseado no tempo de resposta observado por diversas requisições executadas e a disponibilidade do AAS quando solicitado são índices que compõem o índice de reputação. Um índice para serviços cuja qualidade é subjetiva pode ser criado baseado em avaliações de AAS Clientes que já consumiram o serviço. \\
-
-		\hline
-		\textit{product\_id}
-		 & \textit{String}
-		 & Referência ao produto o qual fornece este determinado serviço.                                                                                                                                                                                                                                                                                                                                                                                             \\
-
-		\hline
-	\end{tabular}
-	\label{tab:repositorio-submodelo-servico}
-\end{table}
-
-\begin{table}[htb]
-	\centering
-	\caption{Submodelo ``produto'' do repositório.}
-	\begin{tabular}{p{3cm}p{2cm}p{9cm}}
-		\hline
-		\textbf{Propriedade}
-		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                               \\
-
-		\hline
-		\textit{id}
-		 & \textit{String}
-		 & Tem a função de distinguir exclusivamente os AAS provedores de serviços e todos seus elementos \cite{adolphs2016structure} no mundo conectado da I4.0. Alguns tipos possíveis de identificadores são \cite{bader2019aas}: IRDI, IRI e UUID. O ID do AAS servidor permite que o consumidor dos serviços possa localizar e invocar diretamente o serviço ofertado. \\
-
-		\hline
-		\textit{description}
-		 & \textit{String}
-		 & Breve descrição sobre o AAS Servidor como nome, modelo e companhia fabricante do ativo.                                                                                                                                                                                                                                                                          \\
-		\\
-
-		\hline
-		\textit{reputation}
-		 & \textit{Integer}
-		 & Corresponde à média dos índices de reputação de todos os serviços daquele produto                                                                                                                                                                                                                                                                                \\
-
-		\hline
-	\end{tabular}
-	\label{tab:repositorio-submodelo-produto}
-\end{table}
-
-\begin{table}[htb]
-	\centering
-	\caption{Submodelo ``contrato'' do repositório.}
-	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
-		\hline
-		\textbf{Propriedade}
-		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                                                                                                                                                                                                 \\
-
-		\hline
-		\textit{id}
-		 & \textit{String}
-		 & UUID do contrato.                                                                                                                                                                                                                                                                  \\
-
-
-		\hline
-		\textit{contract\_definition}
-		 & \textit{String}
-		 & Arquivo de definição do contrato, que é a documentação da API. Este documento descreve o comportamento da API, o que inclui as URLs dos \textit{endpoints} (rotas), os métodos de cada rota, argumentos e exemplos de chamadas (\textit{requests}) com suas respectivas respostas. \\
-
-		\hline
-		\textit{version}
-		 & \textit{Integer}
-		 & Versão do contrato.                                                                                                                                                                                                                                                                \\
-
-		\hline
-		\textit{insertion\_time}
-		 & \textit{Datetime}
-		 & \textit{Timestamp} do momento de registro desta versão específica do contrato no repositório.                                                                                                                                                                                      \\
-
-		\hline
-		\textit{service\_id}
-		 & \textit{String}
-		 & Referência ao ID do serviço associado a este contrato.                                                                                                                                                                                                                             \\
-
-
-		\hline
-	\end{tabular}
-	\label{tab:repositorio-submodelo-contrato}
-\end{table}
-
-A \autoref{fig:submodelos-repositorio} mostra a interrelação entre os submodelos apresentados nas Tabelas \ref{tab:repositorio-submodelo-servico}, \ref{tab:repositorio-submodelo-produto} e \ref{tab:repositorio-submodelo-contrato}.
+Os submodelos propostos são baseados na classificação das informações contidas nele. Os submodelos propostos são: ``Dados Gerais'', ``Processos'', ``Inventário'', ``Pedido'', ``Operação'' e ``Documentação''. A \autoref{fig:submodelos-produto} mostra os submodelos propostos.
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[width=1\textwidth]{submodelos-repositorio}
-	\caption{Submodelos do repositório e suas interrelações.}
-	\label{fig:submodelos-repositorio}
+	\includegraphics[width=1\textwidth]{submodelos-produto}
+	\caption{Submodelos do produto e seus atributos.}
+	\label{fig:submodelos-produto}
 \end{figure}
 
-O submodelo ``serviço'' possui a chave estrangeira \textit{product\_id} com referência à chave primária \textit{id} do submodelo ``produto''. Os submodelos ``serviço'' e ``produto'' mantêm uma relação de n para 1, uma vez que um produto pode conter diversos serviços, mas um serviço pertence a um e somente um produto.
-
-O submodelo ``contrato'' possui a chave estrangeira \textit{service\_id} com referência à chave primária \textit{id} do submodelo ``serviço''. Os submodelos ``serviço'' e ``contrato'' mantêm uma relação de 1 para n, uma vez que um serviço pode conter diversos contratos em diferentes versões e os contratos pertencem a exclusivamente um serviço.
-
-Os três submodelos apresentados e suas propriedades não são exaustivas. Entende-se que estes são submodelos básicos para permitir o armazenamento, identificação, e compartilhamento de descrições de serviços. Mais submodelos e novas definições surgirão a fim de se adicionar novas funcionalidades ao repositório.
-
-% O cliente consumidor (AAS-Cliente) na operação de busca fará uma requisição ao repositório ou a uma lista de repositórios e receberá via API a lista de serviços providenciada por meio dos contratos.
-
-O produto (AAS-Servidor) é o responsável pela geração e atualização dos dados referentes a seus serviços no AAS-Repositório. Dados relacionados ao índice de reputação, entretanto, devem ser gerados pelo próprio repositório para garantir a integridade dos índices.
-
-A inserção e atualização de um registro no repositório deve acontecer sempre que um produto é instalado ou atualizado, o que acarreta uma nova operação de publicação, gerando assim uma nova versão do contrato.
-
-%\section{Submodelos e propriedades para a integração da cadeia de valor}
-
-\section{Submodelos do produto}
-
-O produto no contexto da ``Arquitetura para compartilhamento de informações do ativo'' o Componente I4.0 é a fonte e o servidor de informações para os diversos membros ao longo da cadeia de suprimentos. O acesso a estas informações permite a colaboração entre os membros e assim abre oportunidades para uma tomada de decisões coordenada a fim de remover as ineficiências inerentes da cadeia de suprimentos.
-
-É necessária uma definição dos submodelos do produto a fim de se identificar os tipos de informações genéricas a ser compartilhadas e com quais membros compartilhar. Além disso, a definição destes submodelos contribui com o refinamento das especificações do AAS no contexto da Indústria 4.0.
-
-\citeonline{torres2014information} faz uma análise da literatura bibliográfica e analisa o impacto do compartilhamento de informações em cadeias de suprimentos. Além disso, é feita uma classificação dos trabalhos, dentre elas a classificação quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
-
-Os tipos de informações identificados na análise bibliográfica de \citeonline{torres2014information} serão incorporados a seus respectivos submodelos no AAS-Servidor para que possam ser compartilhadas por meio da MDP. Os submodelos a serem criados com base nos tipos de informações identificados na análise bibliográfica são: ``Produto'', ``Processo'', ``Recurso'', ``Inventário'', ``Pedido'' e ``Planejamento''.
-
-%Além disso, os submodelos ``Dados técnicos'', ``Dados Operacionais'' e ``Documentação'' segundo \citeonline{bader2020submodel} também serão incorporados ao AAS do produto. Como ``Produto'' e ``Dados técnicos'' remetem a dados semelhantes, estes submodelos serão fundidos em um.
+\newpage
 
 %Portanto, são detalhados os seguintes submodelos referentes ao AAS-Produto: ``Processo'', ``Recursos'', ``Inventário'', ``Pedido'', ``Planejamento'', ``Dados técnicos'', ``Dados Operacionais'' e ``Documentação'' (Tabelas \ref{tab:produto-submodelo-processo}, \ref{tab:produto-submodelo-recursos}, \ref{tab:produto-submodelo-inventario}, \ref{tab:produto-submodelo-pedido}, \ref{tab:produto-submodelo-planejamento}).
 
-O objetivo de se especificar os submodelos de um AAS é o estabelecimento de um formato padrão de estrutura de dados, criando uma interface pela qual desenvolvedores, fabricantes e editores de documentação técnica possam se basear na hora de descrever o AAS de seus próprios produtos.
+%O objetivo de se especificar os submodelos de um AAS (contido em um C4.0) é o estabelecimento de um formato padrão de estrutura de dados, criando uma interface pela qual desenvolvedores, fabricantes e editores de documentação técnica possam se basear na hora de descrever os seus próprios produtos.
 
-\subsection{Submodelo ``produto''}
+\subsection{Submodelo ``Dados Gerais''}
 
-O AAS-Servidor (AAS do produto) deverá conter um submodelo que representa as informações do produto em si, o que inclui sua ficha com dados técnicos e dados operacionais.
+O AAS do C4.0-Servidor deve conter um submodelo que represente as informações gerais relacionadas ao produto que são de acesso público.
 
-As informações do produto descrevem as características do produto fabricado na cadeia de suprimentos e seu processo de produção.
+As informações neste submodelo descrevem as características do produto na cadeia de suprimentos.
 
-A \autoref{tab:produto-submodelo-produto} detalha o submodelo ``produto'' com suas respectivas propriedades.
+A \autoref{tab:submodelo-dados-gerais} detalha o submodelo ``Dados Gerais'' com seus respectivos atributos.
 
 \begin{table}[htb]
 	\centering
-	\caption{Submodelo ``produto''.}
+	\caption{Atributos do submodelo ``Dados Gerais''.}
 	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
 		\hline
 		\textbf{Propriedade}
 		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                                                                                                                                                  \\
+		 & \textbf{Descrição}                                                                                                                                                                                                        \\
+
+		\hline
+		Nome do produto
+		 & \makecell{String}
+		 & Nome comercial do produto.
+		\\
+
+		\hline
+		Código do produto
+		 & \makecell{String}
+		 & Código para identificação do modelo do produto.
+		\\
+
+		\hline
+		Imagem do produto
+		 & \makecell{MIME\\{image/jpg}}
+		 & Arquivo de imagem do produto em um formato de imagem comum \citeonline{bader2020submodel}.
+		\\
 
 		\hline
 		Estrutura do produto
 		 & \makecell{List\\{[String]}}
-		 & Lista de materiais (\textit{Bill of Materials} - BOM) com os materiais e quantias necessárias para a fabricação do respectivo produto. Organizar a produção de diversos produtos na fábrica e garante a padronização dos processos. \\
+		 & Lista de materiais (\textit{Bill of Materials} - BOM) com os materiais e quantias necessárias para a fabricação do respectivo produto. Organiza a produção do produtos na fábrica e garante a padronização dos processos. \\
+
 
 		\hline
-		Ficha técnica
-		 & \makecell{List\\{[String]}}
-		 & Informações gerais sobre o produto como seu modelo, seu número de série, fabricante, etc.                                                                                                                                           \\
+		Nome do fabricante
+		 & \makecell{String}
+		 & Designação legalmente válida do órgão natural ou judicial diretamente responsável pela concepção, produção, embalagem e rotulagem de um produto \citeonline{bader2020submodel}.
+		\\
 
 		\hline
-		Dados operacionais
-		 & \makecell{List\\{[Float]}}
-		 & Dados relacionados ao funcionamento do produto, como o histório de leitura de sensores e padrões de uso.                                                                                                                            \\
-
-		\hline
-		Documentação
-		 & \makecell{List\\{[Blob]}}
-		 & Arquivos relacionado ao produto como comprovantes e manuais devidamente versionados.                                                                                                                                                \\
+		Logo do fabricante
+		 & \makecell{MIME\\{image/jpg}}
+		 & Arquivo de imagem da logo do fabricante em um formato de imagem comum \citeonline{bader2020submodel}.
+		\\
 
 		\hline
 	\end{tabular}
-	\label{tab:produto-submodelo-produto}
+	\label{tab:submodelo-dados-gerais}
 \end{table}
 
-\subsection{Submodelo ``processo''}
+\newpage
 
-O submodelo ``processo'' descreve informações relacionadas a processos de negócio que adicionam valor ao produto a fim de satisfazer as demandas do cliente, isto é, as etapas de pedido, produção e envio.
+\subsection{Submodelo ``Processos''}
+
+O submodelo ``Processos'' do AAS do C4.0-Servidor descreve informações relacionadas a processos de negócio que adicionam valor ao produto a fim de satisfazer as demandas do cliente, isto é, as etapas de pedido, produção e envio.
 
 A etapa de pedido começa quando um comprador que faz um pedido ao fornecedor e termina quando o fornecedor aceita o pedido. A etapa de produção ocorre com a transformação dos materiais de entrada em um produto de maior valor. A etapa de envio entrega as mercadorias do fornecedor ao comprador. Diferentes tipos de informações estão relacionados a cada uma destas etapas.
 
-A \autoref{tab:produto-submodelo-processo} detalha o submodelo ``processo'' com suas respectivas propriedades.
+A \autoref{tab:submodelo-processos} detalha o submodelo ``Processos'' com seus respectivos atributos.
 
 \begin{table}[htb]
 	\centering
-	\caption{Submodelo ``processo''.}
+	\caption{Atributos do submodelo ``Processos''.}
 	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
 		\hline
 		\textbf{Propriedade}
@@ -356,15 +239,11 @@ A \autoref{tab:produto-submodelo-processo} detalha o submodelo ``processo'' com 
 		 & \textit{Float}
 		 & O \textit{lead time} de manufatura (ou lead time de fabricação) é o período de tempo necessário para fabricar um item, incluindo tempo de preparação do pedido, tempo de fila, tempo de preparação, tempo de execução, tempo de movimentação, tempo de inspeção e tempo de armazenamento. \\
 
-		\hline
-		Variância do \textit{lead time} de produção
-		 & \textit{Float}
-		 & Medida de dispersão mostrando o quão distante cada valor do conjunto de valores de \textit{lead time} de produção está do valor médio.                                                                                                                                                    \\
 
 		\hline
 		\textit{Lead time} de entrega
 		 & \textit{Float}
-		 & Tempo de entrega de um determinado produto. Um valor mais curto garante que os clientes recebam os produtos rapidamente.                                                                                                                                                                  \\
+		 & Tempo de entrega de um determinado produto.                                                                                                                                                                                                                                               \\
 
 		\hline
 		Custo do processo de fabricação
@@ -374,7 +253,7 @@ A \autoref{tab:produto-submodelo-processo} detalha o submodelo ``processo'' com 
 		\hline
 		Qualidade do processo de fabricação
 		 & \textit{Float}
-		 & Agregação de um conjunto de dados estatísticos relacionados à qualidade do processo produtivo de um fabricante. O compartilhamento de informações relacionadas à qualidade é importante para o estabelecimento de confiabilidade no processo de fabricação do fabricante.                 \\
+		 & Agregação de um conjunto de dados estatísticos relacionados à qualidade do processo produtivo de um fabricante. O compartilhamento de informações relacionadas à qualidade é importante para o estabelecimento de confiabilidade no processo de fabricação do produto.                    \\
 
 		\hline
 		Informações da remessa
@@ -383,57 +262,27 @@ A \autoref{tab:produto-submodelo-processo} detalha o submodelo ``processo'' com 
 
 		\hline
 		Custo de preparação
-		 & \textit{Float}
-		 & O custo de preparação da produção influencia no custo do lote de pedidos. A medida que o tamanho do lote de pedidos aumenta, reduz-se o custo total da demanda uma vez que reduz o custo de preparação total.                                                                             \\
+		 & \textit{Double}
+		 & O custo de preparação da produção (\textit{setup}) influencia no custo do lote de pedidos. A medida que o tamanho do lote de pedidos aumenta, reduz-se o custo total da demanda uma vez que reduz o custo de preparação total.                                                            \\
 
 		\hline
 	\end{tabular}
-	\label{tab:produto-submodelo-processo}
+	\label{tab:submodelo-processos}
 \end{table}
 
-\subsection{Submodelo ``recurso''}
+\newpage
 
-O submodelo ``recurso'' agrega informações relacionadas aos recursos necessários para a produção de um determinado produto.
+\subsection{Submodelo ``Inventário''}
 
-O compartilhamento de informações de capacidade de cada um dos recursos na cadeia de suprimentos é útil para o planejamento integrado e a seleção de fornecedores. Desta forma, é possível identificar os fornecedores que estão dispoiníveis para receber uma determinada demanda a partir do produto.
+O submodelo ``Inventário'' do AAS do C4.0-Servidor agrega informações relacionadas ao gerenciamento do inventário de um determinado produto. O objetivo destas informações é a visibilidade do inventário de forma que seja possível ter um determinado produto para venda no momento certo e ao mesmo tempo reduzir custos relativos a estoque.
 
-A \autoref{tab:produto-submodelo-recurso} detalha o submodelo ``recurso'' com suas respectivas propriedades.
+Informações relacionadas ao inventário auxiliam na tomada de decisões sobre quando realizar pedidos ao fabricante, a quantidade de materiais a serem solicitados e onde armazenar.
+
+A \autoref{tab:submodelo-inventario} detalha o submodelo ``Inventário'' com seus respectivos atributos.
 
 \begin{table}[htb]
 	\centering
-	\caption{Submodelo ``recurso''.}
-	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
-		\hline
-		\textbf{Propriedade}
-		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                      \\
-
-		\hline
-		Capacidade
-		 & \textit{Float}
-		 & Quantidade máxima de produtos ou processos que uma unidade de recurso (por exemplo uma máquina, um fornecedor ou uma estação) pode suportar. Cada unidade de recurso pode ser capaz de realizar diferentes operações e produzir diferentes tipos de produtos ou componentes. A capacidade de uma unidade de recurso indica a capacidade de satisfazer a demanda futura. \\
-
-		\hline
-		Variância da Capacidade
-		 & \textit{String}
-		 & Medida de dispersão da capacidade máxima do recurso, indicando sua variação em relação ao valor médio.                                                                                                                                                                                                                                                                  \\
-
-		\hline
-	\end{tabular}
-	\label{tab:produto-submodelo-recurso}
-\end{table}
-
-\subsection{Submodelo ``inventário''}
-
-O submodelo ``inventário'' agrega informações realcionadas ao gerenciamento do inventário daquele determinado produto.  O objetivo destas informações é a visibilidade do inventário de forma que seja possível ter um determinado produto para venda no momento certo e ao mesmo tempo reduzir custos relativos a estoque.
-
-Informações relacionadas a inventário auxiliam na tomada de decisões sobre quando realizar pedidos ao fabricante, a quantidade de materiais a serem solicitados e onde armazenar.
-
-A \autoref{tab:produto-submodelo-inventario} detalha o submodelo ``inventário'' com suas respectivas propriedades.
-
-\begin{table}[htb]
-	\centering
-	\caption{Submodelo ``inventário''.}
+	\caption{Atributos do submodelo ``Inventário''.}
 	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
 		\hline
 		\textbf{Propriedade}
@@ -462,93 +311,180 @@ A \autoref{tab:produto-submodelo-inventario} detalha o submodelo ``inventário''
 
 		\hline
 	\end{tabular}
-	\label{tab:produto-submodelo-inventario}
+	\label{tab:submodelo-inventario}
 \end{table}
 
-\subsection{Submodelo ``pedido''}
+\newpage
 
-Um pedido contém informações sobre a demanda do cliente final para os fornecedores anteriores. As informações do pedido incluem a quantidade de itens no pedido, data de vencimento e tamanho do lote.
+\subsection{Submodelo ``Pedido''}
+
+O submodelo ``Pedido'' pertence ao AAS do C4.0-Servidor.
+
+Cada pedido contém informações sobre a demanda do cliente para cada fornecedor anterior. As informações do pedido incluem a quantidade de itens no pedido, data limite de entrega e tamanho do lote.
 
 Compartilhar informações de quantidade de pedido entre as partes da cadeia de suprimentos ajuda na visibilidade do estado atual de um pedido por todos os membros.
 
-A \autoref{tab:produto-submodelo-pedido} detalha o submodelo ``pedido'' com suas respectivas propriedades.
+A \autoref{tab:submodelo-pedido} detalha o submodelo ``Pedido'' com seus respectivos atributos.
 
 \begin{table}[htb]
 	\centering
-	\caption{Submodelo ``pedido''.}
+	\caption{Atributos do submodelo ``Pedido''.}
 	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
 		\hline
 		\textbf{Propriedade}
 		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                             \\
+		 & \textbf{Descrição}                                                                  \\
 
 		\hline
-		Demanda
+		Quantidade
 		 & \textit{Integer}
-		 & Quantidade de lotes de um produto solicitados em forma de um ``pedido''. Representa uma demanda de fabricação. \\
+		 & Quantidade de items de um produto solicitado. Representa uma demanda de fabricação. \\
 
 		\hline
-		Variância da demanda
-		 & \textit{Float}
-		 & Medida de dispersão da quantidade de pedidos em uma demanda com relação ao valor médio.                        \\
+		Preço unitário
+		 & \textit{Double}
+		 & Valor pago pela unidade de um produto.                                              \\
 
 		\hline
-		Tamanho do lote
-		 & \textit{Float}
-		 & Quantidade de itens do produto contida em uma demanda.                                                         \\
-
-		\hline
-		Data de vencimento
+		Data limite de entrega
 		 & \textit{Datetime}
-		 & Prazo limite para a entrega de uma determinada demanda.                                                        \\
+		 & Prazo limite para a entrega de uma determinada demanda.                             \\
+
+		\hline
+		Geolocalização
+		 & \textit{String}
+		 & Localização geográfica em tempo real de um determinado produto ou lote.             \\
 
 		\hline
 	\end{tabular}
-	\label{tab:produto-submodelo-pedido}
+	\label{tab:submodelo-pedido}
 \end{table}
 
-\subsection{Submodelo ``planejamento''}
+\newpage
 
-As informações de ``planejamento'' englobam as informações relacionadas à previsão de demanda e programação de pedidos feita por cada um dos membros da cadeia de suprimentos.
+% \subsection{Submodelo ``Desenvolvimento''}
 
-A \autoref{tab:produto-submodelo-planejamento} detalha o submodelo ``planejamento'' com suas respectivas propriedades.
+% Este submodelo do AAS do C4.0-Servidor armazena informações relacionada ao desenvolvimento em progresso de próximas versões aprimoradas do produto.
+
+% A \autoref{tab:submodelo-desenvolvimento} detalha o submodelo ``Desenvolvimento'' com seus respectivos atributos.
+
+% \begin{table}[htb]
+% 	\centering
+% 	\caption{Atributos do submodelo ``Desenvolvimento''.}
+% 	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
+% 		\hline
+% 		\textbf{Propriedade}
+% 		 & \textbf{Tipo}
+% 		 & \textbf{Descrição} \\
+
+% 		\hline
+% 		Tendências de marketing
+% 		 & \makecell{String}
+% 		 & a
+% 		\\
 
 
+% 		\hline
+% 	\end{tabular}
+% 	\label{tab:submodelo-desenvolvimento}
+% \end{table}
 
+% \newpage
 
+\subsection{Submodelo ``Operação''}
+
+Este submodelo do AAS do C4.0-Servidor representa dados relacionados ao funcionamento do produto.
+
+O produto nesta fase está em produção e operando. Portanto, o seu funcionamento e a interação do produto com o usuário/operador gera dados de funcionamento.
+
+A análise dados da máquina sobre o desempenho do equipamento de campo em tempo real, juntamente com dados históricos de desempenho ajudam a para entender melhor os problemas de serviço e tentar prever problemas de manutenção do equipamento antes que estes aconteçam.
+
+A \autoref{tab:submodelo-operacao} detalha o submodelo ``Operação'' com seus respectivos atributos.
 
 \begin{table}[htb]
 	\centering
-	\caption{Submodelo ``planejamento''.}
+	\caption{Atributos do submodelo ``Operação''.}
 	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
 		\hline
 		\textbf{Propriedade}
 		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                                                                                                                                                     \\
+		 & \textbf{Descrição}                                                                                                       \\
 
 		\hline
-		Previsão de demanda
-		 & \textit{Float}
-		 & Previsão de demanda de um determinado produto feita por um elo da cadeia de suprimentos. Com as previsões de demanda compartilhadas, é possível estabelecer uma alocação ótima dos recursos de produção entre os membros como um todo. \\
-
-		\hline
-		Modelo de previsão
-		 & \textit{---}
-		 & Modelo utilizado para o cálculo da previsão de demanda.                                                                                                                                                                                \\
+		Leitura de sensores
+		 & \makecell{\makecell{Map\\{[Float]}}}
+		 & Leitura em tempo real dos sensores de temperatura, vibração, etc.
+		\\
 
 
 		\hline
-		Programação da produção
-		 & \textit{Float}
-		 & Alocação de recursos para a produção de um determinado produto para um período de tempo no futuro.                                                                                                                                     \\
-
+		Leitura de sensores histórica
+		 & \makecell{\makecell{Map\\{[Float]}}}
+		 & Estrutura de dados para o armazenamento de leituras de sensores no passado.
+		\\
 
 		\hline
-		Horizonte de planejamento
-		 & \textit{Datetime}
-		 & Período de tempo correspondente à programação da produção.                                                                                                                                                                             \\
+		Desempenho energético
+		 & \makecell{\makecell{Map\\{[Float]}}}
+		 & Armazenamento de índices de desempenho energético calculados com base nas leituras dos sensores do equipamento.
+		\\
+
+		\hline
+		Padrões de uso
+		 & \makecell{\makecell{Map\\{[String]}}}
+		 & Informações relacionadas à interação do usuário/operador com o produto. É gerado com base nos padrões de uso do produto.
+		\\
 
 		\hline
 	\end{tabular}
-	\label{tab:produto-submodelo-planejamento}
+	\label{tab:submodelo-operacao}
 \end{table}
+
+\newpage
+
+\subsection{Submodelo ``Documentação''}
+
+Este submodelo do AAS do C4.0-Servidor é inspirado em \citeonline{bedenbender2017aasexamples}, que menciona a necessidade da existência de um submodelo destinado ao armazenado de arquivos \textit{blob} que não possuem um formato específico.
+
+Este submodelo destina-se ao armazenamento e versionamento de documentos digitais relacionados ao produto. Tal documento pode ser um formato proprietário ou aberto como, por exemplo .pdf, .docx, .ppt, .dwg, .psd e outros.
+
+A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' com seus respectivos atributos.
+
+\begin{table}[htb]
+	\centering
+	\caption{Atributos do submodelo ``Documentação''.}
+	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
+		\hline
+		\textbf{Propriedade}
+		 & \textbf{Tipo}
+		 & \textbf{Descrição}                                                                                                                                \\
+
+
+		\hline
+		Manual de fabricação
+		 & \makecell{Blob}
+		 & Descrição sobre todas as operações realizadas na produção envolvendo o produto, desde a calibração de equipamentos até a saúde dos colaboradores.
+		\\
+
+		\hline
+		Manual de operação
+		 & \makecell{Blob}
+		 & Manual destinado ao usário com instruções de operação/uso.                                                                                        \\
+
+		\hline
+		Notas fiscais
+		 & \makecell{Blob}
+		 & Documento oficial que registra as venda da produto pela empresa.                                                                                  \\
+
+		\hline
+		Modelo digital
+		 & \makecell{Blob}
+		 & Representação digital 3D do produto com suas formas e dimensões reais.                                                                            \\
+
+
+		\hline
+	\end{tabular}
+	\label{tab:submodelo-documentacao}
+\end{table}
+
+\newpage
