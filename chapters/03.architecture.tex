@@ -120,11 +120,13 @@ Nesta seção são apresentados os detalhes sobre uma possível estruturação d
 
 A estrutura proposta do AAS é baseada em \citeonline{bader2019aas}, que estabelece a divisão do AAS em submodelos.
 
-O cabeçalho na estrutura proposta terá a função de providenciar informações públicas sobre o ativo que o identifiquem minimamente e que forneça uma descrição sobre seus serviços oferecidos. O cabeçalho deverá conter informações que podem ser acessadas sem a necessidade de autenticação como, por exemplo, seu identificador único universal (UUID - \textit{Universal Unique IDentifier}), o modelo e fabricante do ativo. O cabeçalho deverá conter também o contrato daquele \textit{Web Service} com as descrições de seus serviços públicos disponíveis.
+% O cabeçalho na estrutura proposta terá a função de providenciar informações públicas sobre o ativo que o identifiquem minimamente e que forneça uma descrição sobre seus serviços oferecidos. O cabeçalho deverá conter informações que podem ser acessadas sem a necessidade de autenticação como, por exemplo, seu identificador único universal (UUID - \textit{Universal Unique IDentifier}), o modelo e fabricante do ativo. O cabeçalho deverá conter também o contrato daquele \textit{Web Service} com as descrições de seus serviços públicos disponíveis.
 
-O cabeçalho não terá a função de fornecer uma ficha técnica detalhada, mas apenas uma caracterização abstrata das funções/serviços do ativo. O cabeçalho deverá necessariamente conter o UUID do AAS. Sem o UUID o C4.0-Servidor se torna inacessível para qualquer uma das partes da cadeia de suprimentos.
+% O cabeçalho não terá a função de fornecer uma ficha técnica detalhada, mas apenas uma caracterização abstrata das funções/serviços do ativo. O cabeçalho deverá necessariamente conter o UUID do AAS. Sem o UUID o C4.0-Servidor se torna inacessível para qualquer uma das partes da cadeia de suprimentos.
 
-O corpo de um AAS fornece as informações e funcionalidades sensíveis sobre o ativo, que podem ser acessadas mediante autenticação. As funcionalidades dos ativos são agrupadas em forma de submodelos, conforme estabelecido em \citeonline{bader2019aas, adolph2018roadmap, bedenbender2017aasexamples}, que são unidades de agrupamento de propriedades semelhantes. Os dados do ativo são armazenados nos próprios submodelos, enquanto a MDP (que também está contida no corpo do AAS) extrai e gerencia as informações dos submodelos de forma a estruturá-las para serem diretamente fornecidas ao C4.0-Cliente por meio de \textit{Web Services}.
+% O corpo de um AAS fornece as informações e funcionalidades sensíveis sobre o ativo, que podem ser acessadas mediante autenticação.
+
+As funcionalidades dos ativos são agrupadas em forma de submodelos, conforme estabelecido em \citeonline{bader2019aas, adolph2018roadmap, bedenbender2017aasexamples}, que são unidades de agrupamento de propriedades semelhantes. Os dados do ativo são armazenados nos próprios submodelos, enquanto a MDP (que também está contida no corpo do AAS) extrai e gerencia as informações dos submodelos de forma a estruturá-las para serem diretamente fornecidas ao C4.0-Cliente por meio de \textit{Web Services}.
 
 A MDP no contexto de um AAS agrega e espelha as informações referentes a cada um dos submodelos de um AAS e as organiza de forma a poderem ser facilmente disponibilizadas por meio de WSs.
 
@@ -170,7 +172,7 @@ Cada C4.0-Cliente (Fabricante, Distribuidor ou Consumidor), portanto, realiza a 
 
 Após o recebimento da resposta da busca pelo C4.0-Repositório, é feita a decisão interna em cada C4.0-Cliente sobre qual serviço selecionar. Uma vez definido, o C4.0-Cliente estabelece uma (\textbf{m}) interação com o C4.0-Servidor (produto), isto é, uma comunicação direta para o consumo do serviço selecionado.
 
-Este é um exemplo de consulta única. Em aplicações reais, o cliente normalmente invocaria o serviço de diversos C4.0-Servidores ao mesmo tempo, como, por exemplo, um fabricante solicitando informações de todas as máquinas de um modelo específico que foram vendidas a clientes espalhados pelo mundo para realizar análise de dados a fim de se fazer a identificação de potenciais falhas por meio de manutenção preditiva. Tal cenário é demonstrado em forma de um segundo exemplo na \autoref{fig:webservice-multiproduto}.
+Este é um exemplo de consulta única. Em aplicações reais, o cliente normalmente invocaria o serviço de diversos C4.0-Servidores ao mesmo tempo, como, por exemplo, um fabricante solicitando informações de todas as máquinas de um modelo específico que foram vendidas a clientes espalhados pelo mundo para realizar análise de dados a fim de se fazer a identificação de potenciais falhas e promover uma manutenção preditiva. Tal cenário é demonstrado em forma de um segundo exemplo na \autoref{fig:webservice-multiproduto}.
 
 \begin{figure}[htb]
 	\centering
@@ -234,7 +236,7 @@ A \autoref{fig:webservice-rami} apresenta os componentes da arquitetura de forne
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{webservice-rami}
+	\includegraphics[width=0.6\textwidth]{webservice-rami}
 	\caption{Camadas do RAMI4.0 com os elementos da arquitetura proposta.}
 	\label{fig:webservice-rami}
 \end{figure}

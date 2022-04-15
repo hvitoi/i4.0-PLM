@@ -359,7 +359,7 @@ Implementações de uma memória com informações sobre produto ao longo de sua
 
 Arquitetura Orientada a Serviços (\textit{Service Oriented Architecture} - SOA) é um estilo de projeto de \textit{software} em que serviços são disponibilizados a outros sistemas por meio de um protocolo de comunicação comum em uma rede \cite{bell2008soa}. Um serviço é uma unidade de funcionalidade que pode ser fornecida/acessada remotamente. A SOA se destina a ser independente de fornecedores, produtos e tecnologias.
 
-Para quem consome um serviço, a abordagem é como uma caixa preta, o que significa que o consumidor não sabe ou não precisa estar ciente do funcionamento interno deste serviço, sendo relevante apenas a sua interface de entrada e de saída, definidos no contrato. Os serviços representam uma lógica de fornecimento de resultados. É uma abstração de problemas, ou seja, toda a complexidade interna inerente aos serviços pode ser abstraída pelos consumidores dos serviços.
+Para quem consome um serviço, a abordagem é como uma caixa preta, o que significa que o consumidor não sabe ou não precisa estar ciente do funcionamento interno deste serviço, sendo relevante apenas as interfaces de entrada e saída, definidas no contrato. Os serviços representam uma lógica de fornecimento de resultados. É uma abstração de problemas, ou seja, toda a complexidade interna inerente aos serviços pode ser abstraída pelos consumidores dos serviços.
 
 Dentro do mundo da Indústria 4.0 e de sistemas produtivos, a SOA é uma abordagem que traz novas perspectivas uma vez que se estabelece um conjunto de princípios para uma arquitetura de sistema autônomo e interoperável \cite{candido2009soa}, que tem por objetivo aumentar a eficiência, agilidade e produtividade de um sistema por meio da adoção generalizada do conceito de serviços \cite{souit2013soa}.
 
@@ -398,11 +398,11 @@ A arquitetura de um WS é constituída por três atores básicos: o provedor de 
 Detalhadamente, os atores em um WS são:
 
 \begin{itemize}
-	\item \textbf{Provedor de serviços}: Representa a plataforma que hospeda e fornece um determinado serviço. Esta plataforma permite que clientes solicitem serviços e recebam suas respectivas respostas. O provedor de serviços é responsável também por fornecer uma descrição sobre o serviço prestado e publicar esta descrição em um repositório acessível pelo solicitante;
+	\item \textbf{Provedor de serviços}: Entidade que hospeda e fornece um determinado serviço. Esta entidade permite que clientes solicitem serviços e recebam suas respectivas respostas. O provedor de serviços é responsável também por fornecer uma descrição sobre o serviço prestado e publicar esta descrição em um repositório acessível pelo solicitante;
 
-	\item \textbf{Repositório de serviços}: É uma plataforma acessível com a função de armazenar e fornecer a descrição sobre diversos WSs. Os WSs são descobertos pelo solicitante, por meio do repositório, para que assim possa decidir o serviço que melhor o atenda;
+	\item \textbf{Repositório de serviços}: Entidade que armazena e fornece a descrição sobre diversos WSs. Os WSs são descobertos pelo solicitante, por meio do repositório, para que assim possa decidir o serviço que melhor o atenda;
 
-	\item \textbf{Solicitante de serviços}: É a plataform que necessita um determinado serviço e solicita a sua execução. O solicitante de serviço pode ser uma pessoa acessando um navegador ou uma outra aplicação realizando solicitações por meio de APIs.
+	\item \textbf{Solicitante de serviços}: Entidade que requer um determinado serviço e solicita a sua execução. O solicitante de serviço pode ser uma pessoa acessando um navegador ou uma outra aplicação realizando solicitações por meio de APIs.
 \end{itemize}
 
 Já as operações básicas em WS em detalhe são:
@@ -437,11 +437,11 @@ Dentro do mundo da Indústria 4.0 não é diferente. O \autoref{cha:arquitetura}
 
 \subsection{Transferência Representacional de Estado}
 
-A Transferência Representacional de Estado (\textit{Representational State Transfer} - REST) é uma arquitetura de \textit{software} que define padrões para acesso e disponibilização de \textit{Web Services} (WSs). Os WSs que seguem o padrão REST são denominados \textit{RESTful Services}. Este estilo de arquitetura de sistemas distribuídos foi apresentado pela primeira em \citeonline{fielding2000rest} .
+A Transferência Representacional de Estado (\textit{Representational State Transfer} - REST) é uma arquitetura de \textit{software} que define padrões para acesso e disponibilização de \textit{Web Services} (WSs). Os WSs que seguem o padrão REST são denominados \textit{RESTful Services}. Este estilo de arquitetura de sistemas distribuídos foi apresentado pela primeira por \citeonline{fielding2000rest} .
 
 A arquitetura REST possibilita a interoperabilidade entre sistemas na \textit{Internet}, pois permite que os sistemas solicitantes acessem e manipulem representações textuais de recursos usando um conjunto uniforme e predefinido de operações sem estado \cite{ferris2004webservices}.
 
-O padrão REST, mais moderno, veio gradualmente substituindo o padrão SOAP, mais antigo, e hoje é a forma mais comum de compartilhamento de informações por meio de \textit{web services}. Apesar de ambos os padrões serem baseados no HTTP e HTTPS, o padrão REST geralmente contém um \textit{payload} de mensagem mais leve por trafegar dados no formato JSON, ao contrário do padrão SOAP que utiliza o formato XML.
+O padrão REST, mais moderno, veio gradualmente substituindo o padrão SOAP (\textit{Simple Object Access Protocol}) e hoje é a forma mais comum de compartilhamento de informações por meio de \textit{web services}. Apesar de ambos os padrões serem baseados no HTTP e HTTPS, o padrão REST geralmente contém um \textit{payload} de mensagem mais leve por trafegar dados no formato JSON (\textit{JavaScript Object Notation}), ao contrário do padrão SOAP que utiliza o formato XML (\textit{Extensible Markup Language}).
 
 A arquitetura REST estabelece as orientações e boas práticas de uma interface que devem ser satisfeitas  para que possa ser referida como um serviço \textit{RESTful}. Esses princípios são \cite{fielding2000rest}:
 
@@ -498,11 +498,6 @@ Cada método do protocolo HTTP recebe um tipo de operação padrão do REST. A \
 		Atualiza um recurso parcialmente.                     \\[5mm]
 
 		\hline
-		PATCH           &
-		Recurso         &
-		Atualiza um recurso parcialmente.                     \\[5mm]
-
-		\hline
 		DELETE          &
 		Recurso         &
 		Exclui um recurso da base de dados.                   \\[5mm]
@@ -522,7 +517,7 @@ Tanto para APIs REST quanto para APIs SOAP, é necessária a definição de um c
 
 Existem vários formatos de arquivo que permitem criar um contrato e obter sua documentação. O mais comumente utilizado para a documentação de APIs REST é o OpenAPI \cite{santos2020openapi}, anteriormente conhecido como \textit{Swagger}.
 
-Para APIs SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{ferris2003wsdl}. APIs com outros protocolos de comunicação, como por exemplo o gRPC (\textit{Remote Call Procedure}), suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
+Para APIs SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{ferris2003wsdl}. APIs com outros protocolos de comunicação, como por exemplo o gRPC (\textit{Google Remote Call Procedure}), suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
 
 O contrato é definido pelos provedores do serviço e destinado aos consumidores da API, ou seja, às empresas e desenvolvedores que irão utilizar a API. O documento geralmente é criado pela própria equipe de desenvolvimento que elabora o serviço.
 
@@ -541,7 +536,7 @@ Um desafio para o desenvolvimento de bons modelos nessa área é a adoção de m
 
 \citeonline{miyagi1996controle} define os sistemas feitos pelo homem (\textit{man-made systems}) como sistemas de manufatura, transporte, comunicação, redes de computadores, etc. Estes sistemas seriam caracterizados por uma dinâmica decorrente da ocorrência de eventos e, portanto, são classificados como Sistemas a Eventos Discretos (SED). Um SED é, portanto, uma classificação de sistemas de acordo com seu comportamento, determinado pela ocorrência de eventos que alteram de forma discreta e instantânea o estado do sistema.
 
-Para a modelagem de SEDs, a aplicação de ferramentas como a Rede de Petri e suas variações como \textit{Production Flow Schema} (PFS) e \textit{Mark Flow Graph} (MFG) são formas de auxílio no desenvolvimento de sistemas de controle e automação.
+Para a modelagem de SEDs, a aplicação de ferramentas como a Rede de Petri e suas variações como \textit{Production Flow Schema} (PFS) são formas de auxílio no desenvolvimento de sistemas de controle e automação.
 
 A utilização da técnica de PFS no contexto da I4.0 pode auxiliar no mapeamento das operações e interações entre os elementos do sistema, uma vez que a dinâmica de interação pode ser classificada com um SED. Neste trabalho o PFS é utilizado a fim de se indicar as atividades relativas à cadeia de valor de um produto e as mapear para dentro das camadas do RAMI4.0.
 
