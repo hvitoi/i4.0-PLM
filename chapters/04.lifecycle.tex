@@ -30,7 +30,7 @@ O fluxo de informações e geração de valor é detalhado a seguir:
 	\item O projeto inicial de um produto é disponibilizado para produção em forma de um ``tipo'';
 	\item Instâncias do projeto são fabricadas e disponibilizadas para venda e distribuição;
 	\item Dados são coletados a partir das várias instâncias produzidas;
-	\item Um alto volume de dados coletados das instâncias é análisado utilizando técnicas de análise de dados e \textit{business intelligence};
+	\item Um alto volume de dados coletados das instâncias é analisado utilizando técnicas de análise de dados e \textit{business intelligence};
 	\item A partir do processamento dos dados, há criação de valor relacionada à melhoria operacional do produto (detalhada na \autoref{sec:melhoria-operacional});
 	\item A partir do processamento dos dados e de outros fatores externos, há criação de valor relacionada à melhoria de projeto do produto (detalhada na \autoref{sec:melhoria-projeto});
 	\item Com as melhorias de projeto, uma nova versão (tipo) é gerada, completando assim o ciclo de vida.
@@ -86,7 +86,7 @@ A eficiência Global do Equipamento (\textit{Overall equipment effectiveness} - 
 
 A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu ``tipo''), ou seja, são benefícios operacionais agregados ao ativo.
 
-A partir das classificações sobre o valor das informações dos produtos apresentadas por \citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts}, foi feito um mapeamento para as funções relacionadas às melhorias operacionais, criando uma nova classificação das informaçoes sob o contexto do eixo ``ciclo de vida e cadeia de valor'' do RAMI4.0.
+A partir das classificações sobre o valor das informações dos produtos apresentadas por \citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts}, foi feito um mapeamento para as funções relacionadas às melhorias operacionais, criando uma nova classificação das informações sob o contexto do eixo ``ciclo de vida e cadeia de valor'' do RAMI4.0.
 
 O valor das informações no que diz respeito à melhoria operacional foram então reclassificados sob o contexto do RAMI4.0. As seguintes categorias foram definidas:
 
@@ -126,32 +126,28 @@ Os documentos representam uma conexão entre os membros da CS, portanto, comunic
 
 \section{Submodelos do C4.0-Servidor}
 
-Nesta seção são apresentadas propostas de submodelos e atributos necessárias para a integração dos ativos na cadeia de suprimentos.
+Nesta seção são apresentadas propostas de submodelos e atributos necessários para a integração dos ativos na cadeia de suprimentos.
 
-Os submodelos dos componentes da ``Arquitetura para compartilhamento de informações do ativo'' (\autoref{cha:arquitetura}) devem ser padronizados e detalhados a fim de se garantir a interoperabilidade entre os sistemas.
+Os submodelos dos componentes da ``Arquitetura para compartilhamento de informações do ativo'' (\autoref{cha:arquitetura}) devem ser padronizados e detalhados a fim de garantir a interoperabilidade entre os sistemas.
 
-São apresentados os submodelos essenciais para o produto, ou seja, o C4.0-Servidor. O C4.0-Servidor é o fornecedor de informações e portanto deve possuir uma estrutura de dados padronizada.
-
-O produto no contexto da ``Arquitetura para compartilhamento de informações do ativo'' é a fonte e o servidor de informações para os diversos membros ao longo da cadeia de suprimentos. O acesso a estas informações permite a colaboração entre os membros e assim abre oportunidades para uma tomada de decisões coordenada a fim de remover as ineficiências inerentes da cadeia de suprimentos.
+O produto no contexto da ``Arquitetura para compartilhamento de informações do ativo'' é a fonte e o servidor de informações para os diversos membros ao longo da cadeia de suprimentos. O acesso a estas informações permite a colaboração entre os membros e assim abre oportunidades para uma tomada de decisões coordenada a fim de remover as ineficiências inerentes à cadeia de suprimentos.
 
 É necessária uma definição dos submodelos do produto para que se possa identificar os tipos de informações genéricas a serem compartilhadas e com quais membros compartilhar. Além disso, a definição destes submodelos contribui com o refinamento das especificações do AAS no contexto da Indústria 4.0.
 
-\citeonline{torres2014information} faz uma análise de literatura e analisa o impacto do compartilhamento de informações em cadeias de suprimentos. Além disso, é feita uma classificação dos trabalhos, dentre elas a classificação quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
+\citeonline{torres2014information} em uma análise de literatura mostra o impacto do compartilhamento de informações e de diferentes estratégias de colaboração na performance de cadeias de suprimentos. Além disso, é feita uma classificação dos trabalhos, dentre elas a classificação quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
 
-Além disso, \citeonline{bader2020submodel} define alguns tipos de submodelos padrões para a Indústria 4.0 e detalha seus respectivos atributos.
+Além disso, \citeonline{bader2020submodel} definem alguns tipos de submodelos padrões para a Indústria 4.0 e detalha seus respectivos atributos.
 
 Os tipos de informações identificados na análise bibliográfica de \citeonline{torres2014information} e no documento de \citeonline{bader2020submodel} serão incorporados a novos submodelos propostos para o produto para que possam ser compartilhados por meio da MDP ao longo da cadeia de suprimentos.
 
-Os submodelos propostos são baseados na classificação das informações contidas nele. Os submodelos propostos são: ``Dados Gerais'', ``Processos'', ``Inventário'', ``Pedido'', ``Operação'' e ``Documentação''. A \autoref{fig:submodelos-produto} mostra os submodelos propostos.
+Os submodelos propostos são baseados na classificação das informações contidas em cada submodelo. Os submodelos propostos são: ``Dados Gerais'', ``Processos'', ``Inventário'', ``Pedido'', ``Operação'' e ``Documentação''. A \autoref{fig:submodelos-produto} mostra os submodelos propostos.
 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=1\textwidth]{submodelos-produto}
-	\caption{Submodelos do produto e seus atributos.}
+	\caption{Submodelos do C4.0-Servidor e seus atributos.}
 	\label{fig:submodelos-produto}
 \end{figure}
-
-\newpage
 
 %Portanto, são detalhados os seguintes submodelos referentes ao AAS-Produto: ``Processo'', ``Recursos'', ``Inventário'', ``Pedido'', ``Planejamento'', ``Dados técnicos'', ``Dados Operacionais'' e ``Documentação'' (Tabelas \ref{tab:produto-submodelo-processo}, \ref{tab:produto-submodelo-recursos}, \ref{tab:produto-submodelo-inventario}, \ref{tab:produto-submodelo-pedido}, \ref{tab:produto-submodelo-planejamento}).
 
@@ -172,42 +168,42 @@ A \autoref{tab:submodelo-dados-gerais} detalha o submodelo ``Dados Gerais'' com 
 		\hline
 		\textbf{Propriedade}
 		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                                                                                                                                        \\
+		 & \textbf{Descrição}                                                                                                                                                                                                           \\
 
 		\hline
 		Nome do produto
 		 & \makecell{String}
-		 & Nome comercial do produto.
+		 & Título que constitui a denominação comercial do objeto/produto.
 		\\
 
 		\hline
 		Código do produto
 		 & \makecell{String}
-		 & Código para identificação do modelo do produto.
+		 & Conjunto de números e/ou letras para identificação do modelo do produto.
 		\\
 
 		\hline
 		Imagem do produto
 		 & \makecell{MIME\\{image/jpg}}
-		 & Arquivo de imagem do produto em um formato de imagem comum \citeonline{bader2020submodel}.
+		 & Arquivo de imagem do produto em um formato de imagem comum \cite{bader2020submodel}.
 		\\
 
 		\hline
 		Estrutura do produto
 		 & \makecell{List\\{[String]}}
-		 & Lista de materiais (\textit{Bill of Materials} - BOM) com os materiais e quantias necessárias para a fabricação do respectivo produto. Organiza a produção do produtos na fábrica e garante a padronização dos processos. \\
+		 & Lista de materiais (\textit{Bill of Materials} - BOM) com os materiais e quantidades necessárias para a fabricação do respectivo produto. Organiza a produção do produtos na fábrica e garante a padronização dos processos. \\
 
 
 		\hline
 		Nome do fabricante
 		 & \makecell{String}
-		 & Designação legalmente válida do órgão natural ou judicial diretamente responsável pela concepção, produção, embalagem e rotulagem de um produto \citeonline{bader2020submodel}.
+		 & Designação legalmente válida do órgão natural ou judicial diretamente responsável pela concepção, produção, embalagem e rotulagem de um produto \cite{bader2020submodel}.
 		\\
 
 		\hline
 		Logo do fabricante
 		 & \makecell{MIME\\{image/jpg}}
-		 & Arquivo de imagem da logo do fabricante em um formato de imagem comum \citeonline{bader2020submodel}.
+		 & Arquivo de imagem da logo do fabricante em um formato de imagem comum \cite{bader2020submodel}.
 		\\
 
 		\hline
@@ -215,68 +211,77 @@ A \autoref{tab:submodelo-dados-gerais} detalha o submodelo ``Dados Gerais'' com 
 	\label{tab:submodelo-dados-gerais}
 \end{table}
 
-\newpage
-
 \subsection{Submodelo ``Processos''}
 
-O submodelo ``Processos'' do AAS do C4.0-Servidor descreve informações relacionadas a processos de negócio que adicionam valor ao produto a fim de satisfazer as demandas do cliente, isto é, as etapas de pedido, produção e envio.
+O submodelo ``Processos'' do AAS do C4.0-Servidor descreve informações relacionadas a processos de negócio que agregam valor ao produto a fim de satisfazer as demandas do cliente, isto é, as etapas de pedido, produção e envio.
 
-A etapa de pedido começa quando um comprador que faz um pedido ao fornecedor e termina quando o fornecedor aceita o pedido. A etapa de produção ocorre com a transformação dos materiais de entrada em um produto de maior valor. A etapa de envio entrega as mercadorias do fornecedor ao comprador. Diferentes tipos de informações estão relacionados a cada uma destas etapas.
+A etapa de pedido começa quando um comprador faz um pedido ao fornecedor e termina quando o fornecedor aceita o pedido. A etapa de produção ocorre com a transformação dos materiais de entrada em um produto de maior valor. A etapa de envio entrega as mercadorias do fornecedor ao comprador. Diferentes tipos de informações estão relacionados a cada uma destas etapas.
 
 A \autoref{tab:submodelo-processos} detalha o submodelo ``Processos'' com seus respectivos atributos.
 
-\begin{table}[htb]
-	\centering
-	\caption{Atributos do submodelo ``Processos''.}
-	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
-		\hline
-		\textbf{Propriedade}
-		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                                                                                                                                                                                                                        \\
+\begin{longtable}{p{.20\textwidth} p{.08\textwidth} p{.60\textwidth}}
+	% \centering
+	\caption{Atributos do submodelo ``Processos''.}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   \\
 
-		\hline
-		\textit{Lead time} de manufatura
-		 & \textit{Float}
-		 & O \textit{lead time} de manufatura (ou lead time de fabricação) é o período de tempo necessário para fabricar um item, incluindo tempo de preparação do pedido, tempo de fila, tempo de preparação, tempo de execução, tempo de movimentação, tempo de inspeção e tempo de armazenamento. \\
+	% \begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
+	\hline
+	\textbf{Propriedade}
+	 & \textbf{Tipo}
+	 & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\
 
 
-		\hline
-		\textit{Lead time} de entrega
-		 & \textit{Float}
-		 & Tempo de entrega de um determinado produto.                                                                                                                                                                                                                                               \\
 
-		\hline
-		Custo do processo de fabricação
-		 & \textit{Double}
-		 & Custo total do processo de fabricação. O compartilhamento dos custos do processo é necessário no planejamento integrado da cadeia de suprimentos.                                                                                                                                         \\
+	\hline
+	Tipo de processo fabricação
+	 & \textit{Double}
+	 & Tipo de processo de fabricação utilizado. Dado que diferentes empresas podem produzir um produto utilizando processos de fabricação distintos, este atributo permite que o cliente possa selecionar/filtrar um fornecedor com base no processo desejado. Além disso, este atributo é utilizado para equiparar fornecedores que utilizam um mesmo processo de fabricação, não prejudicando assim um fornecedor que usa um processo mais caro, porém mais moderno.                                                                                                                                                                                               \\
 
-		\hline
-		Qualidade do processo de fabricação
-		 & \textit{Float}
-		 & Agregação de um conjunto de dados estatísticos relacionados à qualidade do processo produtivo de um fabricante. O compartilhamento de informações relacionadas à qualidade é importante para o estabelecimento de confiabilidade no processo de fabricação do produto.                    \\
+	\hline
+	Custo do processo de fabricação
+	 & \textit{Double}
+	 & Custo total do processo de fabricação. O compartilhamento dos custos do processo é necessário no planejamento integrado da cadeia de suprimentos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              \\
+	\hline
+	Qualidade do processo de fabricação
+	 & \textit{Float}
+	 & Agregação de um conjunto de dados estatísticos relacionados à qualidade do processo produtivo de um fabricante. O compartilhamento de informações relacionadas à qualidade é importante para o estabelecimento de confiabilidade no processo de fabricação do produto. O tipo de métrica adotada para a determinação da qualidade varia dependendo do tipo de processo de fabricação e deve ser acordado entre as partes. Uma forma genérica para a determinação da qualidade é o termo ``Q'' do índice OEE (\textit{Overall Equipment Effectiveness}) \cite{corrales2020oee}, que representa a razão entre peças não refugadas e o total de peças produzidas. \\
 
-		\hline
-		Informações da remessa
-		 & \makecell{List\\{[String]}}
-		 & Informações sobre a remessa na qual o produto foi entregue, como a quantidade de produtos enviada a um cliente. O fornecedor usa essas informações para aproximar a demanda de modo a reduzir o ``efeito chicote''.                                                                       \\
 
-		\hline
-		Custo de preparação
-		 & \textit{Double}
-		 & O custo de preparação da produção (\textit{setup}) influencia no custo do lote de pedidos. A medida que o tamanho do lote de pedidos aumenta, reduz-se o custo total da demanda uma vez que reduz o custo de preparação total.                                                            \\
+	\hline
+	\textit{Lead time} médio de manufatura
+	 & \textit{Float}
+	 & O \textit{lead time} médio de manufatura/fabricação é o período de tempo necessário para fabricar um item, incluindo tempo de preparação do pedido, tempo de fila, tempo de preparação, tempo de execução, tempo de movimentação, tempo de inspeção e tempo de armazenamento. Esta informação é dinâmica e calculada com base no tempo histórico médio observado em pedidos passados.                                                                                                                                                                                                                                                                          \\
 
-		\hline
-	\end{tabular}
+	\hline
+	Custo de \textit{setup}
+	 & \textit{Double}
+	 & O custo de preparação da produção (\textit{setup}) é relacionado a todas as despesas necessárias para a preparação da máquina para a produção, incluindo a mão de obra diretamente aplicada na preparação da mesma. A medida que o tamanho do lote de pedidos aumenta, reduz-se o custo total da demanda uma vez que o custo de \textit{setup} dilui-se no valor total.                                                                                                                                                                                                                                                                                        \\
+
+	\hline
+	Informações de entrega
+	 & \makecell{List\\{[String]}}
+	 & Informações sobre sobre transportadoras disponíveis para a realização da entrega do produto associadas ao custo unitário do serviço de cada uma.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
+
+	\hline
+	\textit{Lead time} médio de entrega
+	 & \textit{Float}
+	 & Tempo de entrega médio de um determinado produto. Esta informação também é dinâmica e calculada com base no tempo histórico médio observado em pedidos passados.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
+
+
+
+	\hline
+	% \end{tabular}
 	\label{tab:submodelo-processos}
-\end{table}
-
-\newpage
+\end{longtable}
 
 \subsection{Submodelo ``Inventário''}
 
 O submodelo ``Inventário'' do AAS do C4.0-Servidor agrega informações relacionadas ao gerenciamento do inventário de um determinado produto. O objetivo destas informações é a visibilidade do inventário de forma que seja possível ter um determinado produto para venda no momento certo e ao mesmo tempo reduzir custos relativos a estoque.
 
 Informações relacionadas ao inventário auxiliam na tomada de decisões sobre quando realizar pedidos ao fabricante, a quantidade de materiais a serem solicitados e onde armazenar.
+
+As informações de inventário estão relacionadas à classe de um produto, e não a um produto unitário. Portanto, produtos de um mesmo modelo compartilharão este submodelo em comum como uma referência, sem que haja duplicidade dos dados e de forma que a atualização se propague a todos os submodelos que fazem referência a esta classe.
+
+As informações de inventário podem ser consumidas por sistemas automatizados para orquestrar a linha de produção e manter os inventários em um nível otimizado, efetuando ordens de compra para outros fornecedores automaticamente. E, desta forma, balancear o \textit{tradeoff} entre custo de estoque e custos de oportunidade de venda.
 
 A \autoref{tab:submodelo-inventario} detalha o submodelo ``Inventário'' com seus respectivos atributos.
 
@@ -314,82 +319,55 @@ A \autoref{tab:submodelo-inventario} detalha o submodelo ``Inventário'' com seu
 	\label{tab:submodelo-inventario}
 \end{table}
 
-\newpage
-
 \subsection{Submodelo ``Pedido''}
 
 O submodelo ``Pedido'' pertence ao AAS do C4.0-Servidor.
 
-Cada pedido contém informações sobre a demanda do cliente para cada fornecedor anterior. As informações do pedido incluem a quantidade de itens no pedido, data limite de entrega e tamanho do lote.
+Cada pedido contém informações sobre a demanda do cliente e os pedidos entre os fornecedores que resultaram na movimentação do produto ao longo da cadeia de suprimentos. As informações do pedido incluem a quantidade de itens no pedido, data limite de entrega e tamanho do lote.
 
 Compartilhar informações de quantidade de pedido entre as partes da cadeia de suprimentos ajuda na visibilidade do estado atual de um pedido por todos os membros.
 
+Assim como no submodelo ``Inventário'', as informações do pedido estão relacionadas à classe de um produto, e não a um produto unitário. Portanto, produtos de um mesmo modelo compartilharão este submodelo em comum como uma referência, sem que haja duplicidade dos dados e de forma que a atualização se propague a todos os submodelos que fazem referência a esta classe.
+
+As informações de pedido são importantes para o planejamento da produção de todas as partes envolvidas na cadeia de suprimentos como forma de se evitar, por exemplo, o efeito chicote \cite{lee1997bullwhip}, que é um problema comum quando há falta de compartilhamento de informações de demandas em tempo real, causando a imprecisão na estimativa da demanda por parte de cada membro da cadeia de suprimentos quando ocorrem flutuações nos volumes dos pedidos.
+
 A \autoref{tab:submodelo-pedido} detalha o submodelo ``Pedido'' com seus respectivos atributos.
 
-\begin{table}[htb]
-	\centering
-	\caption{Atributos do submodelo ``Pedido''.}
-	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
-		\hline
-		\textbf{Propriedade}
-		 & \textbf{Tipo}
-		 & \textbf{Descrição}                                                                  \\
-
-		\hline
-		Quantidade
-		 & \textit{Integer}
-		 & Quantidade de items de um produto solicitado. Representa uma demanda de fabricação. \\
-
-		\hline
-		Preço unitário
-		 & \textit{Double}
-		 & Valor pago pela unidade de um produto.                                              \\
-
-		\hline
-		Data limite de entrega
-		 & \textit{Datetime}
-		 & Prazo limite para a entrega de uma determinada demanda.                             \\
-
-		\hline
-		Geolocalização
-		 & \textit{String}
-		 & Localização geográfica em tempo real de um determinado produto ou lote.             \\
-
-		\hline
-	\end{tabular}
-	\label{tab:submodelo-pedido}
-\end{table}
-
-\newpage
-
-% \subsection{Submodelo ``Desenvolvimento''}
-
-% Este submodelo do AAS do C4.0-Servidor armazena informações relacionada ao desenvolvimento em progresso de próximas versões aprimoradas do produto.
-
-% A \autoref{tab:submodelo-desenvolvimento} detalha o submodelo ``Desenvolvimento'' com seus respectivos atributos.
-
 % \begin{table}[htb]
-% 	\centering
-% 	\caption{Atributos do submodelo ``Desenvolvimento''.}
-% 	\begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
-% 		\hline
-% 		\textbf{Propriedade}
-% 		 & \textbf{Tipo}
-% 		 & \textbf{Descrição} \\
+\begin{longtable}{p{.20\textwidth} p{.08\textwidth} p{.60\textwidth}}
+	% \centering
+	\caption{Atributos do submodelo ``Pedido''.}                                           \\
+	% \begin{tabular}{p{3.5cm}p{1.5cm}p{9cm}}
+	\hline
+	\textbf{Propriedade}
+	 & \textbf{Tipo}
+	 & \textbf{Descrição}                                                                  \\
 
-% 		\hline
-% 		Tendências de marketing
-% 		 & \makecell{String}
-% 		 & a
-% 		\\
+	\hline
+	Quantidade
+	 & \textit{Integer}
+	 & Quantidade de items de um produto solicitado. Representa uma demanda de fabricação. \\
 
+	\hline
+	Preço unitário
+	 & \textit{Double}
+	 & Valor pago pela unidade de um produto.                                              \\
 
-% 		\hline
-% 	\end{tabular}
-% 	\label{tab:submodelo-desenvolvimento}
-% \end{table}
+	\hline
+	Data limite de entrega
+	 & \textit{Datetime}
+	 & Prazo limite para a entrega de uma determinada demanda.                             \\
 
-% \newpage
+	\hline
+	Geolocalização
+	 & \textit{String}
+	 & Localização geográfica em tempo real de um determinado lote.                        \\
+
+	\hline
+	% \end{tabular}
+	\label{tab:submodelo-pedido}
+\end{longtable}
+
 
 \subsection{Submodelo ``Operação''}
 
@@ -397,7 +375,9 @@ Este submodelo do AAS do C4.0-Servidor representa dados relacionados ao funciona
 
 O produto nesta fase está em produção e operando. Portanto, o seu funcionamento e a interação do produto com o usuário/operador gera dados de funcionamento.
 
-A análise dados da máquina sobre o desempenho do equipamento de campo em tempo real, juntamente com dados históricos de desempenho ajudam a para entender melhor os problemas de serviço e tentar prever problemas de manutenção do equipamento antes que estes aconteçam.
+A análise dos dados da máquina sobre o desempenho do equipamento de campo em tempo real, juntamente com dados históricos de desempenho ajudam a entender melhor os problemas de serviço e tentar prever problemas de manutenção dos produtos antes que estes aconteçam.
+
+Desta forma, o fornecedor passa a ter acesso aos dados de funcionamento de um produto vendido, seja este um bem de consumo destinado ao consumidor final ou um equipamento/máquina destinado a outras plantas de produção, possibilitando assim a manutenção orientada por dados baseada nas informações atuais e históricas de um produto em funcionamento.
 
 A \autoref{tab:submodelo-operacao} detalha o submodelo ``Operação'' com seus respectivos atributos.
 
@@ -440,11 +420,10 @@ A \autoref{tab:submodelo-operacao} detalha o submodelo ``Operação'' com seus r
 	\label{tab:submodelo-operacao}
 \end{table}
 
-\newpage
 
 \subsection{Submodelo ``Documentação''}
 
-Este submodelo do AAS do C4.0-Servidor é inspirado em \citeonline{bedenbender2017aasexamples}, que menciona a necessidade da existência de um submodelo destinado ao armazenado de arquivos \textit{blob} que não possuem um formato específico.
+Este submodelo do AAS do C4.0-Servidor é inspirado em \citeonline{bedenbender2017aasexamples}, que menciona a necessidade da existência de um submodelo destinado ao armazenado de arquivos binários que não possuem um formato específico.
 
 Este submodelo destina-se ao armazenamento e versionamento de documentos digitais relacionados ao produto. Tal documento pode ser um formato proprietário ou aberto como, por exemplo .pdf, .docx, .ppt, .dwg, .psd e outros.
 
@@ -469,7 +448,7 @@ A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' co
 		\hline
 		Manual de operação
 		 & \makecell{Blob}
-		 & Manual destinado ao usário com instruções de operação/uso.                                                                                        \\
+		 & Manual destinado ao usuário com instruções de operação/uso.                                                                                       \\
 
 		\hline
 		Notas fiscais
