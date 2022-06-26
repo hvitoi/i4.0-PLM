@@ -9,121 +9,6 @@ Uma visão da MDP sobre o eixo ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 é
 
 Além disso, é abordada uma proposta de modelo da estrutura de dados de um AAS que compartilha as informações relacionadas ao seu estado na cadeia de suprimentos. Desta forma, é feita uma análise relacionada aos submodelos necessários para a implementação da ``Arquitetura para compartilhamento de informações do ativo'', abordada no \autoref{cha:arquitetura}.
 
-\section{Geração de valor por meio do compartilhamento da MDP}
-
-O modelo do RAMI4.0 descrito na \autoref{sub:rami4} apresentou o eixo ``ciclo de vida'' generalizado, cujo o objetivo é representar o ciclo de vida de um Componente I4.0 ao longo de toda a sua cadeia de valor.
-
-O histórico completo do ciclo de vida de um determinado produto corresponde a suas informações de estados relevantes geradas ao longo de sua existência. Estas informações são acessadas via MDP, e são associadas a seu ativo tanto em sua fase ``tipo'' quanto em sua fase ``instância'' (vide \autoref{sub:rami4}). Estes dados podem ser aproveitados de forma inteligente para a geração de valor por meio de novos modelos de negócio.
-
-A ``Arquitetura para compartilhamento de informações do ativo'' possibilita o fluxo de informações entre estas duas fases do ativo (``tipo'' e ``instância''), o que traz novas possíveis formas de geração de valor. A \autoref{fig:aas-lifecycle} ilustra este cenário, onde o compartilhamento da MDP gera melhorias a partir das informações do ativo. Foram identificadas duas formas de geração de valor por meio das informações do ativo: as ``melhorias de projeto'' e as ``melhorias operacionais'', que serão discutidas na \autoref{sec:melhoria-projeto} e \autoref{sec:melhoria-operacional}.
-
-\begin{figure}[htb!]
-	\centering
-	\includegraphics[width=1\textwidth]{aas-lifecycle}
-	\caption{Ciclo de vida do produto.}
-	\label{fig:aas-lifecycle}
-\end{figure}
-
-O fluxo de informações e geração de valor é detalhado a seguir:
-
-\begin{enumerate}[label=(\alph*)]
-	\item O projeto inicial de um produto é disponibilizado para produção em forma de um ``tipo'';
-	\item Instâncias do projeto são fabricadas e disponibilizadas para venda e distribuição;
-	\item Dados são coletados a partir das várias instâncias produzidas;
-	\item Um alto volume de dados coletados das instâncias é analisado utilizando técnicas de análise de dados e \textit{business intelligence};
-	\item A partir do processamento dos dados, há criação de valor relacionada à melhoria operacional do produto (detalhada na \autoref{sec:melhoria-operacional});
-	\item A partir do processamento dos dados e de outros fatores externos, há criação de valor relacionada à melhoria de projeto do produto (detalhada na \autoref{sec:melhoria-projeto});
-	\item Com as melhorias de projeto, uma nova versão (tipo) é gerada, completando assim o ciclo de vida.
-\end{enumerate}
-
-A \autoref{fig:aas-lifecycle} representa o fluxo de geração de valor ao longo do ciclo de vida de um produto no contexto da Indústria 4.0. Este ciclo de vida representa o seu processo de melhoria continua por meio do compartilhamento de dados de acordo com a ``Arquitetura para compartilhamento de informações do ativo'' (\autoref{cha:arquitetura}).
-
-Os ativos (definidos como produtos) geram, por exemplo, informações de uso e sobre manutenções realizadas, que podem ser armazenadas na MDP e assim auxiliar em melhorias no seu próprio processo de fabricação, além de ser fonte de dados para o desenvolvimento de novas versões aperfeiçoadas, gerando um novo ``tipo''.
-
-O compartilhamento das informações insere um novo elemento na competitividade entre as empresas \cite{framling2013plm} e, por meio da MDP, este compartilhamento é possibilitado. Os novos ativos inseridos neste novo ``formato'' trazem a possibilidade de exploração de seus dados e alteram, desta forma, a estrutura da indústria e a natureza da concorrência, expondo as empresas a novas oportunidades e ameaças competitivas \cite{porter2014smartproducts}.
-
-A MDP, portanto, traz a agregação de valor ao produto como um todo por meio do compartilhamento de informações. Neste capítulo são propostas duas novas classificações quanto às formas de melhoria do produto e agregação de valor por meio da MDP: as \textbf{melhorias de projeto} (\autoref{sec:melhoria-projeto}) e as \textbf{melhorias operacionais} (\autoref{sec:melhoria-operacional}) .
-
-A divisão em \textbf{melhorias de projeto} e \textbf{melhorias operacionais} permite segregar as informações a serem compartilhadas e assim detalhar a estrutura de dados do submodelo correspondente.
-
-\subsection{Melhoria de projeto do produto}
-\label{sec:melhoria-projeto}
-
-\citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts} classificaram o valor das informações dos produtos em quatro áreas: monitoramento, controle, otimização e autonomia. Por meio da análise da descrição das funcionalidades e capacidades de cada área, foi feito um mapeamento para o contexto do eixo ``ciclo de vida e cadeia de valor'' do RAMI4.0.
-
-As informações no que diz respeito à melhoria de projeto foram então reclassificadas sob o contexto do RAMI4.0. As seguintes categorias foram então definidas:
-
-\begin{itemize}
-	\item Identificação e reparo de falhas de projeto;
-	\item Melhoria da interação do usuário com o produto;
-	\item Geração de indicadores.
-\end{itemize}
-
-Estas categorias permitem segregar as informações de acordo com os objetivos de projeto que cada uma dessas informações possui. Além disso, as categoriais dão indícios de possíveis dados a serem armazenados ao longo do ciclo de vida do produto, independente da indústria na qual ele está inserido.
-
-A seguir são apresentadas as descrições de cada uma das categorias apresentadas:
-
-A \textbf{``Identificação e reparo de falhas de projeto''} permite o monitoramento remoto e identificação de eventuais falhas de projeto por meio da análise de um alto volume de dados e identificação de padrões.
-
-A identificação de potenciais falhas se dá, por exemplo, por meio da leitura de sensores de temperatura e vibração de diversos ativos de um mesmo modelo. Valores discrepantes do esperado podem, então, serem identificados em uma amostra. Os eventuais erros estruturais de projeto devem ser reparados e lançados como uma nova versão.
-
-A \textbf{``Melhoria da interação do usuário com o produto''} se dá pela exploração e análise das informações que descrevem a maneira e padrões como o usuário interage com o ativo (produto). Desta forma, as informações podem ser utilizadas pelo fabricante para a determinação de funções que podem não ser claras para o usuários ou funções que estão sendo utilizadas de maneira incorreta.
-
-Mudanças na ergonomia e melhorias na intuitividade das funções de operação são mudanças de projeto que elevam a experiência do usuário com o ativo e causam uma maior percepção de valor.
-
-A melhoria de interação se dá também pela adição ou remoção de funcionalidades já existentes. A partir da análise de padrões de uso é possível determinar com o ativo é realmente utilizado e a partir disso levantar a necessidade da adição de novas funcionalidades ou até mesmo a remoção de funções pouco utilizadas.
-
-O monitoramento das características operacionais é uma forma de evoluir o projeto por meio de sua simplificação. Desta forma, atende-se às reais necessidades do usuário e se evita produtos inflados de funcionalidades ou com funcionalidades importantes faltando.
-
-A \textbf{``Geração de indicadores''} traz conhecimento que auxilia na tomada de decisões. Alguns indicadores dependem das circunstâncias de operação do equipamento e, portanto, variam em relação ao valor estabelecido pelo fabricante. Por meio dos indicadores, o fabricante é capaz de investigar problemas e eventualmente reprojetar o equipamento. Além disso, o próprio gestor dos equipamentos pode identificar possíveis melhorias em processos a fim de atingir determinadas metas.
-
-Os indicadores de volume de emissão de gases e materiais particulados podem, por exemplo, serem usados em auditorias para adequação às condições legais e regulatórias no país e/ou para atender às condições de saúde e bem estar do trabalhador.
-
-A eficiência Global do Equipamento (\textit{Overall equipment effectiveness} - OEE), o consumo energético e a eficiência energética são outros exemplos de indicadores a serem gerados e atualizados instantaneamente pelos próprios ativos.
-
-\subsection{Melhoria operacional do produto}
-\label{sec:melhoria-operacional}
-
-A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu ``tipo''), ou seja, são benefícios operacionais agregados ao ativo.
-
-A partir das classificações sobre o valor das informações dos produtos apresentadas por \citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts}, foi feito um mapeamento para as funções relacionadas às melhorias operacionais, criando uma nova classificação das informações sob o contexto do eixo ``ciclo de vida e cadeia de valor'' do RAMI4.0.
-
-O valor das informações no que diz respeito à melhoria operacional foram então reclassificados sob o contexto do RAMI4.0. As seguintes categorias foram definidas:
-
-\begin{itemize}
-	\item Manutenção orientada por dados;
-	\item Monitoramento e rastreamento em tempo real;
-	\item Integração dos membros da cadeia de suprimentos e eficiência logística.
-\end{itemize}
-
-As categorias permitem segregar as informações de acordo com seus respectivos objetivos ao serem inseridos no projeto de um ativo. Além disso, as categoriais dão indícios de possíveis informações genéricas a serem armazenadas ao longo do ciclo de vida do produto, independente da indústria na qual ele está inserido.
-
-A seguir são apresentadas as descrições de cada uma das categorias apresentadas:
-
-A \textbf{``Manutenção orientada por dados''} (\textit{data driven}) é uma mudança de paradigma em relação à forma tradicional de manutenção corretiva. Com a manutenção orientada por dados são usados o comportamento histórico do produto e técnicas estatísticas para a criação de modelos que apontem eventuais falhas antes que estas venham a acontecer.
-
-Com o histórico de leitura de sensores de cada componente do ativo, estratégias de manutenção preditivas e prescritivas podem ser adotadas pelo próprio fabricante. A manutenção orientada pelos dados de uso, comparada com a manutenção tradicional, pode reduzir a incidência de falhas e trazer benefícios econômicos. %\cite{odonovan2015maintenance}
-
-Com a manutenção prescritiva, os dados empíricos e o histórico do ativo são utilizados para prescrever qual medida deve ser tomada, trazendo mais confiabilidade por meio de técnicas estatísticas. A contínua extração de dados de sensores do ativo e sua análise torna a ação de manutenção mais automatizada.
-
-A manutenção dos ativos orientada por dados permite trazer a responsabilidade de manutenção dos ativos de uma planta para a instituição que melhor conhece os detalhes do funcionamento técnico do ativo, como o fabricante ou uma empresa especializada na manutenção de um determinado ativo. O uso de dados para a manutenção permite implementar um novo paradigma de detecção e correção de falhas de equipamentos industriais: a Manutenção como um Serviço (\textit{Maintenance-as-a-Service} - MaaS) \cite{zoll2018maas}.
-
-O \textbf{``Monitoramento e rastreamento em tempo real''} é possibilitado pela leitura de coordenadas geográficas. O monitoramento e rastreamento são úteis durante o transporte entre os membros da cadeia de suprimentos. O distribuidor, por exemplo, pode ter acesso à posição exata de um ativo enquanto este estiver sob sua custódia.
-
-As coordenadas geográficas garantem a rastreabilidade do ativo enquanto ele se desloca ao longo da cadeia de suprimentos. A demanda de rastreabilidade surge para manter um melhor controle da cadeia produtiva, assim como repassar essas informações aos consumidores.
-
-Outra função do rastreamento é como forma de identificar possíveis parcerias ao atender a uma demanda de fabricação. Ao iniciar uma ordem de fabricação/compra, o próprio produto pode assegurar de que todas as especificações escolhidas pelo cliente serão atendidas e, desta forma, o produto pode dar ao cliente estimativas de prazo e custos, assim como o nome de todos os elos da cadeia de suprimentos que estarão envolvidos nesta fabricação/entrega.
-
-A \textbf{``Integração dos membros da cadeia de suprimentos e eficiência logística''} acontece com a melhoria da comunicação entre os elos utilizando o produto (ativo) como centro de interação.
-
-A comunicação passa a ser centralizada no produto e não mais depender do contato direto entre as partes. Isso simplifica também a logística reversa, como no caso de solicitações de devolução, acionamento de garantia, \textit{recalls} e outros, que agora utilizarão o produto como um ponto de intermediação entre as partes (por exemplo, fabricante e consumidor final).
-
-Outro ponto de melhor integração com a utilização do produto como centro das interações é com relação à documentação. O submodelo de documentação conterá todos os documentos digitais referentes ao ativo. Desta forma, manuais, notas fiscais, certificados de manutenção e outros documentos podem ser escritos, lidos e atualizados pelos parceiros da CS mediante autenticação.
-
-O compartilhamento de documentos digitais permite uma maior interação com as partes e garante que cada membro terá sempre a versão mais atualizada de um determinado documento, favorecendo assim sua gestão, reduzindo o uso do papel e tornando os ambientes de trabalho mais seguros, ágeis e organizados.
-
-Os documentos representam uma conexão entre os membros da CS, portanto, comunicados, formulários de troca, documentos para acionamento de garantia e quaisquer outras operações podem ser solicitados pela própria MDP do produto. O produto torna-se o centro das negociações e, portanto, o ponto de integração entre os membros da CS.
-
 \section{Submodelos do C4.0-Servidor}
 
 Nesta seção são apresentadas propostas de submodelos e atributos necessários para a integração dos ativos na cadeia de suprimentos.
@@ -467,3 +352,118 @@ A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' co
 \end{table}
 
 \newpage
+
+\section{Geração de valor por meio do compartilhamento da MDP}
+
+O modelo do RAMI4.0 descrito na \autoref{sub:rami4} apresentou o eixo ``ciclo de vida'' generalizado, cujo o objetivo é representar o ciclo de vida de um Componente I4.0 ao longo de toda a sua cadeia de valor.
+
+O histórico completo do ciclo de vida de um determinado produto corresponde a suas informações de estados relevantes geradas ao longo de sua existência. Estas informações são acessadas via MDP, e são associadas a seu ativo tanto em sua fase ``tipo'' quanto em sua fase ``instância'' (vide \autoref{sub:rami4}). Estes dados podem ser aproveitados de forma inteligente para a geração de valor por meio de novos modelos de negócio.
+
+A ``Arquitetura para compartilhamento de informações do ativo'' possibilita o fluxo de informações entre estas duas fases do ativo (``tipo'' e ``instância''), o que traz novas possíveis formas de geração de valor. A \autoref{fig:aas-lifecycle} ilustra este cenário, onde o compartilhamento da MDP gera melhorias a partir das informações do ativo. Foram identificadas duas formas de geração de valor por meio das informações do ativo: as ``melhorias de projeto'' e as ``melhorias operacionais'', que serão discutidas na \autoref{sec:melhoria-projeto} e \autoref{sec:melhoria-operacional}.
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=1\textwidth]{aas-lifecycle}
+	\caption{Ciclo de vida do produto.}
+	\label{fig:aas-lifecycle}
+\end{figure}
+
+O fluxo de informações e geração de valor é detalhado a seguir:
+
+\begin{enumerate}[label=(\alph*)]
+	\item O projeto inicial de um produto é disponibilizado para produção em forma de um ``tipo'';
+	\item Instâncias do projeto são fabricadas e disponibilizadas para venda e distribuição;
+	\item Dados são coletados a partir das várias instâncias produzidas;
+	\item Um alto volume de dados coletados das instâncias é analisado utilizando técnicas de análise de dados e \textit{business intelligence};
+	\item A partir do processamento dos dados, há criação de valor relacionada à melhoria operacional do produto (detalhada na \autoref{sec:melhoria-operacional});
+	\item A partir do processamento dos dados e de outros fatores externos, há criação de valor relacionada à melhoria de projeto do produto (detalhada na \autoref{sec:melhoria-projeto});
+	\item Com as melhorias de projeto, uma nova versão (tipo) é gerada, completando assim o ciclo de vida.
+\end{enumerate}
+
+A \autoref{fig:aas-lifecycle} representa o fluxo de geração de valor ao longo do ciclo de vida de um produto no contexto da Indústria 4.0. Este ciclo de vida representa o seu processo de melhoria continua por meio do compartilhamento de dados de acordo com a ``Arquitetura para compartilhamento de informações do ativo'' (\autoref{cha:arquitetura}).
+
+Os ativos (definidos como produtos) geram, por exemplo, informações de uso e sobre manutenções realizadas, que podem ser armazenadas na MDP e assim auxiliar em melhorias no seu próprio processo de fabricação, além de ser fonte de dados para o desenvolvimento de novas versões aperfeiçoadas, gerando um novo ``tipo''.
+
+O compartilhamento das informações insere um novo elemento na competitividade entre as empresas \cite{framling2013plm} e, por meio da MDP, este compartilhamento é possibilitado. Os novos ativos inseridos neste novo ``formato'' trazem a possibilidade de exploração de seus dados e alteram, desta forma, a estrutura da indústria e a natureza da concorrência, expondo as empresas a novas oportunidades e ameaças competitivas \cite{porter2014smartproducts}.
+
+A MDP, portanto, traz a agregação de valor ao produto como um todo por meio do compartilhamento de informações. Neste capítulo são propostas duas novas classificações quanto às formas de melhoria do produto e agregação de valor por meio da MDP: as \textbf{melhorias de projeto} (\autoref{sec:melhoria-projeto}) e as \textbf{melhorias operacionais} (\autoref{sec:melhoria-operacional}) .
+
+A divisão em \textbf{melhorias de projeto} e \textbf{melhorias operacionais} permite segregar as informações a serem compartilhadas e assim detalhar a estrutura de dados do submodelo correspondente.
+
+\subsection{Melhoria de projeto do produto}
+\label{sec:melhoria-projeto}
+
+\citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts} classificaram o valor das informações dos produtos em quatro áreas: monitoramento, controle, otimização e autonomia. Por meio da análise da descrição das funcionalidades e capacidades de cada área, foi feito um mapeamento para o contexto do eixo ``ciclo de vida e cadeia de valor'' do RAMI4.0.
+
+As informações no que diz respeito à melhoria de projeto foram então reclassificadas sob o contexto do RAMI4.0. As seguintes categorias foram então definidas:
+
+\begin{itemize}
+	\item Identificação e reparo de falhas de projeto;
+	\item Melhoria da interação do usuário com o produto;
+	\item Geração de indicadores.
+\end{itemize}
+
+Estas categorias permitem segregar as informações de acordo com os objetivos de projeto que cada uma dessas informações possui. Além disso, as categoriais dão indícios de possíveis dados a serem armazenados ao longo do ciclo de vida do produto, independente da indústria na qual ele está inserido.
+
+A seguir são apresentadas as descrições de cada uma das categorias apresentadas:
+
+A \textbf{``Identificação e reparo de falhas de projeto''} permite o monitoramento remoto e identificação de eventuais falhas de projeto por meio da análise de um alto volume de dados e identificação de padrões.
+
+A identificação de potenciais falhas se dá, por exemplo, por meio da leitura de sensores de temperatura e vibração de diversos ativos de um mesmo modelo. Valores discrepantes do esperado podem, então, serem identificados em uma amostra. Os eventuais erros estruturais de projeto devem ser reparados e lançados como uma nova versão.
+
+A \textbf{``Melhoria da interação do usuário com o produto''} se dá pela exploração e análise das informações que descrevem a maneira e padrões como o usuário interage com o ativo (produto). Desta forma, as informações podem ser utilizadas pelo fabricante para a determinação de funções que podem não ser claras para o usuários ou funções que estão sendo utilizadas de maneira incorreta.
+
+Mudanças na ergonomia e melhorias na intuitividade das funções de operação são mudanças de projeto que elevam a experiência do usuário com o ativo e causam uma maior percepção de valor.
+
+A melhoria de interação se dá também pela adição ou remoção de funcionalidades já existentes. A partir da análise de padrões de uso é possível determinar com o ativo é realmente utilizado e a partir disso levantar a necessidade da adição de novas funcionalidades ou até mesmo a remoção de funções pouco utilizadas.
+
+O monitoramento das características operacionais é uma forma de evoluir o projeto por meio de sua simplificação. Desta forma, atende-se às reais necessidades do usuário e se evita produtos inflados de funcionalidades ou com funcionalidades importantes faltando.
+
+A \textbf{``Geração de indicadores''} traz conhecimento que auxilia na tomada de decisões. Alguns indicadores dependem das circunstâncias de operação do equipamento e, portanto, variam em relação ao valor estabelecido pelo fabricante. Por meio dos indicadores, o fabricante é capaz de investigar problemas e eventualmente reprojetar o equipamento. Além disso, o próprio gestor dos equipamentos pode identificar possíveis melhorias em processos a fim de atingir determinadas metas.
+
+Os indicadores de volume de emissão de gases e materiais particulados podem, por exemplo, serem usados em auditorias para adequação às condições legais e regulatórias no país e/ou para atender às condições de saúde e bem estar do trabalhador.
+
+A eficiência Global do Equipamento (\textit{Overall equipment effectiveness} - OEE), o consumo energético e a eficiência energética são outros exemplos de indicadores a serem gerados e atualizados instantaneamente pelos próprios ativos.
+
+\subsection{Melhoria operacional do produto}
+\label{sec:melhoria-operacional}
+
+A análise de dados da MDP traz benefícios às ``instâncias'' sem necessariamente alterar seu projeto (alterar seu ``tipo''), ou seja, são benefícios operacionais agregados ao ativo.
+
+A partir das classificações sobre o valor das informações dos produtos apresentadas por \citeonline{porter2014smartproducts} e \citeonline{porter2015smartproducts}, foi feito um mapeamento para as funções relacionadas às melhorias operacionais, criando uma nova classificação das informações sob o contexto do eixo ``ciclo de vida e cadeia de valor'' do RAMI4.0.
+
+O valor das informações no que diz respeito à melhoria operacional foram então reclassificados sob o contexto do RAMI4.0. As seguintes categorias foram definidas:
+
+\begin{itemize}
+	\item Manutenção orientada por dados;
+	\item Monitoramento e rastreamento em tempo real;
+	\item Integração dos membros da cadeia de suprimentos e eficiência logística.
+\end{itemize}
+
+As categorias permitem segregar as informações de acordo com seus respectivos objetivos ao serem inseridos no projeto de um ativo. Além disso, as categoriais dão indícios de possíveis informações genéricas a serem armazenadas ao longo do ciclo de vida do produto, independente da indústria na qual ele está inserido.
+
+A seguir são apresentadas as descrições de cada uma das categorias apresentadas:
+
+A \textbf{``Manutenção orientada por dados''} (\textit{data driven}) é uma mudança de paradigma em relação à forma tradicional de manutenção corretiva. Com a manutenção orientada por dados são usados o comportamento histórico do produto e técnicas estatísticas para a criação de modelos que apontem eventuais falhas antes que estas venham a acontecer.
+
+Com o histórico de leitura de sensores de cada componente do ativo, estratégias de manutenção preditivas e prescritivas podem ser adotadas pelo próprio fabricante. A manutenção orientada pelos dados de uso, comparada com a manutenção tradicional, pode reduzir a incidência de falhas e trazer benefícios econômicos. %\cite{odonovan2015maintenance}
+
+Com a manutenção prescritiva, os dados empíricos e o histórico do ativo são utilizados para prescrever qual medida deve ser tomada, trazendo mais confiabilidade por meio de técnicas estatísticas. A contínua extração de dados de sensores do ativo e sua análise torna a ação de manutenção mais automatizada.
+
+A manutenção dos ativos orientada por dados permite trazer a responsabilidade de manutenção dos ativos de uma planta para a instituição que melhor conhece os detalhes do funcionamento técnico do ativo, como o fabricante ou uma empresa especializada na manutenção de um determinado ativo. O uso de dados para a manutenção permite implementar um novo paradigma de detecção e correção de falhas de equipamentos industriais: a Manutenção como um Serviço (\textit{Maintenance-as-a-Service} - MaaS) \cite{zoll2018maas}.
+
+O \textbf{``Monitoramento e rastreamento em tempo real''} é possibilitado pela leitura de coordenadas geográficas. O monitoramento e rastreamento são úteis durante o transporte entre os membros da cadeia de suprimentos. O distribuidor, por exemplo, pode ter acesso à posição exata de um ativo enquanto este estiver sob sua custódia.
+
+As coordenadas geográficas garantem a rastreabilidade do ativo enquanto ele se desloca ao longo da cadeia de suprimentos. A demanda de rastreabilidade surge para manter um melhor controle da cadeia produtiva, assim como repassar essas informações aos consumidores.
+
+Outra função do rastreamento é como forma de identificar possíveis parcerias ao atender a uma demanda de fabricação. Ao iniciar uma ordem de fabricação/compra, o próprio produto pode assegurar de que todas as especificações escolhidas pelo cliente serão atendidas e, desta forma, o produto pode dar ao cliente estimativas de prazo e custos, assim como o nome de todos os elos da cadeia de suprimentos que estarão envolvidos nesta fabricação/entrega.
+
+A \textbf{``Integração dos membros da cadeia de suprimentos e eficiência logística''} acontece com a melhoria da comunicação entre os elos utilizando o produto (ativo) como centro de interação.
+
+A comunicação passa a ser centralizada no produto e não mais depender do contato direto entre as partes. Isso simplifica também a logística reversa, como no caso de solicitações de devolução, acionamento de garantia, \textit{recalls} e outros, que agora utilizarão o produto como um ponto de intermediação entre as partes (por exemplo, fabricante e consumidor final).
+
+Outro ponto de melhor integração com a utilização do produto como centro das interações é com relação à documentação. O submodelo de documentação conterá todos os documentos digitais referentes ao ativo. Desta forma, manuais, notas fiscais, certificados de manutenção e outros documentos podem ser escritos, lidos e atualizados pelos parceiros da CS mediante autenticação.
+
+O compartilhamento de documentos digitais permite uma maior interação com as partes e garante que cada membro terá sempre a versão mais atualizada de um determinado documento, favorecendo assim sua gestão, reduzindo o uso do papel e tornando os ambientes de trabalho mais seguros, ágeis e organizados.
+
+Os documentos representam uma conexão entre os membros da CS, portanto, comunicados, formulários de troca, documentos para acionamento de garantia e quaisquer outras operações podem ser solicitados pela própria MDP do produto. O produto torna-se o centro das negociações e, portanto, o ponto de integração entre os membros da CS.
