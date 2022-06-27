@@ -8,10 +8,11 @@ Este capítulo tem o objetivo de apresentar detalhes da arquitetura proposta bas
 Neste capítulo é apresentado também o mapeamento dos componentes desta arquitetura dentro do eixo camadas do RAMI4.0.
 
 \section{Componentes e operações dos serviços de AASs}
+\label{sec:componentes-e-operacoes}
 
 Os serviços no escopo desta arquitetura são representações das funcionalidades dos Componentes I4.0 e são fornecidos e consumidos entre \textit{Asset Administration Shells} (AAS), ou, de forma mais geral, entre os Componentes I4.0 (C4.0), que englobam o AAS.
 
-A lógica de fornecimento e consumo de serviços proposta para a I4.0 segue os moldes de um \textit{Web Service} detalhado na \autoref{sec:webservices}, onde foram apresentados os componentes e operações (vide \autoref{fig:webservice-componentes}) adaptados ao AAS.
+A lógica de fornecimento e consumo de serviços proposta para a I4.0 segue os moldes de um \textit{Web Service} detalhado na \autoref{sec:soa}, onde foram apresentados os componentes e operações (vide \autoref{fig:webservice-componentes}) adaptados ao AAS.
 
 Esta arquitetura envolve três Componentes I4.0 (C4.0) ou atores básicos: O C4.0-Cliente, o C4.0-Servidor e o C4.0-Repositório; e três operações: publicação, busca e interação.
 
@@ -101,7 +102,7 @@ Quando o C4.0 atua como Servidor, este publica seu contrato no repositório por 
 
 Uma vez definido o serviço a ser consumido, o C4.0-Cliente estabelecerá a conexão direta com o C4.0-Servidor por meio de algum dos padrões suportados, utilizando os detalhes contidos no contrato para localizar, contactar e invocar o serviço.
 
-A \autoref{fig:pfs-ws} apresenta um diagrama PFS (\textit{Production Flow Schema}) (vide \autoref{sec:modelagem}), com o fluxo de ocorrência das operações básicas no WS para a interação entre C4.0s.
+A \autoref{fig:pfs-ws} apresenta um diagrama PFS (\textit{Production Flow Schema}) (vide \autoref{sec:modelagem-de-sistemas}), com o fluxo de ocorrência das operações básicas no WS para a interação entre C4.0s.
 
 \begin{figure}[htb]
 	\centering
@@ -112,42 +113,8 @@ A \autoref{fig:pfs-ws} apresenta um diagrama PFS (\textit{Production Flow Schema
 
 Os serviços fornecidos por um C4.0 são diversos. Entretanto, neste trabalho serão tratados com ênfase aqueles serviços que têm como objetivo o compartilhamento de informações sobre o ativo que possam agregar valor ao produto ao longo de sua cadeia de suprimentos. Ou seja, os serviços que extraem informações da MDP do C4.0 e as fornecem, mediante autenticação, às partes solicitantes ao longo da cadeia de suprimentos.
 
-\section{Estrutura do AAS}
-
-O conceito de Memória Digital do Produto (MDP) deve ser inserido na Indústria 4.0 com o objetivo de se agregar valor ao produto por meio da possibilidade de acesso a informações sobre o ativo entre parceiros ao longo da cadeia de suprimentos.
-
-Nesta seção são apresentados os detalhes sobre uma possível estruturação do AAS contendo todas as partes necessárias (incluindo a MDP) para a implementação do compartilhamento de informações por meio de WSs.
-
-A estrutura proposta do AAS é baseada em \citeonline{bader2019aas}, que estabelece a divisão do AAS em submodelos.
-
-% O cabeçalho na estrutura proposta terá a função de providenciar informações públicas sobre o ativo que o identifiquem minimamente e que forneça uma descrição sobre seus serviços oferecidos. O cabeçalho deverá conter informações que podem ser acessadas sem a necessidade de autenticação como, por exemplo, seu identificador único universal (UUID - \textit{Universal Unique IDentifier}), o modelo e fabricante do ativo. O cabeçalho deverá conter também o contrato daquele \textit{Web Service} com as descrições de seus serviços públicos disponíveis.
-
-% O cabeçalho não terá a função de fornecer uma ficha técnica detalhada, mas apenas uma caracterização abstrata das funções/serviços do ativo. O cabeçalho deverá necessariamente conter o UUID do AAS. Sem o UUID o C4.0-Servidor se torna inacessível para qualquer uma das partes da cadeia de suprimentos.
-
-% O corpo de um AAS fornece as informações e funcionalidades sensíveis sobre o ativo, que podem ser acessadas mediante autenticação.
-
-As funcionalidades dos ativos são agrupadas em forma de submodelos, conforme estabelecido em \citeonline{bader2019aas, adolph2018roadmap, bedenbender2017aasexamples}, que são unidades de agrupamento de propriedades semelhantes. Os dados do ativo são armazenados nos próprios submodelos, enquanto a MDP (que também está contida no corpo do AAS) extrai e gerencia as informações dos submodelos de forma a estruturá-las para serem diretamente fornecidas ao C4.0-Cliente por meio de \textit{Web Services}.
-
-A MDP no contexto de um AAS agrega e espelha as informações referentes a cada um dos submodelos de um AAS e as organiza de forma a poderem ser facilmente disponibilizadas por meio de WSs.
-
-Como a MDP é parte integral do AAS, que representa a parte virtual do ativo, esta pode ser fornecida em qualquer meio digital, inclusive em armazenamentos remotos em plataformas na nuvem. Estas plataformas específicas suportam o armazenamento de grandes quantidades de dados, assim como podem assegurar uma alta capacidade de processamento de requisições de serviços.
-
-A estrutura de um AAS compatível com a arquitetura orientada a serviços proposta é apresentada na \autoref{fig:estrutura-aas}.
-
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.7\textwidth]{estrutura-aas}
-	\caption{Estrutura do AAS com seus submodelos e a MDP.}
-	\label{fig:estrutura-aas}
-\end{figure}
-
-Os dados puros estão contidos nos submodelos. A MDP fornece apenas uma interface para a visualização dos dados dos submodelos. A MDP atua como um ponto único de extração de dados dos submodelos, evitando desta forma a extração de dados não tratados diretamente dos submodelos.
-
-A MDP é capaz de realizar o gerenciamento dos dados, estabelecendo, por exemplo, políticas de acesso e/ou escrita e demais regras de negócio do C4.0-Servidor. Uma analogia é de que os submodelos representam o banco de dados, enquanto a MDP é a interface para as operações de criação, leitura, atualização e exclusão (operações CRUD - \textit{Create, Read, Update, Delete}) nesta base de dados que são os submodelos.
-
-Neste trabalho é dado foco aos submodelos que se relacionam a informações sobre o produto que sejam de interesse às partes ao longo da cadeia de suprimentos e que possam ser lidos ou escritos por meio dos WSs. Alguns exemplos desse tipo de submodelo podem incluir: a ficha técnica detalhada do ativo, submodelos de histórico de leitura de sensores, histórico de leitura de geolocalização (GPS), histórico de padrões de uso, etc. A relevância sobre cada uma dessas informações a serem armazenadas pela MDP e os impactos do amplo compartilhamento dessas informações ao longo da cadeia de suprimentos é discutido no \autoref{cha:ciclo-de-vida}.
-
 \section{Fluxo de fornecimento de serviços}
+\label{sec:fluxo-de-fornecimento-de-servicos}
 
 As etapas para o fornecimento de serviços na I4.0 segue um fluxo padrão. Os submodelos agregam informações semelhantes que podem ser lidas ou escritas (via MDP) e disponibilizada por meio de \textit{Web Services} a qualquer uma das partes ao longo da CS mediante autenticação.
 
@@ -188,6 +155,7 @@ O (\textbf{d}) C4.0-Fabricante (Cliente) por sua vez faz uma (\textbf{g}) busca 
 A partir da resposta da busca no C4.0-Repositório, o C4.0-Fabricante pode (\textbf{h}) interagir diretamente com cada um dos C4.0-Produtos para o consumo das informações necessárias.
 
 \section{Mapeamento das operações no RAMI4.0}
+\label{sec:mapeamento-das-operacoes}
 
 Segundo \citeonline{iec2017rami}, o RAMI4.0 fornece uma visão estruturada dos principais elementos de um ativo usando um modelo de níveis composto por três eixos. Desta forma, inter-relações complexas podem ser divididas em seções menores e mais gerenciáveis, combinando os três eixos para representar cada aspecto relevante do estado do ativo em cada ponto de seu ciclo de vida.
 

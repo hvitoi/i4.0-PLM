@@ -64,6 +64,7 @@ O RAMI4.0 apresenta uma representação tridimensional, conforme a \autoref{fig:
 O RAMI4.0, como um modelo de referência, é um elemento para padronização do projeto e implantação de aplicações em I4.0. O RAMI4.0 é uma padronização de linguagem e deve ser aceito e usados por todos os participantes para protótipo, desenvolvimento e validação.
 
 \section{Integração da MDP ao RAMI4.0}
+\label{sec:integracao-mdp-rami}
 
 Ambos os conceitos de I4.0 e MDP são recentes, surgidos em 2011 \cite{kagermann2011industrie} e 2007 \cite{wahlster2007digitalmemory}, respectivamente. A área multidisciplinar de estudo envolvendo MDP e I4.0 surgira em 2013 com o projeto SemProM \cite{wahlster2013semprom}, porém ainda quando I4.0 era um conceito abrangente e sem diretrizes concretas para sua implementação, que ocorreria em 2013 por meio do documento de recomendações para implementação da iniciativa estratégia Industrie 4.0 \cite{kagermann2013recommendations}; e sem a criação do modelo de arquitetura de referência para Indústria 4.0 (RAMI4.0), que seria divulgado em 2015 por meio do documento intitulado ``RAMI4.0'', divulgado por um periódico alemão \cite{hankel2015rami}.
 
@@ -86,22 +87,37 @@ A ``Plattform Industrie 4.0'' é uma das principais redes mundiais de discussão
 Dentre os temas elencados na \autoref{fig:keythemes-i4}, destacam-se os subitens relacionados ao tópico ``Cenários de criação de valor em Indústria 4.0'' por estarem altamente relacionados ao RAMI4.0 e ao conceito de geração de valor por meio da MDP. O desenvolvimento de arquiteturas para geração de valor e a criação de negócios orientados a dados são temas de grande oportunidade dentro do cenário de I4.0, especialmente se considerando os métodos quantitativos de \textit{Business Intelligence} e de análise de dados já estabelecidos.
 
 \section{Objetivos}
+\label{sec:objetivos}
 
-O objetivo do trabalho é a proposta de um arquitetura orientada a serviços baseada no RAMI4.0 para o compartilhamento da memória digital do produto ao longo da cadeia suprimentos (\autoref{cha:arquitetura}) e a proposta de tipos de dados do produto em forma de submodelos a serem compartilhados pela cadeia de suprimentos (\autoref{cha:ciclo-de-vida}).
+O objetivo geral e propósito do trabalho é a elaboração de uma arquitetura baseada no RAMI4.0 para o compartilhamento da memória digital do produto (MDP) ao longo da cadeia de suprimentos.
 
-Para isso, é feita uma integração do conceito de MDP ao RAMI4.0, mapeando suas funções ao eixo Camadas do RAMI4.0.
+Para se alcançar o objetivo geral, este é desmembrado em escopos menores, representados pelos objetivos específicos. Os objetivos específicos do trabalho são:
 
-São feitas também considerações sobre o impacto do amplo compartilhamento da memória digital do produto ao longo da cadeia de suprimentos no ciclo de vida do produto e como isto pode gerar novos modelos de negócio.
+\begin{itemize}
+  \item Integração da MDP ao Componente 4.0 (\autoref{sec:estrutura-aas});
+  \item Levantamento de submodelos do produto e seus respectivos atributos (\autoref{sec:submodelos-produto});
+  \item Apresentação de considerações sobre a geração de valor por meio do compartilhamento da MDP ao longo ciclo de vida de um produto (\autoref{sec:geracao-de-valor});
+  \item Apresentação da arquitetura com seus componentes e operações (\autoref{sec:componentes-e-operacoes});
+  \item Esquematização da dinâmica de compartilhamento de informações por meio de serviços (\autoref{sec:fluxo-de-fornecimento-de-servicos});
+  \item Modelagem do fluxo de informações dentro das camadas do RAMI4.0 (\autoref{sec:mapeamento-das-operacoes}).
+\end{itemize}
 
-Portanto, os eixos ``Camadas'' e ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 são detalhados de forma a se aperfeiçoar a elaboração dessa arquitetura e proporcionar mais robustez ao modelo para uma futura adoção generalizada por parte de empresas por todo o mundo.
+%e a proposta de tipos de dados do produto em forma de submodelos a serem compartilhados pela cadeia de suprimentos (\autoref{cha:ciclo-de-vida}).
 
-Todo o estudo é feito com a proposta de aperfeiçoar o RAMI4.0 no sentido de propiciar o surgimento de novos cenários para a criação de valor no contexto de I4.0 e incentivar a geração de novos modelos de negócio, especialmente aqueles baseados em dados (\textit{data-driven}).
+%Para isso, é feita uma integração do conceito de MDP ao RAMI4.0, mapeando suas funções ao eixo Camadas do RAMI4.0.
 
-Esta pesquisa envolve o estudo de diversos temas relacionados à Indústria 4.0. Os principais itens necessários para a elaboração da arquitetura de compartilhamento de dados são fundamentados no \autoref{cha:fundamentos}.
+%São feitas também considerações sobre o impacto do amplo compartilhamento da memória digital do produto ao longo da cadeia de suprimentos no ciclo de vida do produto e como isto pode gerar novos modelos de negócio.
 
-Tais temas são estudados a fim de se analisar o estado da arte atual em I4.0 e a partir disso propor melhorias e detalhamentos ao RAMI4.0.
+%Portanto, os eixos ``Camadas'' e ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 são detalhados de forma a se aperfeiçoar a elaboração dessa arquitetura e proporcionar mais robustez ao modelo para uma futura adoção generalizada por parte de empresas por todo o mundo.
+
+%Todo o estudo é feito com a proposta de aperfeiçoar o RAMI4.0 no sentido de propiciar o surgimento de novos cenários para a criação de valor no contexto de I4.0 e incentivar a geração de novos modelos de negócio, especialmente aqueles baseados em dados (\textit{data-driven}).
+
+%Esta pesquisa envolve o estudo de diversos temas relacionados à Indústria 4.0. Os principais itens necessários para a elaboração da arquitetura de compartilhamento de dados são fundamentados no \autoref{cha:fundamentos}.
+
+%Tais temas são estudados a fim de se analisar o estado da arte atual em I4.0 e a partir disso propor melhorias e detalhamentos ao RAMI4.0.
 
 \section{Estrutura do trabalho}
+\label{sec:estrutura}
 
 O capítulo atual de introdução (\autoref{cha:introducao}) apresenta uma abordagem inicial dos conceitos que serão tratados ao longo do trabalho e o objetivo da pesquisa.
 
@@ -109,9 +125,9 @@ O capítulo atual de introdução (\autoref{cha:introducao}) apresenta uma abord
 
 O \autoref{cha:fundamentos} apresenta a revisão bibliográfica realizada para a fundamentação dos conceitos necessários para a proposta da arquitetura de compartilhamento de informações do ativo. Cinco conceitos básicos são apresentados nesse capítulo: ``Indústria 4.0'', ``Logística \& Cadeia de Suprimentos'', ``Ciclo de vida do produto'', ``Memória digital do produto'', ``Arquitetura orientada a serviços'' e ``Modelagem de sistemas''.
 
-O \autoref{cha:arquitetura} apresenta os detalhes da arquitetura proposta baseada em \textit{Web Services} (WS) nos moldes de uma arquitetura orientada a serviços (SOA) compatível com Componentes I4.0 para o compartilhamento de informações do ativo ao longo da cadeia de suprimentos. Neste capítulo também é feito o mapeamento de cada um dos elementos desta arquitetura a cada um dos níveis do eixo Camadas do RAMI4.0.
-
 O \autoref{cha:ciclo-de-vida} traz discussões sobre o impacto do amplo compartilhamento da memória digital do produto ao longo da cadeia de suprimentos por meio de \textit{Web Services}, são abordadas possíveis mudanças na curva de ciclo de vida do produto e o surgimento de novos modelos de negócio baseados em dados.
+
+O \autoref{cha:arquitetura} apresenta os detalhes da arquitetura proposta baseada em \textit{Web Services} (WS) nos moldes de uma arquitetura orientada a serviços (SOA) compatível com Componentes I4.0 para o compartilhamento de informações do ativo ao longo da cadeia de suprimentos. Neste capítulo também é feito o mapeamento de cada um dos elementos desta arquitetura a cada um dos níveis do eixo Camadas do RAMI4.0.
 
 %O \autoref{cha:prova-de-conceito} detalha uma possível implementação da arquitetura proposta utilizando algumas tecnologias atualmente consolidadas na área de \textit{Engenharia de Software}.
 
