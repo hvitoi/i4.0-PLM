@@ -1,56 +1,54 @@
 \chapter{O ciclo de vida do produto na I4.0}
 \label{cha:ciclo-de-vida}
 
-Este capítulo traz detalhes da integração da memória digital do produto (MDP) ao Componente 4.0 (C4.0) para que assim possa ser compartilhado pelo cadeia de suprimentos.
+Este capítulo traz detalhes da integração da MDP ao C4.0 para que assim possa ser compartilhado pela CS.
 
-Além disso, é abordada uma proposta de modelo de dados para os submodelos que compartilham informações relacionadas ao estado do produto na cadeia de suprimentos. Desta forma, é feita uma análise dos submodelos e propriedades relevantes a serem compartilhados.
+Além disso, são identificadas as informações do produto de interesse aos membros da CS para que possam ser agregadas em forma de submodelos. A classificação das informações em submodelos é importante para a compatibilidade da arquitetura com o RAMI4.0.
 
-Por fim, este capítulo traz discussões sobre o impacto do amplo compartilhamento da memória digital do produto (MDP) ao longo da cadeia de suprimentos por meio de serviços na Indústria 4.0. Uma visão da MDP sobre o eixo ``Ciclo de Vida e Cadeia de Valor'' é apresentada com considerações sobre a geração de valor por meio do compartilhamento da MDP ao longo ciclo de vida de um produto
+Por fim, este capítulo faz um levantamento dos impactos em geração de valor com o compartilhamento da MDP por meio de serviços na I4.0.
 
-\section{Integração da MDP ao Componente 4.0}
+\section{Integração da MDP ao C4.0}
 \label{sec:estrutura-aas}
 
-O conceito de Memória Digital do Produto (MDP) deve ser inserido na Indústria 4.0 com o objetivo de agregar valor ao produto por meio da possibilidade de acesso a informações sobre o ativo entre parceiros ao longo da cadeia de suprimentos.
+O conceito de MDP é inserido na I4.0 com o objetivo de agregar valor ao produto por meio da possibilidade de acesso a informações sobre o ativo entre parceiros ao longo da CS.
 
-Nesta seção são apresentados os detalhes sobre uma possível estruturação do \textit{Asset Administration Shell} (AAS), que é parte de um Componente 4.0 (C4.0), contendo todas as partes necessárias (incluindo a MDP) para a implementação do compartilhamento de informações por meio de \textit{Web Services} (WS).
+Nesta seção são apresentados os detalhes da estruturação do \textit{Asset Administration Shell} (AAS), que é parte de um C4.0, contendo todas as partes necessárias (incluindo a MDP) para a implementação do compartilhamento de informações por meio de WS.
 
-A estruturação proposta é baseada em \citeonline{bader2019aas}, que estabelece a divisão do AAS em submodelos.
+A estruturação proposta é baseada em \citeonline{bader2019aas}, na qual as funcionalidades dos ativos são agrupadas em forma de submodelos, que são unidades de agrupamento de propriedades semelhantes \cite{bader2019aas, adolph2018roadmap, bedenbender2017aasexamples}. Os dados do ativo são armazenados nos próprios submodelos, enquanto a MDP extrai e gerencia o acesso às informações dos submodelos para que possam ser fornecidas ao solicitante por meio de WS.
 
-As funcionalidades dos ativos são agrupadas em forma de submodelos, conforme estabelecido em \citeonline{bader2019aas, adolph2018roadmap, bedenbender2017aasexamples}, que são unidades de agrupamento de propriedades semelhantes. Os dados do ativo são armazenados nos próprios submodelos, enquanto a MDP extrai e gerencia as informações dos submodelos de forma a estruturá-las para serem diretamente fornecidas ao consumidor por meio de \textit{Web Services}.
-
-A MDP no contexto de um C4.0 agrega as informações referentes a cada um dos submodelos e as organiza de forma a poderem ser facilmente disponibilizadas por meio de WSs.
+A MDP no contexto de um C4.0 agrega as informações referentes a cada um dos submodelos e as organiza de forma que possam ser disponibilizadas.
 
 Como a MDP é parte integral do AAS do C4.0, que representa a parte digital do ativo, esta pode ser fornecida em qualquer meio digital, inclusive em armazenamentos remotos em plataformas na nuvem. Estas plataformas específicas suportam o armazenamento de grandes quantidades de dados, assim como podem assegurar uma alta capacidade de processamento de requisições de serviços.
 
-A estrutura do C4.0 compatível com a arquitetura orientada a serviços proposta é apresentada na \autoref{fig:estrutura-aas}.
+A estrutura do C4.0 com a MDP integrada é apresentada na \autoref{fig:estrutura-aas}.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\textwidth]{estrutura-aas}
-	\caption{Estrutura do Componente 4.0 com seus submodelos e a MDP.}
+	\caption{Integração da MDP ao C4.0.}
 	\label{fig:estrutura-aas}
 \end{figure}
 
-Os dados puros estão contidos nos submodelos. A MDP fornece uma interface para a leitura e escrita dos dados dos submodelos. A MDP atua como um ponto único de extração de dados dos submodelos, evitando, desta forma, a extração de dados não tratados diretamente dos submodelos.
+Os dados estão contidos nos submodelos. A MDP fornece uma interface para a leitura e escrita destes dados. A MDP atua como um ponto único de extração de dados dos submodelos, evitando, desta forma, a leitura direta de dados não tratados.
 
-A MDP é capaz de realizar o gerenciamento dos dados, estabelecendo, por exemplo, políticas de acesso e/ou escrita e demais regras de negócio do produto. Uma analogia é de que os submodelos representam o banco de dados, enquanto a MDP é a interface para as operações de criação, leitura, atualização e exclusão (operações CRUD - \textit{Create, Read, Update, Delete}) nesta base de dados que são os submodelos.
+A MDP é capaz de realizar o gerenciamento dos dados, estabelecendo, por exemplo, políticas de acesso e/ou escrita e demais regras de negócio do produto. Uma analogia é de que os submodelos representam o banco de dados, enquanto a MDP é a interface para as operações de criação, leitura, atualização e exclusão (operações CRUD - \textit{Create, Read, Update, Delete}) nesta base de dados.
 
-Neste trabalho é dado foco aos submodelos que se relacionam a informações sobre o ativo que sejam de interesse às partes ao longo da cadeia de suprimentos e que possam ser lidos ou escritos por meio dos WSs. Alguns exemplos desse tipo de submodelo podem incluir: a ficha técnica detalhada do ativo, submodelos de histórico de leitura de sensores, histórico de leitura de geolocalização (GPS), histórico de padrões de uso, etc. A relevância sobre cada uma dessas informações a serem armazenadas pela MDP e os impactos do amplo compartilhamento dessas informações ao longo da cadeia de suprimentos são discutidos na \autoref{sec:submodelos-produto}.
+Neste trabalho é dado foco às informações sobre o ativo que sejam de interesse aos membros da CS e que possam ser lidos ou escritos por meio de WSs. Alguns exemplos deste tipo de informação podem incluir: a ficha técnica detalhada do ativo, submodelos de histórico de leitura de sensores, histórico de leitura de geolocalização (GPS), histórico de padrões de uso, etc.
 
 \section{Submodelos do produto}
 \label{sec:submodelos-produto}
 
-Nesta seção são apresentadas propostas de submodelos e propriedades necessários para a integração dos ativos na cadeia de suprimentos. Os submodelos devem ser padronizados e detalhados a fim de garantir a interoperabilidade entre os sistemas.
+Nesta seção são apresentados os submodelos e propriedades necessários para a integração dos ativos na CS. Os submodelos devem ser padronizados e detalhados a fim de garantir a interoperabilidade entre os sistemas.
 
-O produto no contexto da ``Arquitetura para compartilhamento de informações do ativo'' é a fonte e o servidor de informações para os diversos membros ao longo da cadeia de suprimentos. O acesso a estas informações permite a colaboração entre os membros e assim abre oportunidades para uma tomada de decisões coordenada a fim de remover as ineficiências inerentes à cadeia de suprimentos.
+O produto é a fonte e o servidor de informações para os diversos membros da CS. O acesso a estas informações permite a colaboração entre os membros e assim abre oportunidades para uma tomada de decisões coordenada a fim de remover as ineficiências inerentes à CS.
 
-É necessária uma definição dos submodelos do produto para que se possa identificar os tipos de informações a serem compartilhadas e com quais membros compartilhar. Além disso, a definição destes submodelos contribui com o refinamento das especificações do AAS no contexto da Indústria 4.0.
+Para isto, é necessária uma definição dos submodelos do produto para que se possa identificar os tipos de informações a serem compartilhadas e com quais membros compartilhar. Além disso, a definição destes submodelos contribui com o refinamento das especificações do AAS no contexto da I4.0.
 
-\citeonline{torres2014information} em uma análise de literatura mostra o impacto do compartilhamento de informações e de diferentes estratégias de colaboração no desempenho de cadeias de suprimentos. Além disso, é feita uma classificação dos trabalhos, dentre elas a classificação quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
+\citeonline{torres2014information} em uma análise de literatura mostra o impacto do compartilhamento de informações e de diferentes estratégias de colaboração no desempenho de CSs. Além disso, é feita uma classificação dos trabalhos, dentre elas a classificação quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
 
-Além disso, \citeonline{bader2020submodel} definem alguns tipos de submodelos padrões para a Indústria 4.0 e detalha suas respectivas propriedades.
+Além disso, \citeonline{bader2020submodel} definem alguns submodelos padrões para a I4.0 e detalha suas respectivas propriedades.
 
-Os tipos de informações identificados na análise bibliográfica de \citeonline{torres2014information} e no documento de \citeonline{bader2020submodel} serão incorporados a novos submodelos propostos para o produto para que possam ser compartilhados por meio da MDP ao longo da cadeia de suprimentos.
+Os tipos de informações identificados na análise bibliográfica de \citeonline{torres2014information} e no documento de \citeonline{bader2020submodel} serão incorporados a novos submodelos propostos para o produto para que possam ser compartilhados por meio da MDP ao longo da CS.
 
 Os submodelos propostos são baseados na classificação das informações (propriedades) contidas em cada um deles. Os submodelos propostos são: ``Dados Gerais'', ``Processos'', ``Inventário'', ``Pedido'', ``Operação'' e ``Documentação''.
 
@@ -58,7 +56,7 @@ Além disso, os submodelos são classificados como ``classe'', onde as informaç
 
 A \autoref{fig:submodelos-produto} mostra os submodelos propostos juntamente com sua classificação. Os mesmos submodelos são detalhados nas subseções seguintes.
 
-\begin{figure}[htb!]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{submodelos-produto}
 	\caption{Submodelos do C4.0-Servidor e suas propriedades.}
@@ -71,7 +69,7 @@ O AAS do C4.0-Servidor deve conter um submodelo que represente as informações 
 
 Este submodelo é baseado no \textit{template} de submodelo ``\textit{Nameplate}'' (Placa de Identificação) introduzido por \citeonline{bader2020submodel}, que tem como alvo principal equipamentos para indústria de processos e automação industrial.
 
-As informações neste submodelo descrevem como as características do produto estarão visíveis para os membros da cadeia de suprimentos.
+As informações neste submodelo descrevem como as características do produto estarão visíveis para os membros da CS.
 
 Dentro deste submodelo, todas as propriedades são comuns a uma mesma classe de produtos.
 
@@ -99,7 +97,7 @@ A \autoref{tab:submodelo-dados-gerais} detalha o submodelo ``Dados Gerais'' com 
 
 \subsection{Submodelo ``Processos''}
 
-O submodelo ``Processos'' do AAS do C4.0-Servidor descreve informações relacionadas a processos de negócio aplicados ao produto a fim de satisfazer as demandas do cliente, como as etapas de pedido, produção e envio.
+O submodelo ``Processos'' do AAS do C4.0-Servidor descreve informações relacionadas a processos de negócio aplicados ao produto a fim de satisfazer as demandas do consumidor final, como as etapas de pedido, produção e envio.
 
 A etapa de pedido começa quando um comprador faz um pedido ao fornecedor e termina quando o fornecedor aceita o pedido. A etapa de produção ocorre com a transformação dos materiais de entrada em um produto de maior valor. A etapa de envio entrega as mercadorias do fornecedor ao comprador. Diferentes tipos de informações estão relacionados a cada uma destas etapas.
 
@@ -116,7 +114,7 @@ A \autoref{tab:submodelo-processos} detalha o submodelo ``Processos'' com suas r
 
 	\hline Tipo de processo de fabricação & \textit{Double} & Tipo de processo de fabricação utilizado. Dado que diferentes empresas podem produzir um produto utilizando processos de fabricação distintos, esta propriedade permite que o cliente possa selecionar/filtrar um fornecedor com base no processo desejado. Além disso, é utilizado para equiparar fornecedores que utilizam um mesmo processo de fabricação, não prejudicando assim um fornecedor que usa um processo mais caro, porém mais moderno.
 
-	\\ \hline Custo do processo de fabricação & \textit{Double} & Custo total do processo de fabricação. O compartilhamento dos custos do processo é necessário no planejamento integrado da cadeia de suprimentos.
+	\\ \hline Custo do processo de fabricação & \textit{Double} & Custo total do processo de fabricação. O compartilhamento dos custos do processo é necessário no planejamento integrado da CS.
 
 	\\ \hline Qualidade do processo de fabricação & \textit{Float} & Agregação de um conjunto de dados estatísticos relacionados à qualidade do processo produtivo de um fabricante. O compartilhamento de informações relacionadas à qualidade é importante para o estabelecimento de confiabilidade no processo de fabricação do produto. O tipo de métrica adotada para a determinação da qualidade varia dependendo do tipo de processo de fabricação e deve ser acordado entre as partes. Uma forma genérica para a determinação da qualidade é o termo ``Q'' do índice OEE (\textit{Overall Equipment Effectiveness}) \cite{corrales2020oee}, que representa a razão entre peças não rejeitadas e o total de peças produzidas.
 
@@ -163,13 +161,13 @@ A \autoref{tab:submodelo-inventario} detalha o submodelo ``Inventário'' com sua
 
 O submodelo ``Pedido'' pertence ao AAS do C4.0-Servidor.
 
-Cada pedido contém informações sobre a demanda do cliente e os pedidos entre os fornecedores que resultaram na movimentação do produto ao longo da cadeia de suprimentos. As informações do pedido incluem a quantidade de itens no pedido, data limite de entrega e tamanho do lote.
+Cada pedido contém informações sobre a demanda do consumidor e os pedidos entre os fornecedores que resultaram na movimentação do produto ao longo da CS. As informações do pedido incluem a quantidade de itens no pedido, data limite de entrega e tamanho do lote.
 
-Compartilhar informações de quantidade de pedido entre as partes da cadeia de suprimentos ajuda na visibilidade do estado atual de um pedido por todos os membros.
+Compartilhar informações de quantidade de pedido entre as partes da CS ajuda na visibilidade do estado atual de um pedido por todos os membros.
 
 Todas as propriedades deste submodelo se referem a uma classe de produtos e não a um produto unitário. Isto pois um pedido pode estar associado a vários produtos em um único lote.
 
-As informações de pedido são importantes para o planejamento da produção de todas as partes envolvidas na cadeia de suprimentos como forma de se evitar, por exemplo, o efeito chicote \cite{lee1997bullwhip}, que é um problema comum quando há falta de compartilhamento de informações de demandas em tempo real, causando a imprecisão na estimativa da demanda por parte de cada membro da cadeia de suprimentos quando ocorrem flutuações nos volumes dos pedidos.
+As informações de pedido são importantes para o planejamento da produção de todas as partes envolvidas na CS como forma de se evitar, por exemplo, o efeito chicote \cite{lee1997bullwhip}, que é um problema comum quando há falta de compartilhamento de informações de demandas em tempo real, causando a imprecisão na estimativa da demanda por parte de cada membro da CS quando ocorrem flutuações nos volumes dos pedidos.
 
 A \autoref{tab:submodelo-pedido} detalha o submodelo ``Pedido'' com suas respectivas propriedades.
 
@@ -246,7 +244,7 @@ A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' co
 
 	\\ \hline Manual de operação & \textit{Blob} & Manual destinado ao usuário com instruções de operação/uso.
 
-	\\ \hline Modelo digital & \textit{Blob} & Representação digital 3D do produto com suas formas e dimensões reais.
+	\\ \hline Modelo digital & \textit{Blob} & Representação digital do produto com suas formas e dimensões.
 
 	\\ \hline
 \end{longtable}
@@ -254,13 +252,11 @@ A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' co
 \section{Geração de valor por meio do compartilhamento da MDP}
 \label{sec:geracao-de-valor}
 
-O modelo do RAMI4.0 descrito na \autoref{sub:rami4} apresentou o eixo ``ciclo de vida'' generalizado, cujo o objetivo é representar o ciclo de vida de um Componente I4.0 ao longo de toda a sua cadeia de valor.
-
-O histórico completo do ciclo de vida de um determinado produto corresponde a suas informações de estados geradas ao longo de sua existência. Estas informações são acessadas via MDP e são associadas a seu ativo tanto em sua fase ``tipo'' quanto em sua fase ``instância'' (vide \autoref{sub:rami4}). Estes dados podem ser aproveitados de forma inteligente para a geração de valor por meio de novos modelos de negócio.
+O histórico completo do ciclo de vida de um determinado produto corresponde a suas informações de estados geradas ao longo de sua existência. Estas informações são acessadas via MDP e são associadas a seu ativo tanto em sua fase ``tipo'' quanto em sua fase ``instância''. Estes dados podem ser aproveitados de forma inteligente para a geração de valor por meio de novos modelos de negócio.
 
 O compartilhamentos de informações entre estas duas fases do ativo auxilia na melhoria contínua do produto, a \autoref{fig:aas-lifecycle} ilustra este cenário. Foram identificadas duas formas de geração de valor por meio das informações do ativo: as ``melhorias de projeto'' e as ``melhorias operacionais''.
 
-\begin{figure}[htb!]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{aas-lifecycle}
 	\caption{Ciclo de vida do produto.}
@@ -295,7 +291,7 @@ O valor das informações no que diz respeito à melhoria operacional foram ent�
 \begin{itemize}
 	\item Manutenção orientada por dados (submodelo ``Operação'');
 	\item Monitoramento e rastreamento em tempo real (submodelo ``Pedido'');
-	\item Integração dos membros da cadeia de suprimentos e eficiência logística (submodelos ``Dados Gerais'', ``Inventário'', ``Pedido'' e ``Documentação'').
+	\item Integração dos membros da CS e eficiência logística (submodelos ``Dados Gerais'', ``Inventário'', ``Pedido'' e ``Documentação'').
 \end{itemize}
 
 As categorias permitem segregar as informações de acordo com seus respectivos objetivos ao serem inseridos no projeto de um ativo. Além disso, as categoriais dão indícios de possíveis informações genéricas a serem armazenadas ao longo do ciclo de vida do produto, independente da indústria na qual ele está inserido.
@@ -304,19 +300,19 @@ A seguir são apresentadas as descrições de cada uma das categorias apresentad
 
 A \textbf{``Manutenção orientada por dados''} (\textit{data driven}) é uma mudança de paradigma em relação à forma tradicional de manutenção corretiva. Com a manutenção orientada por dados são usados o comportamento histórico do produto e técnicas estatísticas para a criação de modelos que apontem eventuais falhas antes que estas venham a acontecer.
 
-Com o histórico de leitura de sensores de cada componente do ativo, estratégias de manutenção preditivas e prescritivas podem ser adotadas pelo próprio fabricante. A manutenção orientada pelos dados de uso, comparada com a manutenção tradicional, pode reduzir a incidência de falhas e trazer benefícios econômicos.
+Com o histórico de leitura de sensores de cada item do ativo, estratégias de manutenção preditivas e prescritivas podem ser adotadas pelo próprio fabricante. A manutenção orientada pelos dados de uso, comparada com a manutenção tradicional, pode reduzir a incidência de falhas e trazer benefícios econômicos.
 
 Com a manutenção prescritiva, os dados empíricos e o histórico do ativo são utilizados para prescrever qual medida deve ser tomada, trazendo mais confiabilidade de operação ao ativo. A contínua extração de dados de sensores do ativo e sua análise torna a ação de manutenção mais automatizada.
 
 A manutenção dos ativos orientada por dados permite trazer a responsabilidade de manutenção dos ativos de uma planta para a instituição que melhor conhece os detalhes do funcionamento técnico do ativo, como o fabricante ou uma empresa especializada na manutenção de um determinado ativo. O uso de dados para a manutenção permite implementar um novo paradigma de detecção e correção de falhas de equipamentos industriais: a Manutenção como um Serviço (\textit{Maintenance-as-a-Service} - MaaS) \cite{zoll2018maas}.
 
-O \textbf{``Monitoramento e rastreamento em tempo real''} é possibilitado pela leitura de coordenadas geográficas. O monitoramento e rastreamento são úteis durante o transporte entre os membros da cadeia de suprimentos. O distribuidor, por exemplo, pode ter acesso à posição exata de um ativo enquanto este estiver sob sua custódia.
+O \textbf{``Monitoramento e rastreamento em tempo real''} é possibilitado pela leitura de coordenadas geográficas. O monitoramento e rastreamento são úteis durante o transporte entre os membros da CS. O distribuidor, por exemplo, pode ter acesso à posição exata de um ativo enquanto este estiver sob sua custódia.
 
 A demanda de rastreabilidade surge para manter um melhor controle da cadeia produtiva, assim como repassar essas informações aos consumidores.
 
-Outra função do rastreamento é como forma de identificar possíveis parcerias ao atender a uma demanda de fabricação. Ao iniciar uma ordem de fabricação/compra, o próprio produto pode assegurar que todas as especificações escolhidas pelo cliente serão atendidas e, desta forma, o produto pode dar ao cliente estimativas de prazo e custos, assim como o nome de todos os elos da cadeia de suprimentos que estarão envolvidos nesta fabricação/entrega.
+Outra função do rastreamento é como forma de identificar possíveis parcerias ao atender a uma demanda de fabricação. Ao iniciar uma ordem de fabricação/compra, o próprio produto pode assegurar que todas as especificações escolhidas pelo cliente serão atendidas e, desta forma, o produto pode dar ao cliente estimativas de prazo e custos, assim como o nome de todos os elos da CS que estarão envolvidos nesta fabricação/entrega.
 
-A \textbf{``Integração dos membros da cadeia de suprimentos e eficiência logística''} acontece com a melhoria da comunicação entre os elos utilizando o produto (ativo) como centro de interação.
+A \textbf{``Integração dos membros da CS e eficiência logística''} acontece com a melhoria da comunicação entre os elos utilizando o produto (ativo) como centro de interação.
 
 A comunicação passa a ser centralizada no produto e não mais dependente do contato direto entre as partes. Isso simplifica também a logística reversa, como no caso de solicitações de devolução, acionamento de garantia, \textit{recalls} e outros, que agora utilizarão o produto como um ponto de intermediação entre as partes (por exemplo, fabricante e consumidor final).
 

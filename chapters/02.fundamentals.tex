@@ -1,34 +1,34 @@
 \chapter{Fundamentos}
 \label{cha:fundamentos}
 
-Nesse capítulo é apresentada a revisão bibliográfica necessária para a fundamentação dos capítulos subsequentes.
+Nesse capítulo é apresentada a revisão bibliográfica para a fundamentação teórica do trabalho.
 
 Seis conceitos básicos são apresentados: ``Indústria 4.0'', ``Logística \& Cadeia de Suprimentos'', ``Ciclo de vida do produto'', ``Memória digital do produto'', ``Arquitetura orientada a serviços'' e ``Modelagem de sistemas''.
 
-A inter-relação entre esses conceitos é a base para o entendimento e criação da arquitetura para o compartilhamento de informações sobre o ativo ao longo da cadeia de suprimentos e para a elaboração de considerações sobre implicações do compartilhamento massivo de informações no ciclo de vida do produto no contexto da Indústria 4.0.
+A inter-relação entre esses conceitos é a base para o entendimento e desenvolvimento da arquitetura e para o estudo das implicações do amplo compartilhamento de informações no ciclo de vida do produto no contexto da I4.0.
 
-\section{Indústria 4.0}
+\section{Indústria 4.0 (I4.0)}
 \label{sec:industria4}
 
-Indústria 4.0 (I4.0) é o nome dado às recentes modificações em relação às tecnologias utilizadas em processos industriais e à forma de organização dos sistemas industriais. Tais tecnologias são inseridas com o propósito de se oferecer um alto nível de automação e intercâmbio de informações entre equipamentos e produtos \cite{lasi2014industryfour}.
+I4.0 é o nome dado às recentes modificações em relação às tecnologias utilizadas em processos industriais e à forma de organização dos sistemas industriais. Tais tecnologias são inseridas com o propósito de se oferecer um alto nível de automação e intercâmbio de informações entre equipamentos e produtos \cite{lasi2014industryfour}.
 
-O nome I4.0 se dá pelo fato de ser considerada a quarta grande revolução com relação às tecnologias de produção industrial, sendo as ``revoluções industriais'' consideradas evoluções tecnológicas que levaram a grandes mudanças no paradigma de produção. As outras transições dentro da indústria ao longo da história aconteceram: no campo da mecanização da produção (1\textsuperscript{a} revolução industrial), com a produção em massa e intenso uso de energia elétrica (2\textsuperscript{a} revolução industrial) e com a expansão da automação e eletrônica (3\textsuperscript{a} revolução industrial) \cite{lasi2014industryfour}. Tal histórico de revoluções no campo da indústria é ilustrado na \autoref{fig:i4-2}.
+O nome se dá ao fato de ser considerada a quarta maior revolução com relação às tecnologias de produção industrial, sendo as ``revoluções industriais'' consideradas evoluções tecnológicas que levaram a grandes mudanças na forma de produção. As outras transições dentro da indústria ao longo da história aconteceram: no campo da mecanização da produção (1\textsuperscript{a} revolução industrial), com a produção em massa e intenso uso de energia elétrica (2\textsuperscript{a} revolução industrial) e com a expansão da automação e eletrônica (3\textsuperscript{a} revolução industrial) \cite{lasi2014industryfour}. Tal histórico de revoluções no campo da indústria é ilustrado na \autoref{fig:i4-2}.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{i4-2.png}
 	\caption{Evolução da indústria por meio das revoluções industriais.}
 	\label{fig:i4-2}
-	\fonte{\citeonline{wahlster2013industrie} (adaptado). }
+	\fonte{\citeonline{wahlster2013industrie} (adaptado).}
 \end{figure}
 
-O termo I4.0 foi trazido a público pela primeira vez em 2011 na feira industrial de Hanôver (\textit{Hannover-Messe}) \cite{kagermann2011industrie}, que é uma feira tecnológica de grande relevância internacional e tem o costume de apresentar grandes inovações relacionadas ao setor industrial.
+O termo I4.0 foi trazido a público pela primeira vez em 2011 na feira industrial de Hanôver (\textit{Hannover-Messe}) \cite{kagermann2011industrie}, que é uma feira tecnológica de grande relevância internacional e visa apresentar grandes inovações relacionadas ao setor industrial.
 
 Por vezes, a I4.0 é tratada também como a convergência da produção industrial com as novas Tecnologias de Informação e Comunicação (TIC) \cite{hermann2016design}.
 
 Embora o termo I4.0 seja bastante comum na discussão tecnológica atual, muitas empresas, centros de pesquisa e universidades não mantêm uma definição comum sobre o assunto. Segundo \citeonline{hermann2016design} e com base em uma revisão de literatura feita pelos mesmos autores, a I4.0 é composta por quatro princípios de projeto para sua implementação, conforme listados na \autoref{tab:principios-i4}.
 
-\begin{table}[htb]
+\begin{table}[t]
 	\centering
 	\footnotesize
 	\caption{Princípios para implantação da I4.0 baseados em \citeonline{hermann2016design}.}
@@ -61,21 +61,21 @@ A quarta revolução industrial já está em curso, segundo o Fórum Econômico 
 
 Uma das bases para esse novo paradigma de produção é a interligação de objetos no ambiente de produção por meio de identificadores individuais usando conceitos de Internet das Coisas (\textit{Internet of Things} - IoT) e de Internet das Coisas Industrial (\textit{Industrial Internet of Things} - IIoT). Tais ``coisas'' se referem a equipamentos, produtos, máquinas, peças, pessoas e quaisquer outros elementos envolvidos no ambiente industrial, que por vezes também são denominados ``ativos''.
 
-Esses ativos são inseridos no meio digital, onde podem trocar informações entre si e executarem funções sobre seus respectivos correspondentes reais de forma mais autônoma e com menor intervenção humana por meio do uso extensivo de recursos avançados de tecnologias da informação e comunicação \cite{adolph2018roadmap}. Devido a essa maior relação entre elementos do sistema de fabricação, extingui-se a relação essencialmente hierarquizada da indústria tradicional e os ativos passam a deter a capacidade de se comunicar diretamente com outros elementos de diferentes níveis, conforme ilustrado na \autoref{fig:i3-to-i4}.
+Esses ativos são inseridos no meio digital, onde podem trocar informações e executar funções sobre seus correspondentes reais de forma mais autônoma e com menor intervenção humana por meio do uso extensivo de recursos avançados de tecnologias da informação e comunicação \cite{adolph2018roadmap}. Devido a essa maior relação entre elementos do sistema de fabricação, extingui-se a relação essencialmente hierarquizada de gestão e controle da indústria tradicional e os ativos passam a deter a capacidade de se comunicar diretamente com outros elementos, conforme ilustrado na \autoref{fig:i3-to-i4}.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{i3-to-i4.png}
-	\caption{Transição do (a) modelo hierárquico tradicional para o (b) modelo flexível de comunicação entre dispositivos na Indústria 4.0.}
+	\caption{Transição do (a) modelo hierárquico tradicional de gestão e controle para o (b) modelo flexível de comunicação entre dispositivos na I4.0.}
 	\label{fig:i3-to-i4}
 	\fonte{\citeonline{schmittner2017mtom} (adaptado).}
 \end{figure}
 
-Essa automatização e a troca de informações entre os ativos tem grande potencial para dar mais eficiência aos processos industriais, pois desta forma o sistema pode tomar decisões melhores com base nas informações que lhe foram fornecidas por meio de sensores e identificadores. A visão para o futuro da produção baseado na I4.0 envolve sistemas de manufatura modulares e eficientes em cenários nos quais os produtos controlam seus próprios processos de fabricação \cite{lasi2014industryfour}.
+Essa automatização dos ativos tem grande potencial para dar mais eficiência aos processos industriais, pois desta forma o sistema pode tomar decisões melhores com base nas informações que lhe foram fornecidas por meio de sensores e identificadores \cite{schmittner2017mtom}. A visão para o futuro da produção baseado na I4.0 envolve sistemas de manufatura modulares e eficientes em cenários nos quais os produtos controlam seus próprios processos de fabricação \cite{lasi2014industryfour}.
 
 Há uma tendência global de redução do ciclo de vida do produto devido à rápida introdução de novas tecnologias para satisfazer a demanda dos clientes, especialmente em produtos eletrônicos \cite{trappey2008lifecycle}. A I4.0 se beneficia da chegada de produtos com curto ciclo de vida uma vez que o produto controla seu próprio processo de fabricação, facilitando, assim, ajustes e personalizações por parte do cliente, enquanto preserva os custos, a qualidade e o tempo de aprovisionamento (\textit{lead time}) da produção em massa.
 
-Indústria 4.0 é um conceito. Isto significa que são princípios a serem seguidos e implementados, porém o caminho para a implementação, assim como as tecnologias a serem adotadas podem ser diversos. As peculiaridades de cada indústria e de cada mercado estabelecem diferentes regras de negócios e, portanto, cada setor da indústria pode necessitar de diferentes formas e tecnologias para se implementar a I4.0 e se tornar uma fábrica inteligente. Alguns avanços tecnológicos, entretanto, são muito importantes ou essenciais para a implementação da I4.0 em qualquer sistema de manufatura, alguns deles são mostrados na \autoref{fig:tecnologias-i4}.
+I4.0 é composta por princípios a serem seguidos e implementados, porém o caminho para a implementação, assim como as tecnologias a serem adotadas podem ser diversos. As peculiaridades de cada indústria e de cada mercado estabelecem diferentes regras de negócios e, portanto, cada setor da indústria pode necessitar de diferentes formas e tecnologias para se implementar a I4.0 e se tornar uma fábrica inteligente. Alguns avanços tecnológicos, entretanto, são muito importantes ou essenciais para a implementação da I4.0 em qualquer sistema de manufatura, alguns deles são mostrados na \autoref{fig:tecnologias-i4}.
 
 \begin{figure}[htb]
 	\centering
@@ -85,46 +85,46 @@ Indústria 4.0 é um conceito. Isto significa que são princípios a serem segui
 	\fonte{\citeonline{russmann2015industryfour} (adaptado).}
 \end{figure}
 
-Após a primeira aparição do termo I4.0 na feira industrial de Hanôver em 2011, o termo ganhou significativa popularidade, principalmente no meio acadêmico e empresarial alemão. O termo foi então incentivado pelo governo alemão \cite{lasi2014industryfour, kagermann2013recommendations}, que apoiou a ideia e anunciou a Indústria 4.0 como parte integral de sua iniciativa estratégica para a indústria alemã, visando liderança em inovação tecnológica \cite{drath2014industrie} como uma abordagem para fortalecer a competitividade da indústria manufatureira alemã.
+Após a primeira aparição do termo I4.0 na feira industrial de Hanôver em 2011, o termo ganhou significativa popularidade, principalmente no meio acadêmico e empresarial alemão. O termo foi então incentivado pelo governo alemão \cite{lasi2014industryfour, kagermann2013recommendations}, que apoiou a ideia e anunciou a I4.0 como parte integral de sua iniciativa estratégica para a indústria alemã, visando liderança em inovação tecnológica \cite{drath2014industrie} como uma abordagem para fortalecer a competitividade da indústria manufatureira alemã.
 
 Por meio da iniciativa \textit{Plattform Industrie 4.0}, criada em 2013 pelo Ministério Federal da Educação e Pesquisa (\textit{Bundesministerium für Bildung und Forschung}) \cite{hartmut2019plattform} e com o grupo de trabalho ``Industrie 4.0 Working Group'' em comunicação com diversas associações de engenharia e indústrias alemãs, foram criados documentos oficiais como os de \citeonline{kagermann2013recommendations}, \citeonline{adolph2018roadmap} e \citeonline{bitkom2016implementation}, publicados em inglês, contendo normas e diretrizes para a implementação da I4.0. Esta iniciativa, atrelada ao entusiasmo acadêmico em torno do projeto I4.0, disseminou o conceito fora da área de língua alemã e popularizou o termo I4.0 no mundo todo como epônimo de um futuro projeto no contexto de indústrias de alta tecnologia.
 
 O impacto econômico dessa revolução industrial será enorme, pois a I4.0 promete uma eficiência operacional substancialmente maior, bem como o surgimento de modelos de negócios, serviços e produtos totalmente novos \cite{hermann2016design}.
 
-Em revoluções industriais passadas, os países pioneiros a se adaptarem às drásticas mudanças de produção foram os que mais se beneficiaram e se consolidaram como potências econômicas. Na quarta revolução industrial não será diferente. Embora a mudança completa para a I4.0 possa levar 20 anos para ser concretizada \cite{russmann2015industryfour}, nos próximos anos serão estabelecidos avanços importantes que definirão os pioneiros e detentores de tecnologias dessa nova revolução. Portanto, é de interesse de cada país liderar a concorrência global a fim de se consolidar como mercado líder e fornecedor de soluções para a Indústria 4.0.
+Em revoluções industriais passadas, os países pioneiros a se adaptarem às drásticas mudanças de produção foram os que mais se beneficiaram e se consolidaram como potências econômicas. Na quarta revolução industrial não será diferente. Embora a mudança completa para a I4.0 possa levar vários anos para ser concretizada \cite{russmann2015industryfour}, nos próximos anos serão estabelecidos avanços importantes que definirão os pioneiros e detentores de tecnologias dessa nova revolução. Portanto, é de interesse de cada país liderar a concorrência global a fim de se consolidar como mercado líder e fornecedor de soluções para a I4.0.
 
-\subsection{Modelo de Arquitetura de Referência para a Indústria 4.0}
+\subsection{Modelo de Arquitetura de Referência para a Indústria 4.0 (RAMI4.0)}
 \label{sub:rami4}
 
-O Modelo de Arquitetura de Referência para a Indústria 4.0, abreviado RAMI4.0, consiste em um sistema de coordenadas tridimensional que descreve todos os aspectos cruciais da Indústria 4.0. Dessa maneira, inter-relações complexas podem ser divididas em grupos menores e mais simples.
+O RAMI4.0 é uma representação tridimensional que descreve todos os aspectos cruciais da I4.0. Dessa maneira, inter-relações complexas podem ser divididas em grupos menores e mais simples.
 
-A \autoref{fig:rami4} mostrou a representação do RAMI4.0, especificando os itens contidos em cada eixo. A \autoref{tab:rami-eixos} fornece uma breve descrição de cada eixo do RAMI4.0.
+A \autoref{fig:rami4} mostra a representação do RAMI4.0 e a \autoref{tab:rami-eixos} fornece uma descrição detalhada de cada eixo.
 
-\begin{table}[htb]
+\begin{table}[t]
 	\centering
 	\footnotesize
 	\caption{Eixos do RAMI4.0.}
 	\label{tab:rami-eixos}
 	\begin{tabular}{p{3cm}p{12cm}}
 		\hline
-		\textbf{Eixo} & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                                                                                                            \\
+		\textbf{Eixo} & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                                                                                      \\
 
 		\hline
 		Camadas
-		              & As seis camadas no eixo vertical descrevem a decomposição de um ativo em suas funcionalidades, isto é, o mapeamento virtual de um ativo. A representação em camadas se origina da tecnologia da informação e comunicação (TIC), onde as funcionalidades de sistemas complexos são comumente divididas em camadas.                                                                                                                                             \\
+		              & As seis camadas deste eixo descrevem a decomposição de um ativo em suas funcionalidades, isto é, o seu mapeamento virtual. A representação em camadas se origina da tecnologia da informação e comunicação (TIC), onde as funcionalidades de sistemas complexos são comumente divididas em camadas.                                                                                                                                     \\
 
 		\hline
-		Ciclo de vida e  Cadeia de valor
-		              & O eixo horizontal esquerdo representa o ciclo de vida das instalações e produtos, com base na IEC 62890 para gerenciamento do ciclo de vida. Além disso, é feita uma distinção entre ``tipos'' e ``instâncias''. Um ``tipo'' é criado na fase de desenvolvimento e, uma vez concluída esta fase, esse tipo é liberado para a produção, servindo como modelo para uma ``instância'', que é quando ativo real está sendo fabricado e possui um número de série. \\
+		Ciclo de vida e Cadeia de valor
+		              & Este representa o ciclo de vida das instalações e produtos, com base na IEC 62890 para gerenciamento do ciclo de vida. Além disso, é feita uma distinção entre ``tipos'' e ``instâncias''. Um ``tipo'' é criado na fase de desenvolvimento e, uma vez concluída esta fase, esse tipo é liberado para a produção, servindo como modelo para uma ``instância'', que é quando ativo real está sendo fabricado e possui um número de série. \\
 
 		\hline
 		Níveis hierárquicos
-		              & No eixo horizontal direito estão indicados os níveis hierárquicos da IEC 62264, a série de padrões internacionais para sistemas de TI e controle corporativos. Os níveis hierárquicos representam as diferentes funcionalidades das fábricas. Para representar o ambiente I4.0, as funcionalidades foram expandidas em relação ao padrão internacional ISA-95, incluindo o ``Produto'', o ``Dispositivo de campo'' e o ``Mundo conectado''.                   \\
+		              & Neste eixo estão indicados os níveis hierárquicos da IEC 62264, a série de padrões internacionais para sistemas de TI e controle corporativos. Os níveis representam as diferentes funcionalidades das fábricas. Para representar o ambiente I4.0, as funcionalidades foram expandidas em relação ao padrão internacional ISA-95, incluindo o ``Produto'', o ``Dispositivo de campo'' e o ``Mundo conectado''.                          \\
 		\hline
 	\end{tabular}
 \end{table}
 
-A \autoref{fig:eixo-camadas} mostra o detalhamento de cada elemento do eixo Camadas do RAMI4.0 e sua associação ao modelo completo.
+A \autoref{fig:eixo-camadas} mostra o detalhamento de cada elemento do eixo Camadas do RAMI4.0 e sua associação ao modelo completo. O propósito de cada camada, começando da mais inferior (Ativo) para a mais elevada (Regra de Negócio), é descrito a seguir \cite{bitkom2016implementation}:
 
 \begin{figure}[htb]
 	\centering
@@ -134,23 +134,21 @@ A \autoref{fig:eixo-camadas} mostra o detalhamento de cada elemento do eixo Cama
 	\fonte{\citeonline{gayko2018ramistandardization} (adaptado).}
 \end{figure}
 
-São 6 as camadas do RAMI4.0. O propósito de cada camada, começando da mais inferior (Ativo) para a mais elevada (Regra de Negócio), é descrito a seguir \cite{bitkom2016implementation}:
-
 \begin{enumerate}
-	\item \textbf{Ativo}: Representa um elemento da realidade não necessariamente físico, como, por exemplo, uma máquina, um \textit{software}, uma documentação, uma ideia, etc. O trabalhador e seu conhecimento sendo aplicado representa também um ativo. Nesta camada física estão os fornecedores de dados, ou seja, os elementos que servirão como fonte de dados. Normalmente estes dados gerados pelo ativo são extraído e monitorados para fins de controle da planta de produção. Os ativos são integrados ao meio digital através da camada de Integração;
+	\item \textbf{Ativo}: Representa um elemento da realidade não necessariamente físico, como, por exemplo, uma máquina, um \textit{software}, uma documentação, uma ideia, etc. O trabalhador e seu conhecimento sendo aplicado representa também um ativo. Nesta camada estão os fornecedores de dados, ou seja, os elementos que servirão como fonte de dados. Normalmente estes dados gerados pelo ativo são extraído e monitorados para fins de controle da planta de produção;
 
 	\item \textbf{Integração}: Camada responsável pela extração e fornecimento de informações sobre os ativos para as camadas superiores. Representa a digitalização dos ativos. Cada evento no mundo real é refletido também em um evento no mundo virtual. Se a realidade mudar, esse evento então é relatado à camada de integração e os dados são atualizados no mundo virtual;
 
 	\item \textbf{Comunicação}: Padronização da interação por meio da adoção de um formato de troca de dados uniforme entre os dispositivos. Esta camada é a responsável pela interoperabilidade entre os ativos na I4.0. Aqui ocorre a integração vertical, ou seja, a interação entre ativos dentro da mesma empresa. A camada de Comunicação fornece dados sobre o ativo à camada de informação;
 
-	\item \textbf{Informação}: Controle dos dados do ativo. Esta camada agrega todos os dados sobre um determinado ativo e é responsável pelo gerenciamento desses dados. Na camada de informação são garantidos que os dados sejam tratados, pré-processados, armazenados e disponibilizados para os demais ativos na rede;
+	\item \textbf{Informação}: Controle dos dados do ativo. Esta camada agrega todos os dados sobre um determinado ativo e é responsável pelo gerenciamento desses dados. Na camada de informação são garantidos que os dados sejam tratados, pré-processados, armazenados e disponibilizados para os demais ativos do sistema;
 
-	\item \textbf{Funcional}: Contém a descrição formal de todas as funcionalidades do sistema. É também a camada responsável pela integração horizontal de ativos, ou seja, é a porta de interação entre Componentes I4.0 de diferentes empresas. Esta camada é a interface para o fornecimento de informações por meio de microsserviços para ativos fora da empresa;
+	\item \textbf{Funcional}: Contém a descrição formal de todas as funcionalidades do sistema. É também a camada responsável pela integração horizontal de ativos, ou seja, é a porta de interação entre C4.0 de diferentes empresas. Esta camada é a interface para o fornecimento de informações por meio de serviços para ativos fora da empresa;
 
 	\item \textbf{Regra de negócio}: Contém as regras de negócio que o sistema deve seguir como, por exemplo, as condições legais e regulatórias. Esta camada também é responsável por mapear os modelos de negócios e fornecer restrições operacionais da planta de produção.
 \end{enumerate}
 
-Já os elementos do eixo ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 são detalhados na \autoref{fig:eixo-ciclodevida}, juntamente com seu destaque dentro do modelo completo. Este eixo é derivado da norma IEC 62890 \cite{adolphs2015rami}. O seu objetivo é representar o estado de um Componente I4.0 ao longo de toda a sua cadeia de valor, ou seja, a representação de seu ciclo de vida.
+Já os elementos do eixo ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 são detalhados na \autoref{fig:eixo-ciclodevida}, juntamente com seu destaque dentro do modelo completo. Este eixo é derivado da norma IEC 62890 \cite{adolphs2015rami}. O seu objetivo é representar o estado de um C4.0 ao longo de toda a sua CS, ou seja, a representação de seu ciclo de vida.
 
 \begin{figure}[htb]
 	\centering
@@ -162,7 +160,7 @@ Já os elementos do eixo ``Ciclo de Vida e Cadeia de Valor'' do RAMI4.0 são det
 
 É feita a distinção fundamental entre ``tipo'' e ``instância'', cada um correspondendo a uma fase em que o ativo se encontra \cite{adolphs2015rami}.
 
-Um ``tipo'' é sempre criado com uma ideia inicial, ou seja, quando um ativo surge na fase de desenvolvimento. Isso abrange o comissionamento, desenvolvimento e testes até a produção inicial de amostras e protótipos \cite{adolph2018roadmap}.
+Um ``tipo'' é sempre criado com uma ideia inicial, ou seja, quando um ativo está na fase de desenvolvimento. Isso abrange o comissionamento, desenvolvimento e testes até a produção inicial de amostras e protótipos \cite{adolph2018roadmap}.
 
 Os ``tipos'' estão presentes desde a concepção/conceitualização até os primeiros protótipos/testes. O ``tipo'' de um ativo é definido por suas propriedades e funcionalidades distintas. Todos os itens que são criados ao longo do projeto de um ativo (e.g., desenhos em CAD, manuais, \textit{softwares}, etc) são incorporados ao ``tipo'' do ativo. Informações externas associadas ao ativo que são criadas ao longo de seu desenvolvimento como informações de \textit{marketing} também são incorporadas ao ``tipo''.
 
@@ -170,7 +168,7 @@ Com a conclusão de todas as etapas de testes e validação, o ``tipo'' é liber
 
 Com a fabricação do ativo, ``instâncias'' são geradas. Cada ativo fabricado representa uma ``instância'' de um determinado ``tipo'' e assim recebe um número de série exclusivo.
 
-As ``instâncias'' são criadas, produzidas ou fabricadas com base nas informações de um ``tipo'' de ativo. Informações específicas sobre produção, logística, qualidade e testes são associadas à ``instância'' do ativo. Nesta fase, os dados de uso são coletados e associados para então poderem ser armazenados na MDP de cada ativo e serem compartilhados com outros parceiros ao longo da cadeia de suprimentos.
+As ``instâncias'' são criadas, produzidas ou fabricadas com base nas informações de um ``tipo'' de ativo. Informações específicas sobre produção, logística, qualidade e testes são associadas à ``instância'' do ativo. Nesta fase, os dados de uso são coletados e associados para então poderem ser armazenados na MDP de cada ativo e serem compartilhados com outros parceiros na CS.
 
 As melhorias sobre um ativo feitas pelo fabricante refletem em um novo ``tipo'', que por sua vez pode ser usado para fabricar novas ``instâncias'', acompanhando, assim, o ciclo de vida deste ativo.
 
@@ -188,27 +186,25 @@ Este eixo representa as diferentes funcionalidades das fábricas e descreve a in
 
 Este eixo é baseado em uma reformulação da IEC 62264, que é a série de padrões internacionais para sistemas de TI e controle corporativos \cite{hankel2015rami}, e faz uma alusão à pirâmide da automação industrial da ISA-95.
 
-Os níveis hierárquicos representam as diferentes funcionalidades das fábricas. Para representar o ambiente I4.0, as funcionalidades foram expandidas além da IEC 62264, que já possui os níveis ``Dispositivo de controle'', ``Estação de trabalho'', ``Centros de trabalho'' e ``Empresa''. Foram adicionados o nível ``Produto'' para descrever funcionalidades de manufatura, o nível ``Dispositivo de campo'' com considerações sobre dispositivos de campo inteligentes, e o nível ``Mundo conectado'' para descrever o grupo de fábricas e a colaboração entre empresas, fornecedores de componentes, clientes, etc.
+Os níveis hierárquicos representam as diferentes funcionalidades das fábricas. Para representar o ambiente I4.0, as funcionalidades foram expandidas além da IEC 62264, que já possui os níveis ``Dispositivo de controle'', ``Estação de trabalho'', ``Centros de trabalho'' e ``Empresa''. Foram adicionados o nível ``Produto'' para descrever funcionalidades de manufatura, o nível ``Dispositivo de campo'' com considerações sobre dispositivos de campo inteligentes, e o nível ``Mundo conectado'' para descrever o grupo de fábricas e a colaboração entre empresas, fornecedores de componentes, consumidores, etc.
 
-Dentro dos três eixos, todos os aspectos cruciais da I4.0 podem ser mapeados, permitindo que os ativos sejam classificados devidamente de acordo com o modelo. Os conceitos altamente flexíveis da I4.0 podem, assim, ser descritos e implementados usando o RAMI4.0. O modelo de arquitetura de referência permite a migração passo a passo do presente estado da indústria para o mundo da Indústria 4.0.
-
-\subsection{Asset Administration Shell}
+\subsection{Asset Administration Shell (AAS)}
 
 Um ativo é qualquer coisa que precise ser conectada para agregar valor a um processo industrial \cite{bader2019aas}, ou seja, todos os itens que têm valor em um caso de uso específico. Na I4.0, isso pode ser um produto físico, uma peça de equipamento, um \textit{software} ou documentos como plantas, contratos, pedidos, etc.
 
-No paradigma da I4.0, cada ativo é encapsulado por uma camada (ou casca) de administração. Esta casca de administração do ativo técnico é denominada \textit{``Asset Administration Shell''} (AAS). O AAS é a representação da parte virtual/digital de um ativo no mundo I4.0 \cite{ye2019aas}.
+Na I4.0 cada ativo é encapsulado por uma camada de administração. Esta camada de administração do ativo técnico é denominada \textit{``Asset Administration Shell''} (AAS). O AAS é a representação da parte digital de um ativo no mundo I4.0 \cite{ye2019aas}.
 
-Fazendo uma associação ao RAMI4.0, o AAS engloba as camadas digitais, sendo elas: Regra de Negócio, Funcional, Informação e Comunicação; parte da camada Integração também é contemplada pelo AAS, já que essa é a conexão entre o ativo e o meio digital. Tal associação é representada pela \autoref{fig:aas-rami}.
+Fazendo uma associação ao eixo ``Camadas'' do RAMI4.0, o AAS engloba as camadas digitais, sendo elas: Regra de Negócio, Funcional, Informação e Comunicação; parte da camada Integração também é contemplada pelo AAS, já que essa é a conexão entre o ativo e o meio digital. Tal associação é representada pela \autoref{fig:aas-rami}.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.8\textwidth]{aas-rami.png}
-	\caption{Representação do AAS como a parte digital do Componente I4.0.}
+	\caption{Representação do AAS.}
 	\label{fig:aas-rami}
 	\fonte{\citeonline{gayko2018ramistandardization} (adaptado).}
 \end{figure}
 
-O AAS consiste em vários submodelos nos quais são descritas todas as informações e funcionalidades de um determinado ativo, incluindo suas características, propriedades, condições, parâmetros, dados de medições e capacidades \cite{bader2019aas}. A \autoref{fig:aas-submodelos} exemplifica um AAS como sendo uma ``casca'' que engloba o ativo, esta casca contém informações relevantes do ativo em forma de ``submodelos''.
+O AAS consiste em vários submodelos nos quais são descritas todas as informações e funcionalidades de um determinado ativo, incluindo suas características, propriedades, condições, parâmetros, dados de medições e capacidades \cite{bader2019aas}. A \autoref{fig:aas-submodelos} exemplifica um AAS contendo informações relevantes do ativo em forma de ``submodelos''.
 
 \begin{figure}[htb]
 	\centering
@@ -220,33 +216,33 @@ O AAS consiste em vários submodelos nos quais são descritas todas as informaç
 
 Os submodelos são unidades básicas de organização dentro de um AAS que agregam informações semelhantes. Eles são divididos em dois tipos: submodelos básicos e submodelos livres \cite{bader2019aasimplementation}.
 
-Os submodelos básicos são unidades de organização que se aplicam a muitos ou todos os ativos dentro do mundo I4.0. Já os submodelos livre são acertados entre os parceiros na cadeia de suprimentos e possuem um uso específico para um determinado ativo.
+Os submodelos básicos são unidades de organização que se aplicam a muitos ou todos os ativos dentro do mundo I4.0. Já os submodelos livres são acordados entre os parceiros na CS e possuem um uso específico para um determinado ativo.
 
-O AAS é um elo entre os ativos reais e seus correspondentes digitais no mundo conectado. Dentro da I4.0, os ativos possuem um AAS com capacidade de comunicação com outros dispositivos \cite{bader2019aas}. O conjunto Ativo-AAS, que é o objeto real encapsulado pelo \textit{Asset Administration Shell}, é denominado ``Componente I4.0''. A \autoref{fig:aas-conexao} ilustra a interação entre diferentes Componentes I4.0 em um ambiente de manufatura.
+O AAS é um elo entre os ativos reais e seus correspondentes digitais no mundo conectado. Dentro da I4.0, os ativos possuem um AAS com capacidade de comunicação com outros dispositivos \cite{bader2019aas}. O conjunto Ativo-AAS é denominado ``Componente I4.0'' (C4.0).%A \autoref{fig:aas-conexao} ilustra a interação entre diferentes C4.0 em um ambiente de manufatura.
 
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=1\textwidth]{aas-conexao.png}
-	\caption{Comunicação entre diferentes Componentes I4.0.}
-	\label{fig:aas-conexao}
-	\fonte{\citeonline{marcon2018asset} (adaptado).}
-\end{figure}
+%\begin{figure}[htb]
+%	\centering
+%	\includegraphics[width=1\textwidth]{aas-conexao.png}
+%	\caption{Exemplo de comunicação entre diferentes C4.0.}
+%	\label{fig:aas-conexao}
+%	\fonte{\citeonline{marcon2018asset} (adaptado).}
+%\end{figure}
 
-A integração dos ativos, representada pelos Componentes I4.0, em um nível funcional requer uma descrição padronizada das funções (ou capacidades) dos ativos em questão. A padronização de submodelos para descrever detalhadamente cada função pode ser usada para definir requisitos para a fabricação de produtos \cite{bedenbender2017aasexamples}. A \autoref{fig:submodelos} mostra um exemplo de detalhamento de funções de um ativo.
+A integração dos ativos, representada pelos C4.0, em um nível funcional requer uma descrição padronizada das funções (ou capacidades) dos ativos em questão. A padronização de submodelos para descrever detalhadamente cada função pode ser usada para definir requisitos para a fabricação de produtos \cite{bedenbender2017aasexamples}. A \autoref{fig:submodelos} mostra um exemplo de detalhamento de funções de um ativo.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=1\textwidth]{submodelos.png}
-	\caption{Detalhamento de funções no AAS por meio de submodelos.}
+	\caption{Exemplo de detalhamento de funções no AAS por meio de submodelos.}
 	\label{fig:submodelos}
 	\fonte{\citeonline{bedenbender2017aasexamples} (adaptado).}
 \end{figure}
 
 No ambiente de manufatura baseado na I4.0, o produto descreve os requisitos necessários para sua fabricação, e então esses requisitos são comparados com as descrições das funções dos ativos disponíveis para o fabricar. Portanto, a seleção de um ativo é otimizada, baseando-se nos requisitos do próprio produto (ativo requisitante) e nas descrições das funções dos ativos disponíveis para a manufatura.
 
-Desta forma, um Componente I4.0 representa todos os elementos necessários para a efetiva interoperabilidade entre ativos no mundo conectado, inclusive os seus próprios requisitos, suas regras de negócio, limitações técnicas e todas as demais características que se relacionem ao ativo e sua interação com o ambiente.
+Desta forma, um C4.0 representa todos os elementos necessários para a efetiva interoperabilidade entre ativos no mundo conectado, inclusive os seus próprios requisitos, suas regras de negócio, limitações técnicas e todas as demais características que se relacionem ao ativo e sua interação com o ambiente.
 
-\section{Logística \& Cadeia de Suprimentos}
+\section{Logística \& Cadeia de Suprimentos (CS)}
 \label{sec:logistica}
 
 A logística é o processo de planejamento, implantação e controle do fluxo de mercadorias, serviços e informações desde o ponto de origem até o ponto de consumo de forma eficiente e eficaz com o propósito de atender as exigências dos clientes \cite{cscmp2013supplychainglossary}. Essa definição sugere a logística como um processo, o que significa que inclui todas as atividades importantes para a disponibilização de bens e serviços aos consumidores quando e onde estes quiserem adquiri-los \cite{ballou2006cadeiasuprimentos}.
@@ -255,25 +251,25 @@ A logística é a essência do comércio \cite{ballou2006cadeiasuprimentos}, ela
 
 A logística moderna envolve primariamente o compartilhamento de dados. A logística da informação lida com o fluxo de informações entre humanos e/ou máquinas dentro ou entre organizações \cite{haftor2011information}, que se agrupam formando uma rede de criação de valor por meio de informações. A Logística da Informação é intrinsecamente relacionada a processos de gestão da informação e tecnologias de informação.
 
-A cadeia de suprimentos (CS), por outro lado, é um conceito mais amplo. A CS é onde a logística é exercida. São as partes necessárias para dar suporte ao pedido de um cliente, desde o produtor até o consumidor final. A gestão da cadeia de suprimentos tem como alvo a orquestração de todas as partes envolvidas por meio de uma logística integrada de forma a otimizar ao máximo o processo de fornecimento de um produto, serviço ou informação.
+A CS, por outro lado, é um conceito mais amplo. A CS é onde a logística é exercida. São as partes necessárias para dar suporte ao pedido de um cliente, desde o produtor até o consumidor final. A gestão da CS tem como alvo a orquestração de todas as partes envolvidas por meio de uma logística integrada de forma a otimizar ao máximo o processo de fornecimento de um produto, serviço ou informação.
 
-A ideia de uma CS simples envolve fornecedor, produtor e cliente \cite{hugos2018supplychain}, porém conceitos modernos estendem a noção de uma CS, passando a incluir diversos outros fornecedores de serviços em áreas como logística, finanças, \textit{marketing} e desenvolvimento, que, mediante coordenação e colaboração, criam oportunidades para melhoria dos custos ou serviços ao consumidor. A \autoref{fig:cadeia-de-suprimentos} exemplifica a inter-relação das partes em uma cadeia de suprimentos estendida.
+A ideia de uma CS simples envolve fornecedor, produtor e cliente \cite{hugos2018supplychain}, porém conceitos modernos estendem a noção de uma CS, passando a incluir diversos outros fornecedores de serviços em áreas como logística, finanças, \textit{marketing} e desenvolvimento, que, mediante coordenação e colaboração, criam oportunidades para melhoria dos custos ou serviços ao consumidor. A \autoref{fig:cadeia-de-suprimentos} exemplifica a inter-relação das partes em uma CS estendida.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{cadeia-de-suprimentos.png}
-	\caption{Exemplo de cadeia de suprimentos estendida.}
+	\caption{Exemplo de CS estendida.}
 	\label{fig:cadeia-de-suprimentos}
 	\fonte{\citeonline{hugos2018supplychain} (adaptado).}
 \end{figure}
 
-Além do eficiente fluxo de materiais e produtos dentro da CS, é imprescindível a manutenção de um canal para troca de informações entre as partes, pois sem uma comunicação adequada, gerentes podem acidentalmente tomar decisões supostamente racionais, porém que afetam negativamente outros líderes da cadeia, como o efeito chicote \cite{lee1997bullwhip}, que é a distorção da percepção da procura de um produto que vai se ampliando ao longo da cadeia de suprimentos. Erros de comunicação desse tipo podem acarretar problemas como o aumento do custo de transporte, o elevado tempo de aprovisionamento ao cliente e o desgaste no relacionamento com os fornecedores.
+Além do eficiente fluxo de materiais e produtos dentro da CS, é imprescindível a manutenção de um canal para troca de informações entre as partes, pois sem uma comunicação adequada, gerentes podem acidentalmente tomar decisões supostamente racionais, porém que afetam negativamente outros líderes da cadeia, como o efeito chicote \cite{lee1997bullwhip}, que é a distorção da percepção da procura de um produto que vai se ampliando ao longo da CS. Erros de comunicação desse tipo podem acarretar problemas como o aumento do custo de transporte, o elevado tempo de aprovisionamento ao cliente e o desgaste no relacionamento com os fornecedores.
 
-Ao longo da cadeia de suprimentos pode-se observar processos que agregam valor ao produto em desenvolvimento. As etapas de transformação do produto com adição de valor ao longo da CS também podem ser definidas como Cadeia de Valor.
+Ao longo da CS pode-se observar processos que agregam valor ao produto em desenvolvimento. As etapas de transformação do produto com adição de valor ao longo da CS também podem ser definidas como Cadeia de Valor (CV).
 
-Uma cadeia de valor é um conjunto de atividades que empresas de um setor específico desempenham a fim de entregar um produto ou serviço que tenha algum valor perceptível para o mercado \cite{porter1985competitiveadvantage}. A ideia da cadeia de valor é baseada na agregação de valor ao produto a cada processo de transformação ocorrido, processo esse que envolve a aquisição e consumo de recursos (mão de obra, materiais, equipamentos, instalações, administração, etc). As atividades em uma cadeia de valor são dividias em duas categorias: as atividades primárias e as atividades de apoio \cite{porter1985competitiveadvantage} (vide \autoref{fig:porter-cadeia-de-valor}).
+Uma CV é um conjunto de atividades que empresas de um setor específico desempenham a fim de entregar um produto ou serviço que tenha algum valor perceptível para o mercado \cite{porter1985competitiveadvantage}. A ideia da CV é baseada na agregação de valor ao produto a cada processo de transformação ocorrido, processo esse que envolve a aquisição e consumo de recursos (mão de obra, materiais, equipamentos, instalações, administração, etc). As atividades em uma CV são dividias em duas categorias: as atividades primárias e as atividades de apoio \cite{porter1985competitiveadvantage} (vide \autoref{fig:porter-cadeia-de-valor}).
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{porter-cadeia-de-valor.png}
 	\caption{Cadeia de valor de Porter.}
@@ -281,17 +277,17 @@ Uma cadeia de valor é um conjunto de atividades que empresas de um setor espec�
 	\fonte{\citeonline{porter1985competitiveadvantage} (adaptado).}
 \end{figure}
 
-As cadeias de valor estão focadas em fornecer o máximo valor ao cliente (valor perceptível) com o menor custo e, portanto, é um indicador para a competitividade da empresa. Com o crescente acirramento da competição entre as empresas, essas devem procurar novas formas de agregar mais valor perceptível aos seus produtos, sendo isto em forma de redução de preço, aumento de qualidade, suporte, ou qualquer outra nova funcionalidade.
+As CV estão focadas em fornecer o máximo valor ao cliente (valor perceptível) com o menor custo e, portanto, é um indicador para a competitividade da empresa. Com o crescente acirramento da competição entre as empresas, essas devem procurar novas formas de agregar mais valor perceptível aos seus produtos, sendo isto em forma de redução de preço, aumento de qualidade, suporte, ou qualquer outra nova funcionalidade.
 
 Outra forma de agregação de valor está no princípio de valor compartilhado, que envolve a geração de valor econômico de forma a criar também valor para a sociedade como um todo \cite{porter2011valorcompartilhado}, com o enfrentamento de suas necessidades e desafios. Esta necessidade de valor compartilhado parte da percepção generalizada de que empresas prosperam às custas da depreciação das comunidades que as cercam. Soluções que visem o aumento das condições de trabalho, a maior racionalidade e eficiência no tratamento dos recursos naturais necessários para sua atividade e outras formas de balancear o \textit{trade-off} entre eficiência econômica e progresso social são estratégias para se recuperar a legitimidade e a percepção de valor pela sociedade da atividade empresarial.
 
 \subsection{Logística 4.0}
 
-Com o entusiasmo acadêmico sobre o tema Indústria 4.0 surgido a partir de 2011, diversas novas linhas de pesquisa derivaram do conceito de I4.0. Uma dessas vertentes é relacionada aos novos desafios tecnológicos na logística e por vezes é denominada ``Logística 4.0''. Estes novos desafios tecnológicos são relacionados primariamente ao intenso uso das Tecnologias de Informação e Comunicação (TIC) e de Internet das Coisas Industrial (IIoT) \cite{barreto2017industry}.
+Com o entusiasmo acadêmico sobre o tema I4.0 surgido a partir de 2011, surgiram diversas linhas de pesquisa relacionadas. Uma dessas vertentes é relacionada aos novos desafios tecnológicos na logística e por vezes é denominada ``Logística 4.0''. Estes novos desafios tecnológicos são relacionados primariamente ao intenso uso das Tecnologias de Informação e Comunicação (TIC) e de Internet das Coisas Industrial (IIoT) \cite{barreto2017industry}.
 
-A inserção dessas novas tecnologias ao escopo de estudo da logística acarreta em novos desafios como a alta necessidade de transparência dos processos (visibilidade ao longo da cadeia de suprimentos) e o controle de integridade (produtos certos, no tempo, lugar, quantidade, condição e preço certos) \cite{barreto2017industry}.
+A inserção dessas novas tecnologias ao escopo de estudo da logística acarreta em novos desafios como a alta necessidade de transparência dos processos (visibilidade ao longo da CS) e o controle de integridade (produtos certos, no tempo, lugar, quantidade, condição e preço certos) \cite{barreto2017industry}.
 
-As cadeias de suprimentos atuais podem ser extremamente grandes e complexas (alta interdependência entre as partes) e, portanto, sem uma correta gestão, podem levar à tomada de decisões não ótimas por parte dos gestores humanos. Por esses aspectos, este setor pode ser um dos primeiros a se adaptar a esta nova forma de organização da Indústria 4.0 (ou da Logística 4.0), tornando os processos cada vez mais automatizados a fim de se atender os novos requisitos da sociedade moderna.
+As CS atuais podem ser extremamente grandes e complexas (alta interdependência entre as partes) e, portanto, sem uma correta gestão, podem levar à tomada de decisões não ótimas por parte dos gestores humanos. Por esses aspectos, este setor pode ser um dos primeiros a se adaptar a esta nova forma de organização da I4.0 (ou da Logística 4.0), tornando os processos cada vez mais automatizados a fim de se atender os novos requisitos da sociedade moderna.
 
 Dentro da CS, identificadores individuais podem ser usados a fim de se implementar a conectividade de objetos e informações requerida no contexto da I4.0. Neste sentido, a tecnologia de RFID (\textit{Radio-Frequency IDentification}) permite criar uma identificação única para um ativo. Esta tecnologia é composta de duas partes: a etiqueta RFID e a antena receptora. A etiqueta é um pequeno \textit{chip} que pode ser acoplado a um ativo e assim armazenar um código de identificação único, assim como outras informações relevantes, que podem ser transmitidas sem fio via radiofrequência para a antena. A utilização de identificadores individuais é comum para aplicação de conceitos da I4.0 \cite{alyahya2016rfidwarehousing, vlachos2014rfidimpact, fan2015inventory, bibi2017rfidfood}, pois permite a identificação de cada ativo na rede e possibilita a troca autônoma de informações.
 
@@ -302,7 +298,7 @@ A Logística 4.0, portanto, estabelece uma série de paradigmas que empresas atu
 
 O conceito de ciclo de vida do produto foi elaborado em meados da década de 1960 com o propósito de criar um modelo que fosse capaz de explicar o sucesso ou fracasso de um produto introduzido no mercado, sendo capaz também de identificar momentos certos para modificar estratégias de preço, fabricação e quando o produto deve ser descontinuado \cite{cao2012lifecycle}. O modelo inicialmente desenvolvido por \citeonline{levitt1965lifecycle} mostra o padrão de produtos na história passando por quatro estágios bem definidos: desenvolvimento de mercado, crescimento, maturidade e declínio, conforme observado na \autoref{fig:product-life-cycle}.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{product-life-cycle.png}
 	\caption{Estágios do ciclo de vida do produto.}
@@ -310,11 +306,11 @@ O conceito de ciclo de vida do produto foi elaborado em meados da década de 196
 	\fonte{\citeonline{levitt1965lifecycle} (adaptado).}
 \end{figure}
 
-Vista a tendência global de redução do ciclo de vida do produto devida a rápida taxa de introdução de novas tecnologias para satisfazer a demanda dos clientes, especialmente no mercado de produtos eletrônicos \cite{trappey2008lifecycle}, novas versões de modelos de ciclo de vida do produto vêm sendo elaboradas considerando outros aspectos de mercado e não somente sob a visão da área de \textit{Marketing}. Por vezes, estudos recentes envolvendo ciclo de vida são denominados ``engenharia do ciclo de vida do produto'' (E-CVP) \cite{cao2012lifecycle} e levam em consideração fatores não abordados nos modelos originais como, por exemplo, a fase de pesquisa e desenvolvimento, a retroalimentação de dados, assim como o descarte e reciclagem do produto.
+Vista a tendência global de redução do ciclo de vida do produto devida a rápida taxa de introdução de novas tecnologias para satisfazer a demanda dos clientes, especialmente no mercado de produtos eletrônicos \cite{trappey2008lifecycle}, novas versões de modelos de ciclo de vida do produto vêm sendo elaboradas considerando outros aspectos de mercado e não somente sob a visão da área de \textit{Marketing}. Alguns estudos \cite{cao2012lifecycle} envolvendo ciclo de vida levam em consideração fatores não abordados nos modelos originais como, por exemplo, a fase de pesquisa e desenvolvimento, a retroalimentação de dados, assim como o descarte e reciclagem do produto.
 
 A \autoref{fig:ciclo-de-vida-extensao} mostra um modelo de ciclo de vida do produto com elementos que incluem a fase de desenvolvimento e a renovação do produto. A renovação do produto e a decorrente extensão de sua vida é essencial, pois mantém o produto no mercado na forma de novas versões e, assim, amplia as receitas mediante ações estratégicas para agregação de valor. O modelo do ciclo de vida e os elementos presentes sempre irão variar conforme a natureza do produto e tipo de mercado consumidor onde o mesmo está inserido.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{ciclo-de-vida-extensao.png}
 	\caption{Modelo de ciclo de vida do produto com renovação do produto.}
@@ -328,42 +324,42 @@ A GCVP tem como finalidade auxiliar gestores na tomada de decisões de negócios
 
 Em nível mais alto, o objetivo do GCVP é aumentar as receitas do produto, reduzir custos relacionados a ele, maximizar o valor do portfólio e maximizar o valor dos produtos atuais e futuros para clientes e acionistas \cite{stark2015lifecycle}.
 
-Mais recentemente, novas propostas de modificações de processos industriais por meio da GCVP aparecem como formas de se agregar mais valor ao produto considerando os ciclos de vida cada vez mais curtos. A Indústria 4.0 e a Logística 4.0 surgem com novas formas de abordagem da gestão do ciclo de vida do produto, considerando as mais novas necessidades do produto e de seus respectivos consumidores.
+Mais recentemente, novas propostas de modificações de processos industriais por meio da GCVP aparecem como formas de se agregar mais valor ao produto considerando os ciclos de vida cada vez mais curtos. A Logística 4.0 surge com nova forma de abordagem da gestão do ciclo de vida do produto, considerando as mais novas necessidades do produto e de seus respectivos consumidores.
 
-\section{Memória digital do produto}
+\section{Memória digital do produto (MDP)}
 \label{sec:mdp}
 
-O termo ``Memória Digital do Produto'' (MDP) surgiu pela primeira vez em 2007 por meio de um boletim de notícias de tecnologia de uma empresa alemã fabricante de conectores elétricos e eletrônicos \cite{wahlster2007digitalmemory}. À época, o termo foi tratado com analogia a um diário, que mantinha todas as informações do produto ao longo de seu ciclo de vida.
+O termo MDP surgiu pela primeira vez em 2007 por meio de um boletim de notícias de tecnologia de uma empresa alemã fabricante de conectores elétricos e eletrônicos \cite{wahlster2007digitalmemory}. À época, o termo foi tratado com analogia a um diário, que mantinha todas as informações do produto ao longo de seu ciclo de vida.
 
-Em outras referências, conceito se relaciona a sistemas que permitem a coleta de dados em todas as fases do ciclo de vida do produto para a distribuição e/ou análise \cite{brandherm2011productmemory,blume2014mdp}. Os dados de interesse do produto são heterogêneos e podem ser gerados e/ou consumidos por diferentes elos ao longo de sua cadeia de suprimentos. A \autoref{fig:mdp} ilustra este comportamento.
+Em outras referências, conceito se relaciona a sistemas que permitem a coleta de dados em todas as fases do ciclo de vida do produto para a distribuição e/ou análise \cite{brandherm2011productmemory,blume2014mdp}. Os dados de interesse do produto são heterogêneos e podem ser gerados e/ou consumidos por diferentes elos ao longo de sua CS. A \autoref{fig:mdp} ilustra este comportamento.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.8\textwidth]{mdp}
-	\caption{Coleta de dados do produto ao longo da cadeia de valores.}
+	\caption{Coleta de dados do produto ao longo da CS.}
 	\label{fig:mdp}
 \end{figure}
 
-Sua relevância está no fato da tendência de produtos novos apresentarem ciclos de vida cada vez mais curtos, e também devido ao fato das cadeias de suprimentos serem compostas por redes cada vez mais complexas, com múltiplos fornecedores e clientes. Com isso, a MDP manteria registros digitais do ciclo de vida dos produtos, faria o monitoramento constante do seu estado atual e realizaria o rastreamento de sua posição. Segundo \citeonline{wahlster2007digitalmemory}, o acesso a essas informações pelas partes interessadas seria de vital importância na competitividade de empresas produtoras e de comércio, além de abrir novas proteções em relação à pirataria.
+Sua relevância está no fato da tendência de produtos novos apresentarem ciclos de vida cada vez mais curtos, e também devido ao fato das CS serem compostas por redes cada vez mais complexas, com múltiplos fornecedores e clientes. Com isso, a MDP manteria registros digitais dos produtos, faria o monitoramento constante do seu estado atual e realizaria o rastreamento de sua posição. Segundo \citeonline{wahlster2007digitalmemory}, o acesso a essas informações pelas partes interessadas seria de vital importância na competitividade de empresas produtoras e de comércio, além de abrir novas proteções em relação à pirataria.
 
-O conceito de MDP pode ser introduzido nos produtos no cenário de Indústria 4.0 e por meio dela extrair e armazenar informações relevantes de eventos ocorridos ao longo do ciclo de vida do produto a fim de fornecer serviços a todo o ambiente com o qual o produto se relaciona \cite{brandherm2011productmemory}. A MDP fornece também uma forma de rastreabilidade, uma vez que pode armazenar informações geoespaciais do ativo ao longo do tempo.
+O conceito de MDP pode ser introduzido nos produtos no cenário de I4.0 e por meio dela extrair e armazenar informações relevantes de eventos ocorridos ao longo do ciclo de vida do produto a fim de fornecer serviços a todo o ambiente com o qual o produto se relaciona \cite{brandherm2011productmemory}. A MDP fornece também uma forma de rastreabilidade, uma vez que pode armazenar informações geoespaciais do ativo ao longo do tempo.
 
-Implementações de uma memória com informações sobre produto ao longo de sua cadeia de suprimentos é importante, pois torna possível acessar e utilizar informações do mundo real providenciada por diferentes fontes para o potencial benefício das partes interessadas naquele produto \cite{brandherm2011productmemory}, como, por exemplo, fabricantes, transportadores, varejistas e consumidores. E também no pós-venda, onde a MDP continua a ser disponibilizada e ativa, dando a possibilidade ao consumidor de ainda manter contato com cada elo da cadeia de suprimentos e se beneficiar de serviços individuais que se acumulam na memória \cite{brandherm2011productmemory}.
+Implementações de uma memória com informações sobre produto ao longo de sua CS é importante, pois torna possível acessar e utilizar informações do mundo real providenciada por diferentes fontes para o potencial benefício das partes interessadas naquele produto \cite{brandherm2011productmemory}, como, por exemplo, fabricantes, transportadores, varejistas e consumidores. E também no pós-venda, onde a MDP continua a ser disponibilizada e ativa, dando a possibilidade ao consumidor de ainda manter contato com cada elo da CS e se beneficiar de serviços individuais que se acumulam na memória \cite{brandherm2011productmemory}.
 
-\section{Arquitetura orientada a serviços}
+\section{Arquitetura orientada a serviços (SOA)}
 \label{sec:soa}
 
-Arquitetura Orientada a Serviços (\textit{Service Oriented Architecture} - SOA) é um estilo de projeto de \textit{software} em que serviços são disponibilizados a outros sistemas por meio de um protocolo de comunicação comum em uma rede \cite{bell2008soa}. Um serviço é uma unidade de funcionalidade que pode ser fornecida/acessada remotamente. A SOA se destina a ser independente de fornecedores, produtos e tecnologias.
+Arquitetura Orientada a Serviços (\textit{Service Oriented Architecture} - SOA) é uma forma de projeto de \textit{software} em que serviços são disponibilizados a outros sistemas por meio de um protocolo de comunicação comum em uma rede de computadores \cite{bell2008soa}. Um serviço é uma unidade de funcionalidade que pode ser fornecida/acessada remotamente. A SOA se destina a ser independente de fornecedores, produtos e tecnologias.
 
 Para quem consome um serviço, a abordagem é como uma caixa preta, o que significa que o consumidor não sabe ou não precisa estar ciente do funcionamento interno deste serviço, sendo relevante apenas as interfaces de entrada e saída, definidas no contrato. Os serviços representam uma lógica de fornecimento de resultados. É uma abstração de problemas, ou seja, toda a complexidade interna inerente aos serviços pode ser abstraída pelos consumidores dos serviços.
 
-Dentro do mundo da Indústria 4.0 e de sistemas produtivos, a SOA é uma abordagem que traz novas perspectivas uma vez que se estabelece um conjunto de princípios para uma arquitetura de sistema autônomo e interoperável \cite{candido2009soa}, que tem por objetivo aumentar a eficiência, agilidade e produtividade de um sistema por meio da adoção generalizada do conceito de serviços \cite{souit2013soa}.
+SOA é uma abordagem que traz novas perspectivas uma vez que se estabelece um conjunto de princípios para a construção de um sistema autônomo e interoperável \cite{candido2009soa}. SOA tem por objetivo aumentar a eficiência, agilidade e produtividade de um sistema por meio da adoção generalizada do conceito de serviços \cite{souit2013soa}. Dentro do mundo da I4.0 e de sistemas produtivos estes princípios também podem ser aplicados.
 
 Os serviços dentro do ambiente de manufatura encapsulam as funcionalidades necessárias, ocultando todas as heterogeneidades das partes do sistema, permitindo, desta forma, características de flexibilidade, confiabilidade e fácil implementação de	soluções \cite{groba2008soa}.
 
 A SOA dentro do meio industrial permite que um sistema atue como \textit{middleware}, ou seja, uma camada ou componente de \textit{software} que integra os diferentes aplicativos em um sistema. A \autoref{fig:middleware} ilustra como se dá a interconexão entre os elementos do sistema com e sem um \textit{middleware}.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.9\textwidth]{middleware.png}
 	\caption{Interconexão entre os elementos do sistema (a) sem um \textit{middleware} e (b) com um \textit{middleware}.}
@@ -375,16 +371,16 @@ SOA está relacionada à ideia de uma Interface de Programação de Aplicação 
 
 Para se disponibilizar um serviço por meio de uma API, o conceito de \textit{Web Services} (WS) é vastamente utilizado \cite{souit2013soa}, pois assim é possível fornecer serviços utilizando a Internet (protocolos TCP/IP) como meio de tráfego de informações.
 
-\subsection{Web Services}
+\subsection{Web Services (WS)}
 \label{sub:web-services}
 
-Um \textit{Web Service} (WS) é uma interface que descreve uma série de operações acessíveis por meio de uma linguagem de descrição de serviços padronizada \cite{gottschalk2002webservices}. Um WS executa uma tarefa específica ou um conjunto de tarefas e retorna ao usuário o resultado da operação. Cada aplicação pode ter a sua própria linguagem, que é traduzida para uma linguagem comum, como o XML (\textit{Extensible Markup Language}), JSON (\textit{JavaScript Object Notation}) e outros.
+Um WS é uma interface que descreve uma série de operações acessíveis por meio de uma linguagem de descrição de serviços padronizada \cite{gottschalk2002webservices}. Um WS executa uma tarefa específica ou um conjunto de tarefas e retorna ao usuário o resultado da operação. Cada aplicação pode ter a sua própria linguagem, que é traduzida para uma linguagem comum, como o XML (\textit{Extensible Markup Language}), JSON (\textit{JavaScript Object Notation}) e outros.
 
 Por meio de WSs, as aplicações podem ser descritas, publicadas, localizadas e invocadas em uma rede de comunicação tipo WWW (\textit{World Wide Web}) \cite{souit2013soa}.
 
 A arquitetura de um WS é constituída por três atores básicos: o provedor de serviços, o repositório de serviços e o solicitante de serviços; e por três operações básicas: a publicação, a procura e a interação \cite{gottschalk2002webservices}. A \autoref{fig:webservice-componentes} ilustra os atores e a interação entre eles por meio das operações.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.8\textwidth]{webservice-componentes}
 	\caption{Componentes de um WS e operações.}
@@ -402,7 +398,7 @@ Detalhadamente, os atores em um WS são:
 	\item \textbf{Solicitante de serviços}: Entidade que requer um determinado serviço e solicita a sua execução. O solicitante de serviço pode ser uma pessoa acessando um navegador ou uma outra aplicação realizando solicitações por meio de APIs.
 \end{itemize}
 
-Já as operações básicas em WS em detalhe são:
+Já as operações básicas em WS são:
 
 \begin{itemize}
 	\item \textbf{Publicação}: Publicação da descrição do serviço pelo provedor em um repositório para que o serviço se torne acessível ao público e os solicitantes possam localizá-lo;
@@ -414,7 +410,7 @@ Já as operações básicas em WS em detalhe são:
 
 As etapas de interação entre as entidades são representadas por meio do diagrama da \autoref{fig:uml-webservice}.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{uml-webservice}
 	\caption{Diagrama com os atores e interações em um WS.}
@@ -422,32 +418,32 @@ As etapas de interação entre as entidades são representadas por meio do diagr
 	\fonte{\citeonline{booth2004webservice} (adaptado).}
 \end{figure}
 
-Neste diagrama a Semântica e a Descrição do Web Service (\textit{Web Service Description} -- WSD) representam os documentos com os quais ambas as partes devem concordar para que haja o efetivo fornecimento e consumo do serviço.
+Neste diagrama, a semântica e a descrição do WS (\textit{Web Service Description} -- WSD) representam os documentos com os quais ambas as partes devem concordar para que haja o efetivo fornecimento e consumo do serviço.
 
 O WSD define os formatos de mensagem, tipos de dados, protocolos de transporte e formatos de troca de dados que devem ser usados entre o solicitante e o provedor \cite{booth2004webservice}. O WSD representa um acordo que rege a mecânica de interação com esse serviço.
 
-Já a Semântica de um WS é o documento que compartilha o comportamento esperado de resposta deste serviço, pode ser explícito ou implícito, oral ou escrito, processável por máquina ou orientado a humanos, e pode ser um acordo legal ou um acordo informal \cite{booth2004webservice}.
+Já a semântica de um WS é o documento que determina o comportamento esperado de resposta deste serviço, pode ser explícito ou implícito, oral ou escrito, processável por máquina ou orientado a humanos, e pode ser um acordo legal ou um acordo informal \cite{booth2004webservice}.
 
-Os WSs se tornaram bastante atrativos, pois este modelo pode ser aplicado com as tecnologias HTTP e XML, que são disponíveis na maioria dos navegadores convencionais. A disponibilização de serviços interativos na \textit{Internet} se tornou muito popular e com isso surgem novos modelos de negócios como o SaaS (\textit{Software as a Service}), PaaS (\textit{Platform as a Service}), IaaS (\textit{Infrastructure as a Service}) e até mesmo MaaS (\textit{Manufacturing as a Service}) \cite{annunziata2019maas, nichols2020maas, siepen2019maas}.
+Os WSs se tornaram bastante atrativos, pois podem ser aplicado com as tecnologias HTTP e XML, que são disponíveis na maioria dos navegadores convencionais. A disponibilização de serviços interativos na \textit{Internet} se tornou muito popular e com isso surgem novos modelos de negócios como o SaaS (\textit{Software as a Service}), PaaS (\textit{Platform as a Service}), IaaS (\textit{Infrastructure as a Service}) e até mesmo MaaS (\textit{Manufacturing as a Service}) \cite{annunziata2019maas, nichols2020maas, siepen2019maas}.
 
-Dentro do mundo da Indústria 4.0 não é diferente. O \autoref{cha:arquitetura} traz uma proposta de como os ativos podem publicar suas funcionalidades em repositórios e executarem determinadas tarefas mediante solicitação por parte do consumidor
+Dentro da I4.0 não é diferente. O \autoref{cha:arquitetura} descreve como os ativos podem publicar suas funcionalidades em repositórios e executarem determinadas tarefas mediante solicitação por parte do consumidor
 
-\subsection{Transferência Representacional de Estado}
+\subsection{Transferência Representacional de Estado (REST)}
 
-A Transferência Representacional de Estado (\textit{Representational State Transfer} - REST) é uma arquitetura de \textit{software} que define padrões para acesso e disponibilização de \textit{Web Services} (WSs). Os WSs que seguem o padrão REST são denominados \textit{RESTful Services}. Este estilo de arquitetura de sistemas distribuídos foi apresentado pela primeira por \citeonline{fielding2000rest} .
+A Transferência Representacional de Estado (\textit{Representational State Transfer} - REST) é uma arquitetura de \textit{software} que define padrões para acesso e disponibilização de WSs. Os WSs que seguem o padrão REST são denominados \textit{RESTful Services}. Esta arquitetura de \textit{software} foi apresentado pela primeira por \citeonline{fielding2000rest}.
 
-A arquitetura REST possibilita a interoperabilidade entre sistemas na \textit{Internet}, pois permite que os sistemas solicitantes acessem e manipulem representações textuais de recursos usando um conjunto uniforme e predefinido de operações sem estado \cite{booth2004webservice}.
+O REST possibilita a interoperabilidade entre sistemas na \textit{Internet}, pois permite que os sistemas solicitantes acessem e manipulem representações textuais de recursos usando um conjunto uniforme e predefinido de operações que não armazenam estado \cite{booth2004webservice}.
 
-O padrão REST, mais moderno, veio gradualmente substituindo o padrão SOAP (\textit{Simple Object Access Protocol}). Hoje, REST é comumente utilizado para o compartilhamento de informações em novos \textit{web services}, sendo o padrão SOAP restante em sistemas legado \cite{serrano2014soaplegacy}. Apesar de ambos os padrões serem baseados no HTTP e HTTPS, o padrão REST geralmente contém um \textit{payload} de mensagem mais leve por trafegar dados no formato JSON (\textit{JavaScript Object Notation}), ao contrário do padrão SOAP que utiliza o formato XML (\textit{Extensible Markup Language}).
+O REST veio gradualmente substituindo o padrão SOAP (\textit{Simple Object Access Protocol}). Hoje, REST é comumente utilizado para o compartilhamento de informações em novos WSs, sendo o padrão SOAP restante em sistemas legado \cite{serrano2014soaplegacy}. Apesar de ambos os padrões serem baseados no HTTP e HTTPS, o REST geralmente contém um \textit{payload} de mensagem mais leve por trafegar dados no formato JSON (\textit{JavaScript Object Notation}), ao contrário do padrão SOAP que utiliza o formato XML (\textit{Extensible Markup Language}).
 
-A arquitetura REST estabelece as orientações e boas práticas de uma interface que devem ser satisfeitas  para que possa ser referida como um serviço \textit{RESTful}. Esses princípios são \cite{fielding2000rest}:
+A arquitetura REST estabelece as orientações e boas práticas de uma interface que devem ser satisfeitas para que possa ser referida como um serviço \textit{RESTful}. Esses princípios são \cite{fielding2000rest}:
 
 \begin{enumerate}
 	\item \textbf{Cliente-Servidor}:  segregação das interfaces dos usuário das interfaces do banco de dados. Desta forma, padroniza-se a interface para a interação com um banco de dados, trazendo mais portabilidade e flexibilidade aos sistemas e melhorando a sua escalabilidade;
 
 	\item \textbf{Sem estado}: cada solicitação do cliente ao servidor deve conter todas as informações necessárias para o servidor processar a solicitação. Desta forma, a solicitação não pode depender de qualquer tipo de contexto a ser armazenado no servidor, o estado da sessão é mantido inteiramente no cliente;
 
-	\item \textbf{Cache}:  a resposta para as solicitações podem ser armazenadas em uma memória \textit{cache}. Quando a resposta puder ser armazenada em \textit{cache}, o cliente poderá reutilizar a resposta já recebida anteriormente e evitar de se realizar uma nova requisição;
+	\item \textbf{Cache}: respostas para as solicitações podem ser armazenadas em memória (\textit{cache}). Quando a resposta puder ser armazenada em \textit{cache}, o cliente poderá reutilizar a resposta já recebida anteriormente e evitar de se realizar uma nova requisição;
 
 	\item \textbf{Interface uniforme}: As interfaces são padronizada entre os sistemas que se comunicam por meio de um serviço REST. São definidas para os serviços REST quatro restrições de interface: identificação de recursos, manipulação de recursos por meio de representações; mensagens auto descritivas e hipermídia como forma de interação com a aplicação;
 
@@ -458,9 +454,9 @@ A arquitetura REST estabelece as orientações e boas práticas de uma interface
 
 O principal item de manipulação relacionado a um serviço REST é o recurso. Um recurso é qualquer informação a ser manipulada: documento, imagem, uma coleção de objetos, etc. Os serviços REST utilizam um identificador único de um recurso como forma de o referenciar em consultas. Exemplo de recursos incluem um usuário, uma foto, um pedido, etc. Já as coleções são conjuntos de recursos de uma mesma categoria, como por exemplo uma  lista de usuários cadastrados, a lista de comentários em uma publicação, etc.
 
-Cada método do protocolo HTTP recebe um tipo de operação padrão do REST. A \autoref{tab:methods-rest} mostra as possíveis operações e seus métodos HTTP correspondentes, quando este protocolo é utilizado.
+Cada método do protocolo HTTP recebe um tipo de operação. A \autoref{tab:methods-rest} mostra as possíveis operações e seus métodos HTTP correspondentes.
 
-\begin{table}[htb]
+\begin{table}[t]
 	\centering
 	\caption{Mapeamento dos métodos HTTP em um serviço \textit{RESTful}.}
 	\label{tab:methods-rest}
@@ -468,42 +464,42 @@ Cada método do protocolo HTTP recebe um tipo de operação padrão do REST. A \
 		\hline
 		\textbf{Método} &
 		\textbf{Escopo} &
-		\textbf{Semântica}                                   \\[5mm]
+		\textbf{Semântica}                                    \\[5mm]
 
 		\hline
 		GET             &
 		Coleção         &
-		Retorna todos os recursos em uma coleção.            \\[5mm]
+		Retorna todos os recursos em uma coleção de recursos. \\[5mm]
 
 		\hline
 		GET             &
 		Recurso         &
-		Retorna um único recurso.                            \\[5mm]
+		Retorna um único recurso.                             \\[5mm]
 
 		\hline
 		POST            &
 		Coleção         &
-		Cria um novo recurso em uma coleção.                 \\[5mm]
+		Cria um novo recurso em uma coleção.                  \\[5mm]
 
 		\hline
 		PUT             &
 		Recurso         &
-		Atualiza um recurso completamente.                   \\[5mm]
+		Atualiza um recurso completamente.                    \\[5mm]
 
 		\hline
 		PATCH           &
 		Recurso         &
-		Atualiza um recurso parcialmente.                    \\[5mm]
+		Atualiza um recurso parcialmente.                     \\[5mm]
 
 		\hline
 		DELETE          &
 		Recurso         &
-		Exclui um recurso da base de dados.                  \\[5mm]
+		Exclui um recurso da base de dados.                   \\[5mm]
 
 		\hline
 		OPTIONS         &
 		Recurso         &
-		Retorna os métodos HTTP disponíveis e outras opções. \\[5mm]
+		Retorna os métodos HTTP disponíveis e outras opções.  \\[5mm]
 
 		\hline
 	\end{tabular}
@@ -523,19 +519,19 @@ O contrato é definido pelos provedores do serviço e destinado aos consumidores
 
 Sistema é um conjunto de elementos interdependentes de modo a formar um todo organizado. Também pode ser entendido como um conjunto de órgãos funcionais, componentes, entidades, partes ou elementos e as relações entre eles, com um objetivo geral a ser atingido \cite{mulbert2005sistemas}.
 
-No contexto da Logística 4.0, um sistema pode ser definido como o conjunto de diferentes cadeias de suprimentos ligadas por meio de relacionamentos interorganizacionais, que fazem acontecer os fluxos envolvidos (de dinheiro, materiais, bens e informações) \cite{oliveira2016supplychain}.
+No contexto da Logística 4.0, um sistema pode ser definido como o conjunto de diferentes CS ligadas por meio de relacionamentos interorganizacionais, que fazem acontecer os fluxos envolvidos (de dinheiro, materiais, bens e informações) \cite{oliveira2016supplychain}.
 
-As técnicas de modelagem e análise dos sistemas na cadeia de suprimentos são meios para melhorar a eficiência da cadeia como um todo. A utilização destas técnica auxiliam no entendimento sobre o comportamento do sistema e dos relacionamentos entre seus componentes. Auxiliam também na reprodução e análise de diferentes cenários e soluções, na previsibilidade de possíveis perturbações de mercado e na melhoria nos processos de distribuição.
+As técnicas de modelagem e análise dos sistemas na CS são meios para melhorar a eficiência da cadeia como um todo. A utilização destas técnica auxiliam no entendimento sobre o comportamento do sistema e dos relacionamentos entre seus componentes. Auxiliam também na reprodução e análise de diferentes cenários e soluções, na previsibilidade de possíveis perturbações de mercado e na melhoria nos processos de distribuição.
 
-Com a intensificação da globalização é cada vez mais comum a criação de cadeias de suprimentos complexas, envolvendo várias organizações dispersas geograficamente. Por isso, as ferramentas de suporte à tomada de decisões podem auxiliar no sentido de fornecer soluções mais adequada à dinâmica de diversas CSs. A modelagem é uma das formas de auxílio à tomada de decisões e pode ser uma ferramenta útil para se entender as interações e melhorar o desempenho da CS \cite{oliveira2016supplychain}.
+Com a intensificação da globalização é cada vez mais comum a criação de CS complexas, envolvendo várias organizações dispersas geograficamente. Por isso, as ferramentas de suporte à tomada de decisões podem auxiliar no sentido de fornecer soluções mais adequada à dinâmica de diversas CSs. A modelagem e análise é uma das formas de auxílio à tomada de decisões e pode ser uma ferramenta útil para se entender as interações e melhorar o desempenho da CS \cite{oliveira2016supplychain}.
 
-Um desafio para o desenvolvimento de bons modelos nessa área é a adoção de metodologias claras que possam facilitar e agilizar o processo de se realizar a modelagem e a análise de aspectos da cadeia de suprimentos. Uma metodologia apresenta apenas um direcionamento sobre os procedimentos a serem tomados a fim de se atingir um objetivo, porém cada problema a ser analisado requer especificações diferentes, o que demanda adaptações dos procedimentos originais.
+Um desafio para o desenvolvimento de bons modelos nessa área é a adoção de metodologias claras que possam facilitar e agilizar o processo de se realizar a modelagem e a análise de aspectos da CS. Uma metodologia apresenta apenas um direcionamento sobre os procedimentos a serem tomados a fim de se atingir um objetivo, porém cada problema a ser analisado requer especificações diferentes, o que demanda adaptações dos procedimentos originais.
 
 \citeonline{miyagi1996controle} define os sistemas feitos pelo homem (\textit{man-made systems}) como sistemas de manufatura, transporte, comunicação, redes de computadores, etc. Estes sistemas seriam caracterizados por uma dinâmica decorrente da ocorrência de eventos e, portanto, são classificados como Sistemas a Eventos Discretos (SED). Um SED é uma classificação de sistemas de acordo com seu comportamento, determinado pela ocorrência de eventos que alteram de forma discreta e instantânea o estado do sistema.
 
-Para a modelagem de SEDs, a aplicação de ferramentas como a Rede de Petri e suas variações como \textit{Production Flow Schema} (PFS) são formas de auxílio no desenvolvimento de sistemas de controle e automação de eventos discretos.
+Para a modelagem de SEDs, a aplicação de ferramentas como a Rede de Petri e suas variações como \textit{Production Flow Schema} (PFS) são formas de auxílio no desenvolvimento de sistemas de controle e automação.
 
-A utilização da técnica de PFS no contexto da I4.0 pode auxiliar no mapeamento das operações e interações entre os elementos do sistema, uma vez que a dinâmica de interação pode ser classificada com um SED. Neste trabalho o PFS é utilizado a fim de se indicar as atividades relativas à cadeia de valor de um produto e as mapear para dentro das camadas do RAMI4.0.
+A utilização da técnica de PFS no contexto da I4.0 pode auxiliar no mapeamento das operações e interações entre os elementos do sistema, uma vez que a dinâmica de interação pode ser classificada com um SED. Neste trabalho o PFS é utilizado a fim de se indicar as atividades relativas à CS de um produto e as mapear para as camadas do RAMI4.0.
 
 \subsection{Production Flow Schema}
 
@@ -555,7 +551,7 @@ Em um PFS deve haver a representação dos eventos discretos. Portanto, qualquer
 
 A \autoref{fig:pfs-elementos} descreve os elementos do PFS e sua representação gráfica.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.9\textwidth]{pfs-elementos}
 	\caption{Elementos do PFS.}
@@ -567,9 +563,9 @@ A atividade corresponde à realização de certas unidades ou conjuntos de opera
 
 Os arcos conectando a parte externa das atividades (horizontalmente) indicam um fluxo principal (primário) (\autoref{fig:pfs-fluxos}\textcolor{blue}{a}); já os arcos conectando a parte interna da atividade (verticalmente) indicam um fluxo secundário (\autoref{fig:pfs-fluxos}\textcolor{blue}{b}) \cite{miyagi1996controle}.
 
-Um terceiro tipo de fluxo é usado para representar a integração entre interfaces das atividades e é indicado por meio de um arco conectando diretamente duas atividades (\autoref{fig:pfs-fluxos}\textcolor{blue}{c}). O arco indicador de interação de fluxo é usado para modelar interações entre diferentes níveis, como operações de solicitação e resposta \cite{pisching2018pfs}.
+Um terceiro tipo de fluxo é usado para representar a interface direta entre atividades e é indicado por meio de um arco conectando diretamente duas atividades (\autoref{fig:pfs-fluxos}\textcolor{blue}{c}). O arco indicador de interação de fluxo é usado para modelar interações entre diferentes níveis, como operações de solicitação e resposta \cite{pisching2018pfs}.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=1\textwidth]{pfs-fluxos}
 	\caption{Tipos de fluxo no PFS.}
@@ -577,6 +573,6 @@ Um terceiro tipo de fluxo é usado para representar a integração entre interfa
 	\fonte{\citeonline{pisching2018pfs} (adaptado).}
 \end{figure}
 
-Os fluxos de processo do sistema em PFS são modelados por meio de uma abordagem \textit{top-down}, assim os resultados podem ser refinados sucessivamente, detalhando, a cada iteração, a atividade representada. A modelagem do sistema em PFS, portanto, parte de um alto nível de abstração, seguido de sucessivos refinamentos, detalhando o modelo a cada nível.
+Os fluxos de processo do sistema em PFS são modelados por meio de uma abordagem \textit{top-down}, assim os resultados podem ser refinados sucessivamente, detalhando, a cada iteração, a atividade representada. A modelagem do sistema em PFS, portanto, parte de um alto nível de abstração, seguido de sucessivos detalhamentos do modelo.
 
-Desta forma, o PFS representa uma linguagem de alto nível independente de tecnologias e fabricantes para modelar os processos do sistema. A relevância de se adotar uma linguagem natural, como o PFS, para a representação de sistemas está na padronização da comunicação com especialistas de diferentes áreas, como arquitetos, engenheiros e desenhistas \cite{pisching2018pfs}. Assim, há uma efetiva comunicação sobre a interação entre as partes de um sistema e sobre os fluxo de elementos e operações em diferentes níveis do sistema em análise, como, por exemplo, produtos, ordens de serviço, máquinas, informações de sensores, etc.
+Desta forma, o PFS é uma linguagem de alto nível independente de tecnologias e fabricantes para modelar os processos do sistema. A relevância de se adotar uma linguagem como o PFS para a representação de sistemas está na padronização da comunicação com especialistas de diferentes áreas, como arquitetos, engenheiros e desenhistas \cite{pisching2018pfs}. Assim, há uma efetiva comunicação sobre a interação entre as partes de um sistema e sobre os fluxo de elementos e operações em diferentes níveis do sistema em análise, como, por exemplo, produtos, ordens de serviço, máquinas, informações de sensores, etc.
