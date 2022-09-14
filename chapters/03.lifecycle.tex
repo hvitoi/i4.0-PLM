@@ -3,7 +3,7 @@
 
 Este capítulo discute integração da Memória Digital do Produto (MDP) ao Componente 4.0 (C4.0) para que assim possa ser compartilhado pela Cadeia de Suprimentos (CS).
 
-Além disso, são identificadas as informações do produto de interesse aos membros da CS para que possam ser agregadas em forma de submodelos de C4.0. A classificação das informações em submodelos é importante para conformidade com o RAMI4.0.
+Além disso, são identificadas as informações do produto de interesse aos membros da CS para que possam ser agregadas em forma de submodelos de C4.0. A classificação das informações em submodelos é importante para a conformidade com o RAMI4.0.
 
 Por fim, este capítulo faz um levantamento dos impactos em geração de valor com o compartilhamento da MDP por meio de serviços na I4.0.
 
@@ -48,7 +48,7 @@ Para isto, é necessária uma definição dos submodelos para que se possa ident
 
 \citeonline{torres2014information} em uma análise de literatura mostra o impacto do compartilhamento de informações e de diferentes estratégias de colaboração no desempenho de CSs. Eles classificam os trabalhos quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
 
-Além disso, \citeonline{bader2020submodel} definem alguns submodelos padrões para a I4.0 e detalha suas respectivas propriedades.
+Além disso, \citeonline{bader2020submodel} definem alguns submodelos padrões para a I4.0 e detalham suas respectivas propriedades.
 
 Os tipos de informações identificados na análise bibliográfica de \citeonline{torres2014information} e no documento de \citeonline{bader2020submodel} serão incorporados a novos submodelos propostos para o produto para que possam ser compartilhados por meio da MDP ao longo da CS.
 
@@ -122,9 +122,9 @@ A \autoref{tab:submodelo-processos} detalha o submodelo ``Processos'' com suas r
 
 	\\ \hline Custo de \textit{setup} & \textit{Double} & O custo de preparação da produção (\textit{setup}) é relacionado a todas as despesas necessárias para a preparação da máquina para a produção, incluindo a mão de obra diretamente aplicada na sua preparação. À medida que o tamanho do lote de pedidos aumenta, reduz-se o custo total da demanda uma vez que o custo de \textit{setup} dilui-se no valor total.
 
-	\\ \hline Informações de entrega & \textit{Map <String>} & Informações sobre transportadoras disponíveis para a realização da entrega do produto associadas ao custo unitário do serviço de cada uma. Informações de entrega variam conforme o destino final de entrega.
+	\\ \hline Informações de entrega & \textit{Map <String>} & Informações sobre transportadoras disponíveis para a realização da entrega do produto associadas ao custo unitário do serviço de cada uma. Informações de entrega variam conforme o destino final da entrega.
 
-	\\ \hline \textit{Lead time} médio de entrega & \textit{Map <Float>} & Tempo de entrega médio de um determinado produto. Esta informação também é dinâmica e calculada com base no tempo histórico médio observado em pedidos passados. Informações de entrega variam conforme o destino final de entrega.
+	\\ \hline \textit{Lead time} médio de entrega & \textit{Map <Float>} & Tempo de entrega médio de um determinado produto. Esta informação também é dinâmica e calculada com base no tempo histórico médio observado em pedidos passados. Informações de entrega variam conforme o destino final da entrega.
 
 	\\ \hline
 \end{longtable}
@@ -176,7 +176,7 @@ A \autoref{tab:submodelo-pedido} detalha o submodelo ``Pedido'' com suas respect
 
 	\hline \textbf{Propriedade} & \textbf{Tipo}    & \textbf{Descrição} \endhead
 
-	\hline Quantidade           & \textit{Integer} & Quantidade de items de um produto solicitado. Representa uma demanda de fabricação.
+	\hline Quantidade           & \textit{Integer} & Quantidade de itens de um produto solicitado. Representa uma demanda de fabricação.
 
 	\\ \hline Preço do pedido & \textit{Double} & Valor pago pela demanda solicitada.
 
@@ -184,7 +184,7 @@ A \autoref{tab:submodelo-pedido} detalha o submodelo ``Pedido'' com suas respect
 
 	\\ \hline Geolocalização & \textit{String} & Localização geográfica em tempo real de um determinado pedido.
 
-	\\ \hline Notas fiscais & \textit{Blob} & Documento oficial que registra as venda da produto pela empresa. É referente ao lote vendido.
+	\\ \hline Notas fiscais & \textit{Blob} & Documento oficial que registra as vendas de produtos pela empresa. É referente ao lote vendido.
 
 	\\ \hline
 \end{longtable}
@@ -223,11 +223,11 @@ A \autoref{tab:submodelo-operacao} detalha o submodelo ``Operação'' com suas r
 
 \subsection{Submodelo ``Documentação''}
 
-Este submodelo do C4.0-Produto é baseada em \citeonline{bedenbender2017aasexamples}, que menciona a necessidade da existência de um submodelo destinado ao armazenado de arquivos binários que não possuem um formato específico.
+Este submodelo do C4.0-Produto é baseado em \citeonline{bedenbender2017aasexamples}, que menciona a necessidade da existência de um submodelo destinado ao armazenamento de arquivos binários que não possuem um formato específico.
 
 Este submodelo destina-se ao armazenamento e versionamento de documentos digitais relacionados ao produto. Tal documento pode ser um formato proprietário ou aberto como, por exemplo .pdf, .docx, .ppt, .dwg, .psd e outros.
 
-Todas as propriedades deste submodelo são comuns a uma família de produto.
+Todas as propriedades deste submodelo são comuns a uma família de produtos.
 
 A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' com suas respectivas propriedades.
 
@@ -254,7 +254,7 @@ A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' co
 
 O histórico completo do ciclo de vida de um determinado produto corresponde a suas informações de estados geradas ao longo de sua existência. Estas informações são registradas e podem ser acessadas via MDP. As informações de um produto são coletadas tanto em sua fase ``tipo'' quanto em sua fase ``instância''. Estas informações podem ser aproveitadas de forma inteligente para a geração de valor por meio de novos modelos de negócio.
 
-O compartilhamentos de informações entre estas duas fases do ativo auxilia na melhoria contínua do produto. A \autoref{fig:aas-lifecycle} ilustra este cenário. Foram identificadas duas formas de geração de valor por meio das informações do ativo: as ``melhorias de projeto'' e as ``melhorias operacionais''.
+O compartilhamento de informações entre estas duas fases do ativo auxilia na melhoria contínua do produto. A \autoref{fig:aas-lifecycle} ilustra este cenário. Foram identificadas duas formas de geração de valor por meio das informações do ativo: as ``melhorias de projeto'' e as ``melhorias operacionais''.
 
 \begin{figure}[htb]
 	\centering
@@ -320,7 +320,7 @@ Outro ponto de melhor integração com a utilização do produto como centro das
 
 O compartilhamento de documentos digitais permite uma maior interação com as partes e garante que cada membro terá sempre a versão mais atualizada de cada documento, favorecendo assim sua gestão, reduzindo o uso do papel e tornando os ambientes de trabalho mais seguros, ágeis e organizados.
 
-Os documentos representam uma conexão entre os membros da CS, portanto, comunicados, formulários de troca, documentos para acionamento de garantia e quaisquer outras operações podem ser solicitados com base na MDP do produto.
+Os documentos representam uma conexão entre os membros da CS, portanto, comunicados, formulários de troca, documentos para acionamento de garantia e quaisquer outras operações podem ser solicitadas com base na MDP do produto.
 
 \subsection{Melhoria de projeto do produto}
 \label{sub:melhoria-projeto}

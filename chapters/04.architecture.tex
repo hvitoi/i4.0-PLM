@@ -5,9 +5,9 @@ Este capítulo tem o objetivo de apresentar a arquitetura proposta baseada em \t
 
 Neste capítulo é apresentado também o mapeamento dos componentes desta arquitetura dentro do eixo camadas do RAMI4.0.
 
-Na I4.0 os ativos se apresentam em diversas formas. Entretanto, ao longo deste capítulo, os ativos tratados são os produtos, uma vez que este é o objeto que percorre a CS e gera informações.
+Na I4.0 os ativos se apresentam em diversas formas. Entretanto, nesta arquitetura proposta, os ativos tratados são os produtos, uma vez que este é o ativo que percorre a CS e gera as informações a serem compartilhadas.
 
-\section{Componentes e operações dos serviços de AASs}
+\section{Componentes e operações da arquitetura}
 \label{sec:componentes-e-operacoes}
 
 Os serviços no escopo desta arquitetura são representações das funcionalidades dos C4.0 e são fornecidos e consumidos entre os próprios C4.0s.
@@ -54,7 +54,7 @@ A \autoref{tab:componentes-ws} lista os C4.0s da arquitetura e suas respectivas 
 
 		\hline
 		C4.0-Repositório
-		 & O C4.0-Repositório é o elemento que recebe, armazena e disponibiliza informações de descrição sobre todos os serviços disponíveis no mundo conectado. As descrições de serviços são disponibilizados em forma de contratos. Este componente recebe operações de ``publicação'' por parte do C4.0-Servidor e operações de ``busca'' por parte do C4.0-Cliente. O C4.0-Repositório não atua como canal de comunicação entre C4.0-Cliente e C4.0-Servidor, mas apenas fornece informações necessárias para que ambos os C4.0s possam se comunicar diretamente por meio da operação de ``interação''. \\
+		 & O C4.0-Repositório é o elemento que recebe, armazena e disponibiliza informações de descrição sobre todos os serviços disponíveis no mundo conectado. As descrições de serviços são disponibilizadas em forma de contratos. Este componente recebe operações de ``publicação'' por parte do C4.0-Servidor e operações de ``busca'' por parte do C4.0-Cliente. O C4.0-Repositório não atua como canal de comunicação entre C4.0-Cliente e C4.0-Servidor, mas apenas fornece informações necessárias para que ambos os C4.0s possam se comunicar diretamente por meio da operação de ``interação''. \\
 
 		\hline
 	\end{tabular}
@@ -115,7 +115,7 @@ Os serviços fornecidos por um C4.0 são diversos. Entretanto, neste trabalho se
 \section{Fluxo de fornecimento de serviços}
 \label{sec:fluxo-de-fornecimento-de-servicos}
 
-As etapas para o fornecimento de serviços na I4.0 segue um fluxo padrão. Os submodelos agregam informações semelhantes que podem ser lidas ou escritas (via MDP) e disponibilizada a qualquer uma das partes ao longo da CS.
+As etapas para o fornecimento de serviços na I4.0 seguem um fluxo padrão. Os submodelos agregam informações semelhantes que podem ser lidas ou escritas (via MDP) e disponibilizada a qualquer uma das partes ao longo da CS.
 
 Um fluxo de leitura/escrita de dados pode ser exemplificado com uma CS simples contendo três membros: um fabricante, um distribuidor e um consumidor; cada membro da CS é um C4.0-Cliente diferente. O fabricante cria o produto, que será o C4.0-Servidor, e define a estrutura do AAS com os submodelos necessários (vide \autoref{sec:submodelos-produto}). A título de exemplo, três submodelos são definidos: submodelo ``Pedido'', submodelo ``Operação'' e submodelo ``Documentação''. Ao longo do ciclo de vida do produto, os membros da CS (fabricante, distribuidor e consumidor) podem interagir com esses submodelos, fazendo sua leitura para o caso dos submodelos de pedido e operação, e podendo fazer a leitura e/ou escrita para o caso do submodelo de documentação.
 
@@ -153,28 +153,28 @@ O (\textbf{d}) C4.0-Cliente (fabricante) por sua vez faz uma (\textbf{g}) busca 
 
 A partir da resposta da busca no C4.0-Repositório, o C4.0-Cliente do fabricante pode (\textbf{h}) interagir diretamente com cada um dos C4.0-Servidores (produtos) para o consumo das informações necessárias.
 
-\section{Mapeamento das operações no RAMI4.0}
+\section{Mapeamento das operações para as camadas do RAMI4.0}
 \label{sec:mapeamento-das-operacoes}
 
 Segundo \citeonline{iec2017rami}, o RAMI4.0 fornece uma visão estruturada de um sistema produtivo dentro da I4.0 por meio de uma representação tridimensional. Desta forma, inter-relações complexas podem ser divididas em seções menores e mais gerenciáveis, combinando os três eixos para representar cada aspecto relevante do estado do ativo em cada ponto de seu ciclo de vida.
 
-Esta seção tem o objetivo de mapear as operações envolvidas no compartilhamento informações ao longo da CS para a estrutura do RAMI4.0 de forma a representar as etapas relacionadas ao trânsito de informações.
+Esta seção tem o objetivo de mapear as operações envolvidas no compartilhamento de informações ao longo da CS para a estrutura do RAMI4.0 de forma a representar as etapas relacionadas ao trânsito de informações.
 
-O mapeamento para o RAMI4.0, contribui para facilitar a execução de implementações da I4.0 uma vez que garante a interoperabilidades entre os sistemas.
+O mapeamento para o RAMI4.0, contribui para facilitar a execução de implementações da I4.0 uma vez que garante a interoperabilidade entre os sistemas.
 
 \subsection{Funcionalidades das camadas do RAMI4.0}
 
 Na \autoref{sub:rami4} foram apresentados os detalhes do RAMI4.0 e o detalhamento de cada nível do eixo Camadas com suas funções genéricas. Nesta subseção são mostradas as funções específicas da arquitetura proposta para cada camada do eixo Camadas do RAMI4.0 sob o contexto do compartilhamento de informações pela CS.
 
-Na camada \textbf{Ativo Técnico} estão os produtos (fontes de informações) e os consumidores diversos (empresas, pessoas, consumidores das informações).
+Na camada \textbf{Ativo Técnico} estão os produtos (fontes de informações), consumidores diversos (empresas, pessoas, consumidores das informações) e os \textit{softwares} repositórios que armazenam os contratos.
 
 Para o compartilhamento de informações do produto no mundo I4.0, os dados a serem extraídos do ativo são estrategicamente selecionados com o objetivo de reunir somente os que agreguem valor ao próprio ativo. Assim, estes dados selecionados são extraídos do ativo e repassados às camadas superiores para que possam ser armazenados e compartilhados por meio de serviços.
 
-A camada \textbf{Integração} está presente em todos os componentes (C4.0-Servidor, C4.0-Cliente e C4.0-Repositório). Porém tanto o C4.0-Cliente quanto o C4.0-Repositório operam primariamente nas camadas digitais e possuem esta camada somente para outros fluxos de integração internos da empresa, seja ele um \textit{software} (por exemplo uma base de dados de ERP) ou um ativo físico. Já a camada de Integração no C4.0-Servidor tem a função mais axiomática para compartilhamento de informações do ativo uma vez que é resposável pela virtualização das informações que são extraídas do ativo e repassadas para as camadas superiores.
+A camada \textbf{Integração} está presente em todos os componentes (C4.0-Servidor, C4.0-Cliente e C4.0-Repositório). Porém tanto o C4.0-Cliente quanto o C4.0-Repositório operam primariamente nas camadas digitais e possuem esta camada somente para outros fluxos de integração internos da empresa, seja ele um \textit{software} (por exemplo uma base de dados de ERP) ou um ativo físico. Já a camada de Integração no C4.0-Servidor tem a função mais axiomática para compartilhamento de informações do ativo uma vez que é responsável pela virtualização das informações que são extraídas do ativo e repassadas para as camadas superiores.
 
 Com relação à camada \textbf{Comunicação}, na arquitetura de compartilhamento de informações, não há comunicação entre C4.0s dentro da mesma empresa uma vez que todas as operações de um WS (publicação, busca e interação) ocorrem entre organizações distintas. Esta camada, entretanto, é necessária para as diversas outras comunicações dentro da própria organização. Os protocolos estabelecidos nesta camada para a integração vertical são independentes dos protocolos para a integração horizontal, que são definidos na camada Funcional.
 
-A camada \textbf{Informação} está presente em todos os componentes. No C4.0-Repositório ela é responsável pelo armazenamento dos contratos disponibilizados por cada produto e pelo processamento das requisições dos C4.0-Clientes. No C4.0-Servidor, esta camada armazena as informações nos submodelos e as disponibiliza por meio da MDP. No C4.0-Cliente, ela é responsável pelo processamento das informações recebidas pelo C4.0-Repositório (para a seleção do serviço adequado) e pelo C4.0-Servidor (para o tratamento das informações recebidas).
+A camada \textbf{Informação} está presente em todos os componentes. No C4.0-Repositório ela é responsável pelo acesso aos contratos disponibilizados por cada produto e pelo processamento das requisições dos C4.0-Clientes. No C4.0-Servidor, esta camada armazena as informações nos submodelos e as disponibiliza por meio da MDP. No C4.0-Cliente, ela é responsável pelo processamento das informações recebidas pelo C4.0-Repositório (para a seleção do serviço adequado) e pelo C4.0-Servidor (para o tratamento das informações recebidas).
 
 Na camada \textbf{Funcional} ocorre a integração horizontal entre as partes da CS de um produto. Os serviços são disponibilizados por meio da camada funcional, portanto esta é a interface entre os C4.0s de diferentes empresas.
 
@@ -184,12 +184,12 @@ Na camada \textbf{Regra de Negócio} se tem as restrições aplicadas sobre os s
 
 A regra de negócio estabelece quem na CS tem permissão para acessar quais informações do ativo e quando. Um fabricante, por exemplo, terá acesso aos dados de padrões de uso de um ativo somente sob a permissão do consumidor que detém o ativo/produto, o que representa uma regra nesta camada. Um distribuidor, por sua vez, só poderá ter acesso à localização do ativo enquanto o ativo estiver sob sua custódia.
 
-Para cada tipo de operação relacionada a um C4.0, é necessário detalhar o fluxo de dados e de eventos acontecendo em cada uma das camadas. Este detalhamento permite que implementações de soluções I4.0 sejam facilitadas e garante que a criação dessas soluções por diversos desenvolvedores de sistemas resulte em sistemas que sejam interoperáveis, independentemente da tecnologia adotada.
+Para cada tipo de operação relacionada a um C4.0, é necessário detalhar o fluxo de dados e de eventos acontecendo em cada uma das camadas. Este detalhamento permite que implementações de soluções I4.0 sejam facilitadas e garante que a criação destas soluções por diversos desenvolvedores de sistemas resulte em sistemas que sejam interoperáveis, independentemente da tecnologia adotada.
 
 O C4.0 pode ainda ser mais detalhadamente especificado, identificando se este representa um produto em desenvolvimento ou um produto em produção. Estes detalhes são cobertos pelo eixo ``Ciclo de Vida e Cadeia de Valor'', e considerações sobre este eixo envolvendo a arquitetura proposta foram apresentadas no \autoref{cha:ciclo-de-vida}.
 
 \begin{itemize}
-	\item \textbf{Ativo}: empresas e pessoas (C4.0-Cliente), produto (C4.0-Servidor) e C4.0-Repositório;
+	\item \textbf{Ativo}: empresas e pessoas (referente ao C4.0-Cliente), produto (referente ao C4.0-Servidor) e os \textit{softwares} repositórios (referente ao C4.0-Repositório);
 	\item \textbf{Integração}: protocolos de transferência de dados (Ethernet, 5G, Wi-Fi, etc);
 	\item \textbf{Comunicação}: protocolos de comunicação para promover a integração vertical (OPC UA, MQTT);
 	\item \textbf{Informação}: contratos (descrição dos serviços), submodelos, MDP;
@@ -225,13 +225,15 @@ Esta operação é iniciada pelo C4.0-Servidor recém instalado ou atualizado, s
 
 	\item Os serviços de compartilhamento de informações do C4.0-Servidor disponíveis são identificados e listados.
 
-	\item As restrições legais e as políticas de privacidade para um determinado C4.0 são acessadas. Esta atividade adicionará restrições aos serviços a serem publicados. Estas restrições serão incorporadas à descrição de cada serviço a ser publicado.
+	\item As restrições legais e as políticas de privacidade para um determinado C4.0 são acessadas. Esta atividade adiciona restrições aos serviços a serem publicados. Estas restrições serão incorporadas à descrição de cada serviço a ser publicado.
 
 	\item O contrato contendo as descrições de serviços disponíveis no C4.0-Servidor é disponibilizado.
 
 	\item O contrato é enviado ao C4.0-Repositório via API.
 
 	\item O C4.0-Repositório recebe o contrato no formato de intercâmbio definido. A descrição dos serviços nesta fase já contém todas as informações para a identificação do serviço e de seu componente correspondente.
+
+	\item Os dados recebidos alimentam uma interface para comunicação com o ativo real.
 
 	\item O contrato com a lista das descrições dos serviços é armazenado junto aos demais contratos na base de dados do C4.0-Repositório.
 
@@ -268,11 +270,13 @@ A operação de requisição para a busca de um serviço parte do C4.0-Cliente e
 
 	\item A requisição é processada. Identifica-se nesta atividade se a requisição é válida e se ela contém todos os parâmetros necessários para a consulta.
 
+	\item Estabelece-se uma interface para a interação com o ativo real para a consulta das informações solicitadas na requisição.
+
 	\item Realiza-se a leitura da lista de contratos na base de dados do C4.0-Repositório utilizando os parâmetros de consulta estabelecidos.
 
 \end{enumerate}
 
-Após a requisição, o C4.0-Repositório envia a resposta ao C4.0-Cliente. O fluxo de atividades da resposta é apresentada em diagramas PFS na \autoref{fig:rami-busca-resposta}.
+Após a requisição, o C4.0-Repositório envia a resposta ao C4.0-Cliente. O fluxo de atividades da resposta é apresentado em diagramas PFS na \autoref{fig:rami-busca-resposta}.
 
 \begin{figure}[htb]
 	\centering
@@ -284,7 +288,11 @@ Após a requisição, o C4.0-Repositório envia a resposta ao C4.0-Cliente. O fl
 Detalhadamente, a resposta do C4.0-Repositório segue o fluxo de atividades, começando pela disponibilização das informações reais do ativo:
 
 \begin{enumerate}
-	\item O contrato contendo a descrições dos serviços é disponibilizado para acesso por parte da camada Funcional. A lista  pode conter serviços válidos, assim como pode conter mensagens de erro por conta de solicitações inválidas ou buscas retornando zero correspondências.
+	\item As informações do \textit{software} repositório contendo os contratos são acessadas e disponibilizadas para as camadas superiores.
+
+	\item Os dados disponibilizados são virtualizados para a integração com o AAS.
+
+	\item O contrato contendo as descrições dos serviços é disponibilizado para acesso por parte da camada Funcional. A lista  pode conter serviços válidos, assim como pode conter mensagens de erro por conta de solicitações inválidas ou buscas retornando zero correspondências.
 
 	\item A resposta é enviada ao C4.0-Cliente via API.
 
@@ -328,7 +336,7 @@ A requisição de um serviço na operação de interação é iniciada pelo C4.0
 
 \end{enumerate}
 
-Após o recebimento e processamento da requisição de um serviço, o C4.0-Servidor deve fazer a extração e envio das informações de seu próprio ativo. A resposta contendo as informações sobre o ativo começa a partir da emissão de um novo evento ou, caso a informação já esteja disponível na MDP, começa direto da camada de Informação. Esta informação percorre um fluxo padrão para que seja disponibilizada ao C4.0-Cliente por meio do serviço. A \autoref{fig:rami-interacao-resposta} mostra as atividades do fluxo de resposta.
+Após o recebimento e processamento da requisição de um serviço, o C4.0-Servidor deve fazer a extração e envio das informações de seu próprio ativo. A resposta contendo as informações sobre o ativo começa a partir da emissão de um novo evento ou, caso a informação já esteja disponível na MDP, começa direto da camada de informação. Esta informação percorre um fluxo padrão para que seja disponibilizada ao C4.0-Cliente por meio do serviço. A \autoref{fig:rami-interacao-resposta} mostra as atividades do fluxo de resposta.
 
 \begin{figure}[htb]
 	\centering
@@ -343,11 +351,11 @@ O detalhamento do fluxo de atividades da resposta é detalhado a seguir:
 
 	\item Um evento físico no mundo real é emitido.
 
-	\item O evento está associado a sinais físicos que podem ser mensurados de alguma forma.
+	\item O evento é transformado em sinais físicos e são fornecidos às camadas superiores.
 
 	\item Os sinais físicos são interpretados e virtualizados. Nesta atividade é criado um correspondente virtual para o evento do ativo físico, ou seja, os dados são digitalizados e disponibilizados ao C4.0-Servidor.
 
-	\item É definido o meio de transporte e o procolo de transferência de dados como, por exemplo, o Wi-Fi, Ethernet, 5G, etc.
+	\item É definido o meio de transporte e o protocolo de transferência de dados como, por exemplo, o Wi-Fi, Ethernet, 5G, etc.
 
 	\item Os dados são devidamente transportados pelo meio e protocolo definidos até uma central de processamento.
 
@@ -369,3 +377,12 @@ O detalhamento do fluxo de atividades da resposta é detalhado a seguir:
 \end{enumerate}
 
 Caso a informação sendo consultada já esteja contida na MDP do C4.0-Servidor (na camada Informação), o fluxo de resposta começa do passo 7, já que neste caso não é necessária a extração dos dados diretamente do ativo (passos 1 -- 6).
+
+\section{Considerações sobre a análise dinâmica do modelo}
+\label{sec:analise-dinamica}
+
+Os modelos PFS apresentados na \autoref{sec:mapeamento-das-operacoes} descrevem cada operação da arquitetura e a conexão entre os componentes. Estes modelos, que são representações de Sistemas a Eventos Discretos (SED), demonstraram características de sequências.
+
+A sequência indica uma ordem de realização das atividades na qual um conjunto de atividades deve ser concluído para que outro seja iniciado  \cite{fattori2012petri}, ou seja, apresenta um comportamento linear.
+
+As atividades apresentadas na \autoref{sec:mapeamento-das-operacoes} detém um alto nível de abstração, porém cada atividade apresentada pode ainda refinada sucessivamente de forma a detalhar cada iteração. A partir do sucessivo detalhamento, novas características podem surgir como paralelismos, conflitos, sincronizações, etc, com as quais é possível analisar outras propriedades do comportamento dinâmico do sistema. O detalhamento das atividades apresentadas na arquitetura não é escopo de estudo deste trabalho.
