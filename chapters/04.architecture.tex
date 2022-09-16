@@ -3,14 +3,14 @@
 
 Este capítulo tem o objetivo de apresentar a arquitetura proposta baseada em \textit{Web Services} (WS) e compatível com os Componentes 4.0 (C4.0) para o compartilhamento de informações de produtos ao longo da CS.
 
-Neste capítulo é apresentado também o mapeamento dos componentes desta arquitetura dentro do eixo camadas do RAMI4.0.
+Neste capítulo é apresentado também o mapeamento dos elementos desta arquitetura para o eixo camadas do RAMI4.0.
 
 Na I4.0 os ativos se apresentam em diversas formas. Entretanto, nesta arquitetura proposta, os ativos tratados são os produtos, uma vez que este é o ativo que percorre a CS e gera as informações a serem compartilhadas.
 
 \section{Componentes e operações da arquitetura}
 \label{sec:componentes-e-operacoes}
 
-Os serviços no escopo desta arquitetura são representações das funcionalidades dos C4.0 e são fornecidos e consumidos entre os próprios C4.0s.
+Os serviços no escopo desta arquitetura são representações das funcionalidades dos C4.0 e são fornecidos e consumidos entre os próprios C4.0.
 
 A forma de fornecimento e consumo de serviços proposta nesta arquitetura segue a abordagem de um \textit{Web Service}, com os seus componentes e operações (vide \autoref{fig:webservice-componentes}), porém adaptados ao C4.0.
 
@@ -18,11 +18,11 @@ Esta arquitetura envolve três atores básicos: O C4.0-Cliente, o C4.0-Servidor 
 
 Os serviços disponibilizados remotamente pelo C4.0-Servidor escutam e respondem solicitações de C4.0-Clientes por meio de uma determinada rede e porta de comunicação. Os C4.0-Clientes, por sua vez, consomem o serviço disponibilizado pelo C4.0-Servidor por meio de solicitações.
 
-Nesta seção são apresentados detalhes sobre os C4.0s e as operações necessárias para o fornecimento de serviços no mundo conectado da I4.0.
+Nesta seção são apresentados detalhes sobre os C4.0 e as operações necessárias para o fornecimento de serviços no mundo conectado da I4.0.
 
 \subsection{Componentes}
 
-Os C4.0s da arquitetura e suas inter-relações são apresentados na \autoref{fig:aas-ws}.
+Os C4.0 da arquitetura e suas inter-relações são apresentados na \autoref{fig:aas-ws}.
 
 \begin{figure}[htb]
 	\centering
@@ -31,9 +31,11 @@ Os C4.0s da arquitetura e suas inter-relações são apresentados na \autoref{fi
 	\label{fig:aas-ws}
 \end{figure}
 
-De maneira sucinta, os C4.0s são descritos da seguinte forma: ``C4.0-Servidor'' é a parte que possui um serviço a oferecer para os demais C4.0s no mundo conectado, o ``C4.0-Cliente'' é a parte que necessita de um serviço e que age ativamente para receber este serviço, e o ``C4.0-Repositório'' é a parte que armazena informações sobre descrições de diversos serviços, que são disponibilizados na forma de contratos.
+De maneira sucinta, os C4.0 são descritos da seguinte forma: ``C4.0-Servidor'' é a parte que possui um serviço a oferecer para os demais C4.0 no mundo conectado, o ``C4.0-Cliente'' é a parte que necessita de um serviço e que age ativamente para receber este serviço, e o ``C4.0-Repositório'' é a parte que armazena informações sobre descrições de diversos serviços, que são disponibilizados na forma de contratos.
 
-A \autoref{tab:componentes-ws} lista os C4.0s da arquitetura e suas respectivas descrições detalhadas.
+O componente C4.0-Servidor desta arquitetura é definido como um servidor de informações genérico, porém no contexto do compartilhamento de informações na CS este componente é o próprio C4.0-Produto (vide \autoref{sec:submodelos-produto}).
+
+A \autoref{tab:componentes-ws} lista os C4.0 da arquitetura e suas respectivas descrições detalhadas.
 
 \begin{table}[htb]
 	\centering
@@ -42,37 +44,37 @@ A \autoref{tab:componentes-ws} lista os C4.0s da arquitetura e suas respectivas 
 	\begin{tabular}{p{3cm}p{12cm}}
 		\hline
 		\textbf{Componente}
-		 & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \\
+		 & \textbf{Descrição}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
 
 		\hline
 		C4.0-Servidor
-		 & O C4.0-Servidor é fonte de informações. Este C4.0 extrai as informações sobre seu ativo para sua própria MDP para que assim possam ser disponibilizadas na rede. Cada submodelo do AAS representa um conjunto de informações e serviços semelhantes agrupados.                                                                                                                                                                                                                                                                                                                                    \\
+		 & O C4.0-Servidor é fonte de informações. Este C4.0 extrai as informações sobre seu ativo para sua própria MDP para que assim possam ser disponibilizadas na rede. Cada submodelo do AAS representa um conjunto de informações e serviços semelhantes agrupados.                                                                                                                                                                                                                                                                                                                                   \\
 
 		\hline
 		C4.0-Cliente
-		 & O C4.0-Cliente é a parte que irá consumir as informações disponibilizadas pelo C4.0-Servidor. O C4.0-Cliente representa cada uma das partes envolvidas na CS. Pode representar uma instituição, uma pessoa física ou até mesmo uma outra máquina/produto.                                                                                                                                                                                                                                                                                                                                         \\
+		 & O C4.0-Cliente é a parte que irá consumir as informações disponibilizadas pelo C4.0-Servidor. O C4.0-Cliente representa cada uma das partes envolvidas na CS. Pode representar uma instituição, uma pessoa física ou até mesmo uma outra máquina/produto.                                                                                                                                                                                                                                                                                                                                        \\
 
 		\hline
 		C4.0-Repositório
-		 & O C4.0-Repositório é o elemento que recebe, armazena e disponibiliza informações de descrição sobre todos os serviços disponíveis no mundo conectado. As descrições de serviços são disponibilizadas em forma de contratos. Este componente recebe operações de ``publicação'' por parte do C4.0-Servidor e operações de ``busca'' por parte do C4.0-Cliente. O C4.0-Repositório não atua como canal de comunicação entre C4.0-Cliente e C4.0-Servidor, mas apenas fornece informações necessárias para que ambos os C4.0s possam se comunicar diretamente por meio da operação de ``interação''. \\
+		 & O C4.0-Repositório é o elemento que recebe, armazena e disponibiliza informações de descrição sobre todos os serviços disponíveis no mundo conectado. As descrições de serviços são disponibilizadas em forma de contratos. Este componente recebe operações de ``publicação'' por parte do C4.0-Servidor e operações de ``busca'' por parte do C4.0-Cliente. O C4.0-Repositório não atua como canal de comunicação entre C4.0-Cliente e C4.0-Servidor, mas apenas fornece informações necessárias para que ambos os C4.0 possam se comunicar diretamente por meio da operação de ``interação''. \\
 
 		\hline
 	\end{tabular}
 \end{table}
 
-O contrato contendo a descrição dos serviços disponíveis nos submodelos de cada C4.0-Servidor é armazenado em um C4.0-Repositório comum, onde todos os C4.0s disponíveis no mundo conectado na I4.0 podem se tornar visíveis. O serviço é fornecido pelo próprio C4.0-Servidor que o tornou público, servindo o C4.0-Repositório apenas como um elemento para a descoberta de serviços.
+O contrato contendo a descrição dos serviços disponíveis nos submodelos de cada C4.0-Servidor é armazenado em um C4.0-Repositório comum, onde todos os C4.0 disponíveis no mundo conectado na I4.0 podem se tornar visíveis. O serviço é fornecido pelo próprio C4.0-Servidor que o tornou público, servindo o C4.0-Repositório apenas como um elemento para a descoberta de serviços.
 
-É importante notar que no mundo da I4.0 todo ativo é englobado por um AAS e se torna um C4.0. O C4.0-Repositório também se refere um ativo, que no caso é o \textit{software} que gerencia os relacionamentos das descrições dos serviços e detém informações e funções que agregam valor ao negócio. O C4.0-Repositório, portanto, é o ativo que assegura a interação com outros C4.0s na I4.0.
+É importante notar que no mundo da I4.0 todo ativo é englobado por um AAS e se torna um C4.0. O C4.0-Repositório também se refere a um ativo, que no caso é o \textit{software} que gerencia os relacionamentos das descrições dos serviços e detém informações e funções que agregam valor ao negócio. O C4.0-Repositório, portanto, é o ativo que assegura a interação com outros C4.0 na I4.0.
 
 Cada C4.0 pode atuar tanto como um fornecedor de serviços (C4.0-Servidor), quanto como um solicitante de serviços (C4.0-Cliente), ou como ambos. Sempre usando o C4.0-Repositório como meio para a publicação ou busca dos serviços.
 
 \subsection{Operações}
 
-As descrições das operações dos serviços são apresentadas na \autoref{tab:operacoes-ws}. As inter-relações entre C4.0s por meio das operações são mostradas na \autoref{fig:aas-ws}.
+As descrições das operações dos serviços são apresentadas na \autoref{tab:operacoes-ws}. As inter-relações entre C4.0 por meio das operações são mostradas na \autoref{fig:aas-ws}.
 
 \begin{table}[htb]
 	\centering
-	\caption{Operações do WS para a interação entre C4.0s.}
+	\caption{Operações do WS para a interação entre C4.0.}
 	\label{tab:operacoes-ws}
 	\begin{tabular}{p{3cm}p{12cm}}
 		\hline
@@ -85,7 +87,7 @@ As descrições das operações dos serviços são apresentadas na \autoref{tab:
 
 		\hline
 		Busca
-		 & Ação tomada pelo C4.0-Cliente sempre que este precise consultar serviços de seu interesse. Nesta operação o C4.0-Cliente faz uma solicitação ao C4.0-Repositório com os parâmetros que definem o tipo e as restrições do serviço desejado. A operação de busca engloba também o fluxo contrário de informações, que é o envio da resposta da solicitação do C4.0-Repositório para o C4.0 Cliente.                                                                 \\
+		 & Ação tomada pelo C4.0-Cliente sempre que este precise consultar serviços de seu interesse. Nesta operação o C4.0-Cliente faz uma solicitação ao C4.0-Repositório com os parâmetros que definem o tipo e as restrições do serviço desejado. A operação de busca engloba também o fluxo contrário de informações, que é o envio da resposta da solicitação do C4.0-Repositório para o C4.0-Cliente.                                                                 \\
 
 		\hline
 		Interação
@@ -101,7 +103,7 @@ Quando o C4.0 atua como C4.0-Servidor, este publica seu contrato no C4.0-Reposit
 
 Uma vez definido o serviço a ser consumido, o C4.0-Cliente estabelecerá a conexão direta com o C4.0-Servidor, utilizando os detalhes contidos no contrato para localizar, contactar e invocar o serviço.
 
-A \autoref{fig:pfs-ws} apresenta um diagrama PFS (\textit{Production Flow Schema}) (vide \autoref{sec:modelagem-de-sistemas}), com o fluxo de ocorrência das operações básicas para a interação entre C4.0s.
+A \autoref{fig:pfs-ws} apresenta um diagrama PFS (\textit{Production Flow Schema}) (vide \autoref{sec:modelagem-de-sistemas}), com o fluxo de ocorrência das operações básicas para a interação entre C4.0.
 
 \begin{figure}[htb]
 	\centering
@@ -115,7 +117,7 @@ Os serviços fornecidos por um C4.0 são diversos. Entretanto, neste trabalho se
 \section{Fluxo de fornecimento de serviços}
 \label{sec:fluxo-de-fornecimento-de-servicos}
 
-As etapas para o fornecimento de serviços na I4.0 seguem um fluxo padrão. Os submodelos agregam informações semelhantes que podem ser lidas ou escritas (via MDP) e disponibilizada a qualquer uma das partes ao longo da CS.
+As etapas para o fornecimento de serviços na I4.0 seguem um fluxo padrão. Os submodelos agregam informações semelhantes que podem ser lidas ou escritas (via MDP) e disponibilizadas a qualquer uma das partes ao longo da CS.
 
 Um fluxo de leitura/escrita de dados pode ser exemplificado com uma CS simples contendo três membros: um fabricante, um distribuidor e um consumidor; cada membro da CS é um C4.0-Cliente diferente. O fabricante cria o produto, que será o C4.0-Servidor, e define a estrutura do AAS com os submodelos necessários (vide \autoref{sec:submodelos-produto}). A título de exemplo, três submodelos são definidos: submodelo ``Pedido'', submodelo ``Operação'' e submodelo ``Documentação''. Ao longo do ciclo de vida do produto, os membros da CS (fabricante, distribuidor e consumidor) podem interagir com esses submodelos, fazendo sua leitura para o caso dos submodelos de pedido e operação, e podendo fazer a leitura e/ou escrita para o caso do submodelo de documentação.
 
@@ -128,9 +130,9 @@ A \autoref{fig:webservice-multielo} demonstra este cenário mencionado com o flu
 	\label{fig:webservice-multielo}
 \end{figure}
 
-Na \autoref{fig:webservice-multielo} também são mostrados os três submodelos do C4.0-Produto: (\textbf{e}) Submodelo ``Pedido'', (\textbf{f}) submodelo ``Operação'' e (\textbf{g}) submodelo ``Documentação''. A (\textbf{h}) MDP realiza o gerenciamento dos dados de todos os submodelos e os disponibiliza para acesso pelos serviços. As descrições dos serviços são armazenados em forma de um (\textbf{i}) contrato. Este contrato é (\textbf{j}) publicado no C4.0-Repositório.
+Na \autoref{fig:webservice-multielo} também são mostrados os três submodelos do C4.0-Servidor: (\textbf{e}) Submodelo ``Pedido'', (\textbf{f}) submodelo ``Operação'' e (\textbf{g}) submodelo ``Documentação''. A (\textbf{h}) MDP realiza o gerenciamento dos dados de todos os submodelos e os disponibiliza para acesso pelos serviços. As descrições dos serviços são armazenados em forma de um (\textbf{i}) contrato. Este contrato é (\textbf{j}) publicado no C4.0-Repositório.
 
-O (\textbf{k}) C4.0-Repositório recebe o contrato do C4.0-Produto e o disponibiliza para consulta. O C4.0-Repositório pode receber também contratos de diversos outros C4.0s do mundo conectado da I4.0.
+O (\textbf{k}) C4.0-Repositório recebe o contrato do C4.0-Servidor e o disponibiliza para consulta. O C4.0-Repositório pode receber também contratos de diversos outros C4.0 do mundo conectado da I4.0.
 
 Os C4.0-Clientes fazem a (\textbf{l}) busca no C4.0-Repositório. A requisição da busca é feita com parâmetros a fim de se restringir qual tipo de serviço aquele C4.0-Cliente pretende consumir, podendo-se restringir a busca, inclusive, ao serviço de um C4.0 específico, identificando-o por meio de seu identificador único.
 
@@ -147,7 +149,7 @@ Este é um exemplo de consulta única. Em aplicações reais, o C4.0-Cliente nor
 	\label{fig:webservice-multiproduto}
 \end{figure}
 
-Neste cenário há uma consulta por parte de um C4.0-Cliente a múltiplos produtos. Neste exemplo, cada C4.0-Produto (\textbf{a}, \textbf{b} e \textbf{c}) realiza uma operação de (\textbf{f}) publicação no (\textbf{e}) C4.0-Repositório.
+Neste cenário há uma consulta por parte de um C4.0-Cliente a múltiplos produtos (C4.0-Servidores). Neste exemplo, cada C4.0-Servidor (\textbf{a}, \textbf{b} e \textbf{c}) realiza uma operação de (\textbf{f}) publicação no (\textbf{e}) C4.0-Repositório.
 
 O (\textbf{d}) C4.0-Cliente (fabricante) por sua vez faz uma (\textbf{g}) busca no C4.0-Repositório especificando os parâmetros que restrinjam a pesquisa somente a determinados modelos de produtos, e recebe como resposta todas as descrições dos serviços que correspondem aos critérios de busca.
 
@@ -160,11 +162,11 @@ Segundo \citeonline{iec2017rami}, o RAMI4.0 fornece uma visão estruturada de um
 
 Esta seção tem o objetivo de mapear as operações envolvidas no compartilhamento de informações ao longo da CS para a estrutura do RAMI4.0 de forma a representar as etapas relacionadas ao trânsito de informações.
 
-O mapeamento para o RAMI4.0, contribui para facilitar a execução de implementações da I4.0 uma vez que garante a interoperabilidade entre os sistemas.
+O mapeamento para o RAMI4.0 contribui para facilitar a execução de implementações da I4.0 uma vez que garante a interoperabilidade entre os sistemas.
 
 \subsection{Funcionalidades das camadas do RAMI4.0}
 
-Na \autoref{sub:rami4} foram apresentados os detalhes do RAMI4.0 e o detalhamento de cada nível do eixo Camadas com suas funções genéricas. Nesta subseção são mostradas as funções específicas da arquitetura proposta para cada camada do eixo Camadas do RAMI4.0 sob o contexto do compartilhamento de informações pela CS.
+Na \autoref{sub:rami4} foram apresentados os detalhes do RAMI4.0 e o detalhamento de cada nível do eixo Camadas com suas funções genéricas. Nesta subseção são mostradas as funções específicas da arquitetura proposta para cada nível/camada do eixo Camadas do RAMI4.0 sob o contexto do compartilhamento de informações pela CS.
 
 Na camada \textbf{Ativo Técnico} estão os produtos (fontes de informações), consumidores diversos (empresas, pessoas, consumidores das informações) e os \textit{softwares} repositórios que armazenam os contratos.
 
@@ -172,13 +174,13 @@ Para o compartilhamento de informações do produto no mundo I4.0, os dados a se
 
 A camada \textbf{Integração} está presente em todos os componentes (C4.0-Servidor, C4.0-Cliente e C4.0-Repositório). Porém tanto o C4.0-Cliente quanto o C4.0-Repositório operam primariamente nas camadas digitais e possuem esta camada somente para outros fluxos de integração internos da empresa, seja ele um \textit{software} (por exemplo uma base de dados de ERP) ou um ativo físico. Já a camada de Integração no C4.0-Servidor tem a função mais axiomática para compartilhamento de informações do ativo uma vez que é responsável pela virtualização das informações que são extraídas do ativo e repassadas para as camadas superiores.
 
-Com relação à camada \textbf{Comunicação}, na arquitetura de compartilhamento de informações, não há comunicação entre C4.0s dentro da mesma empresa uma vez que todas as operações de um WS (publicação, busca e interação) ocorrem entre organizações distintas. Esta camada, entretanto, é necessária para as diversas outras comunicações dentro da própria organização. Os protocolos estabelecidos nesta camada para a integração vertical são independentes dos protocolos para a integração horizontal, que são definidos na camada Funcional.
+Com relação à camada \textbf{Comunicação}, na arquitetura de compartilhamento de informações não há comunicação entre C4.0 dentro da mesma empresa uma vez que todas as operações de um WS (publicação, busca e interação) ocorrem entre organizações distintas. Esta camada, entretanto, é necessária para as diversas outras comunicações dentro da própria organização. Os protocolos estabelecidos nesta camada para a integração vertical são independentes dos protocolos para a integração horizontal, que são definidos na camada Funcional.
 
 A camada \textbf{Informação} está presente em todos os componentes. No C4.0-Repositório ela é responsável pelo acesso aos contratos disponibilizados por cada produto e pelo processamento das requisições dos C4.0-Clientes. No C4.0-Servidor, esta camada armazena as informações nos submodelos e as disponibiliza por meio da MDP. No C4.0-Cliente, ela é responsável pelo processamento das informações recebidas pelo C4.0-Repositório (para a seleção do serviço adequado) e pelo C4.0-Servidor (para o tratamento das informações recebidas).
 
-Na camada \textbf{Funcional} ocorre a integração horizontal entre as partes da CS de um produto. Os serviços são disponibilizados por meio da camada funcional, portanto esta é a interface entre os C4.0s de diferentes empresas.
+Na camada \textbf{Funcional} ocorre a integração horizontal entre as partes da CS de um produto. Os serviços são disponibilizados por meio da camada funcional, portanto esta é a interface entre os C4.0 de diferentes empresas.
 
-Para o fornecimento e consumo dos serviços de compartilhamento de informações nesta camada, devem ser definidas as especificações das APIs, ou seja, o padrão de requisição e resposta para o fornecimento e consumo de serviços como, por exemplo, o padrão REST.
+Para o fornecimento e consumo dos serviços de compartilhamento de informações nesta camada, devem ser definidas as especificações das API, ou seja, o padrão de requisição e resposta para o fornecimento e consumo de serviços como, por exemplo, o padrão REST.
 
 Na camada \textbf{Regra de Negócio} se tem as restrições aplicadas sobre os serviços, como as políticas de privacidade de dados (e.g., restrições de acesso a determinados serviços) e as restrições legais de cada país.
 
@@ -193,7 +195,7 @@ O C4.0 pode ainda ser mais detalhadamente especificado, identificando se este re
 	\item \textbf{Integração}: protocolos de transferência de dados (Ethernet, 5G, Wi-Fi, etc);
 	\item \textbf{Comunicação}: protocolos de comunicação para promover a integração vertical (OPC UA, MQTT);
 	\item \textbf{Informação}: contratos (descrição dos serviços), submodelos, MDP;
-	\item \textbf{Funcional}: protocolos de comunicação para promover a integração horizontal (HTTPS, gRPC, etc), \textit{Web Services} para o compartilhamento de informações (serviços em forma de APIs);
+	\item \textbf{Funcional}: protocolos de comunicação para promover a integração horizontal (HTTPS, gRPC, etc), \textit{Web Services} para o compartilhamento de informações (serviços em forma de API);
 	\item \textbf{Regra de negócio}: restrições legais, políticas de privacidade.
 \end{itemize}
 
@@ -336,7 +338,7 @@ A requisição de um serviço na operação de interação é iniciada pelo C4.0
 
 \end{enumerate}
 
-Após o recebimento e processamento da requisição de um serviço, o C4.0-Servidor deve fazer a extração e envio das informações de seu próprio ativo. A resposta contendo as informações sobre o ativo começa a partir da emissão de um novo evento ou, caso a informação já esteja disponível na MDP, começa direto da camada de informação. Esta informação percorre um fluxo padrão para que seja disponibilizada ao C4.0-Cliente por meio do serviço. A \autoref{fig:rami-interacao-resposta} mostra as atividades do fluxo de resposta.
+Após o recebimento e processamento da requisição de um serviço, o C4.0-Servidor deve fazer a extração e envio das informações de seu próprio ativo. A resposta contendo as informações sobre o ativo começa a partir da emissão de um novo evento ou, caso a informação já esteja disponível na MDP, começa direto da camada de Informação. Esta informação percorre um fluxo padrão para que seja disponibilizada ao C4.0-Cliente por meio do serviço. A \autoref{fig:rami-interacao-resposta} mostra as atividades do fluxo de resposta.
 
 \begin{figure}[htb]
 	\centering
@@ -381,8 +383,10 @@ Caso a informação sendo consultada já esteja contida na MDP do C4.0-Servidor 
 \section{Considerações sobre a análise dinâmica do modelo}
 \label{sec:analise-dinamica}
 
-Os modelos PFS apresentados na \autoref{sec:mapeamento-das-operacoes} descrevem cada operação da arquitetura e a conexão entre os componentes. Estes modelos, que são representações de Sistemas a Eventos Discretos (SED), demonstraram características de sequências.
+Os modelos PFS apresentados na \autoref{sec:mapeamento-das-operacoes} descrevem as operações da arquitetura e a conexão entre os componentes. Estes modelos, que são representações de Sistemas a Eventos Discretos (SED), demonstraram características de sequências.
 
 A sequência indica uma ordem de realização das atividades na qual um conjunto de atividades deve ser concluído para que outro seja iniciado  \cite{fattori2012petri}, ou seja, apresenta um comportamento linear.
 
-As atividades apresentadas na \autoref{sec:mapeamento-das-operacoes} detém um alto nível de abstração, porém cada atividade apresentada pode ainda refinada sucessivamente de forma a detalhar cada iteração. A partir do sucessivo detalhamento, novas características podem surgir como paralelismos, conflitos, sincronizações, etc, com as quais é possível analisar outras propriedades do comportamento dinâmico do sistema. O detalhamento das atividades apresentadas na arquitetura não é escopo de estudo deste trabalho.
+As atividades apresentadas na \autoref{sec:mapeamento-das-operacoes} detém um alto nível de abstração, porém cada atividade apresentada pode ainda sofrer refinamentos sucessivos de forma a detalhar cada iteração. A partir do sucessivo detalhamento, novas características podem surgir como paralelismos, conflitos, sincronizações, etc, com as quais é possível analisar outras propriedades do comportamento dinâmico do sistema. O detalhamento das atividades apresentadas na arquitetura não é escopo de estudo deste trabalho.
+
+Portanto, dado o aspecto linear do sistema, não foi necessária a modelagem com rede de Petri e o uso de \textit{softwares} de simulação. No entanto, ao se refinar as atividades, novas características podem ser evidenciadas e, desta forma, o uso de técnicas, como rede de Petri, passa a ser necessário para garantir o funcionamento do sistema sem travamentos.

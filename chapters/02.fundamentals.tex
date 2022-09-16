@@ -293,15 +293,14 @@ As CS atuais podem ser extremamente grandes e complexas (alta interdependência 
 
 Dentro da CS, identificadores individuais podem ser usados a fim de se implementar a conectividade de objetos e informações requeridas no contexto da I4.0. Neste sentido, a tecnologia de RFID (\textit{Radio-Frequency IDentification}) permite criar uma identificação única para um ativo. A utilização de identificadores individuais é comum para aplicação de conceitos da I4.0 \cite{alyahya2016rfidwarehousing, vlachos2014rfidimpact, fan2015inventory, bibi2017rfidfood}, pois permite a identificação de cada ativo na rede e possibilita a troca autônoma de informações.
 
-A eficiente troca de informações ao longo da CS é uma das variáveis que influenciam na eficiência da cadeia \cite{barreto2017industry}, especialmente em CS complexas e com alta interdependência entre as partes. O estudo sobre formas e processos visando a eficiência da troca de informações é um tema relevante dentro da Logística 4.0 e também foco de estudo neste trabalho.
+A troca de informações ao longo da CS é uma das variáveis que influenciam na eficiência da cadeia \cite{barreto2017industry}, especialmente em CS complexas e com alta interdependência entre as partes. O estudo sobre formas e processos visando a troca de informações é, portanto, um tema relevante dentro da Logística 4.0 e também foco de estudo neste trabalho.
 
 A Logística 4.0, portanto, estabelece uma série de paradigmas que empresas atuando no ramo logístico deverão seguir nos próximos anos para se manterem competitivas. Conceitos de operação como o intercâmbio de informações instantâneas, soluções automatizadas e análise de dados em tempo real abrem caminhos para novos modelos de negócios \cite{strandhagen2017logistics}, que se tornarão essenciais na eficiência em logística moderna.
 
 \section{Ciclo de vida do produto}
 \label{sec:ciclo-de-vida}
 
-Dentro da I4.0, os ativos dizem respeito a equipamentos, produtos, máquinas, peças, pessoas e quaisquer outros elementos envolvidos no ambiente industrial. Neste trabalho são abordados os ativos que se deslocam pela CS, isto é, os produtos. Estes produtos, conforme são fabricados e deslocam por cada elo da cadeia, produzem informações sobre logística, operações, fabricação, etc. Pode-se dizer que estas informações são geradas e compartilhadas ao longo de sua existência, ou seja, ao longo de seu ciclo de vida. Nesta seção são abordados os tipos específicos de ativo que são os produtos.
-
+Dentro da I4.0, os ativos dizem respeito a equipamentos, produtos, máquinas, peças, pessoas e quaisquer outros elementos envolvidos no ambiente industrial. Neste trabalho são abordados os ativos que se deslocam pela CS, isto é, os produtos. Estes produtos, conforme são fabricados e deslocam por cada elo da cadeia, produzem informações sobre logística, operações, fabricação, etc. Pode-se dizer que estas informações são geradas e compartilhadas ao longo de sua existência, ou seja, ao longo de seu ciclo de vida. Portanto, neste trabalho é analisado o ciclo de vida de um tipo de ativo particular, que é o produto que percorre a CS.
 
 O conceito de ciclo de vida do produto foi elaborado em meados da década de 1960 com o propósito de criar um modelo que fosse capaz de explicar o sucesso ou fracasso de um produto introduzido no mercado, sendo capaz também de identificar momentos certos para modificar estratégias de preço, fabricação e quando o produto deve ser descontinuado \cite{cao2012lifecycle}. O modelo inicialmente desenvolvido por \citeonline{levitt1965lifecycle} mostra o padrão de produtos na história passando por quatro estágios bem definidos: desenvolvimento de mercado, crescimento, maturidade e declínio, conforme observado na \autoref{fig:product-life-cycle}.
 
@@ -383,7 +382,7 @@ Para se disponibilizar um serviço por meio de uma API, o conceito de \textit{We
 
 Um WS é uma interface que descreve uma série de operações acessíveis por meio de uma linguagem de descrição de serviços padronizada \cite{gottschalk2002webservices}. Um WS executa uma tarefa específica ou um conjunto de tarefas e retorna ao usuário o resultado da operação. Cada aplicação servidora de serviços pode ter a sua própria linguagem, que é traduzida para uma linguagem de transferência comum, como o XML (\textit{Extensible Markup Language}), JSON (\textit{JavaScript Object Notation}) e outros.
 
-Por meio de WS, as aplicações podem ser descritas, publicadas, localizadas e invocadas em uma rede de comunicação tipo WWW (\textit{World Wide Web}) \cite{souit2013soa}. Para que os WS sejam fornecidos e consumidos, é necessária uma interface de comunicação entre as duas partes. Em sistemas automatizados esta interface é uma API (\textit{Application Programming Interface}), pela qual sistemas programáveis podem se comunicar. Um padrão de API comumente utilizado é a API REST, que é detalhada na \autoref{sub:rest}.
+Por meio de WS, as aplicações podem ser descritas, publicadas, localizadas e invocadas em uma rede de comunicação tipo WWW (\textit{World Wide Web}) \cite{souit2013soa}. Para que os WS sejam fornecidos e consumidos, é necessária uma interface de comunicação entre as duas partes. Em sistemas automatizados esta interface é uma API (\textit{Application Programming Interface}), pela qual sistemas programáveis podem se comunicar. Um padrão comumente utilizado é a API REST, que é detalhada na \autoref{sub:rest}.
 
 O WS envolve três atores básicos: o provedor de serviços, o repositório de serviços e o solicitante de serviços; e por três operações básicas: a publicação, a procura e a interação \cite{gottschalk2002webservices}. A \autoref{fig:webservice-componentes} ilustra os atores e a interação entre eles por meio das operações.
 
@@ -400,9 +399,9 @@ Detalhadamente, os atores em um WS são:
 \begin{itemize}
 	\item \textbf{Provedor de serviços}: Entidade que hospeda e fornece um determinado serviço. Esta entidade permite que clientes solicitem serviços e recebam suas respectivas respostas. O provedor de serviços é responsável também por fornecer uma descrição sobre o serviço prestado e publicar esta descrição em um repositório acessível ao solicitante;
 
-	\item \textbf{Repositório de serviços}: Entidade que armazena e fornece a descrição sobre diversos WSs. Os WSs são descobertos pelo solicitante, por meio do repositório, para que assim possa decidir o serviço que melhor o atenda;
+	\item \textbf{Repositório de serviços}: Entidade que armazena e fornece a descrição sobre diversos WS. Os WS são descobertos pelo solicitante, por meio do repositório, para que assim possa decidir o serviço que melhor o atenda;
 
-	\item \textbf{Solicitante de serviços}: Entidade que requer um determinado serviço e solicita a sua execução. O solicitante de serviço pode ser uma pessoa acessando pelo navegador ou uma outra aplicação realizando solicitações por meio de APIs.
+	\item \textbf{Solicitante de serviços}: Entidade que requer um determinado serviço e solicita a sua execução. O solicitante de serviço pode ser uma pessoa acessando pelo navegador ou uma outra aplicação realizando solicitações por meio de API.
 \end{itemize}
 
 Já as operações básicas em WS são:
@@ -431,18 +430,18 @@ O WSD define os formatos de mensagem, tipos de dados, protocolos de transporte e
 
 Já a semântica de um WS é o documento que determina o comportamento esperado de resposta deste serviço, pode ser explícito ou implícito, oral ou escrito, processável por máquina ou orientado a humanos, e pode ser um acordo legal ou um acordo informal \cite{booth2004webservice}.
 
-Os WSs se tornaram atrativos, pois podem ser implementados com as tecnologias HTTP e XML, que estão disponíveis na maioria dos navegadores de internet e possuem suporte nativo em diversas linguagens de programação. A disponibilização de serviços interativos na \textit{Internet} se tornou popular e com isso surgem novos modelos de negócios como o SaaS (\textit{Software as a Service}), PaaS (\textit{Platform as a Service}), IaaS (\textit{Infrastructure as a Service}) e até mesmo MaaS (\textit{Manufacturing as a Service}) \cite{annunziata2019maas, nichols2020maas, siepen2019maas}.
+Os WS se tornaram atrativos, pois podem ser implementados com as tecnologias HTTP e XML, que estão disponíveis na maioria dos navegadores de internet e possuem suporte nativo em diversas linguagens de programação. A disponibilização de serviços interativos na \textit{Internet} se tornou popular e com isso surgem novos modelos de negócios como o SaaS (\textit{Software as a Service}), PaaS (\textit{Platform as a Service}), IaaS (\textit{Infrastructure as a Service}) e até mesmo MaaS (\textit{Manufacturing as a Service}) \cite{annunziata2019maas, nichols2020maas, siepen2019maas}.
 
 Dentro da I4.0 não é diferente. O \autoref{cha:arquitetura} descreve como os ativos podem publicar suas funcionalidades em repositórios e executarem determinadas tarefas mediante solicitação por parte do consumidor.
 
 \subsection{Transferência Representacional de Estado (REST)}
 \label{sub:rest}
 
-A Transferência Representacional de Estado (\textit{Representational State Transfer} - REST) define padrões para acesso e disponibilização de WSs. Os WSs que seguem o padrão REST são denominados \textit{RESTful Services} \cite{fielding2000rest}.
+A Transferência Representacional de Estado (\textit{Representational State Transfer} - REST) define padrões para acesso e disponibilização de WS. Os WS que seguem o padrão REST são denominados \textit{RESTful Services} \cite{fielding2000rest}.
 
 O REST possibilita a interoperabilidade entre sistemas na \textit{Internet}, pois permite que os sistemas solicitantes acessem e manipulem representações textuais de recursos usando um conjunto uniforme e predefinido de operações \cite{booth2004webservice}.
 
-O REST veio gradualmente substituindo o padrão SOAP (\textit{Simple Object Access Protocol}). Hoje, REST é comumente utilizado para o compartilhamento de informações em novos WSs, sendo o padrão SOAP usado em sistemas legado \cite{serrano2014soaplegacy}. Apesar de ambos os padrões serem baseados no HTTP e HTTPS, o REST geralmente contém um \textit{payload} de mensagem mais leve por trafegar dados no formato JSON (\textit{JavaScript Object Notation}), ao contrário do padrão SOAP que utiliza o formato XML (\textit{eXtensible Markup Language}).
+O REST veio gradualmente substituindo o padrão SOAP (\textit{Simple Object Access Protocol}). Hoje, REST é comumente utilizado para o compartilhamento de informações em novos WS, sendo o padrão SOAP usado em sistemas legado \cite{serrano2014soaplegacy}. Apesar de ambos os padrões serem baseados no HTTP e HTTPS, o REST geralmente contém um \textit{payload} de mensagem mais leve por trafegar dados no formato JSON (\textit{JavaScript Object Notation}), ao contrário do padrão SOAP que utiliza o formato XML (\textit{eXtensible Markup Language}).
 
 O REST estabelece as orientações e boas práticas de uma interface que devem ser satisfeitas para que possa ser referida como um serviço \textit{RESTful}. Esses princípios são \cite{fielding2000rest}:
 
@@ -455,7 +454,7 @@ O REST estabelece as orientações e boas práticas de uma interface que devem s
 
 	\item \textbf{Interface uniforme}: As interfaces são padronizadas entre os sistemas que se comunicam por meio de um serviço REST. São definidas para os serviços REST quatro restrições de interface: identificação de recursos, manipulação de recursos por meio de representações; mensagens auto descritivas e hipermídia como forma de interação com a aplicação;
 
-	\item \textbf{Sistema em camadas}: o sistema é organizado em camadas hierárquicas, restringindo, assim, o comportamento do componente de forma que cada componente possa ter acesso somente às camadas imediatas (acima ou abaixo) com as quais está interagindo;
+	\item \textbf{Sistema em camadas}: o sistema é organizado em camadas hierárquicas, restringindo, assim, o comportamento do componente de forma que cada um possa ter acesso somente às camadas imediatas (acima ou abaixo) com as quais está interagindo;
 \end{enumerate}
 
 O principal item de manipulação relacionado a um serviço REST é o recurso. Um recurso é qualquer informação a ser manipulada: documento, imagem, uma coleção de objetos, etc. Os serviços REST utilizam um identificador único de um recurso como forma de referência em consultas. Já as coleções são conjuntos de recursos de uma mesma categoria, como por exemplo uma  lista de usuários cadastrados, a lista de comentários em uma publicação, etc.
@@ -512,13 +511,13 @@ Cada método do protocolo HTTP está relacionado a um tipo de operação no REST
 	\fonte{\citeonline{fielding2000rest} (adaptado).}
 \end{table}
 
-Tanto para APIs REST quanto para APIs SOAP, é necessária a definição de um contrato, que é a documentação da API. Este documento descreve o comportamento esperado da API, o que inclui as URLs dos \textit{endpoints} (rotas), os métodos de cada rota, argumentos e exemplos de chamadas (\textit{requests}) com suas respectivas respostas \cite{santos2020apicontract}. O contrato garante ao cliente que o servidor responderá em um formato específico, evitando erros e exceções no cliente por quebra de esquema.
+Tanto para uma API REST quanto para uma API SOAP, é necessária a definição de um contrato, que é a sua documentação. Este documento descreve o comportamento esperado da API, o que inclui as URLs dos \textit{endpoints} (rotas), os métodos de cada rota, argumentos e exemplos de chamadas (\textit{requests}) com suas respectivas respostas \cite{santos2020apicontract}. O contrato garante ao cliente que o servidor responderá em um formato específico, evitando erros e exceções no cliente por quebra de esquema.
 
-Existem vários formatos de arquivo que permitem criar um contrato e obter sua documentação. O mais comumente utilizado para a documentação de APIs REST é o OpenAPI \cite{santos2020openapi}, anteriormente conhecido como \textit{Swagger}.
+Existem vários formatos de arquivo que permitem criar um contrato e obter sua documentação. O mais comumente utilizado para a documentação de API REST é o OpenAPI \cite{santos2020openapi}, anteriormente conhecido como \textit{Swagger}.
 
-Para APIs SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{booth2004webservice}. APIs com outros protocolos de comunicação, como por exemplo o gRPC (\textit{Google Remote Call Procedure}), suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
+Para as API SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{booth2004webservice}. As API com outros protocolos de comunicação, como por exemplo o gRPC (\textit{Google Remote Call Procedure}), suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
 
-O contrato é definido pelos provedores do serviço e destinado aos consumidores da API, ou seja, às empresas e desenvolvedores que irão utilizar a API. O documento geralmente é criado pela própria equipe de desenvolvimento que elabora o serviço.
+O contrato é definido pelos provedores do serviço e destinado aos consumidores da API, ou seja, às empresas e desenvolvedores que irão utilizá-la. O documento geralmente é criado pela própria equipe de desenvolvimento que elabora o serviço.
 
 \section{Modelagem de sistemas}
 \label{sec:modelagem-de-sistemas}
@@ -569,7 +568,7 @@ A atividade corresponde à realização de certas unidades ou conjuntos de opera
 
 Os arcos conectando a parte externa das atividades (conectados diretamente nos colchetes) indicam um fluxo principal (primário) (\autoref{fig:pfs-fluxos}\textcolor{blue}{a}); já os arcos conectando a parte interna da atividade indicam um fluxo secundário (\autoref{fig:pfs-fluxos}\textcolor{blue}{b}) \cite{miyagi1996controle}.
 
-Um terceiro tipo de arco é usado para representar a interface direta entre atividades e é indicado por meio de um arco conectando diretamente a parte interna de duas atividades (\autoref{fig:pfs-fluxos}\textcolor{blue}{c}). Este arco indicador de interação direta entre atividades é usado para modelar interações entre diferentes níveis, como operações de solicitação e resposta \cite{pisching2018pfs}.
+Um terceiro tipo de arco é usado para representar a interface direta entre atividades e é indicado por meio de um arco conectando diretamente a parte interna de duas atividades (\autoref{fig:pfs-fluxos}\textcolor{blue}{c}). Este arco indicador de interação direta entre atividades é usado neste trabalho para modelar interações entre diferentes níveis, como operações de solicitação e resposta \cite{pisching2018pfs}.
 
 \begin{figure}[htb]
 	\centering
@@ -579,6 +578,6 @@ Um terceiro tipo de arco é usado para representar a interface direta entre ativ
 	\fonte{\citeonline{pisching2018pfs} (adaptado).}
 \end{figure}
 
-Os fluxos de processo do sistema em PFS são modelados por meio de uma abordagem \textit{top-down}, assim os resultados podem ser refinados sucessivamente, detalhando, a cada iteração, a atividade representada. A modelagem do sistema em PFS, portanto, parte de um alto nível de abstração, seguido de sucessivos detalhamentos que resultam em modelos em rede de Petri e que por sua vez podem ser utilizados para a análise comportamental da dinâmica dos processos do sistema.
+Os fluxos de processo do sistema em PFS são modelados por meio de uma abordagem \textit{top-down}, assim os resultados podem ser refinados sucessivamente, detalhando, a cada iteração, a atividade representada. A modelagem do sistema em PFS, portanto, parte de um alto nível de abstração, seguido de sucessivos detalhamentos que resultam em modelos em rede de Petri e que por sua vez podem ser utilizados para a análise dinâmica dos processos do sistema.
 
 Desta forma, o PFS é uma linguagem de alto nível independente de tecnologia e de fabricantes para modelar os processos do sistema. A relevância de se adotar uma linguagem como o PFS para a representação de sistemas está na padronização da comunicação com especialistas de diferentes áreas, como arquitetos, engenheiros e desenhistas \cite{pisching2018pfs}. Assim, há uma efetiva comunicação sobre a interação entre as partes de um sistema e sobre os fluxos de itens materiais e/ou de informação em diferentes níveis do sistema em análise, como, por exemplo, produtos, ordens de serviço, comandos para máquinas, informações de sensores, etc.

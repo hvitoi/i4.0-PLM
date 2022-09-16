@@ -1,11 +1,11 @@
 \chapter{Ciclo de vida do produto na I4.0}
 \label{cha:ciclo-de-vida}
 
-Este capítulo discute integração da Memória Digital do Produto (MDP) ao Componente 4.0 (C4.0) para que assim possa ser compartilhado pela Cadeia de Suprimentos (CS).
+Este capítulo discute a integração da Memória Digital do Produto (MDP) ao Componente 4.0 (C4.0) para que assim possa ser compartilhado pela Cadeia de Suprimentos (CS).
 
 Além disso, são identificadas as informações do produto de interesse aos membros da CS para que possam ser agregadas em forma de submodelos de C4.0. A classificação das informações em submodelos é importante para a conformidade com o RAMI4.0.
 
-Por fim, este capítulo faz um levantamento dos impactos em geração de valor com o compartilhamento da MDP por meio de serviços na I4.0.
+Por fim, este capítulo faz um levantamento dos impactos na geração de valor com o compartilhamento da MDP por meio de serviços na I4.0.
 
 Na I4.0 os ativos se apresentam em diversas formas. Entretanto, ao longo deste capítulo, os ativos tratados são os produtos, uma vez que este é o objeto que percorre a CS e gera informações.
 
@@ -31,22 +31,22 @@ A estrutura do C4.0 com a MDP integrada é apresentada na \autoref{fig:estrutura
 	\label{fig:estrutura-aas}
 \end{figure}
 
-Os dados estão contidos nos submodelos. Se considera que a MDP dispõe de uma interface para a leitura e escrita destes dados. A MDP representa, assim, um ponto único de extração de dados dos submodelos, evitando, desta forma, a leitura de dados não tratados.
+Os dados estão contidos nos submodelos. Considera-se que a MDP dispõe de uma interface para a leitura e escrita destes dados. A MDP representa, assim, um ponto único de extração de dados dos submodelos, evitando, desta forma, a leitura de dados não tratados.
 
-Se considera também que a MDP é capaz de realizar o gerenciamento dos dados, atendendo, por exemplo, políticas de acesso e/ou escrita e demais regras de negócio do produto. Uma analogia é de que os submodelos representam o banco de dados, enquanto a MDP é a interface para as operações de criação, leitura, atualização e exclusão (operações CRUD - \textit{Create, Read, Update, Delete}) nesta base de dados.
+Considera-se também que a MDP é capaz de realizar o gerenciamento dos dados, atendendo, por exemplo, políticas de acesso e/ou escrita e demais regras de negócio do produto. Uma analogia é de que os submodelos representam o banco de dados, enquanto a MDP é a interface para as operações de criação, leitura, atualização e exclusão (operações CRUD - \textit{Create, Read, Update, Delete}) nesta base de dados.
 
-Neste trabalho é dado foco às informações sobre o ativo que sejam de interesse aos membros da CS e que possam ser lidos ou escritos por meio de WSs. Alguns exemplos deste tipo de informação podem incluir: a ficha técnica detalhada do ativo, submodelos de histórico de leitura de sensores, histórico de leitura de geolocalização (GPS), histórico de padrões de uso, etc.
+Neste trabalho é dado foco às informações sobre o ativo que sejam de interesse aos membros da CS e que possam ser lidos ou escritos por meio de WS. Alguns exemplos deste tipo de informação podem incluir: a ficha técnica detalhada do ativo, submodelos de histórico de leitura de sensores, histórico de leitura de geolocalização (GPS), histórico de padrões de uso, etc.
 
 \section{Submodelos do C4.0-Produto}
 \label{sec:submodelos-produto}
 
-Nesta seção são apresentados os submodelos e propriedades necessários para um produto que percorre a CS. O ativo produto junto com o seu AAS representa o C4.0-Produto (ou C4.0-Servidor, por ser o servidor de informações). Os submodelos do C4.0-Produto devem ser padronizados e detalhados a fim de garantir a interoperabilidade entre os sistemas.
+Nesta seção são apresentados os submodelos e propriedades necessários para um produto que percorre a CS. O ativo produto junto com o seu AAS representa o C4.0-Produto. Os submodelos do C4.0-Produto devem ser padronizados e detalhados a fim de garantir a interoperabilidade entre os sistemas.
 
 O produto é a fonte e o servidor de informações para os diversos membros da CS (ou seja, os demais C4.0). O acesso a estas informações permite a colaboração entre os membros e assim abre oportunidades para uma tomada de decisões coordenada visando a maior eficiência do sistema como um todo.
 
 Para isto, é necessária uma definição dos submodelos para que se possa identificar os tipos de informações a serem compartilhadas e com quais membros compartilhar. Além disso, a definição destes submodelos contribui com o refinamento das especificações do AAS no contexto da I4.0.
 
-\citeonline{torres2014information} em uma análise de literatura mostra o impacto do compartilhamento de informações e de diferentes estratégias de colaboração no desempenho de CSs. Eles classificam os trabalhos quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
+\citeonline{torres2014information} em uma análise de literatura mostra o impacto do compartilhamento de informações e de diferentes estratégias de colaboração no desempenho de CS. Eles classificam os trabalhos quanto ao tipo de informação a ser compartilhada, apresentando também a descrição de informações comumente mencionadas nos trabalhos.
 
 Além disso, \citeonline{bader2020submodel} definem alguns submodelos padrões para a I4.0 e detalham suas respectivas propriedades.
 
@@ -76,13 +76,16 @@ Dentro deste submodelo, todas as propriedades são comuns a uma mesma classe de 
 A \autoref{tab:submodelo-dados-gerais} detalha o submodelo ``Dados Gerais'' com suas respectivas propriedades.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.1\textwidth}|p{0.6\textwidth}|}
+
 	\caption{\label{tab:submodelo-dados-gerais} Propriedades do submodelo ``Dados Gerais''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição}
+	\endfirsthead
 
-	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição} \endfirsthead
+	\caption*{\autoref{tab:submodelo-dados-gerais} (continuação): Propriedades do submodelo ``Dados Gerais''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo}   & \textbf{Descrição}
+	\endhead
 
-	\hline \textbf{Propriedade} & \textbf{Tipo}   & \textbf{Descrição} \endhead
-
-	\hline Nome do produto      & \textit{String} & Título que constitui a denominação comercial do objeto/produto.
+	\hline Nome do produto & \textit{String} & Título que constitui a denominação comercial do objeto/produto.
 
 	\\ \hline Código do produto & \textit{String} & Conjunto de números e/ou letras para identificação do modelo do produto.
 
@@ -106,11 +109,14 @@ Dentro deste submodelo, todas as propriedades são comuns a uma mesma classe de 
 A \autoref{tab:submodelo-processos} detalha o submodelo ``Processos'' com suas respectivas propriedades.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.1\textwidth}|p{0.6\textwidth}|}
+
 	\caption{\label{tab:submodelo-processos} Propriedades do submodelo ``Processos''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição}
+	\endfirsthead
 
-	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição} \endfirsthead
-
-	\hline \textbf{Propriedade}           & \textbf{Tipo}   & \textbf{Descrição} \endhead
+	\caption*{\autoref{tab:submodelo-processos} (continuação): Propriedades do submodelo ``Processos''.}
+	\\ \hline \textbf{Propriedade}           & \textbf{Tipo}   & \textbf{Descrição}
+	\endhead
 
 	\hline Tipo de processo de fabricação & \textit{Double} & Tipo de processo de fabricação utilizado. Dado que diferentes empresas podem produzir um produto utilizando processos de fabricação distintos, esta propriedade permite que o cliente possa selecionar/filtrar um fornecedor com base no processo desejado. Além disso, é utilizado para equiparar fornecedores que utilizam um mesmo processo de fabricação, não prejudicando assim um fornecedor que usa um processo mais caro, porém mais moderno.
 
@@ -122,7 +128,7 @@ A \autoref{tab:submodelo-processos} detalha o submodelo ``Processos'' com suas r
 
 	\\ \hline Custo de \textit{setup} & \textit{Double} & O custo de preparação da produção (\textit{setup}) é relacionado a todas as despesas necessárias para a preparação da máquina para a produção, incluindo a mão de obra diretamente aplicada na sua preparação. À medida que o tamanho do lote de pedidos aumenta, reduz-se o custo total da demanda uma vez que o custo de \textit{setup} dilui-se no valor total.
 
-	\\ \hline Informações de entrega & \textit{Map <String>} & Informações sobre transportadoras disponíveis para a realização da entrega do produto associadas ao custo unitário do serviço de cada uma. Informações de entrega variam conforme o destino final da entrega.
+	\\ \hline Informações de entrega & \textit{Map\footnote{Um \textit{map} (mapa) é uma estrutura de dados do tipo chave-valor \cite{map2022mdn}.}  <String>} & Informações sobre transportadoras disponíveis para a realização da entrega do produto associadas ao custo unitário do serviço de cada uma. Informações de entrega variam conforme o destino final da entrega.
 
 	\\ \hline \textit{Lead time} médio de entrega & \textit{Map <Float>} & Tempo de entrega médio de um determinado produto. Esta informação também é dinâmica e calculada com base no tempo histórico médio observado em pedidos passados. Informações de entrega variam conforme o destino final da entrega.
 
@@ -140,13 +146,16 @@ As informações de inventário podem ser consumidas por sistemas automatizados 
 A \autoref{tab:submodelo-inventario} detalha o submodelo ``Inventário'' com suas respectivas propriedades.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.1\textwidth}|p{0.6\textwidth}|}
+
 	\caption{\label{tab:submodelo-inventario} Propriedades do submodelo ``Inventário''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição}
+	\endfirsthead
 
-	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição} \endfirsthead
+	\caption*{\autoref{tab:submodelo-inventario} (continuação): Propriedades do submodelo ``Inventário''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo}    & \textbf{Descrição}
+	\endhead
 
-	\hline \textbf{Propriedade} & \textbf{Tipo}    & \textbf{Descrição} \endhead
-
-	\hline Nível do inventário  & \textit{Integer} & Quantidade atual de itens de uma determinada classe de produtos em estoque.
+	\hline Nível do inventário & \textit{Integer} & Quantidade atual de itens de uma determinada classe de produtos em estoque.
 
 	\\ \hline Custo de retenção & \textit{Double} & Custo decorrente da manutenção em estoque de unidades de uma determinada classe de produtos.
 
@@ -170,13 +179,16 @@ As informações de pedido são importantes para o planejamento da produção de
 A \autoref{tab:submodelo-pedido} detalha o submodelo ``Pedido'' com suas respectivas propriedades.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.1\textwidth}|p{0.6\textwidth}|}
+
 	\caption{\label{tab:submodelo-pedido} Propriedades do submodelo ``Pedido''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição}
+	\endfirsthead
 
-	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição} \endfirsthead
+	\caption*{\autoref{tab:submodelo-pedido} (continuação): Propriedades do submodelo ``Pedido''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo}    & \textbf{Descrição}
+	\endhead
 
-	\hline \textbf{Propriedade} & \textbf{Tipo}    & \textbf{Descrição} \endhead
-
-	\hline Quantidade           & \textit{Integer} & Quantidade de itens de um produto solicitado. Representa uma demanda de fabricação.
+	\hline Quantidade & \textit{Integer} & Quantidade de itens de um produto solicitado. Representa uma demanda de fabricação.
 
 	\\ \hline Preço do pedido & \textit{Double} & Valor pago pela demanda solicitada.
 
@@ -204,13 +216,16 @@ Todas propriedades deste submodelo se referem a um produto unitário, pois têm 
 A \autoref{tab:submodelo-operacao} detalha o submodelo ``Operação'' com suas respectivas propriedades.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.1\textwidth}|p{0.6\textwidth}|}
+
 	\caption{\label{tab:submodelo-operacao} Propriedades do submodelo ``Operação''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição}
+	\endfirsthead
 
-	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição} \endfirsthead
+	\caption*{\autoref{tab:submodelo-operacao} (continuação): Propriedades do submodelo ``Operação''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo}        & \textbf{Descrição}
+	\endhead
 
-	\hline \textbf{Propriedade} & \textbf{Tipo}        & \textbf{Descrição} \endhead
-
-	\hline Leitura de sensores  & \textit{Map <Float>} & Leitura em tempo real dos sensores de temperatura, vibração, etc.
+	\hline Leitura de sensores & \textit{Map <Float>} & Leitura em tempo real dos sensores de temperatura, vibração, etc.
 
 	\\ \hline Dados históricos de sensores & \textit{Map <Float>} & Estrutura de dados para o armazenamento de leituras de sensores no passado.
 
@@ -232,11 +247,14 @@ Todas as propriedades deste submodelo são comuns a uma família de produtos.
 A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' com suas respectivas propriedades.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.1\textwidth}|p{0.6\textwidth}|}
+
 	\caption{\label{tab:submodelo-documentacao} Propriedades do submodelo ``Documentação''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição}
+	\endfirsthead
 
-	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição} \endfirsthead
-
-	\hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição} \endhead
+	\caption*{\autoref{tab:submodelo-documentacao} (continuação): Propriedades do submodelo ``Documentação''.}
+	\\ \hline \textbf{Propriedade} & \textbf{Tipo} & \textbf{Descrição}
+	\endhead
 
 	\hline Manual de fabricação & \textit{Blob} & Descrição sobre todas as operações realizadas na produção envolvendo o produto, desde a calibração de equipamentos até a saúde dos colaboradores.
 
@@ -246,8 +264,6 @@ A \autoref{tab:submodelo-documentacao} detalha o submodelo ``Documentação'' co
 
 	\\ \hline
 \end{longtable}
-
-\newpage
 
 \section{Geração de valor por meio do compartilhamento da MDP}
 \label{sec:geracao-de-valor}
