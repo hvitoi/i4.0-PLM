@@ -73,7 +73,7 @@ Esses ativos são inseridos no meio digital, onde podem trocar informações e e
 
 Essa automatização dos ativos tem potencial para dar mais eficiência aos processos industriais, pois desta forma o sistema pode tomar decisões com base nas informações que lhe foram fornecidas por meio de sensores e identificadores \cite{schmittner2017mtom}. A visão para o futuro da produção baseado na I4.0 envolve sistemas de manufatura modulares e eficientes em cenários nos quais os produtos controlam seus próprios processos de fabricação \cite{lasi2014industryfour}.
 
-Há uma tendência global de redução do ciclo de vida do produto devido à rápida introdução de novas tecnologias para satisfazer a demanda dos clientes \cite{trappey2008lifecycle}. A I4.0 é um reflexo desta realidade onde os produtos possuem ciclos de vida curtos. Nesta realidade, o produto pode controlar o seu próprio processo de fabricação, facilitando, assim, ajustes e personalizações por parte do cliente, enquanto preserva os custos, a qualidade e o tempo de aprovisionamento (\textit{lead time}) da produção em massa.
+Há uma tendência global de redução do ciclo de vida do produto devido à rápida introdução de novas tecnologias para satisfazer a demanda dos clientes \cite{trappey2008lifecycle}. A I4.0 é um reflexo desta realidade onde os produtos possuem ciclos de vida curtos. Nesta realidade, a definição de um produto controla de forma automática o seu próprio processo de fabricação, facilitando, assim, ajustes e personalizações diretas por parte do cliente, enquanto preserva os custos, a qualidade e o tempo de aprovisionamento (\textit{lead time}) da produção em massa.
 
 A I4.0 é composta por princípios a serem seguidos e implementados, porém o caminho para a implementação, assim como as tecnologias a serem adotadas podem ser diversos. As peculiaridades de cada indústria e de cada mercado estabelecem diferentes regras de negócios e, portanto, cada setor da indústria pode necessitar de diferentes formas e tecnologias para se implementar a I4.0 e se tornar uma fábrica inteligente. Alguns avanços tecnológicos, entretanto, são muito importantes ou essenciais para a implementação da I4.0 em qualquer sistema de manufatura, alguns deles são mostrados na \autoref{fig:tecnologias-i4}.
 
@@ -91,7 +91,7 @@ Por meio da iniciativa \textit{Plattform Industrie 4.0}, criada em 2013 pelo Min
 
 O impacto econômico dessa revolução industrial traz uma eficiência operacional substancialmente maior, bem como o surgimento de modelos de negócios, serviços e produtos totalmente novos \cite{hermann2016design}.
 
-Em revoluções industriais passadas, os países pioneiros a se adaptarem às drásticas mudanças de produção foram os que mais se beneficiaram e se consolidaram como potências econômicas. Embora a mudança completa para a I4.0 possa levar vários anos para ser concretizada \cite{russmann2015industryfour}, os avanços nesta área estabelecem os novos pioneiros e detentores de tecnologias e, portanto, é de interesse de cada país liderar a concorrência global a fim de se consolidar como mercado líder e fornecedor de soluções para a I4.0.
+Em revoluções industriais passadas, os países pioneiros que se adaptaram às drásticas mudanças de produção foram os que mais se beneficiaram e se consolidaram como potências econômicas. Embora a mudança completa para a I4.0 possa levar vários anos para ser concretizada \cite{russmann2015industryfour}, os avanços nesta área estabelecem os novos pioneiros e detentores de tecnologias e, portanto, é de interesse de cada país liderar a concorrência global a fim de se consolidar como mercado líder e fornecedor de soluções para a I4.0.
 
 \subsection{Modelo de Arquitetura de Referência para a Indústria 4.0 (RAMI4.0)}
 \label{sub:rami4}
@@ -139,11 +139,11 @@ A \autoref{fig:eixo-camadas} mostra o detalhamento de cada elemento do eixo ``Ca
 
 	\item \textbf{Integração}: Camada responsável pela extração e fornecimento de informações sobre os ativos para as camadas superiores. Representa a digitalização dos ativos. Cada evento no mundo real é refletido também em um evento no mundo digital. Se a realidade mudar, esse evento então é relatado à camada de integração e os dados são atualizados no mundo digital;
 
-	\item \textbf{Comunicação}: Camada responsável pela padronização da interação por meio da adoção de um formato de troca de dados uniforme entre os dispositivos. Esta camada é a responsável pela interoperabilidade entre os ativos na I4.0. Aqui ocorre a integração vertical, ou seja, a interação entre ativos dentro da mesma empresa. A camada de Comunicação fornece dados sobre o ativo à camada de informação;
+	\item \textbf{Comunicação}: Camada responsável pela padronização da interação por meio da adoção de um formato de troca de dados uniforme entre os dispositivos. Esta camada é a responsável pela interoperabilidade entre os ativos na I4.0. Aqui ocorre a integração vertical, ou seja, a interação entre ativos dentro da mesma organização. A camada de Comunicação fornece dados sobre o ativo à camada de informação;
 
 	\item \textbf{Informação}: Camada responsável pelo controle dos dados do ativo. Esta camada agrega todos os dados sobre um determinado ativo e é responsável pelo gerenciamento desses dados. Na camada de informação são garantidos que os dados sejam tratados, pré-processados, armazenados e disponibilizados para os demais ativos do sistema;
 
-	\item \textbf{Funcional}: Camada responsável por manter a descrição formal de todas as funcionalidades do sistema. É também a camada responsável pela integração horizontal de ativos, ou seja, é a porta de interação entre C4.0 de diferentes empresas. Esta camada é a interface para o fornecimento de informações por meio de serviços para ativos fora da empresa;
+	\item \textbf{Funcional}: Camada responsável por manter a descrição formal de todas as funcionalidades do sistema. É também a camada responsável pela integração horizontal de ativos, ou seja, é a porta de interação entre Componentes 4.0 (C4.0) de diferentes organizações. Esta camada é a interface para o fornecimento de informações por meio de serviços para ativos externos;
 
 	\item \textbf{Regra de negócio}: Camada responsável por manter as regras de negócio que o sistema deve seguir como, por exemplo, as condições legais e regulatórias. Esta camada também é responsável por mapear os modelos de negócios e fornecer restrições operacionais da planta de produção.
 \end{enumerate}
@@ -176,7 +176,7 @@ Tanto nas fases ``tipo'' quanto ``instância'', dados de uso e projeto são cole
 
 A visão sobre ``tipo'' e ``instância'' apresentada se refere a um ativo como um produto, porém a representação de um ativo é genérica, podendo se aplicar também uma documentação, um processo, uma ideia, etc. Ativos estes que também possuem as respectivas fases referentes ao projeto e operação detalhadas.
 
-O último eixo do RAMI4.0, ``Níveis Hierárquicos'', é apresentado na \autoref{fig:eixo-niveishierarquicos}\textcolor{blue}{a}. Nesta representação, o último nível -- ``Mundo conectado'' (não representado na \autoref{fig:eixo-niveishierarquicos}\textcolor{blue}{b}) -- é a interconexão e interoperabilidade entre diversas empresas, que por sua vez possuem todas as demais camadas inferiores listadas.
+O último eixo do RAMI4.0, ``Níveis Hierárquicos'', é apresentado na \autoref{fig:eixo-niveishierarquicos}\textcolor{blue}{a}. Nesta representação, o último nível -- ``Mundo conectado'' (não representado na \autoref{fig:eixo-niveishierarquicos}\textcolor{blue}{b}) -- é a interconexão e interoperabilidade entre diversas organizações, que por sua vez possuem todas as demais camadas inferiores listadas.
 
 \begin{figure}[htb]
 	\centering
@@ -220,7 +220,9 @@ Os submodelos são unidades básicas de organização dentro de um AAS que agreg
 
 Os submodelos básicos são unidades de organização que se aplicam a muitos ou todos os ativos dentro do mundo I4.0. Já os submodelos livres são acordados entre os parceiros na CS e possuem um uso específico para um determinado ativo.
 
-O AAS é um elo entre os ativos reais e seus correspondentes digitais no mundo conectado. Dentro da I4.0, os ativos possuem um AAS com capacidade de comunicação com outros dispositivos \cite{bader2019aas}. O conjunto Ativo-AAS é denominado ``Componente I4.0'' (C4.0).%A \autoref{fig:aas-conexao} ilustra a interação entre diferentes C4.0 em um ambiente de manufatura.
+O AAS é um elo entre os ativos reais e seus correspondentes digitais no mundo conectado. Dentro da I4.0, os ativos possuem um AAS com capacidade de comunicação com outros dispositivos da indústria \cite{bader2019aas}. O conjunto Ativo-AAS é denominado ``Componente I4.0'' (C4.0).
+
+%A \autoref{fig:aas-conexao} ilustra a interação entre diferentes C4.0 em um ambiente de manufatura.
 
 %\begin{figure}[htb]
 %	\centering
@@ -269,7 +271,7 @@ Além do eficiente fluxo de materiais e produtos dentro da CS, é imprescindíve
 
 Ao longo da CS pode-se observar processos que agregam valor ao produto em desenvolvimento. As etapas de transformação do produto com adição de valor ao longo da CS define o que se chama de Cadeia de Valor (CV).
 
-Uma CV é um conjunto de atividades que empresas de um setor específico desempenham a fim de entregar um produto ou serviço que tenha algum valor perceptível para o mercado \cite{porter1985competitiveadvantage}. A ideia da CV é baseada na agregação de valor ao produto a cada processo de transformação ocorrido, processo esse que envolve a aquisição e consumo de recursos (mão de obra, materiais, equipamentos, instalações, administração, etc). As atividades em uma CV são divididas em duas categorias: as atividades primárias e as atividades de apoio \cite{porter1985competitiveadvantage} (vide \autoref{fig:porter-cadeia-de-valor}).
+Uma CV é um conjunto de atividades que organizações de um setor específico desempenham a fim de entregar um produto ou serviço que tenha algum valor perceptível para o mercado \cite{porter1985competitiveadvantage}. A ideia da CV é baseada na agregação de valor ao produto a cada processo de transformação ocorrido, processo esse que envolve a aquisição e consumo de recursos (mão de obra, materiais, equipamentos, instalações, administração, etc). As atividades em uma CV são divididas em duas categorias: as atividades primárias e as atividades de apoio \cite{porter1985competitiveadvantage} (vide \autoref{fig:porter-cadeia-de-valor}).
 
 \begin{figure}[htb]
 	\centering
@@ -279,7 +281,7 @@ Uma CV é um conjunto de atividades que empresas de um setor específico desempe
 	\fonte{\citeonline{porter1985competitiveadvantage} (adaptado).}
 \end{figure}
 
-As CV estão focadas em fornecer o máximo valor ao cliente (valor perceptível) com o menor custo e, portanto, é um indicador para a competitividade da empresa. Com o crescente acirramento da competição entre as empresas, essas devem procurar novas formas de agregar mais valor perceptível aos seus produtos, sendo isto em forma de redução de preço, aumento de qualidade, suporte, ou qualquer outra nova funcionalidade.
+As CV estão focadas em fornecer o máximo valor ao cliente (valor perceptível) com o menor custo e, portanto, é um indicador de competitividade. Com o crescente acirramento da competição, essas devem procurar novas formas de agregar mais valor perceptível aos seus produtos, sendo isto em forma de redução de preço, aumento de qualidade, suporte, ou qualquer outra nova funcionalidade.
 
 Outra forma de agregação de valor está no princípio de valor compartilhado, que envolve a geração de valor econômico de forma a criar também valor para a sociedade como um todo \cite{porter2011valorcompartilhado}, com o enfrentamento de suas necessidades e desafios. Soluções que visem o aumento das condições de trabalho, a maior racionalidade e eficiência no tratamento dos recursos naturais necessários para sua atividade e outras formas de balancear o \textit{trade-off} entre eficiência econômica e progresso social são estratégias para se recuperar a legitimidade e a percepção de valor pela sociedade da atividade empresarial.
 
@@ -289,13 +291,13 @@ Com o entusiasmo sobre o tema I4.0 surgido a partir de 2011, surgiram diversas l
 
 A inserção dessas novas tecnologias ao escopo de estudo da logística acarreta em novos desafios como a necessidade de transparência dos processos (visibilidade ao longo da CS) e o controle de integridade (produtos certos, no tempo, lugar, quantidade, condição e preço certos) \cite{barreto2017industry}.
 
-As CS atuais podem ser extremamente grandes e complexas (alta interdependência entre as partes) e, portanto, sem uma correta gestão, podem levar à tomada de decisões não ótimas por parte dos gestores humanos. Por estes aspectos, as CS podem se aproveitar da nova forma de organização da I4.0 (ou da Logística 4.0), tornando os processos cada vez mais automatizados a fim de se atender os novos requisitos da sociedade moderna.
+As CS atuais podem ser extremamente grandes e complexas (alta interdependência entre as partes) e, portanto, sem uma correta gestão, podem levar à tomada de decisões não ótimas por parte dos gestores. Por estes aspectos, as CS podem se aproveitar da nova forma de organização da I4.0 (ou da Logística 4.0), tornando os processos cada vez mais automatizados a fim de se atender os novos requisitos da sociedade moderna.
 
-Dentro da CS, identificadores individuais podem ser usados a fim de se implementar a conectividade de objetos e informações requeridas no contexto da I4.0. Neste sentido, a tecnologia de RFID (\textit{Radio-Frequency IDentification}) permite criar uma identificação única para um ativo. A utilização de identificadores individuais é comum para aplicação de conceitos da I4.0 \cite{alyahya2016rfidwarehousing, vlachos2014rfidimpact, fan2015inventory, bibi2017rfidfood}, pois permite a identificação de cada ativo na rede e possibilita a troca autônoma de informações.
+Dentro da CS, identificadores individuais podem ser usados a fim de se implementar a conectividade de objetos e informações requeridas no contexto da I4.0. Neste sentido, um exemplo de tecnologia relacionada a identificação de itens é o RFID (\textit{Radio-Frequency IDentification}), que permite criar uma identificação única para um ativo. Outra forma de identificação única é o endereço MAC em interfaces de rede para comunicação de dispositivos em rede, sendo essencial para o tráfego de dados na Internet. A utilização de identificadores é essencial para aplicações de conceitos de I4.0 \cite{alyahya2016rfidwarehousing, vlachos2014rfidimpact, fan2015inventory, bibi2017rfidfood}, pois possibilita a troca autônoma de informações.
 
 A troca de informações ao longo da CS é uma das variáveis que influenciam na eficiência da cadeia \cite{barreto2017industry}, especialmente em CS complexas e com alta interdependência entre as partes. O estudo sobre formas e processos visando a troca de informações é, portanto, um tema relevante dentro da Logística 4.0 e também foco de estudo neste trabalho.
 
-A Logística 4.0, portanto, estabelece uma série de paradigmas que empresas atuando no ramo logístico deverão seguir nos próximos anos para se manterem competitivas. Conceitos de operação como o intercâmbio de informações instantâneas, soluções automatizadas e análise de dados em tempo real abrem caminhos para novos modelos de negócios \cite{strandhagen2017logistics}, que se tornarão essenciais na eficiência em logística moderna.
+A Logística 4.0, portanto, estabelece uma série de paradigmas que organizações atuando no ramo logístico deverão seguir nos próximos anos para se manterem competitivas. Conceitos de operação como o intercâmbio de informações instantâneas, soluções automatizadas e análise de dados em tempo real abrem caminhos para novos modelos de negócios \cite{strandhagen2017logistics}, que se tornarão essenciais na eficiência em logística moderna.
 
 \section{Ciclo de vida do produto}
 \label{sec:ciclo-de-vida}
@@ -326,7 +328,7 @@ A \autoref{fig:ciclo-de-vida-extensao} mostra um modelo de ciclo de vida do prod
 
 A gestão do ciclo de vida do produto (GCVP) refere-se ao gerenciamento de um ativo ao longo dos estágios típicos de sua vida útil (vide \autoref{fig:product-life-cycle}). Esta gestão dentro dos estágios mencionados pode se referir, por exemplo, à fabricação, comercialização, uso ou qualquer outra fase do ciclo de vida em que o produto se encontra.
 
-A GCVP tem como finalidade auxiliar gestores na tomada de decisões de negócios por meio de estratégias como políticas de preços, expansão de mercado, retirada do produto ou inserção de novas versões, etc. A função da GCVP não é gerenciar apenas um produto, mas gerenciar de maneira integrada todas as partes, assim como o portfólio de produtos da empresa \cite{stark2015lifecycle}.
+A GCVP tem como finalidade auxiliar gestores na tomada de decisões de negócios por meio de estratégias como políticas de preços, expansão de mercado, retirada do produto ou inserção de novas versões, etc. A função da GCVP não é gerenciar apenas um produto, mas gerenciar de maneira integrada todas as partes, assim como o portfólio de produtos de uma organização \cite{stark2015lifecycle}.
 
 Em nível mais alto, o objetivo do GCVP é aumentar as receitas do produto, reduzir custos relacionados a ele, maximizar o valor do portfólio e maximizar o valor dos produtos atuais e futuros para clientes e acionistas \cite{stark2015lifecycle}.
 
@@ -346,11 +348,11 @@ Em outras referências, este conceito se relaciona a sistemas que permitem a col
 	\label{fig:mdp}
 \end{figure}
 
-Sua relevância está no fato da tendência de produtos novos apresentarem ciclos de vida cada vez mais curtos, e também devido ao fato das CS serem compostas por redes cada vez mais complexas, com múltiplos fornecedores e clientes. Com isso, a MDP manteria registros digitais dos produtos, permitiria o monitoramento de seu estado atual e o rastreamento de sua posição dentro do processo produtivo. Segundo \citeonline{wahlster2007digitalmemory}, o acesso a essas informações pelas partes interessadas seria de vital importância na competitividade de empresas produtoras e de comércio, além de abrir novas proteções em relação à pirataria.
+Sua relevância está no fato da tendência de produtos novos apresentarem ciclos de vida cada vez mais curtos, e também devido ao fato das CS serem compostas por redes cada vez mais complexas, com múltiplos fornecedores e clientes. Com isso, a MDP manteria registros digitais dos produtos, permitiria o monitoramento de seu estado atual e o rastreamento de sua posição dentro do processo produtivo. Segundo \citeonline{wahlster2007digitalmemory}, o acesso a essas informações pelas partes interessadas seria de vital importância na competitividade de organizações produtoras e de comércio, além de abrir novas proteções em relação à pirataria.
 
 O conceito de MDP pode ser introduzido nos produtos no cenário de I4.0 e por meio dela extrair e armazenar informações relevantes de eventos ocorridos ao longo do ciclo de vida do produto a fim de fornecer serviços a todo o ambiente com o qual o produto se relaciona \cite{brandherm2011productmemory}. A MDP fornece também uma forma de rastreabilidade, uma vez que pode armazenar informações geoespaciais do ativo ao longo do tempo.
 
-Implementações de uma memória com informações sobre o produto ao longo de sua CS é importante, pois torna possível acessar e utilizar informações do mundo real provenientes de diferentes fontes para o potencial benefício das partes interessadas naquele produto \cite{brandherm2011productmemory}, como, por exemplo, fabricantes, transportadores, varejistas e consumidores. Ela também é relevante no pós-venda, onde a MDP continua a ser disponibilizada e ativa, dando a possibilidade ao consumidor de ainda manter contato com cada elo da CS e se beneficiar de serviços individuais que se acumulam na memória \cite{brandherm2011productmemory}.
+O armazenamento de informações sobre o produto ao longo de sua CS é importante, pois torna possível acessar e utilizar informações do mundo real provenientes de diferentes fontes para o potencial benefício das partes interessadas naquele produto \cite{brandherm2011productmemory}, como, por exemplo, fabricantes, transportadores, varejistas e consumidores. Ela também é relevante no pós-venda, onde a MDP continua a ser disponibilizada e ativa, dando a possibilidade ao consumidor de ainda manter contato com cada elo da CS e se beneficiar de serviços individuais que se acumulam na memória \cite{brandherm2011productmemory}.
 
 \section{Arquitetura orientada a serviços (SOA)}
 \label{sec:soa}
@@ -515,9 +517,9 @@ Tanto para uma API REST quanto para uma API SOAP, é necessária a definição d
 
 Existem vários formatos de arquivo que permitem criar um contrato e obter sua documentação. O mais comumente utilizado para a documentação de API REST é o OpenAPI \cite{santos2020openapi}, anteriormente conhecido como \textit{Swagger}.
 
-Para as API SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{booth2004webservice}. As API com outros protocolos de comunicação, como por exemplo o gRPC (\textit{Google Remote Call Procedure}), suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
+Para as API SOAP, o WSDL (\textit{Web Service Description Language}) é utilizado como contrato \cite{booth2004webservice}. As API com outros protocolos de comunicação, como por exemplo o RPC (\textit{Remote Call Procedure}), suportam o contrato por meio de arquivos protobuf (\textit{protocol buffers}).
 
-O contrato é definido pelos provedores do serviço e destinado aos consumidores da API, ou seja, às empresas e desenvolvedores que irão utilizá-la. O documento geralmente é criado pela própria equipe de desenvolvimento que elabora o serviço.
+O contrato é definido pelos provedores do serviço e destinado aos consumidores da API, ou seja, às organizações e desenvolvedores que irão utilizá-la. O documento geralmente é criado pela própria equipe de desenvolvimento que elabora o serviço.
 
 \section{Modelagem de sistemas}
 \label{sec:modelagem-de-sistemas}

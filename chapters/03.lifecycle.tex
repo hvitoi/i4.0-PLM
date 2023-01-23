@@ -31,7 +31,7 @@ A estrutura do C4.0 com a MDP integrada é apresentada na \autoref{fig:estrutura
 	\label{fig:estrutura-aas}
 \end{figure}
 
-Os dados estão contidos nos submodelos. Considera-se que a MDP dispõe de uma interface para a leitura e escrita destes dados. A MDP representa, assim, um ponto único de extração de dados dos submodelos, evitando, desta forma, a leitura de dados não tratados.
+Os dados estão contidos nos submodelos. Considera-se que a MDP dispõe de uma interface para a leitura e escrita programática destes dados. A MDP representa, assim, um ponto único de extração de dados dos submodelos, evitando, desta forma, a leitura de dados não tratados.
 
 Considera-se também que a MDP é capaz de realizar o gerenciamento dos dados, atendendo, por exemplo, políticas de acesso e/ou escrita e demais regras de negócio do produto. Uma analogia é de que os submodelos representam o banco de dados, enquanto a MDP é a interface para as operações de criação, leitura, atualização e exclusão (operações CRUD - \textit{Create, Read, Update, Delete}) nesta base de dados.
 
@@ -50,7 +50,7 @@ Para isto, é necessária uma definição dos submodelos para que se possa ident
 
 Além disso, \citeonline{bader2020submodel} definem alguns submodelos padrões para a I4.0 e detalham suas respectivas propriedades.
 
-Os tipos de informações identificados na análise bibliográfica de \citeonline{torres2014information} e no documento de \citeonline{bader2020submodel} serão incorporados a novos submodelos propostos para o produto para que possam ser compartilhados por meio da MDP ao longo da CS.
+Os tipos de informações identificados na análise bibliográfica foram consolidados e incorporados a novos submodelos propostos para o produto para que possam ser compartilhados por meio da MDP ao longo da CS.
 
 Os submodelos propostos são baseados na classificação das informações (propriedades) contidas em cada um deles. São eles: ``Dados Gerais'', ``Processos'', ``Inventário'', ``Pedido'', ``Operação'' e ``Documentação''.
 
@@ -118,7 +118,7 @@ A \autoref{tab:submodelo-processos} detalha o submodelo ``Processos'' com suas r
 	\\ \hline \textbf{Propriedade}           & \textbf{Tipo}   & \textbf{Descrição}
 	\endhead
 
-	\hline Tipo de processo de fabricação & \textit{Double} & Tipo de processo de fabricação utilizado. Dado que diferentes empresas podem produzir um produto utilizando processos de fabricação distintos, esta propriedade permite que o cliente possa selecionar/filtrar um fornecedor com base no processo desejado. Além disso, é utilizado para equiparar fornecedores que utilizam um mesmo processo de fabricação, não prejudicando assim um fornecedor que usa um processo mais caro, porém mais moderno.
+	\hline Tipo de processo de fabricação & \textit{Double} & Tipo de processo de fabricação utilizado. Dado que diferentes organizações podem produzir um produto utilizando processos de fabricação distintos, esta propriedade permite que o cliente possa selecionar/filtrar um fornecedor com base no processo desejado. Além disso, é utilizado para equiparar fornecedores que utilizam um mesmo processo de fabricação, não prejudicando assim um fornecedor que usa um processo mais caro, porém mais moderno.
 
 	\\ \hline Custo do processo de fabricação & \textit{Double} & Custo total do processo de fabricação. O compartilhamento dos custos do processo é necessário no planejamento integrado da CS.
 
@@ -196,7 +196,7 @@ A \autoref{tab:submodelo-pedido} detalha o submodelo ``Pedido'' com suas respect
 
 	\\ \hline Geolocalização & \textit{String} & Localização geográfica em tempo real de um determinado pedido.
 
-	\\ \hline Notas fiscais & \textit{Blob} & Documento oficial que registra as vendas de produtos pela empresa. É referente ao lote vendido.
+	\\ \hline Notas fiscais & \textit{Blob\footnote{Um \textit{blob} é um arquivo binário qualquer como, por exemplo, um documento PDF.}} & Documento oficial que registra as vendas de produtos. É referente ao lote vendido.
 
 	\\ \hline
 \end{longtable}
@@ -293,7 +293,7 @@ O fluxo de informações e geração de valor é detalhado a seguir:
 
 Os produtos podem gerar, por exemplo, informações sobre uso e manutenções realizadas, que podem ser armazenadas na MDP e assim auxiliar em melhorias no seu próprio processo de fabricação, além de ser fonte de dados para o desenvolvimento de novas versões.
 
-O compartilhamento das informações insere um novo argumento na competitividade entre as empresas \cite{framling2013plm} e, por meio da MDP, este compartilhamento é possibilitado. Os novos ativos inseridos neste novo ``formato'' trazem a possibilidade de exploração de seus dados e alteram, desta forma, a estrutura da indústria e a natureza da concorrência, expondo as empresas a novas oportunidades e ameaças competitivas \cite{porter2015smartproducts}.
+O compartilhamento das informações insere um novo argumento na competitividade empresarial \cite{framling2013plm} e, por meio da MDP, este compartilhamento é possibilitado. Os novos ativos inseridos neste novo ``formato'' trazem a possibilidade de exploração de seus dados e alteram, desta forma, a estrutura da indústria e a natureza da concorrência, expondo as organizações a novas oportunidades e ameaças competitivas \cite{porter2015smartproducts}.
 
 A MDP, portanto, traz a possibilidade de maior agregação de valor ao produto como um todo por meio do compartilhamento de informações. Nesse sentido, estão sendo aqui consideradas duas novas classificações quanto às formas de melhoria do produto e agregação de valor por meio da MDP com base nos submodelos apresentados na \autoref{sec:submodelos-produto}: as \textbf{melhorias operacionais} (\autoref{sub:melhoria-operacional}) e as \textbf{melhorias de projeto} (\autoref{sub:melhoria-projeto}).
 

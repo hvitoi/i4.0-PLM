@@ -172,13 +172,13 @@ Na camada \textbf{Ativo Técnico} estão os produtos (fontes de informações), 
 
 Para o compartilhamento de informações do produto no mundo I4.0, os dados a serem extraídos do ativo são estrategicamente selecionados com o objetivo de reunir somente os que agreguem valor ao próprio ativo. Assim, estes dados selecionados são extraídos do ativo e repassados às camadas superiores para que possam ser armazenados e compartilhados por meio de serviços.
 
-A camada \textbf{Integração} está presente em todos os componentes (C4.0-Servidor, C4.0-Cliente e C4.0-Repositório). Porém tanto o C4.0-Cliente quanto o C4.0-Repositório operam primariamente nas camadas digitais e possuem esta camada somente para outros fluxos de integração internos da empresa, seja ele um \textit{software} (por exemplo uma base de dados de ERP) ou um ativo físico. Já a camada de Integração no C4.0-Servidor tem a função mais axiomática para compartilhamento de informações do ativo uma vez que é responsável pela virtualização das informações que são extraídas do ativo e repassadas para as camadas superiores.
+A camada \textbf{Integração} está presente em todos os componentes (C4.0-Servidor, C4.0-Cliente e C4.0-Repositório). Porém tanto o C4.0-Cliente quanto o C4.0-Repositório operam primariamente nas camadas digitais e possuem esta camada somente para outros fluxos de integração internos da organização, seja ele um \textit{software} (por exemplo uma base de dados de ERP) ou um ativo físico. Já a camada de Integração no C4.0-Servidor tem a função mais axiomática para compartilhamento de informações do ativo uma vez que é responsável pela virtualização das informações que são extraídas do ativo e repassadas para as camadas superiores.
 
-Com relação à camada \textbf{Comunicação}, na arquitetura de compartilhamento de informações não há comunicação entre C4.0 dentro da mesma empresa uma vez que todas as operações de um WS (publicação, busca e interação) ocorrem entre organizações distintas. Esta camada, entretanto, é necessária para as diversas outras comunicações dentro da própria organização. Os protocolos estabelecidos nesta camada para a integração vertical são independentes dos protocolos para a integração horizontal, que são definidos na camada Funcional.
+Com relação à camada \textbf{Comunicação}, na arquitetura de compartilhamento de informações não há comunicação entre C4.0 dentro de uma mesma organização uma vez que todas as operações de um WS (publicação, busca e interação) ocorrem entre organizações distintas. Esta camada, entretanto, é necessária para as diversas outras comunicações dentro da própria organização. Os protocolos estabelecidos nesta camada para a integração vertical são independentes dos protocolos para a integração horizontal, que são definidos na camada Funcional.
 
 A camada \textbf{Informação} está presente em todos os componentes. No C4.0-Repositório ela é responsável pelo acesso aos contratos disponibilizados por cada produto e pelo processamento das requisições dos C4.0-Clientes. No C4.0-Servidor, esta camada armazena as informações nos submodelos e as disponibiliza por meio da MDP. No C4.0-Cliente, ela é responsável pelo processamento das informações recebidas pelo C4.0-Repositório (para a seleção do serviço adequado) e pelo C4.0-Servidor (para o tratamento das informações recebidas).
 
-Na camada \textbf{Funcional} ocorre a integração horizontal entre as partes da CS de um produto. Os serviços são disponibilizados por meio da camada funcional, portanto esta é a interface entre os C4.0 de diferentes empresas.
+Na camada \textbf{Funcional} ocorre a integração horizontal entre as partes da CS de um produto. Os serviços são disponibilizados por meio da camada funcional, portanto esta é a interface entre os C4.0 de diferentes organizações.
 
 Para o fornecimento e consumo dos serviços de compartilhamento de informações nesta camada, devem ser definidas as especificações das API, ou seja, o padrão de requisição e resposta para o fornecimento e consumo de serviços como, por exemplo, o padrão REST.
 
@@ -191,7 +191,7 @@ Para cada tipo de operação relacionada a um C4.0, é necessário detalhar o fl
 O C4.0 pode ainda ser mais detalhadamente especificado, identificando se este representa um produto em desenvolvimento ou um produto em produção. Estes detalhes são cobertos pelo eixo ``Ciclo de Vida e Cadeia de Valor'', e considerações sobre este eixo envolvendo a arquitetura proposta foram apresentadas no \autoref{cha:ciclo-de-vida}.
 
 \begin{itemize}
-	\item \textbf{Ativo}: empresas e pessoas (referente ao C4.0-Cliente), produto (referente ao C4.0-Servidor) e os \textit{softwares} repositórios (referente ao C4.0-Repositório);
+	\item \textbf{Ativo}: organizações e pessoas (referente ao C4.0-Cliente), produto (referente ao C4.0-Servidor) e os \textit{softwares} repositórios (referente ao C4.0-Repositório);
 	\item \textbf{Integração}: protocolos de transferência de dados (Ethernet, 5G, Wi-Fi, etc);
 	\item \textbf{Comunicação}: protocolos de comunicação para promover a integração vertical (OPC UA, MQTT);
 	\item \textbf{Informação}: contratos (descrição dos serviços), submodelos, MDP;
@@ -258,7 +258,7 @@ A operação de requisição para a busca de um serviço parte do C4.0-Cliente e
 
 \begin{enumerate}
 
-	\item O processo de requisição se inicia com a definição por parte do ativo do C4.0-Cliente (pessoa ou empresa) sobre qual informação se deseja consultar como, por exemplo, leituras de sensores, localização geográfica, manuais, etc.
+	\item O processo de requisição se inicia com a definição por parte do ativo do C4.0-Cliente (pessoa ou organização) sobre qual informação se deseja consultar como, por exemplo, leituras de sensores, localização geográfica, manuais, etc.
 
 	\item A partir do tipo de informação a ser consultada, define-se os parâmetros de consulta, que representam o conjunto de restrições que estabelecem qual é exatamente o tipo de serviço que o C4.0-Cliente deseja consumir. Para os serviços que visam a extração de informações do ativo, os parâmetros representam, por exemplo, o ID do provedor de serviços, o horário e data de um determinado evento, uma filtragem por modelos específicos de um produto, etc.
 
