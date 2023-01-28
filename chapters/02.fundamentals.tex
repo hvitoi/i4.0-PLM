@@ -73,7 +73,7 @@ Esses ativos são inseridos no meio digital, onde podem trocar informações e e
 
 Essa automatização dos ativos tem potencial para dar mais eficiência aos processos industriais, pois desta forma o sistema pode tomar decisões com base nas informações que lhe foram fornecidas por meio de sensores e identificadores \cite{schmittner2017mtom}. A visão para o futuro da produção baseado na I4.0 envolve sistemas de manufatura modulares e eficientes em cenários nos quais os produtos controlam seus próprios processos de fabricação \cite{lasi2014industryfour}.
 
-Há uma tendência global de redução do ciclo de vida do produto devido à rápida introdução de novas tecnologias para satisfazer a demanda dos clientes \cite{trappey2008lifecycle}. A I4.0 é um reflexo desta realidade onde os produtos possuem ciclos de vida curtos. Nesta realidade, a definição de um produto controla de forma automática o seu próprio processo de fabricação, facilitando, assim, ajustes e personalizações diretas por parte do cliente, enquanto preserva os custos, a qualidade e o tempo de aprovisionamento (\textit{lead time}) da produção em massa.
+Há uma tendência global de redução do ciclo de vida do produto devido à rápida introdução de novas tecnologias para satisfazer a demanda dos clientes \cite{trappey2008lifecycle}. A I4.0 é um reflexo desta realidade onde os produtos possuem ciclos de vida curtos. Nesta realidade, a definição de um produto guia de forma automática o processo de fabricação do próprio produto, facilitando, assim, ajustes e personalizações diretamente por parte do cliente, enquanto preserva os custos, a qualidade e o tempo de aprovisionamento (\textit{lead time}) da produção em massa.
 
 A I4.0 é composta por princípios a serem seguidos e implementados, porém o caminho para a implementação, assim como as tecnologias a serem adotadas podem ser diversos. As peculiaridades de cada indústria e de cada mercado estabelecem diferentes regras de negócios e, portanto, cada setor da indústria pode necessitar de diferentes formas e tecnologias para se implementar a I4.0 e se tornar uma fábrica inteligente. Alguns avanços tecnológicos, entretanto, são muito importantes ou essenciais para a implementação da I4.0 em qualquer sistema de manufatura, alguns deles são mostrados na \autoref{fig:tecnologias-i4}.
 
@@ -91,7 +91,7 @@ Por meio da iniciativa \textit{Plattform Industrie 4.0}, criada em 2013 pelo Min
 
 O impacto econômico dessa revolução industrial traz uma eficiência operacional substancialmente maior, bem como o surgimento de modelos de negócios, serviços e produtos totalmente novos \cite{hermann2016design}.
 
-Em revoluções industriais passadas, os países pioneiros que se adaptaram às drásticas mudanças de produção foram os que mais se beneficiaram e se consolidaram como potências econômicas. Embora a mudança completa para a I4.0 possa levar vários anos para ser concretizada \cite{russmann2015industryfour}, os avanços nesta área estabelecem os novos pioneiros e detentores de tecnologias e, portanto, é de interesse de cada país liderar a concorrência global a fim de se consolidar como mercado líder e fornecedor de soluções para a I4.0.
+Em revoluções industriais passadas, os países pioneiros, que se adaptaram às drásticas mudanças de produção, foram os que mais se beneficiaram e se consolidaram como potências econômicas. Embora a mudança completa para a I4.0 possa levar vários anos para ser concretizada \cite{russmann2015industryfour}, os avanços nesta área estabelecem os novos pioneiros e detentores de tecnologias e, portanto, é de interesse de cada país liderar a concorrência global a fim de se consolidar como mercado líder e fornecedor de soluções para a I4.0.
 
 \subsection{Modelo de Arquitetura de Referência para a Indústria 4.0 (RAMI4.0)}
 \label{sub:rami4}
@@ -143,7 +143,7 @@ A \autoref{fig:eixo-camadas} mostra o detalhamento de cada elemento do eixo ``Ca
 
 	\item \textbf{Informação}: Camada responsável pelo controle dos dados do ativo. Esta camada agrega todos os dados sobre um determinado ativo e é responsável pelo gerenciamento desses dados. Na camada de informação são garantidos que os dados sejam tratados, pré-processados, armazenados e disponibilizados para os demais ativos do sistema;
 
-	\item \textbf{Funcional}: Camada responsável por manter a descrição formal de todas as funcionalidades do sistema. É também a camada responsável pela integração horizontal de ativos, ou seja, é a porta de interação entre Componentes 4.0 (C4.0) de diferentes organizações. Esta camada é a interface para o fornecimento de informações por meio de serviços para ativos externos;
+	\item \textbf{Funcional}: Camada responsável por manter a descrição formal de todas as funcionalidades do sistema. É também a camada responsável pela integração horizontal de ativos, ou seja, é a porta de interação entre Componentes 4.0 (C4.0) de diferentes organizações. Esta camada é a interface para o fornecimento de informações por meio de serviços para ativos externos à organização;
 
 	\item \textbf{Regra de negócio}: Camada responsável por manter as regras de negócio que o sistema deve seguir como, por exemplo, as condições legais e regulatórias. Esta camada também é responsável por mapear os modelos de negócios e fornecer restrições operacionais da planta de produção.
 \end{enumerate}
@@ -220,7 +220,7 @@ Os submodelos são unidades básicas de organização dentro de um AAS que agreg
 
 Os submodelos básicos são unidades de organização que se aplicam a muitos ou todos os ativos dentro do mundo I4.0. Já os submodelos livres são acordados entre os parceiros na CS e possuem um uso específico para um determinado ativo.
 
-O AAS é um elo entre os ativos reais e seus correspondentes digitais no mundo conectado. Dentro da I4.0, os ativos possuem um AAS com capacidade de comunicação com outros dispositivos da indústria \cite{bader2019aas}. O conjunto Ativo-AAS é denominado ``Componente I4.0'' (C4.0).
+O AAS é um elo entre os ativos reais e seus correspondentes digitais no mundo conectado. Dentro da I4.0, os ativos possuem um AAS com capacidade de comunicação com outros dispositivos \cite{bader2019aas}. O conjunto Ativo-AAS é denominado ``Componente I4.0'' (C4.0).
 
 %A \autoref{fig:aas-conexao} ilustra a interação entre diferentes C4.0 em um ambiente de manufatura.
 
@@ -293,7 +293,7 @@ A inserção dessas novas tecnologias ao escopo de estudo da logística acarreta
 
 As CS atuais podem ser extremamente grandes e complexas (alta interdependência entre as partes) e, portanto, sem uma correta gestão, podem levar à tomada de decisões não ótimas por parte dos gestores. Por estes aspectos, as CS podem se aproveitar da nova forma de organização da I4.0 (ou da Logística 4.0), tornando os processos cada vez mais automatizados a fim de se atender os novos requisitos da sociedade moderna.
 
-Dentro da CS, identificadores individuais podem ser usados a fim de se implementar a conectividade de objetos e informações requeridas no contexto da I4.0. Neste sentido, um exemplo de tecnologia relacionada a identificação de itens é o RFID (\textit{Radio-Frequency IDentification}), que permite criar uma identificação única para um ativo. Outra forma de identificação única é o endereço MAC em interfaces de rede para comunicação de dispositivos em rede, sendo essencial para o tráfego de dados na Internet. A utilização de identificadores é essencial para aplicações de conceitos de I4.0 \cite{alyahya2016rfidwarehousing, vlachos2014rfidimpact, fan2015inventory, bibi2017rfidfood}, pois possibilita a troca autônoma de informações.
+Dentro da CS, identificadores individuais podem ser usados a fim de se implementar a conectividade de objetos e informações requeridas no contexto da I4.0. Neste sentido, um exemplo de tecnologia relacionada a identificação de itens é o RFID (\textit{Radio-Frequency IDentification}), que permite criar uma identificação única para um ativo. Outra forma de identificação única é o endereço MAC (\textit{Media Access Control}) em interfaces de rede para comunicação de dispositivos em rede, sendo essencial para o tráfego de dados na Internet. A utilização de identificadores é essencial para aplicações de conceitos de I4.0 \cite{alyahya2016rfidwarehousing, vlachos2014rfidimpact, fan2015inventory, bibi2017rfidfood}, pois possibilita a troca autônoma de informações.
 
 A troca de informações ao longo da CS é uma das variáveis que influenciam na eficiência da cadeia \cite{barreto2017industry}, especialmente em CS complexas e com alta interdependência entre as partes. O estudo sobre formas e processos visando a troca de informações é, portanto, um tema relevante dentro da Logística 4.0 e também foco de estudo neste trabalho.
 
